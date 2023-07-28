@@ -667,6 +667,43 @@
         "name": "Contact form"
       }
     },
+    "custom-list-product": {
+      "name": "Custom List Product",
+      "settings": {
+        "custom_list_product": {
+          "default": "Custom List Product",
+          "label": "Name"
+        }
+      },
+      "presets": {
+        "name": "Custom list product"
+      }
+    },
+    "custom-list-info-row": {
+      "name": "Custom List Info Row",
+      "settings": {
+        "custom_list_info_row": {
+          "default": "Custom List Info Row",
+          "label": "Name",
+        }
+      },
+      "blocks": {
+        "row": {
+          "name": "Row",
+          "settings": {
+            "title": {
+              "label": "Title"
+            },
+            "content": {
+              "label": "Content"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Custom list product"
+      }
+    },
     "custom-liquid": {
       "name": "Custom Liquid",
       "settings": {

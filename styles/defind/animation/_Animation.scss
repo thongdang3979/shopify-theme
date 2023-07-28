@@ -1,0 +1,7 @@
+//----------Custom Animation----------
+@mixin customAnimation($param-animation: null) {
+    @if $param-animation !=null {
+        -webkit-animation: $param-animation; /* Chr, Saf */
+        animation: $param-animation; /* IE >9, Fx >15, Op >12.0 */
+    }
+}

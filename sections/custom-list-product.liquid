@@ -1,0 +1,67 @@
+{{ 'page-shop.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'test.js' | asset_url }}" defer="defer"></script>
+
+<div class="shop-page-area page-width page-width-desktop">
+  <div class="list-product-area">
+
+    {%- for product in collections.all.products -%}
+      <div class="product-area">
+        <div class="product-image-area">
+
+          <a href="{{ product.url}}" class="front-image-area">
+            <img
+              src="{{ product.images[0] | img_url: '600x600' }}"
+              width="{{ product.images[0].width }}"
+              height="{{ product.images[0].height }}"
+              alt="{{ product.images[0].alt }}"
+              loading="lazy" />
+          </a>
+
+          <a href="{{ product.url }}" class="back-image-area">
+            <img
+              src="{{ product.images[1] | img_url: '600x600' }}"
+              width="{{ product.images[1].width }}"
+              height="{{ product.images[1].height }}"
+              alt="{{ product.images[1].alt }}"
+              loading="lazy" />
+          </a>
+
+        </div>
+        <div class="product-name-area">
+          <h2>
+            <a href="{{ product.url }}">{{ product.title }}</a>
+          </h2>
+        </div>
+        <div class="product-price-area">
+          <span>{{ product.price | money }}</span>
+        </div>
+      </div>
+    {%- endfor -%}
+
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "t:sections.custom-list-product.name",
+    "tag": "section",
+    "class": "section",
+    "disabled_on": {
+      "groups": ["header", "footer"]
+    },
+    "settings": [
+      {
+        "type": "liquid",
+        "id": "custom_list_product",
+        "default": "t:sections.custom-list-product.settings.custom_list_product.default",
+        "label": "t:sections.custom-list-product.settings.custom_list_product.label",
+        "info": "This is an custom section list product"
+      }
+    ],
+    "presets": [
+      {
+        "name": "t:sections.custom-list-product.presets.name"
+      }
+    ]
+  }
+{% endschema %}

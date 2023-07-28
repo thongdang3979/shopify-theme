@@ -1,0 +1,10 @@
+//----------Custom Transition----------
+@mixin customTransition($param-transition: null) {
+    @if $param-transition !=null {
+        -webkit-transition: $param-transition;
+        -moz-transition: $param-transition;
+        -ms-transition: $param-transition;
+        -o-transition: $param-transition;
+        transition: $param-transition;
+    }
+}

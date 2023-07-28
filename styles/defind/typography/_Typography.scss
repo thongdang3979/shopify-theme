@@ -1,0 +1,49 @@
+//----------Master Typography----------
+@mixin customFont($param-size: null, $param-weight: null, $param-line-height: null, $param-color: null, $param-ratio-tablet: null, $param-ratio-mobile: null) {
+
+    $font-size: if($param-size, $param-size, 16px);
+    $font-weight: if($param-weight, $param-weight, 400);
+    $line-height: if($param-line-height, $param-line-height, 110%);
+    $color: if($param-color, $param-color, unset);
+
+    //-----CSS-----
+    font-size: $font-size;
+    font-weight: $param-weight;
+    line-height: $line-height;
+    color: $color;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+
+    //----CSS----
+
+    //------Tablet------
+    @if type-of($param-ratio-tablet)==number {
+        @media screen and (max-width: 1024px) {
+            font-size: $font-size * $param-ratio-tablet;
+        }
+    }
+
+    @else if type-of($param-ratio-tablet)==string {
+        @media screen and (max-width: 1024px) {
+            font-size: $param-ratio-tablet;
+        }
+    }
+    //------Tablet------
+
+    //------Mobile------
+    @if type-of($param-ratio-mobile)==number {
+        @media screen and (max-width: 768px) {
+            font-size: $font-size * $param-ratio-mobile;
+        }
+    }
+
+    @else if type-of($param-ratio-mobile)==string {
+        @media screen and (max-width: 768px) {
+            font-size: $param-ratio-mobile;
+        }
+    }
+    //------Mobile------
+
+}

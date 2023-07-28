@@ -1,0 +1,51 @@
+{%- for block in section.blocks -%}
+  <div class="box-left-area">
+    <h2></h2>
+  </div>
+  <div class="box-right-area">
+    <p></p>
+  </div>
+{%- endfor -%}
+
+{% schema %}
+  {
+    "name": "t:sections.custom-list-info-row.name",
+    "tag": "section",
+    "class": "section",
+    "disabled_on": {
+      "groups": ["header", "footer"]
+    },
+    "settings": [
+      {
+        "type": "liquid",
+        "id": "custom_list_info_row",
+        "default": "t:sections.custom-list-info-row.settings.custom_list_info_row.default",
+        "label": "t:sections.custom-list-info-row.settings.custom_list_info_row.label",
+        "info": "This is an custom section list info row"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "row",
+        "name": "t:sections.custom-list-info-row.blocks.row.name",
+        "settings": [
+          {
+            "type": "inline_richtext",
+            "id": "title",
+            "label": "t:sections.custom-list-info-row.blocks.row.settings.title.label"
+          }, {
+            "type": "richtext",
+            "id": "content",
+            "default": "Content",
+            "label": "t:sections.custom-list-info-row.blocks.row.settings.content.label"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "t:sections.custom-list-info-row.presets.name"
+      }
+    ]
+  }
+{% endschema %}
