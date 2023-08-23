@@ -1,0 +1,323 @@
+{{ 'sunday-home-page.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  @media only screen and (min-width: 200px) {
+    .home-banner-area{
+      {% if section.settings.image_product_width_mobile %}
+          height: {{ section.settings.image_banner_height_mobile | append: 'px' }};
+      {% endif %}
+    }
+    .home-banner-area .product-image-area {
+      {% if section.settings.image_product_width_mobile %}
+        width: {{ section.settings.image_product_width_mobile | append: 'px' }};
+      {% endif %}
+
+      {% if section.settings.image_product_position_right_mobile %}
+        right: {{ section.settings.image_product_position_right_mobile | append: 'px' }};
+      {% endif %}
+
+      {% if section.settings.image_product_position_bottom_mobile %}
+        bottom: -{{ section.settings.image_product_position_bottom_mobile | append: 'px' }};
+      {% endif %}
+    }
+    .home-banner-area .group-content-area .content-area .mobile-content {
+      {% if section.settings.content_banner_margin_top_mobile %}
+        margin-top: {{ section.settings.content_banner_margin_top_mobile | append: 'px' }};
+      {% endif %}
+    }
+  }
+
+  @media only screen and (min-width: 1025px) {
+    .home-banner-area{
+      {% if section.settings.image_product_width_desktop %}
+          height: {{ section.settings.image_banner_height_desktop | append: 'px' }};
+      {% endif %}
+    }
+    .home-banner-area .product-image-area {
+      {% if section.settings.image_product_width_desktop %}
+        width: {{ section.settings.image_product_width_desktop | append: 'px' }};
+      {% endif %}
+
+      {% if section.settings.image_product_position_right_desktop %}
+        right: {{ section.settings.image_product_position_right_desktop | append: 'px' }};
+      {% endif %}
+
+      {% if section.settings.image_product_position_bottom_desktop %}
+        bottom: -{{ section.settings.image_product_position_bottom_desktop | append: 'px' }};
+      {% endif %}
+    }
+    .home-banner-area .group-content-area .content-area .desktop-content {
+      {% if section.settings.content_banner_margin_top_desktop %}
+        margin-top: {{ section.settings.content_banner_margin_top_desktop | append: 'px' }};
+      {% endif %}
+    }
+  }
+
+  .home-banner-area .group-content-area .title-area h1 {
+    {% if section.settings.heading_align %}
+      text-align: {{ section.settings.heading_align }};
+    {% endif %}
+  }
+
+  .home-banner-area .group-content-area .content-area p {
+    {% if section.settings.content_align %}
+      text-align: {{ section.settings.content_align }};
+    {% endif %}
+  }
+{%- endstyle -%}
+
+<section class="home-banner-area">
+  <div class="background-image">
+    <img
+      class="mobile-image"
+      src="{{ section.settings.image_banner_mobile | default: 'https://cdn.shopify.com/s/files/1/0798/1577/0402/files/SundayVN-banner-mobile.png?v=1692088420' }}"
+      width="{{ section.settings.image_banner_mobile.width | default: '414' }}"
+      height="{{ section.settings.image_banner_mobile.height | default: '516' }}"
+      alt="{{ section.settings.image_banner_mobile.alt | default: 'SundayBanner'}}"
+    >
+
+    <img
+      class="desktop-image"
+      src="{{ section.settings.image_banner_desktop | default: 'https://cdn.shopify.com/s/files/1/0798/1577/0402/files/SunnyBanner.jpg?v=1690789591' }}"
+      width="{{ section.settings.image_banner_desktop.width | default: '1920'}}"
+      height="{{ section.settings.image_banner_desktop.height | default: '979' }}"
+      alt="{{ section.settings.image_banner_desktop.alt | default: 'SundayBanner'}}"
+    >
+  </div>
+
+  <div class="product-image-area">
+    {%- if section.settings.image_product -%}
+      {{ section.settings.image_product | image_url: width: 1024 | image_tag }}
+    {%- else -%}
+      <img
+        src="https://cdn.shopify.com/s/files/1/0798/1577/0402/files/Vitamin-D3-K2-no-bg.png?v=1690798827"
+        width="500"
+        height="611"
+        alt="SundayBannerProduct"
+      >
+    {%- endif -%}
+  </div>
+  <div class="group-content-area">
+    <div class="title-area">
+      {% if section.settings.heading_banner_desktop %}
+        <h1 class="desktop-title">{{ section.settings.heading_banner_desktop | upcase }}</h1>
+      {% endif %}
+      {% if section.settings.heading_banner_mobile %}
+        <h1 class="mobile-title">{{ section.settings.heading_banner_mobile | upcase }}</h1>
+      {% endif %}
+    </div>
+    <div class="content-area">
+      {% if section.settings.content_banner_desktop %}
+        <div class="desktop-content">
+          {{ section.settings.content_banner_desktop }}
+        </div>
+      {% endif %}
+
+      {% if section.settings.content_banner_mobile %}
+        <div class="mobile-content">
+          {{ section.settings.content_banner_mobile }}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "t:sections.sunday-home-page-banner.name",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image_banner_desktop",
+      "label": "t:sections.sunday-home-page-banner.settings.image_banner_desktop.label"
+    },
+    {
+      "type": "range",
+      "id": "image_banner_height_desktop",
+      "min": 100,
+      "max": 1000,
+      "step": 10,
+      "unit": "px",
+      "label": "t:sections.sunday-home-page-banner.settings.image_banner_height_desktop.label",
+      "default": 920
+    },
+    {
+      "type": "text",
+      "id": "heading_banner_desktop",
+      "default": "DINH DƯỠNG CAO CẤP<br>TỪ THIÊN NHIÊN",
+      "label": "t:sections.sunday-home-page-banner.settings.heading_banner_desktop.label"
+    },
+    {
+      "type": "richtext",
+      "id": "content_banner_desktop",
+      "default": "<p>Tất cả sản phẩm có chất lượng và độ tinh khiết cao nhất,<br> Các dưỡng chất được giữ gìn nguyên vẹn hoàn hảo nhất.</p>",
+      "label": "t:sections.sunday-home-page-banner.settings.content_banner_desktop.label"
+    },
+    {
+      "type": "range",
+      "id": "content_banner_margin_top_desktop",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "t:sections.sunday-home-page-banner.settings.content_banner_margin_top_desktop.label",
+      "default": 0
+    },
+
+    {
+      "type": "image_picker",
+      "id": "image_banner_mobile",
+      "label": "t:sections.sunday-home-page-banner.settings.image_banner_mobile.label"
+    },
+    {
+      "type": "range",
+      "id": "image_banner_height_mobile",
+      "min": 100,
+      "max": 600,
+      "step": 5,
+      "unit": "px",
+      "label": "t:sections.sunday-home-page-banner.settings.image_banner_height_mobile.label",
+      "default": 515
+    },
+    {
+      "type": "text",
+      "id": "heading_banner_mobile",
+      "default": "DINH DƯỠNG<br>CAO CẤP<br>TỪ THIÊN NHIÊN",
+      "label": "t:sections.sunday-home-page-banner.settings.heading_banner_mobile.label"
+    },
+    {
+      "type": "richtext",
+      "id": "content_banner_mobile",
+      "default": "<p>Tất cả sản phẩm có chất lượng và độ tinh khiết cao nhất, Các dưỡng chất được giữ gìn nguyên vẹn hoàn hảo nhất.</p>",
+      "label": "t:sections.sunday-home-page-banner.settings.content_banner_mobile.label"
+    },
+    {
+      "type": "range",
+      "id": "content_banner_margin_top_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "t:sections.sunday-home-page-banner.settings.content_banner_margin_top_mobile.label",
+      "default": 0
+    },
+
+    {
+      "type": "image_picker",
+      "id": "image_product",
+      "label": "t:sections.sunday-home-page-banner.settings.image_product.label"
+    },
+    {
+      "type": "range",
+      "id": "image_product_width_desktop",
+      "min": 100,
+      "max": 600,
+      "step": 5,
+      "unit": "px",
+      "label": "t:sections.sunday-home-page-banner.settings.image_product_width_desktop.label",
+      "default": 500
+    },
+    {
+      "type": "range",
+      "id": "image_product_position_right_desktop",
+      "min": 0,
+      "max": 300,
+      "step": 5,
+      "unit": "px",
+      "label": "t:sections.sunday-home-page-banner.settings.image_product_position_right_desktop.label",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "image_product_position_bottom_desktop",
+      "min": 0,
+      "max": 400,
+      "step": 5,
+      "unit": "px",
+      "label": "t:sections.sunday-home-page-banner.settings.image_product_position_bottom_desktop.label",
+      "default": 100
+    },
+
+    {
+      "type": "range",
+      "id": "image_product_width_mobile",
+      "min": 100,
+      "max": 300,
+      "step": 2,
+      "unit": "px",
+      "label": "t:sections.sunday-home-page-banner.settings.image_product_width_mobile.label",
+      "default": 172
+    },
+    {
+      "type": "range",
+      "id": "image_product_position_right_mobile",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "t:sections.sunday-home-page-banner.settings.image_product_position_right_mobile.label",
+      "default": 4
+    },
+    {
+      "type": "range",
+      "id": "image_product_position_bottom_mobile",
+      "min": 0,
+      "max": 300,
+      "step": 5,
+      "unit": "px",
+      "label": "t:sections.sunday-home-page-banner.settings.image_product_position_bottom_mobile.label",
+      "default": 50
+    },
+    {
+      "type": "select",
+      "id": "heading_align",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:sections.sunday-home-page-banner.settings.heading_align.options__1.label"
+        },
+        {
+          "value": "center",
+          "label": "t:sections.sunday-home-page-banner.settings.heading_align.options__2.label"
+        },
+        {
+          "value": "right",
+          "label": "t:sections.sunday-home-page-banner.settings.heading_align.options__3.label"
+        }
+      ],
+      "default": "center",
+      "label": "t:sections.sunday-home-page-banner.settings.heading_align.label"
+    },
+    {
+      "type": "select",
+      "id": "content_align",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:sections.sunday-home-page-banner.settings.heading_align.options__1.label"
+        },
+        {
+          "value": "center",
+          "label": "t:sections.sunday-home-page-banner.settings.heading_align.options__2.label"
+        },
+        {
+          "value": "right",
+          "label": "t:sections.sunday-home-page-banner.settings.heading_align.options__3.label"
+        }
+      ],
+      "default": "center",
+      "label": "t:sections.sunday-home-page-banner.settings.content_align.label"
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.sunday-home-page-banner.presets.name"
+    }
+  ]
+}
+{% endschema %}

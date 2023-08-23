@@ -359,7 +359,7 @@ class MenuDrawer extends HTMLElement {
     this.querySelectorAll('summary').forEach((summary) =>
       summary.addEventListener('click', this.onSummaryClick.bind(this))
     );
-    this.querySelectorAll('button:not(.localization-selector)').forEach((button) =>
+    this.querySelectorAll('button:not(.localization-selector), .icon-close-custom').forEach((button) =>
       button.addEventListener('click', this.onCloseButtonClick.bind(this))
     );
   }
@@ -798,7 +798,7 @@ class SlideshowComponent extends SliderComponent {
 
   setSlidePosition(position) {
     if (this.setPositionTimeout) clearTimeout(this.setPositionTimeout);
-    this.setPositionTimeout = setTimeout (() => {
+    this.setPositionTimeout = setTimeout(() => {
       this.slider.scrollTo({
         left: position,
       });
@@ -1257,3 +1257,10 @@ class ProductRecommendations extends HTMLElement {
 }
 
 customElements.define('product-recommendations', ProductRecommendations);
+
+//----------------------Custom Js----------------------
+// const iconCloseCustom = document.querySelector('.icon-close-custom');
+
+// iconCloseCustom.addEventListener("click", () => {
+//   closeMenuDrawer();
+// });

@@ -1,0 +1,53 @@
+{{ 'sunday-master-background-cta.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .background-cta-area {
+    {% if section.settings.slider_background != null %}
+      background-image: url('{{- section.settings.slider_background | image_url: width: 2048 -}}');
+    {% else %}
+      background-image: url('https://cdn.shopify.com/s/files/1/0798/1577/0402/files/Truecleanbeauty.jpg?v=1692241327');
+    {% endif %}
+  }
+{%- endstyle -%}
+
+<section class="background-cta-area">
+  <div class="button-area">
+    <a href="{{ section.settings.button_link | default: '#' }}" class="sd-button-third">
+      {{- section.settings.button_content -}}
+    </a>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "t:sections.sunday-master-background-cta.name",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "slider_background",
+      "label": "t:sections.sunday-master-background-cta.settings.slider_background.label"
+    },
+    {
+      "type": "text",
+      "id": "button_content",
+      "default": "Xem thêm",
+      "label": "t:sections.sunday-master-background-cta.settings.button_content.label"
+    },
+    {
+      "id": "button_link",
+      "type": "url",
+      "label": "t:sections.sunday-master-background-cta.settings.button_link.label"
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.sunday-master-background-cta.presets.name"
+    }
+  ]
+}
+{% endschema %}

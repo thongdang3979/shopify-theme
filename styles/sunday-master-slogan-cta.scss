@@ -1,0 +1,117 @@
+@import 'function.scss';
+
+@media only screen and (min-width: 200px) {
+    .slogan-area {
+        @include flexCustome(column, nowrap, center, center, center);
+        padding: 40px 20px 16px;
+
+        .title-area {
+            h2 {
+                @include customFont(24px, 700, 120%, $Gray-333, null, null);
+                text-transform: uppercase;
+                text-align: center;
+                margin: 0;
+            }
+        }
+
+        .slogan-content-area {
+            margin-top: 12px;
+
+            .slogan-tablet,.slogan-desktop {
+                display: none;
+            }
+
+            p {
+                @include customFont(14px, 500, 140%, $Gray-333, null, null);
+                text-align: center;
+                margin: 0;
+            }
+        }
+
+        .button-area {
+            margin-top: 16px;
+
+            a {
+                @include customFont(14px, 700, 160%, $Orange-CA9, null, null);
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 769px) {
+    .slogan-area {
+        padding: 60px;
+
+        .title-area {
+            h2 {
+                font-size: 44px;
+                font-weight: 600;
+                line-height: 160%;
+            }
+        }
+
+        .slogan-content-area {
+            margin-top: 44px;
+
+            .slogan-mobile {
+                display: none;
+            }
+
+            .slogan-tablet {
+                display: block;
+            }
+
+            p {
+                font-size: 18px;
+                font-weight: 500;
+                line-height: 160%;
+            }
+        }
+
+        .button-area {
+            margin-top: 34px;
+
+            a {
+                font-size: 18px;
+                line-height: 125%;
+            }
+        }
+
+    }
+}
+
+@media only screen and (min-width: 1025px) {
+    .slogan-area {
+        padding: 80px;
+
+        .title-area {
+            h2 {
+                font-size: 80px;
+                font-weight: 600;
+                line-height: 87.5%;
+            }
+        }
+
+        .slogan-content-area{
+            .slogan-tablet {
+                display: none;
+            }
+
+            .slogan-desktop {
+                display: block;
+            }
+        }
+
+        .button-area {
+            margin-top: 32px;
+            a {
+                font-size: 18px;
+                line-height: 125%;
+            }
+        }
+
+    }
+}

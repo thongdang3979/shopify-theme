@@ -1022,6 +1022,53 @@
               "label": "Subtext"
             }
           }
+        },
+        "footer-information": {
+          "name": "Footer Information",
+          "settings": {
+            "address_title": {
+              "label": "Address Title"
+            },
+            "address_content": {
+              "label": "Address Content"
+            },
+            "email_title": {
+              "label": "Email Title"
+            },
+            "email_content": {
+              "label": "Email Content"
+            }
+          }
+        },
+        "footer-menu": {
+          "name": "Footer Menu",
+          "settings": {
+            "menu_title": {
+              "label": "Menu Title"
+            },
+            "menu_list": {
+              "label": "Menu",
+              "info": "Displays only top-level menu items."
+            },
+            "menu_type": {
+              "label": "Menu Type",
+              "info": "Menu Type For Special Case In Mobile."
+            },
+            "menu_width_mobile": {
+              "info": "Menu Width For Mobile."
+            }
+          }
+        },
+        "footer-logo": {
+          "name": "Footer Logo",
+          "settings": {
+            "footer_logo_alignment": {
+              "label": "Footer Logo Align"
+            },
+            "footer_logo_height": {
+              "label": "Footer Logo Height"
+            }
+          }
         }
       },
       "settings": {
@@ -1082,6 +1129,9 @@
         },
         "enable_follow_on_shop": {
           "label": "Enable Follow on Shop"
+        },
+        "footer_copyright": {
+          "label": "Footer Copyright"
         }
       }
     },
@@ -3359,6 +3409,212 @@
       },
       "presets": {
         "name": "Collapsible content"
+      }
+    },
+    "sunday-home-page-banner": {
+      "name": "Sunday Home Banner",
+      "settings": {
+        "image_banner_desktop": {
+          "label": "Banner For Desktop"
+        },
+        "image_banner_height_desktop": {
+          "label": "Height Banner For Desktop"
+        },
+        "heading_banner_desktop": {
+          "label": "Heading Banner Desktop"
+        },
+        "content_banner_desktop": {
+          "label": "Content Banner Desktop"
+        },
+        "content_banner_margin_top_desktop": {
+          "label": "Content Banner Gap Desktop"
+        },
+        "image_banner_mobile": {
+          "label": "Banner For Mobile"
+        },
+        "image_banner_height_mobile": {
+          "label": "Height Banner For Mobile"
+        },
+        "heading_banner_mobile": {
+          "label": "Heading Banner Mobile"
+        },
+        "content_banner_mobile": {
+          "label": "Content Banner Mobile"
+        },
+        "content_banner_margin_top_mobile": {
+          "label": "Content Banner Gap Mobile"
+        },
+        "image_product": {
+          "label": "Image Product On Banner"
+        },
+        "image_product_width_desktop": {
+          "label": "Width Image Product On Desktop"
+        },
+        "image_product_position_right_desktop": {
+          "label": "Position Right Image Product On Desktop"
+        },
+        "image_product_position_bottom_desktop": {
+          "label": "Position Bottom Image Product On Desktop"
+        },
+        "image_product_width_mobile": {
+          "label": "Width Image Product On Mobile"
+        },
+        "image_product_position_right_mobile": {
+          "label": "Position Right Image Product On Mobile"
+        },
+        "image_product_position_bottom_mobile": {
+          "label": "Position Bottom Image Product On Mobile"
+        },
+        "heading_align": {
+          "label": "Heading alignment",
+          "options__1": {
+            "label": "Left"
+          },
+          "options__2": {
+            "label": "Center"
+          },
+          "options__3": {
+            "label": "Right"
+          }
+        },
+        "content_align": {
+          "label": "Heading alignment",
+          "options__1": {
+            "label": "Left"
+          },
+          "options__2": {
+            "label": "Center"
+          },
+          "options__3": {
+            "label": "Right"
+          }
+        }
+      },
+      "presets": {
+        "name": "Sunday Home Banner"
+      }
+    },
+    "sunday-master-best-selling": {
+      "name": "Sunday Best Selling Product",
+      "settings": {
+        "section_heading": {
+          "label": "Section Heading"
+        },
+        "product_limit": {
+          "label": "Product limt"
+        },
+        "button_content": {
+          "label": "Button content"
+        }
+      },
+      "presets": {
+        "name": "Sunday Best Selling Product"
+      }
+    },
+    "sunday-master-product-slider-background": {
+      "name": "Sunday Product Slider Background",
+      "settings": {},
+      "blocks": {
+        "name": "Product Slider",
+        "settings": {
+          "sub_title": {
+            "label": "Sub Title"
+          },
+          "heading_title": {
+            "label": "Heading Title"
+          },
+          "slider_background": {
+            "label": "Background Image"
+          },
+          "slider_background_position_desktop": {
+            "label": "Background Image Desktop Position"
+          },
+          "button_content": {
+            "label": "Button Content"
+          },
+          "button_link": {
+            "label": "Link"
+          }
+        }
+      },
+      "presets": {
+        "name": "Sunday Product Slider Background"
+      }
+    },
+    "sunday-master-background-cta": {
+      "name": "Sunday Background CTA",
+      "settings": {
+        "slider_background": {
+          "label": "Background Image"
+        },
+        "button_content": {
+          "label": "Button Content"
+        },
+        "button_link": {
+          "label": "Link"
+        }
+      },
+      "presets": {
+        "name": "Sunday Background CTA"
+      }
+    },
+    "sunday-master-slogan-cta": {
+      "name": "Sunday Slogan CTA",
+      "settings": {
+        "heading_title": {
+          "label": "Heading Title"
+        },
+        "slogan_desktop": {
+          "label": "Slogan Desktop"
+        },
+        "slogan_tablet": {
+          "label": "Slogan Tablet"
+        },
+        "slogan_mobile": {
+          "label": "Slogan Mobike"
+        },
+        "button_content": {
+          "label": "Button Content"
+        },
+        "button_link": {
+          "label": "Link"
+        }
+      },
+      "presets": {
+        "name": "Sunday Slogan CTA"
+      }
+    },
+    "sunday-master-background-content": {
+      "name": "Sunday Background Content",
+      "settings": {
+        "slider_background_desktop": {
+          "label": "Background Image Desktop"
+        },
+        "content_desktop": {
+          "label": "Content Desktop"
+        },
+        "heading_title_desktop": {
+          "label": "Title Desktop"
+        },
+        "slider_background_mobile": {
+          "label": "Background Image Mobike"
+        },
+        "content_mobile": {
+          "label": "Content Mobile"
+        },
+        "heading_title_mobile": {
+          "label": "Title Mobile"
+        }
+      },
+      "presets": {
+        "name": "Sunday Background Content"
+      }
+    },
+    "sunday-master-logo": {
+      "name": "Sunday Logo",
+      "settings": {},
+      "presets": {
+        "name": "Sunday Logo"
       }
     }
   }

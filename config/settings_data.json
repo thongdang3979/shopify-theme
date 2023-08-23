@@ -58,11 +58,22 @@
             "secondary_button_label": "#FFFFFF",
             "shadow": "#121212"
           }
+        },
+        "background-custom": {
+          "settings": {
+            "background": "#FFFFFF",
+            "background_gradient": "",
+            "text": "#FFFFFF",
+            "button": "#FFFFFF",
+            "button_label": "#FFFFFF",
+            "secondary_button_label": "#FFFFFF",
+            "shadow": "#FFFFFF"
+          }
         }
       },
-      "type_header_font": "assistant_n4",
+      "type_header_font": "quicksand_n4",
       "heading_scale": 100,
-      "type_body_font": "assistant_n4",
+      "type_body_font": "quicksand_n4",
       "body_scale": 100,
       "page_width": 1200,
       "spacing_sections": 0,

@@ -1,0 +1,209 @@
+@import 'function.scss';
+
+@media only screen and (min-width: 200px) {
+    .product-slider-background-area {
+        .product-background-slider {
+            margin-bottom: 0;
+            
+            .slider-container {
+                position: relative;
+                height: 812px;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center center;
+
+                .sub-title-area {
+                    position: absolute;
+                    top: 16px;
+                    left: 50%;
+                    transform: translateX(-50%);
+
+                    h3 {
+                        @include customFont(16px, 500, 100%, $White-FFF, null, null);
+                        text-transform: uppercase;
+                        margin: 0;
+                    }
+                }
+
+                .heading-title-area {
+                    position: absolute;
+                    top: 36px;
+                    left: 50%;
+                    transform: translateX(-50%);
+
+                    h2 {
+                        @include customFont(24px, 700, 100%, $Gray-333, null, null);
+                        text-transform: uppercase;
+                        margin: 0;
+                    }
+                }
+
+                .button-area {
+                    @include flexCustome(row, nowrap, center, center, center);
+                    position: absolute;
+                    bottom: 50px;
+                    width: 100%;
+
+                    a {
+                        @include customFont(17px, 700, 100%, $White-FFF, null, null);
+                        @include customButton($Orange-CA9, $Orange-CA9, $Gray-5E6, $Gray-5E6, $White-FFF, $White-FFF);
+                        padding: 16px 38px;
+                    }
+                }
+            }
+
+            .slick-prev,
+            .slick-next {
+                background: transparent;
+                border: none;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                z-index: 99;
+                display: none !important;
+
+                &::before {
+                    content: "";
+                    display: none;
+                }
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+
+            .slick-prev {
+                left: 0;
+            }
+
+            .slick-next {
+                right: 0;
+            }
+
+            .slick-dots {
+                position: absolute;
+                bottom: 16px;
+
+                li {
+                    width: 10px;
+                    height: 10px;
+
+                    button:before {
+                        content: "";
+                        background: transparent;
+                        border: 1px solid $Orange-CA9;
+                        border-radius: 50%;
+                        width: 10px;
+                        height: 10px;
+                        opacity: 1;
+                    }
+
+                    &.slick-active {
+                        button:before {
+                            background: $Orange-CA9;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+@media only screen and (min-width: 769px) {
+    .product-slider-background-area {
+        .product-background-slider {
+
+            .slider-container {
+                height: 864px;
+
+                .sub-title-area {
+                    top: 60px;
+
+                    h3 {
+                        font-size: 26px;
+                    }
+                }
+
+                .heading-title-area {
+                    top: 80px;
+
+                    h2 {
+                        font-size: 44px;
+                        font-weight: 600;
+                        line-height: 160%;
+                    }
+                }
+
+                .button-area {
+                    @include flexCustome(row, nowrap, center, center, center);
+                    position: absolute;
+                    bottom: 50px;
+                    width: 100%;
+
+                    a {
+                        padding: 16px 38px;
+                    }
+                }
+            }
+
+            .slick-prev,
+            .slick-next {
+                display: block !important;
+            }
+
+            .slick-prev {
+                left: 30px;
+            }
+
+            .slick-next {
+                right: 30px;
+            }
+
+        }
+    }
+}
+
+@media only screen and (min-width: 1025px) {
+    .product-slider-background-area {
+        .product-background-slider {
+
+            .slider-container {
+                background-position-y: -260px;
+
+                .sub-title-area {
+                    h3 {
+                        font-size: 40px;
+                    }
+                }
+
+                .heading-title-area {
+                    top: 105px;
+
+                    h2 {
+                        font-size: 80px;
+                        font-weight: 600;
+                        line-height: 87.5%;
+                    }
+                }
+
+                .button-area {
+                    bottom: 57px;
+                }
+            }
+
+            .slick-prev {
+                left: 41px;
+            }
+
+            .slick-next {
+                right: 41px;
+            }
+
+            .slick-dots{
+                bottom: 22px;
+            }
+
+        }
+    }
+}

@@ -1,0 +1,45 @@
+@import 'function.scss';
+
+@media only screen and (min-width: 200px) {
+    .background-cta-area {
+        position: relative;
+        height: 293px;
+
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+
+        @include customTransition(all 0.3s linear);
+
+        .button-area {
+            @include flexCustome(row, nowrap, null, null, null);
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+
+            a {
+                @include customFont(17px, 700, 100%, $White-FFF, null, null);
+                @include customButton(transparent, $Green-3A4, $Orange-CA9, $Orange-CA9, $White-FFF, $White-FFF);
+                border-width: 2px;
+                padding: 16px 38px;
+
+                &:hover {
+                    border-width: 2px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 769px) {
+    .background-cta-area {
+        height: 616.39px;
+
+        .button-area {
+            position: absolute;
+            bottom: 60px;
+            left: unset;
+            right: 60px;
+        }
+    }
+}
