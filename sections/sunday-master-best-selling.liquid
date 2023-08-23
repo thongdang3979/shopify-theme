@@ -1,0 +1,85 @@
+{{ 'sunday-master-featured-product.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'sunday-master-featured-product.js' | asset_url }}" defer="defer"></script>
+
+<section class="featured-product-area page-width">
+  <div class="title-area">
+    <h2>{{ section.settings.section_heading | upcase }}</h2>
+  </div>
+  {%- for collection in section.settings.collection_list -%}
+    <div class="featured-product-slider">
+      {% for product in collections[collection.handle].products limit: section.settings.product_limit %}
+        <div class="item">
+          <a class="product-image-area" href="{{ product.url }}">
+            <img
+              src="{{ product.featured_image.src | img_url: 'medium' }}"
+              width="{{ product.featured_image.width }}"
+              height="{{ product.featured_image.height }}"
+              alt="{{ product.title }}"
+            >
+
+            <div class="product-tag-area">
+              <h3>HOT</h3>
+            </div>
+          </a>
+          <div class="group-content-area">
+            <div class="product-title-area">
+              <a href="{{ product.url }}">{{ product.title }}</a>
+            </div>
+            <div class="product-description-area">
+              <p>{{ product.description }}</p>
+            </div>
+            <div class="button-area">
+              <a class="sd-button-primary" href="{{ product.url }}">{{ section.settings.button_content }}</a>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  {% endfor %}
+</section>
+
+{% schema %}
+{
+  "name": "t:sections.sunday-master-best-selling.name",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "text",
+      "id": "section_heading",
+      "default": "Sản phẩm bán chạy",
+      "label": "t:sections.sunday-master-best-selling.settings.section_heading.label"
+    },
+    {
+      "type": "collection_list",
+      "id": "collection_list",
+      "label": "Collections",
+      "limit": 1
+    },
+    {
+      "type": "range",
+      "id": "product_limit",
+      "min": 1,
+      "max": 10,
+      "step": 1,
+      "unit": "EA",
+      "label": "t:sections.sunday-master-best-selling.settings.product_limit.label",
+      "default": 4
+    },
+    {
+      "type": "text",
+      "id": "button_content",
+      "default": "Xem thêm",
+      "label": "t:sections.sunday-master-best-selling.settings.button_content.label"
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.sunday-master-best-selling.presets.name"
+    }
+  ]
+}
+{% endschema %}

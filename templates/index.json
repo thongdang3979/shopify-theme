@@ -1,210 +1,108 @@
 {
   "sections": {
-    "image_banner": {
-      "type": "image-banner",
+    "sunday-home-page-banner": {
+      "type": "sunday-home-page-banner",
+      "settings": {
+        "image_banner_desktop": "",
+        "image_banner_height_desktop": 920,
+        "heading_banner_desktop": "DINH DƯỠNG CAO CẤP<br>TỪ THIÊN NHIÊN",
+        "content_banner_desktop": "<p>Tất cả sản phẩm có chất lượng và độ tinh khiết cao nhất,<br> Các dưỡng chất được giữ gìn nguyên vẹn hoàn hảo nhất.</p>",
+        "content_banner_margin_top_desktop": 0,
+        "image_banner_mobile": "",
+        "image_banner_height_mobile": 515,
+        "heading_banner_mobile": "DINH DƯỠNG<br>CAO CẤP<br>TỪ THIÊN NHIÊN",
+        "content_banner_mobile": "<p>Tất cả sản phẩm có chất lượng và độ tinh khiết cao nhất, Các dưỡng chất được giữ gìn nguyên vẹn hoàn hảo nhất.</p>",
+        "content_banner_margin_top_mobile": 0,
+        "image_product": "",
+        "image_product_width_desktop": 500,
+        "image_product_position_right_desktop": 60,
+        "image_product_position_bottom_desktop": 100,
+        "image_product_width_mobile": 172,
+        "image_product_position_right_mobile": 4,
+        "image_product_position_bottom_mobile": 50,
+        "heading_align": "center",
+        "content_align": "center"
+      }
+    },
+    "sunday-master-best-selling": {
+      "type": "sunday-master-best-selling",
+      "settings": {
+        "section_heading": "Sản phẩm bán chạy",
+        "collection_list": [
+          "featured-product"
+        ],
+        "product_limit": 4,
+        "button_content": "Xem thêm"
+      }
+    },
+    "sunday-master-product-slider-background": {
+      "type": "sunday-master-product-slider-background",
       "blocks": {
-        "heading": {
-          "type": "heading",
+        "slide-0": {
+          "type": "slide",
           "settings": {
-            "heading": "Image banner",
-            "heading_size": "h0"
+            "sub_title": "",
+            "heading_title": "VITAMIN D",
+            "slider_background": "",
+            "slider_background_position_desktop": 260,
+            "button_content": "Xem thêm",
+            "button_link": ""
           }
         },
-        "text": {
-          "type": "text",
+        "slide-1": {
+          "type": "slide",
           "settings": {
-            "text": "Give customers details about the banner image(s) or content on the template.",
-            "text_style": "body"
-          }
-        },
-        "button": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Shop all",
-            "button_link_1": "shopify://collections/all",
-            "button_style_secondary_1": true,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
+            "sub_title": "",
+            "heading_title": "VITAMIN D",
+            "slider_background": "//4a625d-2.myshopify.com/cdn/shop/files/26.05.23_-_Vitamin_D_Vietnam_Campaign-13-rs.png?v=1692158779&width=2048",
+            "slider_background_position_desktop": 260,
+            "button_content": "Xem thêm",
+            "button_link": ""
           }
         }
       },
       "block_order": [
-        "heading",
-        "text",
-        "button"
-      ],
+        "slide-0",
+        "slide-1"
+      ]
+    },
+    "sunday-master-background-cta": {
+      "type": "sunday-master-background-cta",
       "settings": {
-        "image_overlay_opacity": 40,
-        "image_height": "large",
-        "desktop_content_position": "bottom-center",
-        "show_text_box": false,
-        "desktop_content_alignment": "center",
-        "color_scheme": "inverse",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": false,
-        "show_text_below": false
+        "section_heading": "Sản phẩm bán chạy",
+        "product_limit": "4",
+        "button_content": "Xem thêm"
       }
     },
-    "rich_text": {
-      "type": "rich-text",
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "heading": "Talk about your brand",
-            "heading_size": "h1"
-          }
-        },
-        "text": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
-          }
-        }
-      },
-      "block_order": [
-        "heading",
-        "text"
-      ],
+    "sunday-master-slogan-cta": {
+      "type": "sunday-master-slogan-cta",
       "settings": {
-        "color_scheme": "background-1",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 0
+        "heading_title": "TRIẾT LÝ KINH DOANH",
+        "slogan_desktop": "<p>“Sunday Natural mong muốn tạo ra những sản phẩm có thể đáp ứng các tiêu chuẩn cao nhất cả về chất lượng<br> lẫn độ tinh khiết; giá trị cốt lõi của chúng tôi chính là các thành phần hữu cơ và có nguồn gốc từ thiên nhiên.”</p>",
+        "slogan_tablet": "<p>“Sunday Natural mong muốn tạo ra những sản phẩm có thể đáp ứng các<br> tiêu chuẩn cao nhất cả về chất lượng lẫn độ tinh khiết; giá trị cốt lõi của<br> chúng tôi chính là các thành phần hữu cơ và có nguồn gốc từ thiên nhiên.”</p>",
+        "slogan_mobile": "<p>“Sunday Natural mong muốn tạo ra những sản phẩm có thể đáp ứng các tiêu chuẩn cao nhất cả về chất lượng lẫn độ tinh khiết; giá trị cốt lõi của chúng tôi chính là các thành phần hữu cơ và có nguồn gốc từ thiên nhiên.”</p>",
+        "button_content": "Xem thêm",
+        "button_link": ""
       }
     },
-    "featured_collection": {
-      "type": "featured-collection",
+    "sunday-master-background-content": {
+      "type": "sunday-master-background-content",
       "settings": {
-        "title": "Featured products",
-        "heading_size": "h2",
-        "collection": "all",
-        "products_to_show": 8,
-        "columns_desktop": 4,
-        "color_scheme": "background-1",
-        "show_view_all": false,
-        "swipe_on_mobile": false,
-        "image_ratio": "adapt",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "columns_mobile": "2",
-        "padding_top": 28,
-        "padding_bottom": 36
-      }
-    },
-    "collage": {
-      "type": "collage",
-      "blocks": {
-        "collection-0": {
-          "type": "collection",
-          "settings": {
-            "collection": ""
-          }
-        },
-        "product": {
-          "type": "product",
-          "settings": {
-            "product": "",
-            "second_image": false
-          }
-        },
-        "collection-1": {
-          "type": "collection",
-          "settings": {
-            "collection": ""
-          }
-        }
-      },
-      "block_order": [
-        "collection-0",
-        "product",
-        "collection-1"
-      ],
-      "settings": {
-        "heading": "Multimedia collage",
-        "heading_size": "h2",
-        "desktop_layout": "left",
-        "mobile_layout": "collage",
-        "color_scheme": "background-1",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "video": {
-      "type": "video",
-      "settings": {
-        "heading": "",
-        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-        "heading_size": "h1",
-        "description": "",
-        "full_width": false,
-        "color_scheme": "background-1",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "multicolumn": {
-      "type": "multicolumn",
-      "blocks": {
-        "column1": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column2": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column3": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "column1",
-        "column2",
-        "column3"
-      ],
-      "settings": {
-        "title": "",
-        "heading_size": "h1",
-        "image_width": "third",
-        "image_ratio": "adapt",
-        "columns_desktop": 3,
-        "column_alignment": "center",
-        "background_style": "none",
-        "button_label": "",
-        "button_link": "",
-        "swipe_on_mobile": false,
-        "color_scheme": "background-1",
-        "columns_mobile": "1",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "slider_background_desktop": "",
+        "content_desktop": "<p>Sức khoẻ tốt chính là cách đơn giản nhất để con người<br> có thể sống lâu hơn</p>",
+        "heading_title_desktop": "Đức Phật",
+        "slider_background_mobile": "",
+        "content_mobile": "<p>Khoẻ mạnh là giàu có, bình thản là an vui</p>",
+        "heading_title_mobile": "Đức Phật"
       }
     }
   },
   "order": [
-    "image_banner",
-    "rich_text",
-    "featured_collection",
-    "collage",
-    "video",
-    "multicolumn"
+    "sunday-home-page-banner",
+    "sunday-master-best-selling",
+    "sunday-master-product-slider-background",
+    "sunday-master-background-cta",
+    "sunday-master-slogan-cta",
+    "sunday-master-background-content"
   ]
 }

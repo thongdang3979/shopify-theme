@@ -20,25 +20,6 @@
       <div class="menu-drawer__inner-container">
         <div class="menu-drawer__navigation-container">
           <nav class="menu-drawer__navigation">
-            <div class="menu-topbar-area">
-              <div class="menu-title-area">
-                <h3>DANH MỤC</h3>
-              </div>
-              <div class="group-menu-content-area">
-                <div class="language-area">
-                  <a href="#">EN</a>
-                  <div class="group-line-area">
-                    <span></span>
-                    <span></span>
-                  </div>
-                  <a href="#" class="active">VN</a>
-                </div>
-                <div class="icon-area">
-                  {% render 'icon-close-custom' %}
-                </div>
-              </div>
-            </div>
-            <div class="menu-topbar-line-area"></div>
             <ul class="menu-drawer__menu has-submenu list-menu" role="list">
               {%- for link in section.settings.menu.links -%}
                 <li>

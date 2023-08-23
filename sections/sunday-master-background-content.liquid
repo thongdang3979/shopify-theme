@@ -1,0 +1,93 @@
+{{ 'sunday-master-background-content.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+    @media (min-width: 200px) {
+      .background-content-area {
+        {% if section.settings.slider_background_desktop != null %}
+          background: url('{{- section.settings.slider_background_desktop | image_url: width: 1024 -}}'), lightgray;
+        {% else %}
+          background: url('https://cdn.shopify.com/s/files/1/0798/1577/0402/files/about-us-mobile.png?v=1692334098'), lightgray;
+        {% endif %}
+      }
+    }
+
+    @media (min-width: 769px) {
+    .background-content-area {
+      {% if section.settings.slider_background_desktop != null %}
+        background: url('{{- section.settings.slider_background_desktop | image_url: width: 2048 -}}'), lightgray;
+      {% else %}
+        background: url('https://cdn.shopify.com/s/files/1/0798/1577/0402/files/about-us-desktop.png?v=1692334101'), lightgray;
+      {% endif %}
+    }
+  }
+{%- endstyle -%}
+
+<section class="background-content-area">
+  <div class="group-content-area">
+    <div class="content-area content-desktop">
+      {{ section.settings.content_desktop | rich_text }}
+    </div>
+    <div class="content-area content-mobile">
+      {{ section.settings.content_mobile | rich_text }}
+    </div>
+    <div class="title-area title-desktop">
+      <h3>{{ section.settings.heading_title_desktop }}</h3>
+    </div>
+    <div class="title-area title-mobile">
+      <h3>{{ section.settings.heading_title_mobile }}</h3>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "t:sections.sunday-master-background-content.name",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "slider_background_desktop",
+      "label": "t:sections.sunday-master-background-content.settings.slider_background_desktop.label"
+    },
+    {
+      "type": "richtext",
+      "id": "content_desktop",
+      "default": "<p>Sức khoẻ tốt chính là cách đơn giản nhất để con người<br> có thể sống lâu hơn</p>",
+      "label": "t:sections.sunday-master-background-content.settings.content_desktop.label"
+    },
+    {
+      "type": "text",
+      "id": "heading_title_desktop",
+      "default": "Đức Phật",
+      "label": "t:sections.sunday-master-background-content.settings.heading_title_desktop.label"
+    },
+
+    {
+      "type": "image_picker",
+      "id": "slider_background_mobile",
+      "label": "t:sections.sunday-master-background-content.settings.slider_background_mobile.label"
+    },
+    {
+      "type": "richtext",
+      "id": "content_mobile",
+      "default": "<p>Khoẻ mạnh là giàu có, bình thản là an vui</p>",
+      "label": "t:sections.sunday-master-background-content.settings.content_mobile.label"
+    },
+    {
+      "type": "text",
+      "id": "heading_title_mobile",
+      "default": "Đức Phật",
+      "label": "t:sections.sunday-master-background-content.settings.heading_title_mobile.label"
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.sunday-master-background-content.presets.name"
+    }
+  ]
+}
+{% endschema %}

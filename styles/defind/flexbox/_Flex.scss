@@ -1,0 +1,57 @@
+//----------Flex Custom----------
+@mixin flexCustome($flex-direction-value, $flex-wrap-value, $align-content-value, $justify-content-value, $align-items-value, $gap-value: 0) {
+    display: -webkit-box;
+    /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;
+    /* TWEENER - IE 10 */
+    display: -webkit-flex;
+    /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex;
+    /* NEW, Spec - Firefox, Chrome, Opera */
+
+    @if $flex-direction-value !=null {
+        flex-direction: $flex-direction-value;
+    }
+
+    @if $flex-wrap-value !=null {
+        flex-wrap: $flex-wrap-value;
+    }
+
+    @if $align-content-value !=null {
+        align-content: $align-content-value;
+    }
+
+    @if $justify-content-value !=null {
+        justify-content: $justify-content-value;
+    }
+
+    @if $align-items-value !=null {
+        align-items: $align-items-value;
+    }
+
+    @if $gap-value !=0 {
+        gap: $gap-value;
+    }
+}
+
+//----------Flex Center----------
+@mixin flexCenter($flex-direction-value, $flex-wrap-value, $gap-value: 0) {
+    display: -webkit-box;
+    /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;
+    /* TWEENER - IE 10 */
+    display: -webkit-flex;
+    /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex;
+    /* NEW, Spec - Firefox, Chrome, Opera */
+
+    flex-direction: $flex-direction-value;
+    flex-wrap: $flex-wrap-value;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+
+    @if $gap-value !=0 {
+        gap: $gap-value;
+    }
+}

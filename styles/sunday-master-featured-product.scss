@@ -1,0 +1,287 @@
+@import 'function.scss';
+
+@media only screen and (min-width: 200px) {
+
+    .featured-product-area {
+        padding: 72px 12px 44px;
+
+        .title-area {
+            h2 {
+                @include customFont(24px, 700, 100%, $Gray-333, null, null);
+                text-align: center;
+                text-transform: uppercase;
+                margin: 0;
+            }
+        }
+
+        .featured-product-slider {
+            margin-top: 32px;
+
+            /* the slides */
+            .slick-track {
+                display: flex !important;
+            }
+
+            .slick-slide {
+                margin: 0 12px;
+                height: inherit !important;
+            }
+
+            /* the parent */
+            .slick-list {
+                margin: 0 -12px;
+            }
+
+            .item {
+                @include flexCustome(column, nowrap, center, center, center, 20px);
+                position: relative;
+
+                .product-image-area {
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: contain;
+                    }
+
+                    .product-tag-area {
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        padding: 22px 12px;
+                        background: $Orange-CA9;
+                        border-radius: 50%;
+
+                        h3 {
+                            @include customFont(18px, 700, 100%, $White-FFF, null, null);
+                            text-transform: uppercase;
+                            margin: 0;
+                        }
+                    }
+                }
+
+                .group-content-area {
+                    @include flexCustome(column, nowrap, center, center, center, 16px);
+
+                    .product-title-area {
+                        height: 40px;
+
+                        a {
+                            @include customFont(16px, 600, 120%, $Gray-343, null, null);
+                            margin: 0;
+                            display: -webkit-box;
+                            -webkit-box-orient: vertical;
+                            -webkit-line-clamp: 2;
+                            overflow: hidden;
+                            text-decoration: none;
+                        }
+                    }
+
+                    .product-description-area {
+                        display: none;
+
+                        p {
+                            @include customFont(16px, 500, 150%, $Gray-333, null, null);
+                            display: -webkit-box;
+                            -webkit-box-orient: vertical;
+                            -webkit-line-clamp: 3;
+                            overflow: hidden;
+                            margin: 0;
+                        }
+                    }
+
+                    .button-area {
+                        @include flexCustome(column, nowrap, null, null, null);
+
+                        a{
+                            @include customFont(14px, 700, 100%, $Orange-CA9, null, null);
+                            @include customButton(transparent, $Orange-CA9, $Gray-5E6, $Gray-5E6, $Orange-CA9, $White-FFF);
+                        }
+                    }
+                }
+
+            }
+
+            .slick-prev,
+            .slick-next {
+                background: transparent;
+                border: none;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                z-index: 99;
+
+                &::before{
+                    content: "";
+                    display: none;
+                }
+
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+
+            .slick-prev {
+                left: -12px;
+            }
+
+            .slick-next {
+                right: -12px;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 769px) {
+
+    .featured-product-area {
+        padding: 72px 44px 60px;
+
+        .title-area {
+            h2 {
+                font-size: 44px;
+                font-weight: 600;
+                line-height: 160%;
+            }
+        }
+
+        .featured-product-slider {
+
+            /* the slides */
+            .slick-track {
+                display: flex !important;
+            }
+
+            .slick-slide {
+                margin: 0 16px;
+                height: inherit !important;
+            }
+
+            /* the parent */
+            .slick-list {
+                margin: 0 -16px;
+            }
+
+            .item {
+                .product-image-area {
+                    .product-tag-area {
+                        padding: 30px 16px;
+                        background: $Orange-CA9;
+
+                        h3 {
+                            font-size: 30px;
+                        }
+                    }
+                }
+
+                .group-content-area {
+                    gap: 24px;
+
+                    .product-title-area {
+                        height: 65px;
+
+                        a {
+                            font-size: 28px;
+                        }
+                    }
+
+                    .button-area{
+                        a{
+                            font-size: 17px;
+                            padding: 16px 24px;
+                        }
+                    }
+                }
+            }
+
+            .slick-prev {
+                left: -36px;
+            }
+
+            .slick-next {
+                right: -36px;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1025px) {
+
+    .featured-product-area {
+        padding: 135px 100px 80px;
+
+        .title-area {
+            h2 {
+                font-size: 44px;
+                font-weight: 600;
+                line-height: 160%;
+            }
+        }
+
+        .featured-product-slider {
+
+            /* the slides */
+            .slick-track {
+                display: flex !important;
+            }
+
+            .slick-slide {
+                margin: 0 44px;
+                height: inherit !important;
+            }
+
+            /* the parent */
+            .slick-list {
+                margin: 0 -44px;
+            }
+
+            .item {
+                flex-direction: row;
+                gap: 24px;
+                align-items: flex-start;
+
+                .product-image-area {
+                    width: 45%;
+                    max-width: 264px;
+                    position: relative;
+                }
+
+                .group-content-area {
+                    width: 55%;
+                    flex: 1;
+                    height: 100%;
+                    justify-content: unset;
+                    align-items: unset;
+
+                    .product-title-area {
+                        height: unset;
+
+                        a {
+                            font-size: 36px;
+                            line-height: 125%;
+                        }
+                    }
+
+                    .product-description-area {
+                        display: block;
+                    }
+
+                    .button-area {
+                        margin-top: auto;
+                        align-items: flex-end;
+                    }
+                }
+
+
+
+            }
+
+            .slick-prev {
+                left: -72px;
+            }
+
+            .slick-next {
+                right: -72px;
+            }
+        }
+    }
+}

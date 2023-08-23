@@ -1,0 +1,76 @@
+{{ 'sunday-master-slogan-cta.css' | asset_url | stylesheet_tag }}
+
+<section class="slogan-area">
+  <div class="title-area">
+    <h2>{{ section.settings.heading_title }}</h2>
+  </div>
+  <div class="slogan-content-area">
+    <div class="slogan-desktop">
+      {{ section.settings.slogan_desktop | rich_text }}
+    </div>
+    <div class="slogan-tablet">
+      {{ section.settings.slogan_tablet | rich_text }}
+    </div>
+    <div class="slogan-mobile">
+      {{ section.settings.slogan_mobile | rich_text }}
+    </div>
+  </div>
+  <div class="button-area">
+    <a href="{{ section.settings.button_link | default: '#' }}" class="sd-button-third">
+      {{- section.settings.button_content -}}
+    </a>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "t:sections.sunday-master-slogan-cta.name",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading_title",
+      "default": "TRIẾT LÝ KINH DOANH",
+      "label": "t:sections.sunday-master-slogan-cta.settings.heading_title.label"
+    },
+    {
+      "type": "richtext",
+      "id": "slogan_desktop",
+      "default": "<p>“Sunday Natural mong muốn tạo ra những sản phẩm có thể đáp ứng các tiêu chuẩn cao nhất cả về chất lượng<br> lẫn độ tinh khiết; giá trị cốt lõi của chúng tôi chính là các thành phần hữu cơ và có nguồn gốc từ thiên nhiên.”</p>",
+      "label": "t:sections.sunday-master-slogan-cta.settings.slogan_desktop.label"
+    },
+    {
+      "type": "richtext",
+      "id": "slogan_tablet",
+      "default": "<p>“Sunday Natural mong muốn tạo ra những sản phẩm có thể đáp ứng các<br> tiêu chuẩn cao nhất cả về chất lượng lẫn độ tinh khiết; giá trị cốt lõi của<br> chúng tôi chính là các thành phần hữu cơ và có nguồn gốc từ thiên nhiên.”</p>",
+      "label": "t:sections.sunday-master-slogan-cta.settings.slogan_tablet.label"
+    },
+    {
+      "type": "richtext",
+      "id": "slogan_mobile",
+      "default": "<p>“Sunday Natural mong muốn tạo ra những sản phẩm có thể đáp ứng các tiêu chuẩn cao nhất cả về chất lượng lẫn độ tinh khiết; giá trị cốt lõi của chúng tôi chính là các thành phần hữu cơ và có nguồn gốc từ thiên nhiên.”</p>",
+      "label": "t:sections.sunday-master-slogan-cta.settings.slogan_mobile.label"
+    },
+    {
+      "type": "text",
+      "id": "button_content",
+      "default": "Xem thêm",
+      "label": "t:sections.sunday-master-slogan-cta.settings.button_content.label"
+    },
+    {
+      "id": "button_link",
+      "type": "url",
+      "label": "t:sections.sunday-master-slogan-cta.settings.button_link.label"
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.sunday-master-slogan-cta.presets.name"
+    }
+  ]
+}
+{% endschema %}

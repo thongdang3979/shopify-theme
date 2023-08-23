@@ -6,31 +6,65 @@
       "type": "footer",
       "blocks": {
         "footer-0": {
-          "type": "link_list",
+          "type": "footer-logo",
           "settings": {
-            "heading": "Quick links",
-            "menu": "footer"
+            "footer_logo_alignment": "left",
+            "footer_logo_height": 46
           }
         },
         "footer-1": {
-          "type": "link_list",
+          "type": "footer-information",
           "settings": {
-            "heading": "Info",
-            "menu": "footer"
+            "address_title": "Địa chỉ",
+            "address_content": "<p>L18-11-13, Tầng 18, Tòa nhà Vincom Center Đồng Khởi, 72 Lê Thánh Tôn, Phường Bến Nghé, Quận 1, Thành phố Hồ Chí Minh, Việt Nam<\/p>",
+            "email_title": "Email",
+            "email_content": "<p>lienhe@sunday.vn<\/p>"
           }
         },
         "footer-2": {
-          "type": "text",
+          "type": "footer-menu",
           "settings": {
-            "heading": "Our mission",
-            "subtext": "<p>Share contact information, store details, and brand content with your customers.<\/p>"
+            "menu_title": "LIÊN HỆ",
+            "menu_list": "footer-contact",
+            "menu_type": "special",
+            "menu_width_mobile": 100
+          }
+        },
+        "footer-3": {
+          "type": "footer-menu",
+          "settings": {
+            "menu_title": "THEO DÕI",
+            "menu_list": "footer-subcribes",
+            "menu_type": "icon",
+            "menu_width_mobile": 33
+          }
+        },
+        "footer-4": {
+          "type": "footer-menu",
+          "settings": {
+            "menu_title": "HỖ TRỢ",
+            "menu_list": "footer-assist",
+            "menu_type": "default",
+            "menu_width_mobile": 33
+          }
+        },
+        "footer-5": {
+          "type": "footer-menu",
+          "settings": {
+            "menu_title": "CHÍNH SÁCH",
+            "menu_list": "footer-policy",
+            "menu_type": "default",
+            "menu_width_mobile": 33
           }
         }
       },
       "block_order": [
         "footer-0",
         "footer-1",
-        "footer-2"
+        "footer-2",
+        "footer-3",
+        "footer-4",
+        "footer-5"
       ],
       "settings": {
         "color_scheme": "background-1",

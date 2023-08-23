@@ -1,0 +1,109 @@
+{{ 'sunday-master-product-slider-background.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'sunday-master-product-slider-background.js' | asset_url }}" defer="defer"></script>
+
+<style>
+  {%- for block in section.blocks -%}
+    {%- if block.type == 'slide' -%}
+      @media only screen and (min-width: 1025px) {
+        .product-slider-background-area .product-background-slider .slider-container.block-index-{{ forloop.index }} {
+          {%- if block.settings.slider_background_position_desktop -%}
+            background-position-y: -{{ block.settings.slider_background_position_desktop | append: 'px' }};
+          {%- endif -%}
+        }
+      }
+    {%- endif -%}
+  {%- endfor -%}
+</style>
+
+<section class="product-slider-background-area">
+  <div class="product-background-slider">
+    {%- for block in section.blocks -%}
+      {%- if block.type == 'slide' -%}
+        {%- if block.settings.slider_background != null -%}
+          {%- assign backgroundImage = block.settings.slider_background | image_url: width: 2048 -%}
+        {%- else -%}
+          {%- assign backgroundImage = 'https://cdn.shopify.com/s/files/1/0798/1577/0402/files/26.05.23_-_Vitamin_D_Vietnam_Campaign-13-rs.png?v=1692158779' -%}
+        {%- endif -%}
+
+        <div
+          class="slider-container block-index-{{ forloop.index }}"
+          style="background-image: url({{ backgroundImage }})"
+        >
+          <div class="sub-title-area">
+            <h3>{{ block.settings.sub_title }}</h3>
+          </div>
+          <div class="heading-title-area">
+            <h2>{{ block.settings.heading_title }}</h2>
+          </div>
+          <div class="button-area">
+            <a href="{{ block.settings.button_link | default: '#' }}" class="sd-button-second">
+              {{- block.settings.button_content -}}
+            </a>
+          </div>
+        </div>
+      {%- endif -%}
+    {%- endfor -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "t:sections.sunday-master-product-slider-background.name",
+  "tag": "section",
+  "class": "section",
+  "settings": [],
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "blocks": [
+    {
+      "name": "t:sections.sunday-master-product-slider-background.blocks.name",
+      "type": "slide",
+      "settings": [
+        {
+          "type": "text",
+          "id": "sub_title",
+          "label": "t:sections.sunday-master-product-slider-background.blocks.settings.sub_title.label"
+        },
+        {
+          "type": "text",
+          "id": "heading_title",
+          "label": "t:sections.sunday-master-product-slider-background.blocks.settings.heading_title.label"
+        },
+        {
+          "type": "image_picker",
+          "id": "slider_background",
+          "label": "t:sections.sunday-master-product-slider-background.blocks.settings.slider_background.label"
+        },
+        {
+          "type": "range",
+          "id": "slider_background_position_desktop",
+          "min": 0,
+          "max": 800,
+          "step": 10,
+          "unit": "px",
+          "label": "t:sections.sunday-master-product-slider-background.blocks.settings.slider_background_position_desktop.label",
+          "default": 260
+        },
+        {
+          "type": "text",
+          "id": "button_content",
+          "default": "Xem thêm",
+          "label": "t:sections.sunday-master-product-slider-background.blocks.settings.button_content.label"
+        },
+        {
+          "id": "button_link",
+          "type": "url",
+          "label": "t:sections.sunday-master-product-slider-background.blocks.settings.button_link.label"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.sunday-master-product-slider-background.presets.name",
+      "blocks": []
+    }
+  ]
+}
+{% endschema %}

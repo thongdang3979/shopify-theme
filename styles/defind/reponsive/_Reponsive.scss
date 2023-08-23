@@ -1,0 +1,26 @@
+//----------Reponsive----------
+@mixin reponsiveFormat ($breakpoint: null) {
+    @if $breakpoint ==Laptop {
+        @media screen and (max-width: 1440px) {
+            @content;
+        }
+    }
+
+    @if $breakpoint ==Tablet {
+        @media screen and (max-width: 1024px) {
+            @content;
+        }
+    }
+
+    @if $breakpoint ==Mobile {
+        @media screen and (max-width: 768px) {
+            @content;
+        }
+    }
+
+    @if $breakpoint !=null {
+        @media screen and (max-width: $breakpoint) {
+            @content;
+        }
+    }
+}
