@@ -144,6 +144,9 @@
         "logo_image": {
           "label": "Logo"
         },
+        "second_logo_image": {
+          "label": "Second Logo"
+        },
         "logo_width": {
           "label": "Desktop logo width",
           "info": "Logo width is automatically optimized for mobile."
@@ -665,43 +668,6 @@
       "name": "Contact Form",
       "presets": {
         "name": "Contact form"
-      }
-    },
-    "custom-list-product": {
-      "name": "Custom List Product",
-      "settings": {
-        "custom_list_product": {
-          "default": "Custom List Product",
-          "label": "Name"
-        }
-      },
-      "presets": {
-        "name": "Custom list product"
-      }
-    },
-    "custom-list-info-row": {
-      "name": "Custom List Info Row",
-      "settings": {
-        "custom_list_info_row": {
-          "default": "Custom List Info Row",
-          "label": "Name",
-        }
-      },
-      "blocks": {
-        "row": {
-          "name": "Row",
-          "settings": {
-            "title": {
-              "label": "Title"
-            },
-            "content": {
-              "label": "Content"
-            }
-          }
-        }
-      },
-      "presets": {
-        "name": "Custom list product"
       }
     },
     "custom-liquid": {
@@ -3610,11 +3576,92 @@
         "name": "Sunday Background Content"
       }
     },
+    "sunday-master-banner-content": {
+      "name": "Sunday Banner Content",
+      "settings": {
+        "slider_banner_desktop": {
+          "label": "Banner Image Desktop"
+        },
+        "heading_title_desktop": {
+          "label": "Title Desktop"
+        },
+        "slider_banner_mobile": {
+          "label": "Banner Image Mobike"
+        },
+        "heading_title_mobile": {
+          "label": "Title Mobile"
+        }
+      },
+      "presets": {
+        "name": "Sunday Banner Content"
+      }
+    },
     "sunday-master-logo": {
       "name": "Sunday Logo",
       "settings": {},
       "presets": {
         "name": "Sunday Logo"
+      }
+    },
+    "sunday-master-list-content": {
+      "name": "Sunday List Content",
+      "settings": {
+      },
+      "blocks": {
+        "name": "Sunday List Content",
+        "settings": {
+          "title": {
+            "label": "Title"
+          },
+          "content": {
+            "label": "Content"
+          }
+        }
+      },
+      "presets": {
+        "name": "Sunday List Content"
+      }
+    },
+    "sunday-master-breadcrumb": {
+      "name": "Sunday Breadcrumb",
+      "settings": {
+        "breabcrumb_position_left": {
+          "label": "Breadcrumb Postion Left"
+        }
+      },
+      "presets": {
+        "name": "Sunday Breadcrumb"
+      }
+    },
+    "sunday-master-background-richtext": {
+      "name": "Sunday Group Background Richtext",
+      "settings": {
+        "richtext_group_backgrond_desktop": {
+          "label": "Group Background Desktop"
+        },
+        "richtext_group_backgrond_mobile": {
+          "label": "Group Background Mobile"
+        },
+        "richtext_group_backgrond_desktop_default": {
+          "label": "Group Background Desktop Default (URL)"
+        },
+        "richtext_group_backgrond_mobile_default": {
+          "label": "Group Background Mobile Default (URL)"
+        },
+        "richtext_group_backgrond_desktop_height": {
+          "label": "Group Background Desktop Height"
+        }
+      },
+      "blocks": {
+        "name": "Group Richtext",
+        "settings": {
+          "content": {
+            "label": "Group Richtext"
+          }
+        }
+      },
+      "presets": {
+        "name": "Sunday Group Background Richtext"
       }
     }
   }

@@ -39,6 +39,10 @@
       "search": "Search",
       "reset": "Clear search term"
     },
+    "custom-search": {
+      "search": "Tìm kiếm...",
+      "reset": "Xóa"
+    },
     "cart": {
       "view": "View cart ({{ count }})",
       "view_empty_cart": "View cart",

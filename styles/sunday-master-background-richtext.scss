@@ -1,0 +1,137 @@
+@import 'function.scss';
+
+@media only screen and (min-width: 200px) {
+    .group-background-richtext-area {
+        .group-background-area {
+
+            .background-image-desktop {
+                height: 416px;
+                display: none;
+                width: 100%;
+            }
+
+            .background-image-mobile {
+                height: 416px;
+                width: 100%;
+
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .group-content-area {
+            @include flexCustome(column, nowrap, null, null, null, 24px);
+            padding: 40px 12px;
+
+            .content-area {
+
+                h1,
+                h2,
+                h3,
+                h4,
+                h5,
+                h6 {
+                    margin-bottom: 12px;
+                    margin-top: 0;
+                }
+
+                br {
+                    content: "";
+                    margin: 6px;
+                    display: flex;
+                }
+
+                h3 {
+                    @include customFont(16px, 700, 130%, $Black-000, null, null);
+                }
+
+                h4 {
+                    @include customFont(14px, 600, 160%, $Black-000, null, null);
+                    text-align: center;
+                }
+
+                p {
+                    display: flex;
+                    @include customFont(14px, 500, 140%, $Gray-333, null, null);
+                    margin: 0;
+                    min-height: 12px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 769px) {
+    .group-background-richtext-area {
+        .group-background-area {
+
+            .background-image-desktop {
+                display: block;
+                height: 286.688px;
+            }
+
+            .background-image-mobile {
+                display: none;
+            }
+
+        }
+
+        .group-content-area {
+            gap: 32px;
+            padding: 44px 80px;
+
+            .content-area {
+
+                h3 {
+                    font-size: 18px;
+                    line-height: 120%;
+                }
+
+                p {
+                    line-height: 170%;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1025px) {
+    .group-background-richtext-area {
+        .group-background-area {
+            .background-image-desktop {
+                height: 440px;
+            }
+        }
+
+        .group-content-area {
+            gap: 32px;
+            padding: 60px;
+
+            .content-area {
+
+                br {
+                    margin: 8px;
+                }
+
+                h3 {
+                    font-size: 20px;
+                }
+
+                h4 {
+                    font-size: 16px;
+                    line-height: 170%;
+                }
+
+                p {
+                    font-size: 16px;
+                    font-weight: 500;
+                    min-height: 16px;
+                }
+            }
+        }
+    }
+}

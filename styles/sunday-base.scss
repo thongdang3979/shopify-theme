@@ -69,31 +69,55 @@
             background: $Gray-889;
             margin: 16px 0;
         }
+
+        .menu-drawer__menu {
+            .list-menu__item {
+                @include customFont(16px, 500, 150%, $Gray-333, null, null);
+                text-transform: uppercase;
+            }
+        }
     }
 }
 
 @media only screen and (min-width: 200px) {
     .header {
-        grid-template-areas: 'left-icons icons heading users carts';
-        grid-template-columns: 0.5fr 0.5fr 3fr 0.5fr 0.5fr;
+        grid-template-areas: 'left-icons search logo users carts';
+        grid-template-columns: 1fr 1fr 8fr 1fr 1fr;
         padding: 12px 16px;
 
-        header-drawer{
+        header-drawer {
             margin-left: 0;
         }
 
-        .header__icon{
-            span{
+        .header__icon {
+            width: 24px;
+            height: 24px;
+
+            span {
                 justify-content: flex-start;
+            }
+
+            .icon {
+                color: $White-FFF;
             }
         }
 
-        .header__icons{
+        .header__heading {
+            grid-area: logo;
+            justify-self: center;
+        }
+
+        .header__icons {
+            grid-area: search;
             justify-self: start;
             padding-right: 0;
 
-            span{
+            span {
                 justify-content: flex-start;
+            }
+
+            .header__custom-search {
+                display: none;
             }
         }
 
@@ -102,6 +126,11 @@
             grid-area: users;
             justify-self: end;
             padding-right: 0;
+
+            svg {
+                width: 23px;
+                height: 23px;
+            }
         }
 
         .header__cart {
@@ -109,25 +138,376 @@
             grid-area: carts;
             justify-self: end;
             padding-right: 0;
+
+            svg {
+                width: 23px;
+                height: 23px;
+            }
+
+            .header__icon--cart {
+                margin-right: 0;
+                justify-content: end;
+            }
         }
+
+        .header__inline-menu {
+            grid-area: main-menu;
+
+            .list-menu--inline {
+                column-gap: 32px;
+            }
+
+            .list-menu__item {
+                padding: 0;
+            }
+        }
+
+        .header__inline-second-menu {
+            grid-area: second-menu;
+            display: none;
+
+            .list-menu--inline {
+                column-gap: 32px;
+            }
+
+            .list-menu__item {
+                padding: 0;
+            }
+        }
+
+        .list-menu--inline {
+            flex-wrap: nowrap;
+        }
+
+        .header__active-menu-item{
+            text-decoration: none;
+            position: relative;
+     
+            &::after{
+             content: "";
+             position: absolute;
+             bottom: -5px;
+             left: 0;
+             right: 0;
+             width: 100%;
+             height: 2px;
+             background: $Orange-CA9;
+            }
+         }
     }
 
-    .cart-count-bubble{
-        top: 5px;
+    .cart-count-bubble {
+        top: -3px;
+        left: unset;
+        right: -6px;
         bottom: unset;
+        width: 16px;
+        height: 16px;
         background-color: $Orange-CA9;
+        @include customFont(12px, 600, 100%, $White-FFF, null, null);
     }
 
-    .header__heading-logo-wrapper{
-        img{
+    .header__heading-logo-wrapper {
+        img {
             width: 120px;
             height: 46.612px;
+            object-fit: contain;
+        }
+
+        &.second-logo {
+            opacity: 0;
+            height: 0;
+            overflow: hidden;
+            @include customTransition(opacity 1s ease-out);
         }
     }
 
-    .header__heading-link{
+    .header__heading-link {
         padding: 0;
+        margin: 0 !important;
     }
+
+    .shopify-section-header-sticky {
+        .header-wrapper {
+            background: $White-FFF;
+            border-bottom: 2px solid $Gray-CAC;
+        }
+
+        .header__heading-logo-wrapper {
+            display: none;
+
+            &.second-logo {
+                opacity: 1;
+                display: block;
+                height: auto;
+
+                img {
+                    width: 51px;
+                    height: 47px;
+                }
+            }
+        }
+
+        .header__icon {
+            .icon {
+                color: $Black-000;
+            }
+
+            &.header__icon--menu svg path {
+                stroke: $Black-000;
+            }
+        }
+
+        .header__user {
+            svg {
+                path {
+                    stroke: $Black-000;
+                }
+            }
+        }
+
+        .header__cart {
+            svg {
+                path {
+                    fill: $Black-000;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 769px) {
+    .header {
+        grid-template-columns: .5fr .5fr 5fr .5fr .5fr;
+        padding: 42px 44px;
+
+        .header__icon {
+            width: 32px;
+            height: 32px;
+
+            .icon {
+                width: 32px;
+                height: 32px;
+            }
+        }
+
+        .header__user {
+            svg {
+                width: 32px;
+                height: 32px;
+            }
+        }
+
+        .header__cart {
+            .header__icon--cart {
+                svg {
+                    width: 32px;
+                    height: 32px;
+                }
+            }
+        }
+    }
+
+    .cart-count-bubble {
+        width: 20px;
+        height: 20px;
+        font-size: 14px;
+    }
+
+    .header__heading-logo-wrapper {
+        img {
+            width: 159px;
+            height: 62px;
+        }
+    }
+}
+
+@media only screen and (min-width: 990px) {
+    .header {
+        // grid-template-areas: "left-icons icons heading users carts";
+        grid-template-columns: 0.5fr 0.5fr 1fr 1fr 1fr 3fr 1fr 1fr 1fr 0.5fr 0.5fr;
+        grid-template-rows: 0.5fr 1fr;
+        grid-template-areas:
+            ". . . . . . search search . users carts"
+            "second-menu second-menu second-menu second-menu second-menu logo main-menu main-menu main-menu main-menu main-menu";
+        padding: 10px 40px !important;
+
+        details-modal.header__search {
+            display: none;
+        }
+
+        .header__inline-menu {
+            justify-self: end;
+
+            .list-menu__item {
+                span {
+                    @include customFont(16px, 600, 133%, $White-FFF, null, null);
+                    text-transform: uppercase;
+                }
+            }
+        }
+
+        .header__inline-second-menu {
+            .list-menu__item {
+                span {
+                    @include customFont(16px, 600, 133%, $White-FFF, null, null);
+                    text-transform: uppercase;
+                }
+            }
+        }
+
+        .header__inline-second-menu {
+            display: block;
+        }
+
+        .header__icons {
+            justify-self: end;
+
+            .header__search {
+                display: none !important;
+            }
+
+            .header__custom-search {
+                display: block;
+
+                .search {
+                    .field {
+                        &::after {
+                            box-shadow: none;
+                        }
+
+                        .search__input.field__input {
+                            border-radius: 5px;
+                            background: rgba(255, 255, 255, 0.50);
+                            border: none;
+                            padding: 14px 7px;
+                            @include customFont(13px, 400, 100%, $Black-000, null, null);
+                        }
+
+                        .field__input:focus~.field__label,
+                        .field__input:not(:placeholder-shown)~.field__label,
+                        .field__input:-webkit-autofill~.field__label,
+                        .customer .field input:focus~label,
+                        .customer .field input:not(:placeholder-shown)~label,
+                        .customer .field input:-webkit-autofill~label {
+                            top: 3px;
+                        }
+
+                        .field__label {
+                            left: 7px;
+                            font-family: Quicksand;
+                        }
+
+                        .field__button {
+                            width: 36px;
+                        }
+
+                        .reset__button {
+                            right: 36px;
+                        }
+                    }
+
+                    .predictive-search--header {
+                        display: none;
+
+                        .predictive-search__results-groups-wrapper {
+                            @include flexCustome(column, nowrap, flex-start, center, flex-start);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .header__heading-logo-wrapper {
+        img {
+            width: 240px;
+            height: 93.06px;
+        }
+    }
+
+    .shopify-section-header-sticky {
+        .header-wrapper {
+            background: $White-FFF;
+            border-bottom: 2px solid $Gray-CAC;
+        }
+
+        .header {
+            grid-template-columns: 0.5fr 0.5fr 0.5fr 1fr 4fr 3fr 4fr 1fr 0.5fr 0.5fr 0.5fr;
+            grid-template-rows: 1fr;
+            grid-template-areas:
+                ". . . . second-menu logo main-menu search . users carts";
+            padding: 25px;
+
+            .header__inline-menu {
+                margin-left: 12px;
+            }
+
+            .header__inline-second-menu {
+                margin-right: 12px;
+            }
+
+            .header__icons {
+                .header__custom-search {
+                    display: none;
+                }
+
+                .header__search {
+                    display: block !important;
+
+                    span {
+                        justify-content: flex-end;
+                    }
+                }
+            }
+
+            .header__inline-second-menu,
+            .header__inline-menu {
+                .list-menu__item span {
+                    color: $Black-000;
+                }
+            }
+        }
+
+        .header__heading-logo-wrapper {
+            display: none;
+
+            &.second-logo {
+                opacity: 1;
+                display: block;
+                height: auto;
+
+                img {
+                    width: 51px;
+                    height: 47px;
+                }
+            }
+        }
+
+        .header__icon .icon {
+            color: $Black-000;
+        }
+
+        .header__user {
+            svg {
+                path {
+                    stroke: $Black-000;
+                }
+            }
+        }
+
+        .header__cart {
+            svg {
+                path {
+                    fill: $Black-000;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1025px) {
+    .header {}
 }
 
 //--------------------------------------------Footer--------------------------------------------
@@ -144,6 +524,7 @@
 
             .footer__blocks-wrapper {
                 display: flex;
+                row-gap: 0;
             }
 
             .footer-block.grid__item {
@@ -313,7 +694,7 @@
 
                 .footer-block__menu-list-heading {
                     color: $White-FFF;
-                    
+
                     &.special {
                         display: block;
                     }
@@ -400,7 +781,7 @@
                         font-size: 14px;
                         line-height: 170%;
 
-                        svg{
+                        svg {
                             width: 12px;
                             height: 12px;
                         }
@@ -415,8 +796,8 @@
                 padding: 24px;
             }
 
-            .footer__copyright{
-                .copyright__content{
+            .footer__copyright {
+                .copyright__content {
                     font-size: 14px;
                 }
             }

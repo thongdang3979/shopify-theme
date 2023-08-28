@@ -443,6 +443,14 @@ class MenuDrawer extends HTMLElement {
   onCloseButtonClick(event) {
     const detailsElement = event.currentTarget.closest('details');
     this.closeSubmenu(detailsElement);
+
+    const closeButton = event.target.closest('.icon-close-custom');
+    if (closeButton) {
+      const openDetailsElement = closeButton.closest('details[open]');
+      if (openDetailsElement) {
+        document.body.classList.remove(`overflow-hidden-${this.dataset.breakpoint}`);
+      }
+    }
   }
 
   closeSubmenu(detailsElement) {
@@ -1259,8 +1267,3 @@ class ProductRecommendations extends HTMLElement {
 customElements.define('product-recommendations', ProductRecommendations);
 
 //----------------------Custom Js----------------------
-// const iconCloseCustom = document.querySelector('.icon-close-custom');
-
-// iconCloseCustom.addEventListener("click", () => {
-//   closeMenuDrawer();
-// });

@@ -1,0 +1,65 @@
+{{ 'sunday-master-banner-content.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  @media (min-width: 200px) {
+    .background-content-area {
+      {% if section.settings.slider_background_desktop != null %}
+        background: url('{{- section.settings.slider_background_desktop | image_url: width: 1024 -}}');
+      {% else %}
+        background: url('https://cdn.shopify.com/s/files/1/0798/1577/0402/files/Aboutus.png?v=1692944525');
+      {% endif %}
+    }
+  }
+{%- endstyle -%}
+
+<section class="background-content-area">
+  <div class="group-content-area">
+    <div class="title-area title-desktop">
+      <h2>{{ section.settings.heading_title_desktop }}</h2>
+    </div>
+    <div class="title-area title-mobile">
+      <h2>{{ section.settings.heading_title_mobile }}</h2>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "t:sections.sunday-master-banner-content.name",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "slider_banner_desktop",
+      "label": "t:sections.sunday-master-banner-content.settings.slider_banner_desktop.label"
+    },
+    {
+      "type": "text",
+      "id": "heading_title_desktop",
+      "default": "Đức Phật",
+      "label": "t:sections.sunday-master-banner-content.settings.heading_title_desktop.label"
+    },
+
+    {
+      "type": "image_picker",
+      "id": "slider_banner_mobile",
+      "label": "t:sections.sunday-master-banner-content.settings.slider_banner_mobile.label"
+    },
+    {
+      "type": "text",
+      "id": "heading_title_mobile",
+      "default": "Đức Phật",
+      "label": "t:sections.sunday-master-banner-content.settings.heading_title_mobile.label"
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.sunday-master-banner-content.presets.name"
+    }
+  ]
+}
+{% endschema %}

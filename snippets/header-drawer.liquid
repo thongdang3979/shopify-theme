@@ -40,7 +40,7 @@
             </div>
             <div class="menu-topbar-line-area"></div>
             <ul class="menu-drawer__menu has-submenu list-menu" role="list">
-              {%- for link in section.settings.menu.links -%}
+              {%- for link in section.settings['mobile-menu'].links -%}
                 <li>
                   {%- if link.links != blank -%}
                     <details id="Details-menu-drawer-menu-item-{{ forloop.index }}">

@@ -1,0 +1,129 @@
+{% comment %}
+  Renders a header search modal. Should be used with 'header.liquid'
+
+  Accepts:
+  - input_id: {String} Id for the search input element (required)
+
+  Usage:
+  {% render 'header-custom-search', input_id: 'My-Id'%}
+{% endcomment %}
+
+<div class="header__custom-search">
+  <search>
+    {% comment %}
+      <summary
+        class="header__icon header__icon--search header__icon--summary link focus-inset modal__toggle"
+        aria-haspopup="dialog"
+        aria-label="{{ 'general.search.search' | t }}"
+      >
+        <span>
+          <svg class="modal__toggle-open icon icon-search" aria-hidden="true" focusable="false">
+            <use href="#icon-search">
+          </svg>
+          <svg class="modal__toggle-close icon icon-close" aria-hidden="true" focusable="false">
+            <use href="#icon-close">
+          </svg>
+        </span>
+      </summary>
+    {% endcomment %}
+
+    <div>
+      {%- if settings.predictive_search_enabled -%}
+        <predictive-search class="search-modal__form" data-loading-text="{{ 'accessibility.loading' | t }}">
+      {%- else -%}
+        <search-form class="search-modal__form">
+      {%- endif -%}
+      <form action="{{ routes.search_url }}" method="get" role="search" class="search search-modal__form">
+        <div class="field">
+          <input
+            class="search__input field__input"
+            id="{{ input_id }}"
+            type="search"
+            name="q"
+            value="{{ search.terms | escape }}"
+            placeholder="{{ 'general.custom-search.search' | t }}"
+            {%- if settings.predictive_search_enabled -%}
+              role="combobox"
+              aria-expanded="false"
+              aria-owns="predictive-search-results"
+              aria-controls="predictive-search-results"
+              aria-haspopup="listbox"
+              aria-autocomplete="list"
+              autocorrect="off"
+              autocomplete="off"
+              autocapitalize="off"
+              spellcheck="false"
+            {%- endif -%}
+          >
+          <label class="field__label" for="{{ input_id }}">{{ 'general.custom-search.search' | t }}</label>
+          <input type="hidden" name="options[prefix]" value="last">
+          <button
+            type="reset"
+            class="reset__button field__button{% if search.terms == blank %} hidden{% endif %}"
+            aria-label="{{ 'general.search.reset' | t }}"
+          >
+            <svg class="icon icon-close" aria-hidden="true" focusable="false">
+              <use xlink:href="#icon-reset">
+            </svg>
+          </button>
+          <button class="search__button field__button" aria-label="{{ 'general.custom-search.search' | t }}">
+            <svg
+              class="icon icon-search"
+              aria-hidden="true"
+              focusable="false"
+              xmlns="http://www.w3.org/2000/svg"
+              width="21"
+              height="22"
+              viewBox="0 0 21 22"
+              fill="none"
+            >
+              <g clip-path="url(#clip0_1203_510)">
+              <path d="M8.77734 16.5441C9.80273 16.5441 10.7666 16.358 11.6689 15.9858C12.5713 15.6004 13.3608 15.082 14.0376 14.4307C14.7144 13.7794 15.2441 13.0151 15.627 12.1378C16.0098 11.2605 16.2012 10.3234 16.2012 9.3265C16.2012 8.3163 16.0098 7.37256 15.627 6.49528C15.2441 5.60471 14.7144 4.82712 14.0376 4.16252C13.3608 3.49791 12.5713 2.97287 11.6689 2.5874C10.7666 2.20193 9.80273 2.0092 8.77734 2.0092C7.75195 2.0092 6.78809 2.20193 5.88574 2.5874C4.9834 2.95958 4.19385 3.47133 3.51709 4.12264C2.84033 4.77395 2.31055 5.53825 1.92773 6.41553C1.54492 7.2928 1.35352 8.23654 1.35352 9.24674C1.35352 10.2437 1.53809 11.1874 1.90723 12.078C2.29004 12.9552 2.81641 13.7262 3.48633 14.3908C4.15625 15.0554 4.94238 15.5804 5.84473 15.9659C6.74707 16.3514 7.72461 16.5441 8.77734 16.5441ZM8.77734 3.18554C9.625 3.18554 10.4248 3.3517 11.1768 3.684C11.9287 4.00301 12.5884 4.435 13.1558 4.97998C13.7231 5.52496 14.1709 6.16962 14.499 6.91398C14.8271 7.64505 14.9912 8.42263 14.9912 9.24674C14.9912 10.0709 14.8271 10.8551 14.499 11.5994C14.1709 12.3305 13.7231 12.9752 13.1558 13.5334C12.5884 14.0917 11.9287 14.537 11.1768 14.8693C10.4248 15.2016 9.625 15.3678 8.77734 15.3678C7.92969 15.3678 7.12305 15.2083 6.35742 14.8892C5.5918 14.5702 4.92188 14.1316 4.34766 13.5733C3.77344 13.0151 3.32227 12.3637 2.99414 11.6194C2.65234 10.875 2.48145 10.0841 2.48145 9.24674C2.48145 8.39605 2.64551 7.60517 2.97363 6.8741C3.30176 6.14304 3.75293 5.50502 4.32715 4.96004C4.90137 4.41507 5.57129 3.98307 6.33691 3.66406C7.08887 3.34505 7.90234 3.18554 8.77734 3.18554ZM20.4053 21.2495C20.4873 21.2495 20.5659 21.2329 20.6411 21.1997C20.7163 21.1664 20.7744 21.1299 20.8154 21.09C20.9385 20.9837 21 20.8441 21 20.6713C21 20.4985 20.9385 20.3523 20.8154 20.2327L15.8115 15.3678C15.6885 15.2481 15.5381 15.1883 15.3604 15.1883C15.1826 15.1883 15.0322 15.2481 14.9092 15.3678C14.7861 15.4874 14.7246 15.6303 14.7246 15.7964C14.7246 15.9626 14.7861 16.1055 14.9092 16.2251L19.9131 21.09C20.0361 21.1299 20.1387 21.1664 20.2207 21.1997C20.3027 21.2329 20.3643 21.2495 20.4053 21.2495Z" fill="black"/>
+              </g>
+              <defs>
+              <clipPath id="clip0_1203_510">
+              <rect width="21" height="21" fill="white" transform="matrix(-1 0 0 -1 21 21.9399)"/>
+              </clipPath>
+              </defs>
+            </svg>
+          </button>
+        </div>
+
+        {%- if settings.predictive_search_enabled -%}
+          <div class="predictive-search predictive-search--header" tabindex="-1" data-predictive-search>
+            <div class="predictive-search__loading-state">
+              <svg
+                aria-hidden="true"
+                focusable="false"
+                class="spinner"
+                viewBox="0 0 66 66"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+              </svg>
+            </div>
+          </div>
+
+          <span class="predictive-search-status visually-hidden" role="status" aria-hidden="true"></span>
+        {%- endif -%}
+      </form>
+      {%- if settings.predictive_search_enabled -%}
+        </predictive-search>
+      {%- else -%}
+        </search-form>
+      {%- endif -%}
+
+      {% comment %}
+        <button
+          type="button"
+          class="search-modal__close-button modal__close-button link link--text focus-inset"
+          aria-label="{{ 'accessibility.close' | t }}"
+        >
+          <svg class="icon icon-close" aria-hidden="true" focusable="false">
+            <use href="#icon-close">
+          </svg>
+        </button>
+      {% endcomment %}
+    </div>
+  </search>
+</div>

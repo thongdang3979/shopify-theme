@@ -78,7 +78,7 @@
 
     <img
       class="desktop-image"
-      src="{{ section.settings.image_banner_desktop | default: 'https://cdn.shopify.com/s/files/1/0798/1577/0402/files/SunnyBanner.jpg?v=1690789591' }}"
+      src="{{ section.settings.image_banner_desktop | default: 'https://cdn.shopify.com/s/files/1/0798/1577/0402/files/Main_Banner_3840x2126_018519b0-c69e-48d9-aaa8-6b94f7940be8.webp?v=1692929090' }}"
       width="{{ section.settings.image_banner_desktop.width | default: '1920'}}"
       height="{{ section.settings.image_banner_desktop.height | default: '979' }}"
       alt="{{ section.settings.image_banner_desktop.alt | default: 'SundayBanner'}}"
@@ -100,10 +100,14 @@
   <div class="group-content-area">
     <div class="title-area">
       {% if section.settings.heading_banner_desktop %}
-        <h1 class="desktop-title">{{ section.settings.heading_banner_desktop | upcase }}</h1>
+        <h1 class="desktop-title">
+          {{ section.settings.heading_banner_desktop | upcase | default: 'DINH DƯỠNG CAO CẤP<br>TỪ THIÊN NHIÊN' }}
+        </h1>
       {% endif %}
       {% if section.settings.heading_banner_mobile %}
-        <h1 class="mobile-title">{{ section.settings.heading_banner_mobile | upcase }}</h1>
+        <h1 class="mobile-title">
+          {{ section.settings.heading_banner_mobile | upcase | default: 'DINH DƯỠNG<br>CAO CẤP<br>TỪ THIÊN NHIÊN' }}
+        </h1>
       {% endif %}
     </div>
     <div class="content-area">
@@ -144,7 +148,7 @@
       "step": 10,
       "unit": "px",
       "label": "t:sections.sunday-home-page-banner.settings.image_banner_height_desktop.label",
-      "default": 920
+      "default": 800
     },
     {
       "type": "text",
@@ -155,7 +159,7 @@
     {
       "type": "richtext",
       "id": "content_banner_desktop",
-      "default": "<p>Tất cả sản phẩm có chất lượng và độ tinh khiết cao nhất,<br> Các dưỡng chất được giữ gìn nguyên vẹn hoàn hảo nhất.</p>",
+      "default": "<p>Tất cả sản phẩm có chất lượng và độ tinh khiết cao nhất, Các dưỡng chất được giữ gìn nguyên vẹn hoàn hảo nhất.</p>",
       "label": "t:sections.sunday-home-page-banner.settings.content_banner_desktop.label"
     },
     {
@@ -220,7 +224,7 @@
       "step": 5,
       "unit": "px",
       "label": "t:sections.sunday-home-page-banner.settings.image_product_width_desktop.label",
-      "default": 500
+      "default": 380
     },
     {
       "type": "range",
@@ -230,7 +234,7 @@
       "step": 5,
       "unit": "px",
       "label": "t:sections.sunday-home-page-banner.settings.image_product_position_right_desktop.label",
-      "default": 60
+      "default": 25
     },
     {
       "type": "range",
@@ -240,7 +244,7 @@
       "step": 5,
       "unit": "px",
       "label": "t:sections.sunday-home-page-banner.settings.image_product_position_bottom_desktop.label",
-      "default": 100
+      "default": 170
     },
 
     {
@@ -251,7 +255,7 @@
       "step": 2,
       "unit": "px",
       "label": "t:sections.sunday-home-page-banner.settings.image_product_width_mobile.label",
-      "default": 172
+      "default": 210
     },
     {
       "type": "range",
@@ -271,7 +275,7 @@
       "step": 5,
       "unit": "px",
       "label": "t:sections.sunday-home-page-banner.settings.image_product_position_bottom_mobile.label",
-      "default": 50
+      "default": 55
     },
     {
       "type": "select",

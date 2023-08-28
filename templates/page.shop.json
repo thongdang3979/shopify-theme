@@ -6,17 +6,9 @@
         "padding_top": 28,
         "padding_bottom": 28
       }
-    },
-    "custom_list_product": {
-      "type": "custom-list-product",
-      "settings": {
-        "padding_top": 28,
-        "padding_bottom": 28
-      }
     }
   },
   "order": [
-    "main",
-    "custom_list_product"
+    "main"
   ]
 }

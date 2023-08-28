@@ -4,9 +4,9 @@
       "type": "sunday-home-page-banner",
       "settings": {
         "image_banner_desktop": "",
-        "image_banner_height_desktop": 920,
+        "image_banner_height_desktop": 800,
         "heading_banner_desktop": "DINH DƯỠNG CAO CẤP<br>TỪ THIÊN NHIÊN",
-        "content_banner_desktop": "<p>Tất cả sản phẩm có chất lượng và độ tinh khiết cao nhất,<br> Các dưỡng chất được giữ gìn nguyên vẹn hoàn hảo nhất.</p>",
+        "content_banner_desktop": "<p>Tất cả sản phẩm có chất lượng và độ tinh khiết cao nhất, Các dưỡng chất được giữ gìn nguyên vẹn hoàn hảo nhất.</p>",
         "content_banner_margin_top_desktop": 0,
         "image_banner_mobile": "",
         "image_banner_height_mobile": 515,
@@ -14,12 +14,12 @@
         "content_banner_mobile": "<p>Tất cả sản phẩm có chất lượng và độ tinh khiết cao nhất, Các dưỡng chất được giữ gìn nguyên vẹn hoàn hảo nhất.</p>",
         "content_banner_margin_top_mobile": 0,
         "image_product": "",
-        "image_product_width_desktop": 500,
-        "image_product_position_right_desktop": 60,
-        "image_product_position_bottom_desktop": 100,
-        "image_product_width_mobile": 172,
+        "image_product_width_desktop": 380,
+        "image_product_position_right_desktop": 25,
+        "image_product_position_bottom_desktop": 170,
+        "image_product_width_mobile": 210,
         "image_product_position_right_mobile": 4,
-        "image_product_position_bottom_mobile": 50,
+        "image_product_position_bottom_mobile": 55,
         "heading_align": "center",
         "content_align": "center"
       }
@@ -44,7 +44,7 @@
             "sub_title": "",
             "heading_title": "VITAMIN D",
             "slider_background": "",
-            "slider_background_position_desktop": 260,
+            "slider_background_position_desktop": 30,
             "button_content": "Xem thêm",
             "button_link": ""
           }
@@ -54,8 +54,8 @@
           "settings": {
             "sub_title": "",
             "heading_title": "VITAMIN D",
-            "slider_background": "//4a625d-2.myshopify.com/cdn/shop/files/26.05.23_-_Vitamin_D_Vietnam_Campaign-13-rs.png?v=1692158779&width=2048",
-            "slider_background_position_desktop": 260,
+            "slider_background": "",
+            "slider_background_position_desktop": 30,
             "button_content": "Xem thêm",
             "button_link": ""
           }

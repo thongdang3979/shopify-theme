@@ -169,7 +169,7 @@
         .product-background-slider {
 
             .slider-container {
-                background-position-y: -260px;
+                background-position-y: -30px;
 
                 .sub-title-area {
                     h3 {
@@ -204,6 +204,16 @@
                 bottom: 22px;
             }
 
+        }
+    }
+}
+
+@media only screen and (min-width: 1600px) {
+    .product-slider-background-area {
+        .product-background-slider {
+            .slider-container {
+                background-position-y: -200px !important;
+            }
         }
     }
 }

@@ -1,0 +1,128 @@
+{{ 'sunday-master-background-richtext.css' | asset_url | stylesheet_tag }}
+
+<section class="group-background-richtext-area">
+  <section class="group-background-richtext-area">
+    <div class="group-background-area">
+      {% assign background_img_desktop = section.settings.richtext_group_backgrond_desktop %}
+      {% assign background_img_mobile = section.settings.richtext_group_backgrond_mobile %}
+      {% assign default_desktop_img_url = section.settings.richtext_group_backgrond_desktop_default %}
+      {% assign default_mobile_img_url = section.settings.richtext_group_backgrond_mobile_default %}
+
+      <div
+        class="background-image-desktop"
+        {%- if section.settings.richtext_group_backgrond_desktop_height != 440 %}
+          style="height: {{ section.settings.richtext_group_backgrond_desktop_height | append: 'px' }};"
+        {% endif -%}
+      >
+        {% if background_img_desktop == null %}
+          <img src="{{ default_desktop_img_url }}" alt="SundayImage" loading="lazy">
+        {% else %}
+          {{ background_img_desktop | img_url: '2048' | img_tag: 'Desktop Image', 'lazy loading' }}
+        {% endif %}
+      </div>
+
+      <div class="background-image-mobile">
+        {% if background_img_mobile == null %}
+          <img src="{{ default_mobile_img_url }}" alt="SundayImage" loading="lazy">
+        {% else %}
+          {{ background_img_mobile | img_url: '1024' | img_tag: 'Mobile Image', 'lazy loading' }}
+        {% endif %}
+      </div>
+    </div>
+  </section>
+
+  {% assign content_blocks = section.blocks | where: 'type', 'richtext_group' %}
+
+  {%- if content_blocks.size > 0 -%}
+    <div class="group-content-area page-width">
+      {% for block in content_blocks %}
+        <div class="content-area" style="text-align: {{ block.settings.text_align }};">
+          {{ block.settings.content | newline_to_br | richtext }}
+        </div>
+      {% endfor %}
+    </div>
+  {%- endif -%}
+</section>
+
+{% schema %}
+{
+  "name": "t:sections.sunday-master-background-richtext.name",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "richtext_group_backgrond_desktop",
+      "label": "t:sections.sunday-master-background-richtext.settings.richtext_group_backgrond_desktop.label"
+    },
+    {
+      "type": "image_picker",
+      "id": "richtext_group_backgrond_mobile",
+      "label": "t:sections.sunday-master-background-richtext.settings.richtext_group_backgrond_mobile.label"
+    },
+    {
+      "type": "url",
+      "id": "richtext_group_backgrond_desktop_default",
+      "label": "t:sections.sunday-master-background-richtext.settings.richtext_group_backgrond_desktop_default.label"
+    },
+    {
+      "type": "url",
+      "id": "richtext_group_backgrond_mobile_default",
+      "label": "t:sections.sunday-master-background-richtext.settings.richtext_group_backgrond_mobile_default.label"
+    },
+    {
+      "type": "range",
+      "id": "richtext_group_backgrond_desktop_height",
+      "min": 0,
+      "max": 920,
+      "step": 20,
+      "unit": "px",
+      "label": "t:sections.sunday-master-background-richtext.settings.richtext_group_backgrond_desktop_height.label",
+      "default": 440
+    }
+  ],
+  "blocks": [
+    {
+      "name": "t:sections.sunday-master-background-richtext.blocks.name",
+      "type": "richtext_group",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "content",
+          "default": "<p></p>",
+          "label": "t:sections.sunday-master-background-richtext.blocks.settings.content.label"
+        },
+        {
+          "type": "select",
+          "label": "Text Align",
+          "id": "text_align",
+          "default": "left",
+          "options": [
+            {
+              "value": "left",
+              "label": "Left"
+            },
+            {
+              "value": "center",
+              "label": "Center"
+            },
+            {
+              "value": "right",
+              "label": "Right"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.sunday-master-background-richtext.presets.name",
+      "blocks": []
+    }
+  ]
+}
+{% endschema %}

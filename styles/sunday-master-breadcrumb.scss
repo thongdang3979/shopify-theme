@@ -1,0 +1,101 @@
+@import 'function.scss';
+
+@media only screen and (min-width: 200px) {
+    .breadcrumbs {
+        padding: 0 10px;
+        margin-top: 16px;
+
+        .breadcrumbs__list {
+            @include flexCustome(row, nowrap, center, flex-start, center, 3px);
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+
+            .breadcrumbs__item {
+                display: inline-block;
+
+                .breadcrumbs__icon {
+                    display: flex;
+
+                    svg {
+                        width: 13.333px;
+                        height: 13.333px;
+                    }
+                }
+
+                .breadcrumbs__link {
+                    display: flex;
+                    text-decoration: underline;
+
+                    &[aria-current='page'] {
+                        @include customFont(12px, 400, 100%, $Orange-CA9, null, null);
+                        text-decoration: none;
+
+                    }
+
+                    &[aria-current='page']:hover,
+                    &[aria-current='page']:focus {
+                        text-decoration: underline;
+                    }
+                }
+
+                &.home-item {
+                    img {
+                        width: 20px;
+                        height: 19.31px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 769px) {
+    .breadcrumbs {
+        margin-top: 32px;
+
+        .breadcrumbs__list {
+            gap: 6px;
+
+            .breadcrumbs__item {
+                .breadcrumbs__icon {
+                    svg {
+                        width: 24px;
+                        height: 24px;
+                    }
+                }
+
+                .breadcrumbs__link {
+
+                    &[aria-current='page'] {
+                        font-size: 16px;
+                    }
+                }
+
+                &.home-item {
+                    img {
+                        width: 32px;
+                        height: 30.897px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .breadcrumbs {
+
+        .breadcrumbs__list {
+
+            .breadcrumbs__item {
+                &.home-item {
+                    img {
+                        width: 40px;
+                        height: 38.621px;
+                    }
+                }
+            }
+        }
+    }
+}
