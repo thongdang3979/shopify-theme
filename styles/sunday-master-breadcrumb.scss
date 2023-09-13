@@ -23,26 +23,17 @@
                     }
                 }
 
-                .breadcrumbs__link {
+                a{
                     display: flex;
                     text-decoration: underline;
-
-                    &[aria-current='page'] {
-                        @include customFont(12px, 400, 100%, $Orange-CA9, null, null);
-                        text-decoration: none;
-
-                    }
-
-                    &[aria-current='page']:hover,
-                    &[aria-current='page']:focus {
-                        text-decoration: underline;
-                    }
+                    @include customFont(14px, 400, 100%, $Orange-CA9, null, null);
+                    text-decoration: none;
                 }
 
                 &.home-item {
                     img {
-                        width: 20px;
-                        height: 19.31px;
+                        width: 25px;
+                        height: 24.31px;
                     }
                 }
             }
@@ -65,11 +56,8 @@
                     }
                 }
 
-                .breadcrumbs__link {
-
-                    &[aria-current='page'] {
-                        font-size: 16px;
-                    }
+                a {
+                    font-size: 16px;
                 }
 
                 &.home-item {

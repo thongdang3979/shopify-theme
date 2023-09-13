@@ -2,14 +2,23 @@
 
 {%- style -%}
   @media (min-width: 200px) {
-    .background-content-area {
-      {% if section.settings.slider_background_desktop != null %}
-        background: url('{{- section.settings.slider_background_desktop | image_url: width: 1024 -}}');
-      {% else %}
-        background: url('https://cdn.shopify.com/s/files/1/0798/1577/0402/files/Aboutus.png?v=1692944525');
-      {% endif %}
-    }
-  }
+     .background-content-area {
+       {% if section.settings.banner_mobile != null %}
+         background-image: url('{{- section.settings.banner_mobile | image_url: width: 1024 -}}');
+       {% else %}
+         background-image: url('{{- section.settings.banner_mobile_default -}}');
+       {% endif %}
+     }
+   }
+   @media (min-width: 1025px) {
+     .background-content-area {
+       {% if section.settings.banner_desktop != null %}
+         background-image: url('{{- section.settings.banner_desktop | image_url: width: 2048 -}}');
+       {% else %}
+         background-image: url('{{- section.settings.banner_desktop_default -}}');
+       {% endif %}
+     }
+   }
 {%- endstyle -%}
 
 <section class="background-content-area">
@@ -34,8 +43,13 @@
   "settings": [
     {
       "type": "image_picker",
-      "id": "slider_banner_desktop",
-      "label": "t:sections.sunday-master-banner-content.settings.slider_banner_desktop.label"
+      "id": "banner_desktop",
+      "label": "t:sections.sunday-master-banner-content.settings.banner_desktop.label"
+    },
+    {
+      "type": "url",
+      "id": "banner_desktop_default",
+      "label": "t:sections.sunday-master-banner-content.settings.banner_desktop_default.label"
     },
     {
       "type": "text",
@@ -46,8 +60,13 @@
 
     {
       "type": "image_picker",
-      "id": "slider_banner_mobile",
-      "label": "t:sections.sunday-master-banner-content.settings.slider_banner_mobile.label"
+      "id": "banner_mobile",
+      "label": "t:sections.sunday-master-banner-content.settings.banner_mobile.label"
+    },
+    {
+      "type": "url",
+      "id": "banner_mobile_default",
+      "label": "t:sections.sunday-master-banner-content.settings.banner_mobile_default.label"
     },
     {
       "type": "text",

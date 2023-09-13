@@ -1,0 +1,40 @@
+{{ 'swiper-bundle.min.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'swiper-bundle.min.js' | asset_url }}" defer="defer"></script>
+{{ 'sunday-product-detail.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'sunday-product-detail.js' | asset_url }}" defer="defer"></script>
+
+<section class="product-detail-area page-width">
+  <div class="product-group-info-area">
+    <div class="product-image-area">
+      <swiper-container class="mySwiper">
+        <swiper-slide>Slide 1</swiper-slide>
+        <swiper-slide>Slide 2</swiper-slide>
+        <swiper-slide>Slide 3</swiper-slide>
+        <swiper-slide>Slide 4</swiper-slide>
+        <swiper-slide>Slide 5</swiper-slide>
+        <swiper-slide>Slide 6</swiper-slide>
+        <swiper-slide>Slide 7</swiper-slide>
+        <swiper-slide>Slide 8</swiper-slide>
+        <swiper-slide>Slide 9</swiper-slide>
+      </swiper-container>
+    </div>
+    <div class="product-info-area">
+      <h1>{{ product.title }}</h1>
+      <p>{{ product.description }}</p>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "t:sections.sunday-product-detail.name",
+  "tag": "section",
+  "class": "section",
+  "settings": [],
+  "presets": [
+    {
+      "name": "t:sections.sunday-product-detail.presets.name"
+    }
+  ]
+}
+{% endschema %}

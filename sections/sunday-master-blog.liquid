@@ -1,0 +1,92 @@
+{{ 'sunday-master-blog.css' | asset_url | stylesheet_tag }}
+
+<script>
+  console.log({{ section.settings.blog.articles | json }});
+</script>
+
+<section class="article-area page-width">
+  {% assign hasBlockArticles = false %}
+  {% for block in section.blocks %}
+    {% if block.settings.each_article and block.settings.each_article != '' %}
+      {% assign hasBlockArticles = true %}
+      <article class="{% cycle 'odd', 'even' %}">
+        <div class="image-area">
+          <a href="{{ block.settings.each_article.url }}">
+            <img
+              src="{{ block.settings.each_article | image_url: width: 1280 }}"
+              alt="{{ block.settings.each_article.title }}"
+            >
+          </a>
+        </div>
+        <div class="group-info-area">
+          <div class="title-area">
+            <a href="{{ block.settings.each_article.url }}">{{ block.settings.each_article.title | upcase }}</a>
+          </div>
+          <div class="button-area">
+            <a href="{{ block.settings.each_article.url }}">Xem thêm</a>
+          </div>
+        </div>
+      </article>
+    {% endif %}
+  {% endfor %}
+
+  {% if hasBlockArticles == false %}
+    {% assign articlesToDisplay = section.settings.blog.articles | sort: 'date' | reverse %}
+
+    {% for article in articlesToDisplay %}
+      {% if article and article != '' %}
+        <article class="{% cycle 'odd', 'even' %}">
+          <div class="image-area">
+            <a href="{{ article.url }}">
+              <img src="{{ article | image_url: width: 1280 }}" alt="{{ article.title }}">
+            </a>
+          </div>
+          <div class="group-info-area">
+            <div class="title-area">
+              <a href="{{ article.url }}">{{ article.title | upcase }}</a>
+            </div>
+            <div class="button-area">
+              <a href="{{ article.url }}">Xem thêm</a>
+            </div>
+          </div>
+        </article>
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+</section>
+
+{% schema %}
+{
+  "name": "t:sections.sunday-master-blog.name",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "blog",
+      "id": "blog",
+      "label": "t:sections.sunday-master-blog.settings.blog.label"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "t:sections.sunday-master-blog.blocks.name",
+      "type": "choose_article",
+      "settings": [
+        {
+          "type": "article",
+          "id": "each_article",
+          "label": "Article"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.sunday-master-blog.presets.name"
+    }
+  ]
+}
+{% endschema %}

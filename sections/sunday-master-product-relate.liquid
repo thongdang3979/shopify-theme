@@ -1,0 +1,95 @@
+{{ 'sunday-master-product-relate.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'sunday-master-product-relate.js' | asset_url }}" defer="defer"></script>
+
+<section class="product-relate-area page-width">
+  <div class="title-area">
+    <h2>{{ section.settings.title }}</h2>
+  </div>
+
+  {% if template == 'product.sunday-product-detail' %}
+    {% assign current_product_collection = product.collections.first %}
+    {% assign currentCollectionHandle = current_product_collection.handle %}
+  {% else %}
+    {% assign selectedCollectionHandle = section.settings.collection.handle %}
+    {% if selectedCollectionHandle == blank %}
+      {% assign currentCollectionHandle = collection.handle %}
+    {% else %}
+      {% assign currentCollectionHandle = selectedCollectionHandle %}
+    {% endif %}
+  {% endif %}
+
+  {% if collections[currentCollectionHandle].products.size > 0 %}
+    <div class="group-product-area group-product-slider">
+      {% for related_product in collections[currentCollectionHandle].products %}
+        {% unless related_product.id == product.id %}
+          <div class="product-item">
+            <a class="product-image-area" href="{{ related_product.url }}">
+              <img
+                src="{{ related_product.featured_image.src | image_url: width: 300 }}"
+                width="{{ related_product.featured_image.width }}"
+                height="{{ related_product.featured_image.height }}"
+                alt="{{ related_product.title }}"
+                loading="lazy"
+              >
+            </a>
+            <div class="group-product-info-area">
+              <div class="product-title-area">
+                <a href="{{ related_product.url }}">{{ related_product.title }}</a>
+              </div>
+              <div class="product-variation-area">
+                <table>
+                  <tbody>
+                    {% for variant in related_product.variants %}
+                      <tr class="variation-item">
+                        <td class="price-area">
+                          <span>{{ variant.price | money }}</span>
+                        </td>
+                        <td class="line-area"></td>
+                        <td class="size-area">
+                          <span>{{ variant.title }}</span>
+                        </td>
+                      </tr>
+                    {% endfor %}
+                  </tbody>
+                </table>
+                <div class="button-area">
+                  <a class="sd-button-primary" href="{{ related_product.url }}">MUA NGAY</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        {% endunless %}
+      {% endfor %}
+    </div>
+  {% endif %}
+</section>
+
+{% schema %}
+{
+  "name": "t:sections.sunday-master-product-relate.name",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "inline_richtext",
+      "id": "title",
+      "default": "SẢN PHẨM ĐỀ XUẤT",
+      "label": "t:sections.sunday-master-product-relate.settings.title.label"
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Collection"
+    }
+  ],
+
+  "presets": [
+    {
+      "name": "t:sections.sunday-master-product-relate.presets.name"
+    }
+  ]
+}
+{% endschema %}

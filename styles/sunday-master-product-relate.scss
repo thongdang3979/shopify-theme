@@ -1,0 +1,75 @@
+@import 'function.scss';
+
+@media only screen and (min-width: 200px) {
+    .product-relate-area {
+        padding: 44px 12px;
+        @include customProduct();
+
+        .title-area {
+            text-align: center;
+
+            h2 {
+                @include customFont(20px, 600, 130%, $Black-000, null, null);
+                text-transform: uppercase;
+                margin: 0;
+            }
+        }
+
+        .group-product-slider {
+            width: 100%;
+            margin-top: 24px;
+
+            .product-item {
+                height: 430px;
+                padding: 0 12px;
+            }
+
+            /* the parent */
+            .slick-list {
+                width: 100%;
+            }
+
+            .slick-track {
+                margin-left: 0;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 769px) {
+    .product-relate-area {
+        .title-area {
+            text-align: center;
+
+            h2 {
+                font-size: 48px;
+                line-height: 100%;
+            }
+        }
+
+        .group-product-slider {
+            margin-top: 44px;
+
+            .product-item {
+                height: 530px;
+            }
+
+            /* the parent */
+            .slick-list {
+                width: 100%;
+            }
+
+            .slick-track {
+                margin-left: 0;
+            }
+
+            .slick-prev {
+                left: -55px;
+            }
+
+            .slick-next {
+                right: -55px;
+            }
+        }
+    }
+}

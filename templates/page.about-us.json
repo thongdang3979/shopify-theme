@@ -3,9 +3,11 @@
     "sunday-master-banner-content": {
       "type": "sunday-master-banner-content",
       "settings": {
-        "slider_banner_desktop": "",
+        "banner_desktop": "",
+        "banner_desktop_default": "https://cdn.shopify.com/s/files/1/0817/3902/2646/files/About-us.png",
         "heading_title_desktop": "SẢN PHẨM DINH DƯỠNG<br>SIÊU TINH KHIẾT<br>NGUỒN GỐC TỰ NHIÊN",
-        "slider_banner_mobile": "",
+        "banner_mobile": "",
+        "banner_mobile_default": "https://cdn.shopify.com/s/files/1/0817/3902/2646/files/About-us.png",
         "heading_title_mobile": "SẢN PHẨM DINH DƯỠNG<br>SIÊU TINH KHIẾT<br>NGUỒN GỐC TỰ NHIÊN"
       }
     },
@@ -83,8 +85,8 @@
       "settings": {
         "richtext_group_backgrond_desktop": "",
         "richtext_group_backgrond_mobile": "",
-        "richtext_group_backgrond_desktop_default": "https://cdn.shopify.com/s/files/1/0798/1577/0402/files/about-us-desktop.png?v=1692334101",
-        "richtext_group_backgrond_mobile_default": "https://cdn.shopify.com/s/files/1/0798/1577/0402/files/about-us-mobile.png?v=1692334098"
+        "richtext_group_backgrond_desktop_default": "https://cdn.shopify.com/s/files/1/0817/3902/2646/files/about-us-desktop.png?v=1693217875",
+        "richtext_group_backgrond_mobile_default": "https://cdn.shopify.com/s/files/1/0817/3902/2646/files/about-us-mobile.png?v=1693217873"
       },
       "blocks": {
         "group-0": {
@@ -120,8 +122,8 @@
       "settings": {
         "richtext_group_backgrond_desktop": "",
         "richtext_group_backgrond_mobile": "",
-        "richtext_group_backgrond_desktop_default": "https://cdn.shopify.com/s/files/1/0798/1577/0402/files/Aboutus_1.png?v=1693203289",
-        "richtext_group_backgrond_mobile_default": "https://cdn.shopify.com/s/files/1/0798/1577/0402/files/Aboutus2_2.png?v=1693205989"
+        "richtext_group_backgrond_desktop_default": "https://cdn.shopify.com/s/files/1/0817/3902/2646/files/About-us-1.png?v=1693277071",
+        "richtext_group_backgrond_mobile_default": "https://cdn.shopify.com/s/files/1/0817/3902/2646/files/About-us-1-mb.png?v=1693277068"
       },
       "blocks": {
         "group-0": {
@@ -149,8 +151,8 @@
       "settings": {
         "richtext_group_backgrond_desktop": "",
         "richtext_group_backgrond_mobile": "",
-        "richtext_group_backgrond_desktop_default": "https://cdn.shopify.com/s/files/1/0798/1577/0402/files/Aboutus_2.png?v=1693203289",
-        "richtext_group_backgrond_mobile_default": "https://cdn.shopify.com/s/files/1/0798/1577/0402/files/Aboutus2_3.png?v=1693205988"
+        "richtext_group_backgrond_desktop_default": "https://cdn.shopify.com/s/files/1/0817/3902/2646/files/About-us-2.png?v=1693277071",
+        "richtext_group_backgrond_mobile_default": "https://cdn.shopify.com/s/files/1/0817/3902/2646/files/About-us-2-mb.png?v=1693277068"
       },
       "blocks": {
         "group-0": {
@@ -178,8 +180,8 @@
       "settings": {
         "richtext_group_backgrond_desktop": "",
         "richtext_group_backgrond_mobile": "",
-        "richtext_group_backgrond_desktop_default": "https://cdn.shopify.com/s/files/1/0798/1577/0402/files/Aboutus_3.png?v=1693203290",
-        "richtext_group_backgrond_mobile_default": "https://cdn.shopify.com/s/files/1/0798/1577/0402/files/Aboutus2_4.png?v=1693205989"
+        "richtext_group_backgrond_desktop_default": "https://cdn.shopify.com/s/files/1/0817/3902/2646/files/About-us-3.png?v=1693277072",
+        "richtext_group_backgrond_mobile_default": "https://cdn.shopify.com/s/files/1/0817/3902/2646/files/About-us-3-mb.png?v=1693277068"
       },
       "blocks": {
         "group-0": {
@@ -207,8 +209,8 @@
       "settings": {
         "richtext_group_backgrond_desktop": "",
         "richtext_group_backgrond_mobile": "",
-        "richtext_group_backgrond_desktop_default": "https://cdn.shopify.com/s/files/1/0798/1577/0402/files/Aboutus_5.png?v=1693203290",
-        "richtext_group_backgrond_mobile_default": "https://cdn.shopify.com/s/files/1/0798/1577/0402/files/Aboutus2_5.png?v=1693205989"
+        "richtext_group_backgrond_desktop_default": "https://cdn.shopify.com/s/files/1/0817/3902/2646/files/About-us-5.png?v=1693277072",
+        "richtext_group_backgrond_mobile_default": "https://cdn.shopify.com/s/files/1/0817/3902/2646/files/About-us-5-mb.png?v=1693277068"
       },
       "blocks": {
         "group-0": {
@@ -236,8 +238,8 @@
       "settings": {
         "richtext_group_backgrond_desktop": "",
         "richtext_group_backgrond_mobile": "",
-        "richtext_group_backgrond_desktop_default": "https://cdn.shopify.com/s/files/1/0798/1577/0402/files/Aboutus_4.png?v=1693203290",
-        "richtext_group_backgrond_mobile_default": "https://cdn.shopify.com/s/files/1/0798/1577/0402/files/Aboutus2_6.png?v=1693205989"
+        "richtext_group_backgrond_desktop_default": "https://cdn.shopify.com/s/files/1/0817/3902/2646/files/About-us-4.png?v=1693277072",
+        "richtext_group_backgrond_mobile_default": "https://cdn.shopify.com/s/files/1/0817/3902/2646/files/About-us-4-mb.png?v=1693277068"
       },
       "blocks": {
         "group-0": {
@@ -265,8 +267,8 @@
       "settings": {
         "richtext_group_backgrond_desktop": "",
         "richtext_group_backgrond_mobile": "",
-        "richtext_group_backgrond_desktop_default": "https://cdn.shopify.com/s/files/1/0798/1577/0402/files/Aboutus_6.png?v=1693203290",
-        "richtext_group_backgrond_mobile_default": "https://cdn.shopify.com/s/files/1/0798/1577/0402/files/Aboutus2_7.png?v=1693205989",
+        "richtext_group_backgrond_desktop_default": "https://cdn.shopify.com/s/files/1/0817/3902/2646/files/About-us-6.png?v=1693277072",
+        "richtext_group_backgrond_mobile_default": "https://cdn.shopify.com/s/files/1/0817/3902/2646/files/About-us-6-mb.png?v=1693277068",
         "richtext_group_backgrond_desktop_height": 880
       },
       "blocks": {

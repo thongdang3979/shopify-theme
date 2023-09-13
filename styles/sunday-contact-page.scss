@@ -1,0 +1,233 @@
+@import 'function.scss';
+
+@media only screen and (min-width: 200px) {
+    .contact-page-area {
+        @include flexCustome(column, nowrap, null, null, null, 24px);
+        padding-bottom: 40px;
+
+        .title-area {
+            margin-top: 24px;
+
+            h1 {
+                @include customFont(24px, 700, 100%, $Black-000, null, null);
+                margin: 0;
+            }
+        }
+
+        .group-content-area {
+            @include flexCustome(column, nowrap, null, null, null, 24px);
+
+            .infomation-area {
+                @include flexCustome(column, nowrap, null, null, null);
+
+                .group-box-infomation {
+                    @include flexCustome(column, nowrap, null, null, null, 8px);
+
+                    .box-title-area {
+                        h2 {
+                            @include customFont(16px, 700, 100%, $Orange-CA9, null, null);
+                            margin: 0;
+                        }
+
+                        &.second {
+                            margin-top: 16px;
+                        }
+                    }
+
+                    .box-description {
+                        p {
+                            @include customFont(16px, 400, 160%, $Black-202, null, null);
+                            margin: 0;
+
+                            a {
+                                color: $Orange-CA9;
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+
+                    .box-icon-area {
+                        @include flexCustome(row, nowrap, center, flex-start, flex-start, 12px);
+
+                        .icon-area {
+                            @include flexCustome(row, nowrap, null, null, null);
+                            border-radius: 4px;
+                            background: $Orange-CA9;
+                            padding: 4px;
+
+                            svg,
+                            img {
+                                width: 13.333px;
+                                height: 13.333px;
+                            }
+                        }
+
+                        .content-area {
+
+                            h3,
+                            a {
+                                @include customFont(14px, 600, 160%, $Black-202, null, null);
+                                letter-spacing: 1px;
+                                margin: 0;
+                                text-decoration: none
+                            }
+                        }
+                    }
+                }
+            }
+
+            .form-area {
+                #ContactForm {
+                    @include flexCustome(column, nowrap, null, null, null, 12px);
+
+                    .form-label {
+                        @include customFont(18px, 500, 160%, $Black-202, null, null);
+                    }
+
+                    .form-check-label {
+                        @include customFont(16px, 500, 160%, $Black-202, null, null);
+                    }
+
+                    .form-group {
+                        @include flexCustome(column, nowrap, null, null, null, 4px);
+
+                        input,
+                        select,
+                        textarea {
+                            border-radius: 4px;
+                            border: 1px solid $Gray-E6E;
+                            background: $White-FFF;
+                            min-height: 52px;
+                            height: 100%;
+                            width: 100%;
+                            padding: 5px 8px;
+                            @include customFont(16px, 500, 130%, $Black-202, null, null);
+                        }
+
+                        button {
+                            @include customFont(16px, 700, 130%, $White-FFF, null, null);
+                            text-transform: uppercase;
+                            letter-spacing: 2px;
+                            @include customButton($Orange-CA9, $Orange-CA9, $Green-3A4, $Green-3A4, $White-FFF, $White-FFF);
+                            margin-top: 24px;
+
+                            &::after {
+                                box-shadow: none;
+                            }
+                        }
+
+                        *:focus-visible {
+                            outline: unset;
+                            outline-offset: unset;
+                            box-shadow: unset;
+                        }
+                    }
+
+                    .form-check {
+                        @include flexCustome(row, nowrap, null, null, null, 4px);
+                        margin-top: 12px;
+
+                        input[type="checkbox"] {
+                            width: 20px;
+                            height: 20px;
+                            border-radius: 4px;
+                            border: 1px solid #DDDDE3;
+                            background: #F5F5F5;
+                            accent-color: $Orange-CA9;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 769px) {
+    .breadcrumbs {
+        padding-left: 80px;
+    }
+
+    .contact-page-area {
+        padding-left: 80px;
+        padding-right: 80px;
+
+        .title-area {
+            margin-top: 32px;
+        }
+
+
+        .group-content-area {
+            .infomation-area {
+                .group-box-infomation {
+                    .box-title-area {
+                        &.second {
+                            margin-top: 24px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1025px) {
+    .contact-page-area {
+        gap: 32px;
+
+
+        .group-content-area {
+            flex-direction: row;
+            gap: 42px;
+
+            .infomation-area,
+            .form-area {
+                width: calc(50% - 21px);
+            }
+
+            .infomation-area {
+                .title-area {
+                    h1 {
+                        font-size: 36px;
+                    }
+                }
+
+                .group-box-infomation {
+                    .box-title-area {
+                        h2 {
+                            font-size: 24px;
+                        }
+
+                        &.second {
+                            margin-top: 52px;
+                        }
+                    }
+
+                    .box-description {
+                        p {
+                            font-size: 18px;
+                        }
+                    }
+
+                    .box-icon-area {
+                        .icon-area {
+
+                            svg,
+                            img {
+                                width: 20px;
+                                height: 20px;
+                            }
+                        }
+
+                        .content-area {
+
+                            h3,
+                            a {
+                                font-size: 18px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

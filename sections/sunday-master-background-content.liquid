@@ -6,7 +6,7 @@
         {% if section.settings.slider_background_desktop != null %}
           background: url('{{- section.settings.slider_background_desktop | image_url: width: 1024 -}}'), lightgray;
         {% else %}
-          background: url('https://cdn.shopify.com/s/files/1/0798/1577/0402/files/about-us-mobile.png?v=1692334098'), lightgray;
+          background: url('https://cdn.shopify.com/s/files/1/0817/3902/2646/files/about-us-mobile.png?v=1693217873'), lightgray;
         {% endif %}
       }
     }
@@ -16,7 +16,7 @@
       {% if section.settings.slider_background_desktop != null %}
         background: url('{{- section.settings.slider_background_desktop | image_url: width: 2048 -}}'), lightgray;
       {% else %}
-        background: url('https://cdn.shopify.com/s/files/1/0798/1577/0402/files/about-us-desktop.png?v=1692334101'), lightgray;
+        background: url('https://cdn.shopify.com/s/files/1/0817/3902/2646/files/about-us-desktop.png?v=1693217875'), lightgray;
       {% endif %}
     }
   }
@@ -25,10 +25,10 @@
 <section class="background-content-area">
   <div class="group-content-area">
     <div class="content-area content-desktop">
-      {{ section.settings.content_desktop | rich_text }}
+      {{ section.settings.content_desktop }}
     </div>
     <div class="content-area content-mobile">
-      {{ section.settings.content_mobile | rich_text }}
+      {{ section.settings.content_mobile }}
     </div>
     <div class="title-area title-desktop">
       <h3>{{ section.settings.heading_title_desktop }}</h3>

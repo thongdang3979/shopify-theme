@@ -1,0 +1,31 @@
+{
+  "sections": {
+    "sunday-master-banner-content": {
+      "type": "sunday-master-banner-content",
+      "settings": {
+        "banner_desktop": "",
+        "banner_desktop_default": "https://cdn.shopify.com/s/files/1/0817/3902/2646/files/26.05.23_-_Vitamin_D_Vietnam_Campaign-7_Large_70c5ff0a-110b-4265-a618-7f38a7115dee.png?v=1693577583",
+        "heading_title_desktop": "",
+        "banner_mobile": "",
+        "banner_mobile_default": "https://cdn.shopify.com/s/files/1/0817/3902/2646/files/26.05.23_-_Vitamin_D_Vietnam_Campaign-7_Large_70c5ff0a-110b-4265-a618-7f38a7115dee.png?v=1693577583",
+        "heading_title_mobile": ""
+      }
+    },
+    "sunday-collection-template-two": {
+      "type": "sunday-collection-template-two",
+      "settings": {}
+    },
+    "sunday-master-product-relate": {
+      "type": "sunday-master-product-relate",
+      "settings": {
+        "title": "SẢN PHẨM ĐỀ XUẤT",
+        "collection": ""
+      }
+    }
+  },
+  "order": [
+    "sunday-master-banner-content",
+    "sunday-collection-template-two",
+    "sunday-master-product-relate"
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "sections": {
+    "sunday-master-breadcrumb": {
+      "type": "sunday-master-breadcrumb",
+      "settings": {
+        "breabcrumb_position_left": 0
+      }
+    },
+    "sunday-product-detail": {
+      "type": "sunday-product-detail",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "enable_sticky_info": true,
+        "media_size": "large",
+        "constrain_to_viewport": true,
+        "gallery_layout": "stacked",
+        "mobile_thumbnails": "hide",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 60,
+        "padding_bottom": 12
+      }
+    },
+    "sunday-master-product-relate": {
+      "type": "sunday-master-product-relate",
+      "settings": {
+        "title": "SẢN PHẨM ĐỀ XUẤT",
+        "collection": ""
+      }
+    }
+  },
+  "order": [
+    "sunday-master-breadcrumb",
+    "sunday-product-detail",
+    "sunday-master-product-relate"
+  ]
+}

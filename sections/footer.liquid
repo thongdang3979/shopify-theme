@@ -216,7 +216,7 @@
                             <li>
                               <a
                                 href="{{ link.url }}"
-                                class="link link--text list-menu__item list-menu__item--link{% if link.active %} list-menu__item--active{% endif %}"
+                                class="link link--text list-menu__item list-menu__item--link{% if link.active %} list-menu__item--actives{% endif %}"
                               >
                                 {{ link.title }}
                                 {%- if block.settings.menu_type == 'icon' -%}
@@ -260,10 +260,12 @@
                     <a
                       href="{{ routes.root_url }}"
                       class="footer-logo header__heading-link link link--text focus-inset"
-                      style="text-align: {{ block.settings.footer_logo_alignment }};"
                     >
                       {%- if settings.logo != blank -%}
-                        <div class="header__heading-logo-wrapper">
+                        <div
+                          class="header__heading-logo-wrapper"
+                          style="text-align: {{ block.settings.footer_logo_alignment }};"
+                        >
                           {%- assign logo_alt = settings.logo.alt | default: shop.name | escape -%}
                           {%- assign logo_height = settings.logo_width | divided_by: settings.logo.aspect_ratio -%}
                           {% capture sizes %}(max-width: {{ settings.logo_width | times: 2 }}px) 50vw, {{ settings.logo_width }}px{% endcapture %}
@@ -282,7 +284,18 @@
                           }}
                         </div>
                       {%- else -%}
-                        <span class="h2">{{ shop.name }}</span>
+                        <div
+                          class="header__heading-logo-wrapper"
+                          style="text-align: {{ block.settings.footer_logo_alignment }};"
+                        >
+                          <img
+                            src="https://cdn.shopify.com/s/files/1/0817/3902/2646/files/sunday-logo.png?v=1693218239"
+                            width="240"
+                            height="88"
+                            alt="Sunday-logo"
+                            loading="eager"
+                          >
+                        </div>
                       {%- endif -%}
                     </a>
                 {%- endcase -%}

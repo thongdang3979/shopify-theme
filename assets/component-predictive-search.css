@@ -72,6 +72,7 @@ predictive-search[loading] .predictive-search {
   flex-direction: column;
   flex: 1 1 auto;
   gap: 2rem;
+  width: 100%;
 }
 
 .predictive-search__result-group:first-child .predictive-search__pages-wrapper {

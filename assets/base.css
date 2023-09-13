@@ -73,6 +73,51 @@
 
 /* base */
 
+@font-face {
+  font-family: 'Quicksand';
+  src: url('Quicksand-Medium.woff2') format('woff2'),
+    url('Quicksand-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Quicksand';
+  src: url('Quicksand-Bold.woff2') format('woff2'),
+    url('Quicksand-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Quicksand';
+  src: url('Quicksand-Light.woff2') format('woff2'),
+    url('Quicksand-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Quicksand';
+  src: url('Quicksand-Regular.woff2') format('woff2'),
+    url('Quicksand-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Quicksand';
+  src: url('Quicksand-SemiBold.woff2') format('woff2'),
+    url('Quicksand-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
 .no-js:not(html) {
   display: none !important;
 }
@@ -2338,7 +2383,8 @@ product-info .loading-overlay:not(.hidden)~*,
 
 /* section-header */
 .section-header.shopify-section-group-header-group {
-  z-index: 9999;
+  z-index: 999;
+  top: 0;
 }
 
 .shopify-section-header-sticky {
@@ -2824,8 +2870,8 @@ details[open]>.header__submenu {
 }
 
 .header__menu-item:hover span {
-  text-decoration: underline;
-  text-underline-offset: 0.3rem;
+  /* text-decoration: underline; */
+  /* text-underline-offset: 0.3rem; */
 }
 
 details[open]>.header__menu-item {

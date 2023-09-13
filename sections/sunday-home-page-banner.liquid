@@ -2,11 +2,11 @@
 
 {%- style -%}
   @media only screen and (min-width: 200px) {
-    .home-banner-area{
+    /* .home-banner-area{
       {% if section.settings.image_product_width_mobile %}
           height: {{ section.settings.image_banner_height_mobile | append: 'px' }};
       {% endif %}
-    }
+    } */
     .home-banner-area .product-image-area {
       {% if section.settings.image_product_width_mobile %}
         width: {{ section.settings.image_product_width_mobile | append: 'px' }};
@@ -28,11 +28,11 @@
   }
 
   @media only screen and (min-width: 1025px) {
-    .home-banner-area{
+    /* .home-banner-area{
       {% if section.settings.image_product_width_desktop %}
           height: {{ section.settings.image_banner_height_desktop | append: 'px' }};
       {% endif %}
-    }
+    } */
     .home-banner-area .product-image-area {
       {% if section.settings.image_product_width_desktop %}
         width: {{ section.settings.image_product_width_desktop | append: 'px' }};
@@ -70,18 +70,20 @@
   <div class="background-image">
     <img
       class="mobile-image"
-      src="{{ section.settings.image_banner_mobile | default: 'https://cdn.shopify.com/s/files/1/0798/1577/0402/files/SundayVN-banner-mobile.png?v=1692088420' }}"
+      src="{% if section.settings.image_banner_mobile %}{{ section.settings.image_banner_mobile | image_url: width: 1024 }}{% else %}//cdn.shopify.com/s/files/1/0817/3902/2646/files/Sunday-banner-mb.png?v=1693217456{% endif %}"
       width="{{ section.settings.image_banner_mobile.width | default: '414' }}"
       height="{{ section.settings.image_banner_mobile.height | default: '516' }}"
-      alt="{{ section.settings.image_banner_mobile.alt | default: 'SundayBanner'}}"
+      alt="{{ section.settings.image_banner_mobile.alt | default: 'SundayBanner' }}"
+      loading="eager"
     >
 
     <img
       class="desktop-image"
-      src="{{ section.settings.image_banner_desktop | default: 'https://cdn.shopify.com/s/files/1/0798/1577/0402/files/Main_Banner_3840x2126_018519b0-c69e-48d9-aaa8-6b94f7940be8.webp?v=1692929090' }}"
-      width="{{ section.settings.image_banner_desktop.width | default: '1920'}}"
+      src="{% if section.settings.image_banner_desktop %}{{ section.settings.image_banner_desktop | image_url: width: 1920 }}{% else %}//cdn.shopify.com/s/files/1/0817/3902/2646/files/Sunday-banner.webp?v=1693217350{% endif %}"
+      width="{{ section.settings.image_banner_desktop.width | default: '1920' }}"
       height="{{ section.settings.image_banner_desktop.height | default: '979' }}"
-      alt="{{ section.settings.image_banner_desktop.alt | default: 'SundayBanner'}}"
+      alt="{{ section.settings.image_banner_desktop.alt | default: 'SundayBanner' }}"
+      loading="eager"
     >
   </div>
 
@@ -90,10 +92,11 @@
       {{ section.settings.image_product | image_url: width: 1024 | image_tag }}
     {%- else -%}
       <img
-        src="https://cdn.shopify.com/s/files/1/0798/1577/0402/files/Vitamin-D3-K2-no-bg.png?v=1690798827"
+        src="https://cdn.shopify.com/s/files/1/0817/3902/2646/files/Vitamin-no-bg.png?v=1693217221"
         width="500"
         height="611"
         alt="SundayBannerProduct"
+        loading="eager"
       >
     {%- endif -%}
   </div>

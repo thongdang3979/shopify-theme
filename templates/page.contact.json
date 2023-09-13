@@ -1,25 +1,66 @@
 {
   "sections": {
-    "main": {
-      "type": "main-page",
+    "sunday-master-banner-content": {
+      "type": "sunday-master-banner-content",
       "settings": {
-        "padding_top": 36,
-        "padding_bottom": 36
+        "banner_desktop": "",
+        "banner_desktop_default": "https://cdn.shopify.com/s/files/1/0817/3902/2646/files/z4555749562504_a0fdd70fa5c7373b7f58cc6118c53f02.jpg?v=1694578571",
+        "heading_title_desktop": "",
+        "banner_mobile": "",
+        "banner_mobile_default": "https://cdn.shopify.com/s/files/1/0817/3902/2646/files/z4555749562504_a0fdd70fa5c7373b7f58cc6118c53f02.jpg?v=1694578571",
+        "heading_title_mobile": ""
       }
     },
-    "form": {
-      "type": "contact-form",
+    "sunday-master-breadcrumb": {
+      "type": "sunday-master-breadcrumb",
       "settings": {
-        "heading": "",
-        "heading_size": "h1",
-        "color_scheme": "background-1",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "breabcrumb_position_left": 0
       }
+    },
+    "suday-contact-form": {
+      "type": "suday-contact-form",
+      "settings": {},
+      "blocks": {
+        "box_contact_infomation-0": {
+          "type": "box_contact_infomation",
+          "settings": {
+            "title": "Gọi chúng tôi",
+            "description": "<p>Liên hệ với chúng tôi để được giải đáp thắc mắc ngay nhé</p>"
+          }
+        },
+        "box_contact_icon-0": {
+          "type": "box_contact_icon",
+          "settings": {
+            "box_icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\">\n<g clip-path=\"url(#clip0_1642_1505)\">\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M6.24841 0.599461C6.69602 0.535515 7.13086 0.779889 7.30897 1.19549L9.31201 5.86925C9.47309 6.24509 9.38911 6.68114 9.09997 6.97027L7.65922 8.41103C8.4124 10.1772 9.82031 11.5851 11.5864 12.3382L13.0272 10.8975C13.3163 10.6084 13.7524 10.5244 14.1282 10.6855L18.802 12.6885C19.2176 12.8666 19.462 13.3014 19.398 13.7491L18.7682 18.1577C18.7003 18.6329 18.3042 18.9929 17.8247 19.0152C13.4574 19.2181 9.01938 17.6514 5.68272 14.3148C2.34607 10.9781 0.779372 6.5401 0.982296 2.1728C1.00458 1.69322 1.36453 1.29716 1.8398 1.22926L6.24841 0.599461ZM2.96577 3.08871C3.00675 6.64585 4.3839 10.1875 7.09693 12.9005C9.80997 15.6136 13.3516 16.9907 16.9088 17.0317L17.3097 14.2249L13.9627 12.7904L12.5442 14.209C12.2763 14.4768 11.8802 14.5703 11.5208 14.4505C8.70034 13.5104 6.4871 11.2971 5.54694 8.47664C5.42716 8.11731 5.52068 7.72114 5.78851 7.45331L7.20703 6.0348L5.77257 2.68774L2.96577 3.08871Z\" fill=\"white\"/>\n</g>\n<defs>\n<clipPath id=\"clip0_1642_1505\">\n<rect width=\"20\" height=\"20\" fill=\"white\"/>\n</clipPath>\n</defs>\n</svg>",
+            "description": "<h3><a href=\"tel: 0908912100\">0908912100</a></h3>"
+          }
+        },
+        "box_contact_infomation-1": {
+          "type": "box_contact_infomation",
+          "settings": {
+            "title": "Ghé thăm chúng tôi,",
+            "description": "<p>Ghé thăm chúng tôi,</p><p><a href=\"\">Xem trên google map</a></p>"
+          }
+        },
+        "box_contact_icon-1": {
+          "type": "box_contact_icon",
+          "settings": {
+            "box_icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\">\n<g clip-path=\"url(#clip0_1642_1514)\">\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M10 5C8.34315 5 7 6.34315 7 8C7 9.65685 8.34315 11 10 11C11.6569 11 13 9.65685 13 8C13 6.34315 11.6569 5 10 5ZM9 8C9 7.44772 9.44772 7 10 7C10.5523 7 11 7.44772 11 8C11 8.55228 10.5523 9 10 9C9.44772 9 9 8.55228 9 8Z\" fill=\"white\"/>\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M15.2263 1.98053C12.2238 -0.660178 7.7762 -0.660177 4.7737 1.98053C1.40988 4.93903 1.05764 10.1211 3.98017 13.5246L9.24131 19.6515C9.43129 19.8727 9.70837 20 9.99998 20C10.2916 20 10.5687 19.8727 10.7587 19.6515L16.0198 13.5246C18.9423 10.1211 18.5901 4.93903 15.2263 1.98053ZM6.09454 3.48233C8.34176 1.50589 11.6582 1.50589 13.9054 3.48233C16.4426 5.71374 16.7151 9.64487 14.5024 12.2216L9.99998 17.465L5.49752 12.2216C3.28489 9.64487 3.55741 5.71374 6.09454 3.48233Z\" fill=\"white\"/>\n</g>\n<defs>\n<clipPath id=\"clip0_1642_1514\">\n<rect width=\"20\" height=\"20\" fill=\"white\"/>\n</clipPath>\n</defs>\n</svg>",
+            "description": "<h3>L18-11-13, Tầng 18, Tòa nhà Vincom Center Đồng Khởi, 72 Lê Thánh Tôn, Phường Bến Nghé, Quận 1, Thành phố Hồ Chí Minh, Việt Nam</h3>"
+          }
+        }
+      },
+      "block_order": [
+        "box_contact_infomation-0",
+        "box_contact_icon-0",
+        "box_contact_infomation-1",
+        "box_contact_icon-1"
+      ]
     }
   },
   "order": [
-    "main",
-    "form"
+    "sunday-master-banner-content",
+    "sunday-master-breadcrumb",
+    "suday-contact-form"
   ]
 }

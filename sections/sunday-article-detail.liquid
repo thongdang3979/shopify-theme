@@ -1,0 +1,112 @@
+{{ 'sunday-article-detail.css' | asset_url | stylesheet_tag }}
+
+<section class="article-detail-area">
+  {%- for block in section.blocks -%}
+    {%- case block.type -%}
+      {%- when 'article_banner' -%}
+        {%- if article.image -%}
+          <div class="article-banner-area">
+            <img
+              srcset="
+                {% if article.image.width >= 350 %}{{ article.image | image_url: width: 350 }} 350w,{% endif %}
+                {% if article.image.width >= 750 %}{{ article.image | image_url: width: 750 }} 750w,{% endif %}
+                {% if article.image.width >= 1100 %}{{ article.image | image_url: width: 1100 }} 1100w,{% endif %}
+                {% if article.image.width >= 1500 %}{{ article.image | image_url: width: 1500 }} 1500w,{% endif %}
+                {% if article.image.width >= 2200 %}{{ article.image | image_url: width: 2200 }} 2200w,{% endif %}
+                {% if article.image.width >= 3000 %}{{ article.image | image_url: width: 3000 }} 3000w,{% endif %}
+                {{ article.image | image_url }} {{ article.image.width }}w
+              "
+              sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 }}px, (min-width: 750px) calc(100vw - 10rem), 100vw"
+              src="{{ article.image | image_url: width: 1100 }}"
+              loading="eager"
+              fetchpriority="high"
+              width="{{ article.image.width }}"
+              height="{{ article.image.height }}"
+              alt="{{ article.image.alt | escape }}"
+            >
+          </div>
+        {%- endif -%}
+      {%- when 'article_breadcrumb' -%}
+        <div class="article-breadcrumb-area page-width">
+          {% render 'sunday-breadcrumb' %}
+        </div>
+
+      {%- when 'article_title' -%}
+        <div class="group-article-title-area page-width">
+          <h1 class="article-title-area" itemprop="headline">
+            {{ article.title | escape }}
+          </h1>
+          {%- if block.settings.blog_show_date -%}
+            <span class="circle-divider caption-with-letter-spacing" itemprop="dateCreated pubdate datePublished">
+              {{- article.published_at | time_tag: format: 'date' -}}
+            </span>
+          {%- endif -%}
+          {%- if block.settings.blog_show_author -%}
+            <span class="caption-with-letter-spacing" itemprop="author" itemscope itemtype="http://schema.org/Person">
+              <span itemprop="name">{{ article.author }}</span>
+            </span>
+          {%- endif -%}
+        </div>
+
+      {%- when 'article_content' -%}
+        <div
+          class="article-content-area page-width rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+          itemprop="articleBody"
+          {{ block.shopify_attributes }}
+        >
+          {{ article.content }}
+        </div>
+    {%- endcase -%}
+  {%- endfor -%}
+</section>
+
+{% schema %}
+{
+  "name": "t:sections.sunday-article-detail.name",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [],
+  "blocks": [
+    {
+      "type": "article_banner",
+      "name": "t:sections.sunday-article-detail.blocks.article_banner.name"
+    },
+    {
+      "type": "article_breadcrumb",
+      "name": "t:sections.sunday-article-detail.blocks.article_breadcrumb.name"
+    },
+    {
+      "type": "article_title",
+      "name": "t:sections.sunday-article-detail.blocks.article_title.name",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "blog_show_date",
+          "default": false,
+          "label": "t:sections.main-article.blocks.title.settings.blog_show_date.label"
+        },
+        {
+          "type": "checkbox",
+          "id": "blog_show_author",
+          "default": false,
+          "label": "t:sections.main-article.blocks.title.settings.blog_show_author.label"
+        }
+      ]
+    },
+    {
+      "type": "article_content",
+      "name": "t:sections.sunday-article-detail.blocks.article_content.name",
+      "limit": 1
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.sunday-master-blog.presets.name"
+    }
+  ]
+}
+{% endschema %}

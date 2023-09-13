@@ -1,0 +1,84 @@
+@import 'function.scss';
+
+@media only screen and (min-width: 200px) {
+    .collection-area {
+
+        .collection-details-area {
+            @include flexCustome(column, nowrap, null, null, null, 16px);
+            padding: 30px 0;
+
+            h1 {
+                @include customFont(24px, 700, 120%, $Black-000, null, null);
+                text-transform: uppercase;
+                text-align: center;
+                margin: 0;
+            }
+
+            .description-area {
+
+                h2 {
+                    @include customFont(16px, 700, 120%, $Black-000, null, null);
+                    margin: 0;
+                }
+
+                img {
+                    width: 100%
+                }
+
+                p {
+                    @include customFont(14px, 400, 160%, $Gray-686, null, null);
+                    letter-spacing: 0.14px;
+                    @include customFont(14px, 500, 160%, $Gray-333, null, null);
+                    margin: 0;
+                    min-height: 16px;
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 769px) {
+    .collection-area {
+
+        .collection-details-area {
+            gap: 22px;
+
+            h1 {
+                font-size: 32px;
+            }
+
+            .description-area {
+
+                h2 {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1025px) {
+    .collection-area {
+
+        .collection-details-area {
+            gap: 32px;
+            padding: 44px 0;
+
+            h1 {
+                font-size: 40px;
+            }
+
+            .description-area {
+
+                h2 {
+                    font-size: 22px;
+                }
+
+                p {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}

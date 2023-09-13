@@ -1,0 +1,88 @@
+{{ 'sunday-master-breadcrumb.css' | asset_url | stylesheet_tag }}
+
+{% style %}
+  @media only screen and (min-width: 769px) {
+    .breadcrumbs .breadcrumbs__list{
+      padding-left: {{ section.settings.breabcrumb_position_left | append: 'px' }}
+    }
+  }
+{% endstyle %}
+
+{%- unless template == 'index' or template == 'cart' or template == 'list-collections' or template == '404' -%}
+  {%- assign check_template = template | split: '.' | first -%}
+  {%- assign icon_home = 'https://cdn.shopify.com/s/files/1/0817/3902/2646/files/sunday_circle.png?v=1693275027' -%}
+  {%- assign icon_arrow = '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M6.29289 3.60344C6.68342 3.21292 7.31658 3.21292 7.70711 3.60344L13.7071 9.60344C14.0976 9.99396 14.0976 10.6271 13.7071 11.0177L7.70711 17.0177C7.31658 17.4082 6.68342 17.4082 6.29289 17.0177C5.90237 16.6271 5.90237 15.994 6.29289 15.6034L11.5858 10.3105L6.29289 5.01765C5.90237 4.62713 5.90237 3.99396 6.29289 3.60344Z" fill="#333333"/></svg>' -%}
+
+  <nav class="breadcrumbs page-width" role="navigation" aria-label="breadcrumbs">
+    <ol class="breadcrumbs__list">
+      <li class="breadcrumbs__item home-item">
+        <a class="breadcrumbs__link" href="/"
+          ><img src="{{ icon_home }}" width="40" height="40" alt="home-logo" loading="lazy"
+        ></a>
+      </li>
+      <li class="breadcrumbs__item">
+        <span class="breadcrumbs__icon">{{ icon_arrow }}</span>
+      </li>
+      {%- case check_template -%}
+        {%- when 'page' -%}
+          <li class="breadcrumbs__item">
+            <a class="breadcrumbs__link" href="{{ page.url }}" aria-current="page">{{ page.title }}</a>
+          </li>
+        {%- when 'product' -%}
+          {%- if product.collections.size > 0 -%}
+            <li class="breadcrumbs__item">
+              {{ product.collections[0].title | link_to: product.collections[0].url }}
+            </li>
+            <li class="breadcrumbs__item">
+              <span class="breadcrumbs__icon">{{ icon_arrow }}</span>
+            </li>
+          {%- endif -%}
+          <li class="breadcrumbs__item">
+            <a class="breadcrumbs__link" href="{{ product.url }}" aria-current="page">{{ product.title }}</a>
+          </li>
+        {%- when 'collection' and collection.handle -%}
+          {%- if current_tags -%}
+            <li class="breadcrumbs__item">
+              {{ collection.title | link_to: collection.url }}
+            </li>
+            <li class="breadcrumbs__item">
+              {%- capture tag_url -%}{{ collection.url }}/{{ current_tags | join: "+" }}{%- endcapture -%}
+              <a class="breadcrumbs__link" href="{{ tag_url }}" aria-current="page">{{ current_tags | join: ' + ' }}</a>
+            </li>
+          {%- else -%}
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link" href="{{ collection.url }}" aria-current="page">{{ collection.title }}</a>
+            </li>
+          {%- endif -%}
+        {%- when 'blog' -%}
+          {%- if current_tags -%}
+            <li class="breadcrumbs__item">
+              {{ blog.title | link_to: blog.url }}
+            </li>
+            <li class="breadcrumbs__item">
+              {%- capture tag_url -%}{{ blog.url }}/tagged/{{ current_tags | join: "+" }}{%- endcapture -%}
+              <a class="breadcrumbs__link" href="{{ tag_url }}" aria-current="page">{{ current_tags | join: ' + ' }}</a>
+            </li>
+          {%- else -%}
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link" href="{{ blog.url }}" aria-current="page">{{ blog.title }}</a>
+            </li>
+          {%- endif -%}
+        {%- when 'article' -%}
+          <li class="breadcrumbs__item">
+            {{ blog.title | link_to: blog.url }}
+          </li>
+          <li class="breadcrumbs__item">
+            <span class="breadcrumbs__icon">{{ icon_arrow }}</span>
+          </li>
+          <li class="breadcrumbs__item">
+            <a class="breadcrumbs__link" href="{{ article.url }}" aria-current="page">{{ article.title }}</a>
+          </li>
+        {%- else -%}
+          <li class="breadcrumbs__item">
+            <a class="breadcrumbs__link" href="{{ request.path }}" aria-current="page">{{ page_title }}</a>
+          </li>
+      {%- endcase -%}
+    </ol>
+  </nav>
+{%- endunless -%}

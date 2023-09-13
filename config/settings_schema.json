@@ -21,6 +21,11 @@
         "label": "t:settings_schema.logo.settings.second_logo_image.label"
       },
       {
+        "type": "image_picker",
+        "id": "sticky_logo",
+        "label": "t:settings_schema.logo.settings.sticky_logo_image.label"
+      },
+      {
         "type": "range",
         "id": "logo_width",
         "min": 50,

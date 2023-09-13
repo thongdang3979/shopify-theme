@@ -1,19 +1,38 @@
 {
   "sections": {
-    "main": {
-      "type": "main-blog",
+    "sunday-master-banner-content": {
+      "type": "sunday-master-banner-content",
       "settings": {
-        "layout": "collage",
-        "show_image": true,
-        "image_height": "medium",
-        "show_date": true,
-        "show_author": false,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "banner_desktop": "",
+        "banner_desktop_default": "https://cdn.shopify.com/s/files/1/0817/3902/2646/files/hand-book-banner.png?v=1693368385",
+        "heading_title_desktop": "",
+        "banner_mobile": "",
+        "banner_mobile_default": "https://cdn.shopify.com/s/files/1/0817/3902/2646/files/Hand-book-baner-mb.png?v=1693368223",
+        "heading_title_mobile": ""
       }
+    },
+    "sunday-master-breadcrumb": {
+      "type": "sunday-master-breadcrumb",
+      "settings": {
+        "breabcrumb_position_left": 10
+      }
+    },
+    "sunday-master-blog": {
+      "type": "sunday-master-blog",
+      "settings": {
+        "blog": "cam-nang"
+      },
+      "blocks": {
+       
+      },
+      "block_order": [
+       
+      ]
     }
   },
   "order": [
-    "main"
+    "sunday-master-banner-content",
+    "sunday-master-breadcrumb",
+    "sunday-master-blog"
   ]
 }

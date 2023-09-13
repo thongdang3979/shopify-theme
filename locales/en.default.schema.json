@@ -147,6 +147,9 @@
         "second_logo_image": {
           "label": "Second Logo"
         },
+        "sticky_logo_image": {
+          "label": "Sticky Logo"
+        },
         "logo_width": {
           "label": "Desktop logo width",
           "info": "Logo width is automatically optimized for mobile."
@@ -3579,14 +3582,20 @@
     "sunday-master-banner-content": {
       "name": "Sunday Banner Content",
       "settings": {
-        "slider_banner_desktop": {
+        "banner_desktop": {
           "label": "Banner Image Desktop"
+        },
+        "banner_desktop_default": {
+          "label": "Banner Image Default Desktop"
         },
         "heading_title_desktop": {
           "label": "Title Desktop"
         },
-        "slider_banner_mobile": {
-          "label": "Banner Image Mobike"
+        "banner_mobile": {
+          "label": "Banner Image Mobile"
+        },
+        "banner_mobile_default": {
+          "label": "Banner Image Default Mobile"
         },
         "heading_title_mobile": {
           "label": "Title Mobile"
@@ -3605,8 +3614,7 @@
     },
     "sunday-master-list-content": {
       "name": "Sunday List Content",
-      "settings": {
-      },
+      "settings": {},
       "blocks": {
         "name": "Sunday List Content",
         "settings": {
@@ -3662,6 +3670,129 @@
       },
       "presets": {
         "name": "Sunday Group Background Richtext"
+      }
+    },
+    "sunday-master-blog": {
+      "name": "Sunday Blog",
+      "settings": {
+        "blog": {
+          "label": "Choose Blog"
+        }
+      },
+      "blocks": {
+        "name": "Choose Article",
+        "settings": {}
+      },
+      "presets": {
+        "name": "Sunday Blog"
+      }
+    },
+    "sunday-article-detail": {
+      "name": "Sunday Article Detail",
+      "settings": {},
+      "blocks": {
+        "article_banner": {
+          "name": "Article Banner"
+        },
+        "article_breadcrumb": {
+          "name": "Article Breadcrumb"
+        },
+        "article_title": {
+          "name": "Article Title"
+        },
+        "article_content": {
+          "name": "Article Content"
+        }
+      },
+      "presets": {
+        "name": "Sunday Article Detail"
+      }
+    },
+    "sunday-collection-template-one": {
+      "name": "Sunday Collection Tempate One",
+      "settings": {
+        "shop_sidebar": {
+          "label": "Shop Page Siderbar"
+        }
+      },
+      "blocks": {
+        "group_product_category": {
+          "name": "Group Product Follow Category",
+          "settings": {
+            "group_title": {
+              "label": "Group Title"
+            },
+            "group_sidebar_title": {
+              "label": "Group Sidebar Title"
+            },
+            "group_description": {
+              "label": "Group Description"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "nday Collection Tempate One"
+      }
+    },
+    "sunday-collection-template-two": {
+      "name": "Sunday Collection Tempate Two",
+      "settings": {},
+      "presets": {
+        "name": "Sunday Collection Tempate Two"
+      }
+    },
+    "sunday-master-product-relate": {
+      "name": "Sunday Product Relate",
+      "settings": {
+        "title": {
+          "label": "Title"
+        }
+      },
+      "presets": {
+        "name": "Sunday Product Relate"
+      }
+    },
+    "sunday-product-detail": {
+      "name": "Sunday Product Detail",
+      "settings": {
+       
+      },
+      "presets": {
+        "name": "Sunday Product Detail"
+      }
+    },
+    "sunday-contact-form": {
+      "name": "Sunday Contact Form",
+      "settings": {
+       
+      },
+      "blocks": {
+        "box_contact_infomation": {
+          "name": "Box Contact Infomation",
+          "settings": {
+            "title": {
+              "label": "Box Title"
+            },
+            "description": {
+              "label": "Box Description"
+            }
+          }
+        },
+        "box_contact_icon": {
+          "name": "Box Contact Icon",
+          "settings": {
+            "box_icon": {
+              "label": "Icon"
+            },
+            "description": {
+              "label": "Box Description"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Sunday Contact Form"
       }
     }
   }

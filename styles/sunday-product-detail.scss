@@ -1,0 +1,71 @@
+@import 'function.scss';
+
+.product-detail-area {
+    .product-group-info-area {
+        @include flexCustome(row, nowrap, null, null, null, 76px);
+
+        .product-image-area,
+        .product-info-area {
+            @include flexBoxWidthCustome(76px, 2, 1, 1);
+        }
+
+        $color_1: #000;
+
+        .product-image-area {
+            swiper-container {
+                width: 100%;
+                height: 100%;
+            }
+
+            swiper-slide {
+                text-align: center;
+                font-size: 18px;
+                background: #fff;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-size: cover;
+                background-position: center;
+
+                img {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            swiper-container {
+                width: 100%;
+                height: 300px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .mySwiper {
+                height: 80%;
+                width: 100%;
+            }
+
+            .mySwiper2 {
+                height: 20%;
+                box-sizing: border-box;
+                padding: 10px 0;
+
+                swiper-slide {
+                    width: 25%;
+                    height: 100%;
+                    opacity: 0.4;
+                }
+
+                .swiper-slide-thumb-active {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}

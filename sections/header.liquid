@@ -40,7 +40,7 @@
   {%- endif -%}
 
   {%- if section.settings.menu_type_desktop != "drawer" -%}
-    @media screen and (min-width: 990px) {
+    @media screen and (min-width: 1025px) {
       header-drawer {
         display: none;
       }
@@ -143,7 +143,7 @@
   endfor
 -%}
 
-<{% if section.settings.sticky_header_type != 'none' %}sticky-header data-sticky-type="{{ section.settings.sticky_header_type }}"{% else %}div{% endif %} class="header-wrapper color-{{ section.settings.color_scheme }} gradient{% if section.settings.show_line_separator %} header-wrapper--border-bottom{% endif %}">
+<{% if section.settings.sticky_header_type != 'none' %}sticky-header data-sticky-type="{{ section.settings.sticky_header_type }}"{% else %}div{% endif %} class="header-wrapper {% unless template == 'index' or template == 'page.about-us' or template == 'page.hand-book' %}header-wrapper-second{% endunless %} color-{{ section.settings.color_scheme }} gradient{% if section.settings.show_line_separator %} header-wrapper--border-bottom{% endif %}">
   {%- liquid
     assign social_links = false
     assign localization_forms = false
@@ -188,26 +188,86 @@
                     height="{{ logo_height }}"
                     alt="{{ logo_alt }}"
                     sizes="{{ sizes }}"
-                    srcset="{{ logo_url | img_url: '600x' }} 600w, {{ logo_url | img_url: '900x' }} 900w, {{ logo_url | img_url: '1200x' }} 1200w"
-                    preload: true>
-              </div>
-              <div class="header__heading-logo-wrapper second-logo">
-                {%- assign logo_alt = settings.logo.alt | default: shop.name | escape -%}
-                {%- assign logo_height = settings.logo_width | divided_by: settings.logo.aspect_ratio -%}
-                {% capture sizes %}(max-width: {{ settings.logo_width | times: 2 }}px) 50vw, {{ settings.logo_width }}px{% endcapture %}
-                {% capture widths %}{{ settings.logo_width }}, {{ settings.logo_width | times: 1.5 | round }}, {{ settings.logo_width | times: 2 }}{% endcapture %}
-                {{ settings.second_logo | image_url: width: 600 | image_tag:
-                  class: 'header__heading-logo motion-reduce',
-                  widths: widths,
-                  height: logo_height,
-                  width: settings.logo_width,
-                  alt: logo_alt,
-                  sizes: sizes,
-                  preload: true
-                }}
+                    srcset="{{ logo_url | image_url: width: 600 }} 600w, {{ logo_url | image_url: width: 900 }} 900w, {{ logo_url | image_url: width: 1200 }} 1200w"
+                    preload: true
+                    loading="eager">
               </div>
             {%- else -%}
-              <span class="h2">{{ shop.name }}</span>
+            <div class="header__heading-logo-wrapper">
+              <img
+                src="https://cdn.shopify.com/s/files/1/0817/3902/2646/files/sunday-logo.png?v=1693218239&width=1920"
+                width="1370"
+                height="531"
+                alt="Sunday-logo"
+                loading="eager"
+              >
+            </div>
+            {%- endif -%}
+
+            {%- if settings.second_logo != blank -%}
+              {% assign max_second_logo_width = 200 %}
+              {% assign second_logo_height = max_second_logo_width | divided_by: settings.second_logo.aspect_ratio %}
+              {% capture sizes %}(max-width: {{ max_second_logo_width | times: 2 }}px) 50vw, {{ max_second_logo_width }}px{% endcapture %}
+              {% capture widths %}{{ max_second_logo_width }}, {{ max_second_logo_width | times: 1.5 | round }}, {{ max_second_logo_width | times: 2 }}{% endcapture %}
+
+              <div class="header__heading-logo-wrapper second-logo">
+                {% assign second_logo_alt = settings.second_logo.alt | default: shop.name | escape %}
+                {% assign second_logo_url = settings.second_logo | image_url: width: 600 %}
+                <img
+                  src="{{ second_logo_url }}"
+                  class="header__heading-second_logo motion-reduce"
+                  width="{{ max_second_logo_width }}"
+                  height="{{ second_logo_height }}"
+                  alt="{{ second_logo_alt }}"
+                  sizes="{{ sizes }}"
+                  srcset="{{ second_logo_url | image_url: width: 600 }} 600w, {{ second_logo_url | image_url: width: 900 }} 900w, {{ second_logo_url | image_url: width: 1200 }} 1200w"
+                  preload:
+                  true
+                  loading="eager"
+                >
+              </div>
+            {%- else -%}
+              <div class="header__heading-logo-wrapper second-logo">
+                <img
+                  src="https://cdn.shopify.com/s/files/1/0817/3902/2646/files/sunday-logo-black.png?v=1693881670&width=1920"
+                  width="1370"
+                  height="531"
+                  alt="Sunday-second-logo"
+                  loading="eager"
+                >
+              </div>
+            {%- endif -%}
+
+            {%- if settings.sticky_logo != blank -%}
+              {% assign second_max_logo_width = 200 %}
+              {% assign sticky_logo_height = second_max_logo_width | divided_by: settings.sticky_logo.aspect_ratio %}
+              {% capture second_sizes %}(max-width: {{ second_max_logo_width | times: 2 }}px) 50vw, {{ second_max_logo_width }}px{% endcapture %}
+              {% capture second_widths %}{{ second_max_logo_width }}, {{ second_max_logo_width | times: 1.5 | round }}, {{ second_max_logo_width | times: 2 }}{% endcapture %}
+
+              <div class="header__heading-logo-wrapper sticky-logo">
+                {% assign sticky_logo_alt = settings.sticky_logo.alt | default: shop.name | escape %}
+                {% assign sticky_logo_url = settings.sticky_logo | image_url: width: 600 %}
+                <img
+                  src="{{ sticky_logo_url }}" 
+                  class="header__heading-logo motion-reduce"
+                  width="{{ second_max_logo_width }}"
+                  height="{{ sticky_logo_height }}"
+                  alt="{{ sticky_logo_alt }}"
+                  sizes="{{ second_sizes }}"
+                  srcset="{{ sticky_logo_url | image_url: width: 600 }} 600w, {{ sticky_logo_url | image_url: width: 900 }} 900w, {{ sticky_logo_url | image_url: width: 1200 }} 1200w"
+                  preload="true"
+                  loading="eager">
+              </div>
+            {%- else -%}
+              <div class="header__heading-logo-wrapper sticky-logo">
+                <img
+                  src="https://cdn.shopify.com/s/files/1/0817/3902/2646/files/sunday_circle.png?v=1693275027"
+                  width="240"
+                  height="88"
+                  alt="Sunday-logo"
+                  loading="eager"
+                >
+              </div>
             {%- endif -%}
           </a>
         </h1>
@@ -250,7 +310,77 @@
                 }}
               </div>
             {%- else -%}
-              <span class="h2">{{ shop.name }}</span>
+            <div class="header__heading-logo-wrapper">
+              <img
+                src="https://cdn.shopify.com/s/files/1/0817/3902/2646/files/sunday-logo.png?v=1693218239&width=1920"
+                width="1370"
+                height="531"
+                alt="Sunday-logo"
+                loading="eager"
+              >
+            </div>
+            {%- endif -%}
+
+            {%- if settings.second_logo != blank -%}
+              {% assign max_second_logo_width = 200 %}
+              {% assign second_logo_height = max_second_logo_width | divided_by: settings.second_logo.aspect_ratio %}
+              {% capture sizes %}(max-width: {{ max_second_logo_width | times: 2 }}px) 50vw, {{ max_second_logo_width }}px{% endcapture %}
+              {% capture widths %}{{ max_second_logo_width }}, {{ max_second_logo_width | times: 1.5 | round }}, {{ max_second_logo_width | times: 2 }}{% endcapture %}
+
+              <div class="header__heading-logo-wrapper second-logo">
+                {% assign second_logo_alt = settings.second_logo.alt | default: shop.name | escape %}
+                {% assign second_logo_url = settings.second_logo | image_url: width: 600 %}
+                <img
+                  src="{{ second_logo_url }}"
+                  class="header__heading-second_logo motion-reduce"
+                  width="{{ max_second_logo_width }}"
+                  height="{{ second_logo_height }}"
+                  alt="{{ second_logo_alt }}"
+                  sizes="{{ sizes }}"
+                  srcset="{{ second_logo_url | image_url: width: 600 }} 600w, {{ second_logo_url | image_url: width: 900 }} 900w, {{ second_logo_url | image_url: width: 1200 }} 1200w"
+                  preload:
+                  true
+                  loading="eager"
+                >
+              </div>
+            {%- else -%}
+              <div class="header__heading-logo-wrapper second-logo">
+                <img
+                  src="https://cdn.shopify.com/s/files/1/0817/3902/2646/files/sunday-logo-black.png?v=1693881670&width=1920"
+                  width="1370"
+                  height="531"
+                  alt="Sunday-second-logo"
+                  loading="eager"
+                >
+              </div>
+            {%- endif -%}
+
+            {%- if settings.sticky_logo != blank -%}
+              <div class="header__heading-logo-wrapper sticky-logo">
+                {%- assign sticky_logo_alt = settings.sticky_logo.alt | default: shop.name | escape -%}
+                {%- assign sticky_logo_height = settings.sticky_logo_width | divided_by: settings.sticky_logo.aspect_ratio -%}
+                {% capture second_sizes %}(min-width: 750px) {{ settings.sticky_logo_width }}px, 50vw{% endcapture %}
+                {% capture second_widths %}{{ settings.logo_width }}, {{ settings.sticky_logo_width | times: 1.5 | round }}, {{ settings.sticky_logo_width | times: 2 }}{% endcapture %}
+                {{ settings.logo | image_url: width: 1024 | image_tag:
+                  class: 'header__heading-logo',
+                  widths: second_widths,
+                  height: sticky_logo_height,
+                  width: settings.sticky_logo_width,
+                  alt: sticky_logo_alt,
+                  sizes: second_sizes,
+                  preload: true
+                }}
+              </div>
+            {%- else -%}
+            <div class="header__heading-logo-wrapper sticky-logo">
+              <img
+                src="https://cdn.shopify.com/s/files/1/0817/3902/2646/files/sunday_circle.png?v=1693275027"
+                width="240"
+                height="88"
+                alt="Sunday-logo"
+                loading="eager"
+              >
+            </div>
             {%- endif -%}
           </a>
       {%- if request.page_type == 'index' -%}
@@ -430,11 +560,33 @@
 
       if (this.predictiveSearch && this.predictiveSearch.isOpen) return;
 
-      if (scrollTop > this.currentScrollTop && scrollTop > this.headerBounds.bottom) {
+      // if (scrollTop > this.currentScrollTop && scrollTop > this.headerBounds.bottom) {
+      //   this.header.classList.add('scrolled-past-header');
+      //   if (this.preventHide) return;
+      //   requestAnimationFrame(this.hide.bind(this));
+      // } else if (scrollTop < this.currentScrollTop && scrollTop > this.headerBounds.bottom) {
+      //   this.header.classList.add('scrolled-past-header');
+      //   if (!this.preventReveal) {
+      //     requestAnimationFrame(this.reveal.bind(this));
+      //   } else {
+      //     window.clearTimeout(this.isScrolling);
+
+      //     this.isScrolling = setTimeout(() => {
+      //       this.preventReveal = false;
+      //     }, 66);
+
+      //     requestAnimationFrame(this.hide.bind(this));
+      //   }
+      // } else if (scrollTop <= this.headerBounds.top) {
+      //   this.header.classList.remove('scrolled-past-header');
+      //   requestAnimationFrame(this.reset.bind(this));
+      // }
+
+      if (scrollTop > this.currentScrollTop && scrollTop > 0) {
         this.header.classList.add('scrolled-past-header');
         if (this.preventHide) return;
         requestAnimationFrame(this.hide.bind(this));
-      } else if (scrollTop < this.currentScrollTop && scrollTop > this.headerBounds.bottom) {
+      } else if (scrollTop < this.currentScrollTop && scrollTop > 0) {
         this.header.classList.add('scrolled-past-header');
         if (!this.preventReveal) {
           requestAnimationFrame(this.reveal.bind(this));

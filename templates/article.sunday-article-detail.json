@@ -1,0 +1,34 @@
+{
+  "sections": {
+    "main": {
+      "type": "sunday-article-detail",
+      "blocks": {
+        "article-0": {
+          "type": "article_banner"
+        },
+        "article-1": {
+          "type": "article_breadcrumb"
+        },
+        "article-2": {
+          "type": "article_title",
+          "settings": {
+            "show_date": false,
+            "show_author": false
+          }
+        },
+        "article-3": {
+          "type": "article_content"
+        }
+      },
+      "block_order": [
+        "article-0",
+        "article-1",
+        "article-2",
+        "article-3"
+      ]
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

@@ -55,3 +55,21 @@
         gap: $gap-value;
     }
 }
+
+@mixin flexBoxWidthCustome($params-gap: null, $params-column: null, $params-tablet-column: null, $params-mobile-column: null) {
+    @if $params-gap !=null and $params-column !=null {
+        width: calc(100% / $params-column - $params-gap / $params-column * ($params-column - 1));
+    }
+
+    @if $params-gap !=null and $params-tablet-column !=null {
+        @media screen and (max-width: 1024px) {
+            width: calc(100% / $params-tablet-column - $params-gap / $params-tablet-column * ($params-tablet-column - 1));
+        }
+    }
+
+    @if $params-gap !=null and $params-mobile-column !=null {
+        @media screen and (max-width: 768px) {
+            width: calc(100% / $params-mobile-column - $params-gap / $params-mobile-column * ($params-mobile-column - 1));
+        }
+    }
+}

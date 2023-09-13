@@ -1,0 +1,31 @@
+{{ 'sunday-collection-template-two.css' | asset_url | stylesheet_tag }}
+
+<section class="collection-area collection-area-template-two page-width">
+  <div class="collection-details-area">
+    <div class="title-area">
+      <h1>
+        {{ collection.title | upcase }}
+      </h1>
+    </div>
+    <div class="description-area">
+      {{ collection.description | richtext }}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "t:sections.sunday-collection-template-two.name",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [],
+  "presets": [
+    {
+      "name": "t:sections.sunday-collection-template-two.presets.name"
+    }
+  ]
+}
+{% endschema %}

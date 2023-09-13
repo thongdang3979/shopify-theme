@@ -17,7 +17,7 @@
         "image_product_width_desktop": 380,
         "image_product_position_right_desktop": 25,
         "image_product_position_bottom_desktop": 170,
-        "image_product_width_mobile": 210,
+        "image_product_width_mobile": 170,
         "image_product_position_right_mobile": 4,
         "image_product_position_bottom_mobile": 55,
         "heading_align": "center",
@@ -29,7 +29,7 @@
       "settings": {
         "section_heading": "Sản phẩm bán chạy",
         "collection_list": [
-          "featured-product"
+          "best-selling"
         ],
         "product_limit": 4,
         "button_content": "Xem thêm"

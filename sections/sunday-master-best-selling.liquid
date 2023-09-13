@@ -11,10 +11,11 @@
         <div class="item">
           <a class="product-image-area" href="{{ product.url }}">
             <img
-              src="{{ product.featured_image.src | img_url: 'medium' }}"
+              src="{{ product.featured_image.src | image_url: width: 300 }}"
               width="{{ product.featured_image.width }}"
               height="{{ product.featured_image.height }}"
               alt="{{ product.title }}"
+              loading="lazy"
             >
 
             <div class="product-tag-area">
