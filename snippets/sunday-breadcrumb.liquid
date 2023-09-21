@@ -30,6 +30,8 @@
           </li>
         {%- when 'product' -%}
           {%- if product.collections.size > 0 -%}
+            {% assign product_subtitle = product.metafields.descriptors.subtitle %}
+
             <li class="breadcrumbs__item">
               {{ product.collections[0].title | link_to: product.collections[0].url }}
             </li>
@@ -38,7 +40,9 @@
             </li>
           {%- endif -%}
           <li class="breadcrumbs__item">
-            <a class="breadcrumbs__link" href="{{ product.url }}" aria-current="page">{{ product.title }}</a>
+            <a class="breadcrumbs__link" href="{{ product.url }}" aria-current="page">
+              {{- product_subtitle | default: product.title -}}
+            </a>
           </li>
         {%- when 'collection' and collection.handle -%}
           {%- if current_tags -%}

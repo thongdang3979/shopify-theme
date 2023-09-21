@@ -25,8 +25,16 @@ let CUSTOM_COLLECTION = {
                     }
                 });
 
-                $('.icon-collapse').on('click', function () {
-                    $(this).parent('.description-area').toggleClass('collapse');
+                $('.icon-collapse').on('click', function (e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+
+                    var $parent = $(this).parent('.description-area');
+                    if ($parent.hasClass('collapse')) {
+                        $parent.removeClass('collapse').addClass('uncollapse');
+                    } else {
+                        $parent.removeClass('uncollapse').addClass('collapse');
+                    }
                 });
             }
         });

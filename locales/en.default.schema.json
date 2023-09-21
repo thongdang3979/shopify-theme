@@ -2349,6 +2349,20 @@
               "label": "Third heading"
             }
           }
+        },
+        "social": {
+          "name": "Social",
+          "settings": {
+            "social_icon": {
+              "label": "Social Icon"
+            },
+            "social_title": {
+              "label": "Social Title"
+            },
+            "social_url": {
+              "label": "Social URL"
+            }
+          }
         }
       },
       "settings": {
@@ -3732,7 +3746,7 @@
         }
       },
       "presets": {
-        "name": "nday Collection Tempate One"
+        "name": "Sunday Collection Tempate One"
       }
     },
     "sunday-collection-template-two": {

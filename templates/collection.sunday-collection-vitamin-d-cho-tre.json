@@ -1,0 +1,37 @@
+{
+  "sections": {
+    "sunday-collection-template-one": {
+      "type": "sunday-collection-template-one",
+      "settings": {},
+      "blocks": {
+        "collection-one": {
+          "type": "group_product_category",
+          "settings": {
+            "collection": "de-xuat",
+            "show_collection_title": false,
+            "group_title": "Chúng tôi đề xuất",
+            "group_sidebar_title": "Đề xuất",
+            "group_description": "<p>Vitamin D3 và K2 phụ thuộc vào nhau với tư cách là đồng yếu tố. Các công thức cân bằng của chúng tôi, với D3 và K2 MK-7 all-trans (K2VITAL®), được tối ưu hóa để bổ sung D3 dự trữ hoặc để bổ sung linh hoạt, toàn diện.</p>"
+          }
+        },
+        "collection-two": {
+          "type": "group_product_category",
+          "settings": {
+            "collection": "vitamin-d3-10-000-ui",
+            "show_collection_title": true,
+            "group_title": "",
+            "group_sidebar_title": "",
+            "group_description": "<p>High-dose vitamin D3 for replenishing vitamin D stores in the body, offered pure or in combination with vitamin K2 MK-7 (K2VITAL®). Available as either a vegan or vegetarian preparation and in the form of liquid drops or capsules.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "collection-one",
+        "collection-two"
+      ]
+    }
+  },
+  "order": [
+    "sunday-collection-template-one"
+  ]
+}

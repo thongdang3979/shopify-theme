@@ -81,10 +81,6 @@
 
                         p {
                             @include customFont(16px, 500, 150%, $Gray-333, null, null);
-                            display: -webkit-box;
-                            -webkit-box-orient: vertical;
-                            -webkit-line-clamp: 3;
-                            overflow: hidden;
                             margin: 0;
                         }
                     }
@@ -92,7 +88,7 @@
                     .button-area {
                         @include flexCustome(column, nowrap, null, null, null);
 
-                        a{
+                        a {
                             @include customFont(14px, 700, 100%, $Orange-CA9, null, null);
                             @include customButton(transparent, $Orange-CA9, $Gray-5E6, $Gray-5E6, $Orange-CA9, $White-FFF);
                         }
@@ -110,12 +106,12 @@
                 transform: translateY(-50%);
                 z-index: 99;
 
-                &::before{
+                &::before {
                     content: "";
                     display: none;
                 }
 
-                &:hover{
+                &:hover {
                     cursor: pointer;
                 }
             }
@@ -184,8 +180,8 @@
                         }
                     }
 
-                    .button-area{
-                        a{
+                    .button-area {
+                        a {
                             font-size: 17px;
                             padding: 16px 24px;
                         }
@@ -218,6 +214,7 @@
         }
 
         .featured-product-slider {
+            margin-top: 60px;
 
             /* the slides */
             .slick-track {
@@ -262,7 +259,16 @@
                     }
 
                     .product-description-area {
-                        display: block;
+                        display: -webkit-box;
+                        -webkit-box-orient: vertical;
+                        -webkit-line-clamp: 4;
+                        overflow: hidden;
+                        height: 100px;
+
+                        ul,
+                        ol {
+                            display: none;
+                        }
                     }
 
                     .button-area {

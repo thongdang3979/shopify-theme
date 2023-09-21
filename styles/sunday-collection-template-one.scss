@@ -15,9 +15,9 @@
 
         .sidebar-area {
             @include flexCustome(column, nowrap, null, null, null, 16px);
-            max-width: calc(30% - 19px);
+            max-width: calc(20% - 19px);
             min-width: 267px;
-            width: calc(30% - 19px);
+            width: calc(20% - 19px);
 
             &.toggle-open .sticky-area {
                 display: flex;
@@ -42,7 +42,7 @@
 
                     .category-title {
                         h2 {
-                            @include customFont(20px, 600, 115%, $Black-000, null, null);
+                            @include customFont(16px, 600, 115%, $Black-000, null, null);
                             letter-spacing: 2px;
                             text-transform: uppercase;
                             margin: 0;
@@ -52,7 +52,7 @@
 
 
                 .list-category-area {
-                    @include flexCustome(column, nowrap, null, null, null, 8px);
+                    @include flexCustome(column, nowrap, null, null, null, 6px);
 
                     .category-item {
                         cursor: pointer;
@@ -176,6 +176,7 @@
 
         .content-area {
             @include flexCustome(column, nowrap, null, null, null, 24px);
+            min-width: 400px;
 
             .breadcrumbs {
                 margin-top: 0;
@@ -199,13 +200,6 @@
                     padding: 0 12px;
 
                     &.collapse {
-                        p {
-                            display: -webkit-box;
-                            -webkit-box-orient: vertical;
-                            -webkit-line-clamp: 3;
-                            overflow: hidden;
-                        }
-
                         .icon-collapse {
                             display: flex;
                             position: absolute;
@@ -214,10 +208,24 @@
                         }
                     }
 
+                    &.uncollapse {
+                        p {
+                            display: -webkit-box;
+                            -webkit-box-orient: vertical;
+                            -webkit-line-clamp: unset;
+                            overflow: unset;
+                        }
+                    }
+
                     p {
                         @include customFont(14px, 400, 160%, $Gray-686, null, null);
                         letter-spacing: 0.14px;
                         margin: 0;
+                        text-align: justify;
+                        display: -webkit-box;
+                        -webkit-box-orient: vertical;
+                        -webkit-line-clamp: 4;
+                        overflow: hidden;
                     }
 
                     .icon-collapse {
@@ -271,6 +279,7 @@
                         @include customFont(14px, 400, 160%, $Gray-686, null, null);
                         letter-spacing: 0.14px;
                         margin: 0;
+                        text-align: justify;
                     }
 
                     .icon-collapse {
@@ -358,7 +367,7 @@
                     padding: 0;
 
                     p {
-                        font-size: 18px;
+                        font-size: 16px;
                     }
                 }
             }
@@ -416,8 +425,7 @@
         .sidebar-area {
 
             .sticky-area {
-                @include flexCustome(column, nowrap, null, null, null, 16px);
-                position: sticky;
+                display: flex;
                 top: 100px;
                 right: unset;
                 height: auto;
@@ -425,32 +433,15 @@
                 padding: 0;
                 filter: none;
                 background: none;
-
-                .category-title {
-                    h2 {
-                        @include customFont(20px, 600, 115%, $Black-000, null, null);
-                        letter-spacing: 2px;
-                        text-transform: uppercase;
-                        margin: 0;
-                    }
-                }
+                gap: 12px;
 
                 .list-category-area {
-                    @include flexCustome(column, nowrap, null, null, null, 8px);
 
                     .category-item {
                         cursor: pointer;
 
                         span {
-                            @include customFont(16px, 400, 140%, $Gray-686, null, null);
-                            letter-spacing: 2px;
-                            text-decoration: none;
-                        }
-
-                        &.active {
-                            span {
-                                color: $Orange-CA9;
-                            }
+                           font-size: 13px;
                         }
                     }
                 }
@@ -466,6 +457,8 @@
         }
 
         .content-area {
+            width: calc(70% - 19px);
+
             .collection-details-area {
                 h1 {
                     font-size: 64px;

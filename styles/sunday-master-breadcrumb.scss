@@ -6,7 +6,9 @@
         margin-top: 16px;
 
         .breadcrumbs__list {
-            @include flexCustome(row, nowrap, center, flex-start, center, 3px);
+            @include flexCustome(row, wrap, center, flex-start, center);
+            column-gap: 3px;
+            row-gap: 10px;
             list-style-type: none;
             margin: 0;
             padding: 0;
@@ -23,7 +25,7 @@
                     }
                 }
 
-                a{
+                a {
                     display: flex;
                     text-decoration: underline;
                     @include customFont(14px, 400, 100%, $Orange-CA9, null, null);

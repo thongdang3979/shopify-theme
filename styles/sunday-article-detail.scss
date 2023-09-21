@@ -45,7 +45,7 @@
                 @include customFont(16px, 700, 120%, $Black-000, null, null);
             }
 
-            p {
+            p,span,div {
                 @include customFont(14px, 500, 160%, $Gray-333, null, null);
                 margin: 0;
                 min-height: 16px;
@@ -125,7 +125,7 @@
                 line-height: 130%;
             }
 
-            p {
+            p,span,div {
                 font-size: 16px;
             }
         }
