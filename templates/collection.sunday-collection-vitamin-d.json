@@ -2,77 +2,8 @@
   "sections": {
     "sunday-collection-template-one": {
       "type": "sunday-collection-template-one",
-      "settings": {},
-      "blocks": {
-        "collection-one": {
-          "type": "group_product_category",
-          "settings": {
-            "collection": "de-xuat",
-            "show_collection_title": false,
-            "group_title": "Chúng tôi đề xuất",
-            "group_sidebar_title": "Đề xuất",
-            "group_description": "<p>Vitamin D3 và K2 phụ thuộc vào nhau với tư cách là đồng yếu tố. Các công thức cân bằng của chúng tôi, với D3 và K2 MK-7 all-trans (K2VITAL®), được tối ưu hóa để bổ sung D3 dự trữ hoặc để bổ sung linh hoạt, toàn diện.</p>"
-          }
-        },
-        "collection-two": {
-          "type": "group_product_category",
-          "settings": {
-            "collection": "vitamin-d3-10-000-ui",
-            "show_collection_title": true,
-            "group_title": "",
-            "group_sidebar_title": "",
-            "group_description": "<p>High-dose vitamin D3 for replenishing vitamin D stores in the body, offered pure or in combination with vitamin K2 MK-7 (K2VITAL®). Available as either a vegan or vegetarian preparation and in the form of liquid drops or capsules.</p>"
-          }
-        },
-        "collection-three": {
-          "type": "group_product_category",
-          "settings": {
-            "collection": "vitamin-d3-5-000-ui",
-            "show_collection_title": true,
-            "group_title": "",
-            "group_sidebar_title": "",
-            "group_description": "<p>High-dose vitamin D3 for long-term supplementation in times of heightened vitamin D needs, such as during the winter or in the case of extended periods with limited sun exposure. Available in the form of pure D3, to combine with vitamin K2 as needed, as well as in a convenient blend of K2 MK-7 (K2VITAL®).</p>"
-          }
-        },
-        "collection-four": {
-          "type": "group_product_category",
-          "settings": {
-            "collection": "vitamin-d3-k2-2-500-ui",
-            "show_collection_title": true,
-            "group_title": "",
-            "group_sidebar_title": "",
-            "group_description": "<p>Vitamin D3 at a dose ideal for flexible supplementation all year round. Also suitable for use as a maintenance dose. Available pure or in combination with K2 MK-7 (K2VITAL®) from Norway. Both vegan and vegetarian formulas available.</p>"
-          }
-        },
-        "collection-five": {
-          "type": "group_product_category",
-          "settings": {
-            "collection": "vitamin-d3-1-000-ui",
-            "show_collection_title": true,
-            "group_title": "",
-            "group_sidebar_title": "",
-            "group_description": "<p>Vitamin D3 at a dose ideal for flexible supplementation all year round. Also suitable for use as a maintenance dose. Available pure or in combination with K2 MK-7 (K2VITAL®) from Norway. Both vegan and vegetarian formulas available.</p>"
-          }
-        },
-        "collection-six": {
-          "type": "group_product_category",
-          "settings": {
-            "collection": "vitamin-d3-200-ui-cho-tre-em",
-            "show_collection_title": true,
-            "group_title": "",
-            "group_sidebar_title": "",
-            "group_description": "<p>Vitamin D3 at a dose ideal for flexible supplementation all year round. Also suitable for use as a maintenance dose. Available pure or in combination with K2 MK-7 (K2VITAL®) from Norway. Both vegan and vegetarian formulas available.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "collection-one",
-        "collection-two",
-        "collection-three",
-        "collection-four",
-        "collection-five",
-        "collection-six"
-      ]
+      "settings": {
+      }
     }
   },
   "order": [

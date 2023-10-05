@@ -1,0 +1,38 @@
+{%- comment -%}
+  Renders the language picker for the localization form
+
+  Accepts:
+    - localPosition: pass in the position in which the form is coming up to create specific IDs
+{%- endcomment -%}
+
+<button
+  type="button"
+  class="disclosure__button localization-form__select localization-selector link link--text caption-large"
+  aria-expanded="false"
+  aria-controls="{{ localPosition }}List"
+  aria-describedby="{{ localPosition }}Label"
+>
+  <span>{{ localization.language.iso_code | upcase }}</span>
+  {% comment %} {% render 'icon-caret' %} {% endcomment %}
+</button>
+{%- for language in localization.available_languages -%}
+  <a
+    class="link link--text disclosure__link caption-large{% if language.iso_code == localization.language.iso_code %} disclosure__link--active{% endif %} focus-inset"
+    href="#"
+    hreflang="{{ language.iso_code }}"
+    lang="{{ language.iso_code }}"
+    {% if language.iso_code == localization.language.iso_code %}
+      aria-current="true"
+    {% endif %}
+    data-value="{{ language.iso_code }}"
+  >
+    {{ language.iso_code | upcase -}}
+  </a>
+  {%- if forloop.last == false %}
+    <div class="group-line-area">
+      <span></span>
+      <span></span>
+    </div>
+  {%- endif %}
+{%- endfor -%}
+<input type="hidden" name="locale_code" value="{{ localization.language.iso_code }}">

@@ -11,32 +11,27 @@ let CUSTOM_COLLECTION = {
     collection_content_collapse_control: function () {
         jQuery(document).ready(function ($) {
             // Check if the screen width is less than or equal to 768 pixels (adjust as needed)
-            if ($(window).width() <= 768) {
-                let $description_areas = $('.collection-area .content-area .description-area');
+            let $description_areas = $('.collection-area .content-area .description-area');
 
-                $description_areas.each(function () {
-                    let $this = $(this);
-                    let lineHeight = parseInt($this.css("line-height"));
-                    let contentHeight = $this.height();
-                    let maxLines = 3; // Adjust this value to control the number of lines to display
+            $description_areas.each(function () {
+                let $this = $(this);
+                let lineHeight = parseFloat($this.css("line-height"));
+                let contentHeight = $this.height();
+                let maxLines = 4; // Adjust this value to control the number of lines to display
 
-                    if (contentHeight > lineHeight * maxLines) {
-                        $this.addClass('collapse');
-                    }
-                });
+                if (contentHeight > lineHeight * maxLines) {
+                    $this.addClass('collapse');
+                }
+            });
 
-                $('.icon-collapse').on('click', function (e) {
-                    e.preventDefault();
-                    e.stopPropagation();
+            // Set up a click event for the 'icon-collapse' elements
+            $('.description-area').on('click', '.icon-collapse', function (e) {
+                e.preventDefault();
+                e.stopPropagation();
 
-                    var $parent = $(this).parent('.description-area');
-                    if ($parent.hasClass('collapse')) {
-                        $parent.removeClass('collapse').addClass('uncollapse');
-                    } else {
-                        $parent.removeClass('uncollapse').addClass('collapse');
-                    }
-                });
-            }
+                var $parent = $(this).closest('.description-area');
+                $parent.toggleClass('collapse uncollapse');
+            });
         });
     },
 

@@ -3483,11 +3483,14 @@
         "section_heading": {
           "label": "Section Heading"
         },
+        "product_list": {
+          "label": "Product List"
+        },
         "product_limit": {
-          "label": "Product limt"
+          "label": "Product Limt"
         },
         "button_content": {
-          "label": "Button content"
+          "label": "Button Content"
         }
       },
       "presets": {
@@ -3506,11 +3509,20 @@
           "heading_title": {
             "label": "Heading Title"
           },
-          "slider_background": {
-            "label": "Background Image"
+          "slider_background_desktop": {
+            "label": "Background Image Desktop"
           },
-          "slider_background_position_desktop": {
+          "slider_background_desktop_default": {
+            "label": "Background Image Desktop Default"
+          },
+          "slider_background_desktop_position": {
             "label": "Background Image Desktop Position"
+          },
+          "slider_background_mobile": {
+            "label": "Background Image Mobile"
+          },
+          "slider_background_mobile_default": {
+            "label": "Background Image Mobile Default"
           },
           "button_content": {
             "label": "Button Content"
@@ -3801,6 +3813,20 @@
             },
             "description": {
               "label": "Box Description"
+            }
+          }
+        },
+        "box_social_icon": {
+          "name": "Box Social Icon",
+          "settings": {
+            "box_social_icon": {
+              "label": "Icon"
+            },
+            "box_social_icon_default": {
+              "label": "Icon Default"
+            },
+            "box_social_url": {
+              "label": "URL"
             }
           }
         }

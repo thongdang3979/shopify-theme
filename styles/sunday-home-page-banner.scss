@@ -6,6 +6,10 @@
         position: relative;
         height: 516px;
 
+        h1{
+            display: none;
+        }
+
         .background-image {
             position: relative;
             height: 100%;
@@ -71,7 +75,7 @@
                     display: none;
                 }
 
-                h1 {
+                h2 {
                     @include customFont(32px, 700, 120%, $White-FFF, null, null);
                     letter-spacing: 1px;
                     text-transform: uppercase;
@@ -130,7 +134,7 @@
                     display: block;
                 }
 
-                h1 {
+                h2 {
                     font-size: 48px;
                     font-weight: 600;
                 }
@@ -184,7 +188,7 @@
 
         .group-content-area {
             .title-area {
-                h1 {
+                h2 {
                     font-size: 60px;
                 }
             }

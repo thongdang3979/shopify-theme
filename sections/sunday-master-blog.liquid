@@ -1,9 +1,5 @@
 {{ 'sunday-master-blog.css' | asset_url | stylesheet_tag }}
 
-<script>
-  console.log({{ section.settings.blog.articles | json }});
-</script>
-
 <section class="article-area page-width">
   {% assign hasBlockArticles = false %}
   {% for block in section.blocks %}
@@ -46,7 +42,7 @@
               <a href="{{ article.url }}">{{ article.title | upcase }}</a>
             </div>
             <div class="button-area">
-              <a href="{{ article.url }}">Xem thêm</a>
+              <a href="{{ article.url }}">{{ 'sunday.partials.button.read_more' | t }}</a>
             </div>
           </div>
         </article>

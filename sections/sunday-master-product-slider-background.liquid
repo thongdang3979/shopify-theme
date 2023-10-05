@@ -4,11 +4,29 @@
 <style>
   {%- for block in section.blocks -%}
     {%- if block.type == 'slide' -%}
+
+      {%- if block.settings.slider_background_desktop == blank -%}
+        {%- assign desktopImage = block.settings.slider_background_desktop_default -%}
+      {%- else -%}
+        {%- assign desktopImage = block.settings.slider_background_desktop | image_url: width: 2048 -%}
+      {%- endif -%}
+
+      {%- if block.settings.slider_background_mobile == blank -%}
+        {%- assign mobileImage = block.settings.slider_background_mobile_default -%}
+      {%- else -%}
+        {%- assign mobileImage = block.settings.slider_background_mobile | image_url: width: 1024 -%}
+      {%- endif -%}
       @media only screen and (min-width: 1025px) {
         .product-slider-background-area .product-background-slider .slider-container.block-index-{{ forloop.index }} {
-          {%- if block.settings.slider_background_position_desktop -%}
-            background-position-y: -{{ block.settings.slider_background_position_desktop | append: 'px' }};
+          background-image: url({{ desktopImage }});
+          {%- if block.settings.slider_background_desktop_position -%}
+            background-position-y: -{{ block.settings.slider_background_desktop_position | append: 'px' }};
           {%- endif -%}
+        }
+      }
+      @media only screen and (max-width: 1024px) {
+        .product-slider-background-area .product-background-slider .slider-container.block-index-{{ forloop.index }} {
+          background-image: url({{ mobileImage }});
         }
       }
     {%- endif -%}
@@ -19,16 +37,7 @@
   <div class="product-background-slider">
     {%- for block in section.blocks -%}
       {%- if block.type == 'slide' -%}
-        {%- if block.settings.slider_background != null -%}
-          {%- assign backgroundImage = block.settings.slider_background | image_url: width: 2048 -%}
-        {%- else -%}
-          {%- assign backgroundImage = 'https://cdn.shopify.com/s/files/1/0817/3902/2646/files/26.05.23_-_Vitamin_D_Vietnam_Campaign-13-rs.png?v=1693217720' -%}
-        {%- endif -%}
-
-        <div
-          class="slider-container block-index-{{ forloop.index }}"
-          style="background-image: url({{ backgroundImage }})"
-        >
+        <div class="slider-container block-index-{{ forloop.index }}">
           <div class="sub-title-area">
             <h3>{{ block.settings.sub_title }}</h3>
           </div>
@@ -36,7 +45,7 @@
             <h2>{{ block.settings.heading_title }}</h2>
           </div>
           <div class="button-area">
-            <a href="{{ block.settings.button_link | default: '#' }}" class="sd-button-second">
+            <a href="{{ block.settings.button_link | default: '/collections/vitamin-d' }}" class="sd-button-second">
               {{- block.settings.button_content -}}
             </a>
           </div>
@@ -72,18 +81,33 @@
         },
         {
           "type": "image_picker",
-          "id": "slider_background",
-          "label": "t:sections.sunday-master-product-slider-background.blocks.settings.slider_background.label"
+          "id": "slider_background_desktop",
+          "label": "t:sections.sunday-master-product-slider-background.blocks.settings.slider_background_desktop.label"
+        },
+        {
+          "type": "url",
+          "id": "slider_background_desktop_default",
+          "label": "t:sections.sunday-master-product-slider-background.blocks.settings.slider_background_desktop_default.label"
         },
         {
           "type": "range",
-          "id": "slider_background_position_desktop",
+          "id": "slider_background_desktop_position",
           "min": 0,
           "max": 800,
           "step": 10,
           "unit": "px",
-          "label": "t:sections.sunday-master-product-slider-background.blocks.settings.slider_background_position_desktop.label",
+          "label": "t:sections.sunday-master-product-slider-background.blocks.settings.slider_background_desktop_position.label",
           "default": 30
+        },
+        {
+          "type": "image_picker",
+          "id": "slider_background_mobile",
+          "label": "t:sections.sunday-master-product-slider-background.blocks.settings.slider_background_mobile.label"
+        },
+        {
+          "type": "url",
+          "id": "slider_background_mobile_default",
+          "label": "t:sections.sunday-master-product-slider-background.blocks.settings.slider_background_mobile_default.label"
         },
         {
           "type": "text",

@@ -10,6 +10,10 @@
         background-size: cover !important;
         background-position: center center !important;
 
+        h1{
+            display: none;
+        }
+
         .group-content-area {
             @include flexCustome(column, nowrap, center, center, center);
             height: 100%;
@@ -59,7 +63,8 @@
 @media only screen and (min-width: 1025px) {
 
     .background-content-area {
-        height: 650px;
+        height: 600px;
+        max-height: 90vh;
 
         .group-content-area {
             

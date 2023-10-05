@@ -29,19 +29,33 @@
             <a class="breadcrumbs__link" href="{{ page.url }}" aria-current="page">{{ page.title }}</a>
           </li>
         {%- when 'product' -%}
-          {%- if product.collections.size > 0 -%}
-            {% assign product_subtitle = product.metafields.descriptors.subtitle %}
+          {% assign collection_to_display = product.metafields.custom.product_breadcrumb_collection.value %}
+          {% assign product_subtitle = product.metafields.descriptors.subtitle %}
 
+          {% if collection_to_display %}
             <li class="breadcrumbs__item">
-              {{ product.collections[0].title | link_to: product.collections[0].url }}
+              {{
+                product.metafields.custom.product_breadcrumb_collection.value.title
+                | link_to: product.metafields.custom.product_breadcrumb_collection.value.url
+              }}
             </li>
             <li class="breadcrumbs__item">
               <span class="breadcrumbs__icon">{{ icon_arrow }}</span>
             </li>
-          {%- endif -%}
+          {% elsif product.collections.size > 0 %}
+            {% assign collection_to_display = product.collections | last %}
+
+            <li class="breadcrumbs__item">
+              {{ collection_to_display.title | link_to: collection_to_display.url }}
+            </li>
+            <li class="breadcrumbs__item">
+              <span class="breadcrumbs__icon">{{ icon_arrow }}</span>
+            </li>
+          {% endif %}
+
           <li class="breadcrumbs__item">
             <a class="breadcrumbs__link" href="{{ product.url }}" aria-current="page">
-              {{- product_subtitle | default: product.title -}}
+              {{ product_subtitle | default: product.title }}
             </a>
           </li>
         {%- when 'collection' and collection.handle -%}

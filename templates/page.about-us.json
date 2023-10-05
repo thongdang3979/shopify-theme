@@ -4,10 +4,10 @@
       "type": "sunday-master-banner-content",
       "settings": {
         "banner_desktop": "",
-        "banner_desktop_default": "https://cdn.shopify.com/s/files/1/0817/3902/2646/files/About-us.png",
+        "banner_desktop_default": "https:\/\/cdn.shopify.com\/s\/files\/1\/0817\/3902\/2646\/files\/About-us.png",
         "heading_title_desktop": "SẢN PHẨM DINH DƯỠNG<br>SIÊU TINH KHIẾT<br>NGUỒN GỐC TỰ NHIÊN",
         "banner_mobile": "",
-        "banner_mobile_default": "https://cdn.shopify.com/s/files/1/0817/3902/2646/files/About-us.png",
+        "banner_mobile_default": "https:\/\/cdn.shopify.com\/s\/files\/1\/0817\/3902\/2646\/files\/About-us.png",
         "heading_title_mobile": "SẢN PHẨM DINH DƯỠNG<br>SIÊU TINH KHIẾT<br>NGUỒN GỐC TỰ NHIÊN"
       }
     },
@@ -24,49 +24,49 @@
           "type": "list_row",
           "settings": {
             "title": "NGUỒN GỐC THIÊN NHIÊN",
-            "content": "<p>Các chất dinh dưỡng và thành phần hoạt tính có nguồn gốc từ thiên nhiên và thực vật đều có hoạt tính sinh học cao nhất. Nếu có thể, chúng sẽ được cấp chứng nhận hữu cơ và đảm bảo không sử dụng thuốc trừ sâu trong quá trình canh tác.</p>"
+            "content": "<p>Các chất dinh dưỡng và thành phần hoạt tính có nguồn gốc từ thiên nhiên và thực vật đều có hoạt tính sinh học cao nhất. Nếu có thể, chúng sẽ được cấp chứng nhận hữu cơ và đảm bảo không sử dụng thuốc trừ sâu trong quá trình canh tác.<\/p>"
           }
         },
         "row-1": {
           "type": "list_row",
           "settings": {
             "title": "CHẤT LƯỢNG",
-            "content": "<p>Được đảm bảo từ những nhà sản xuất hàng đầu cùng với nguyên liệu từ các khu vực canh tác tốt nhất trên thế giới. Chất lượng của các nguyên liệu và thành phẩm luôn được kiểm tra trong phòng thí nghiệm về độ tinh khiết cũng như hàm lượng dinh dưỡng.</p>"
+            "content": "<p>Được đảm bảo từ những nhà sản xuất hàng đầu cùng với nguyên liệu từ các khu vực canh tác tốt nhất trên thế giới. Chất lượng của các nguyên liệu và thành phẩm luôn được kiểm tra trong phòng thí nghiệm về độ tinh khiết cũng như hàm lượng dinh dưỡng.<\/p>"
           }
         },
         "row-2": {
           "type": "list_row",
           "settings": {
             "title": "SỰ TINH KHIẾT",
-            "content": "<p>Canh tác hữu cơ, nguyên liệu tinh khiết không chứa các chất phụ gia hóa học. Phương pháp chiết xuất nhẹ nhàng. Không biến đổi gen (non-GMO) và không chất độc hại. Sản xuất chuyên biệt với máy móc bán tự động kết hợp thao tác nhẹ nhàng nhằm bảo toàn chất lượng của các chất dinh dưỡng.</p>"
+            "content": "<p>Canh tác hữu cơ, nguyên liệu tinh khiết không chứa các chất phụ gia hóa học. Phương pháp chiết xuất nhẹ nhàng. Không biến đổi gen (non-GMO) và không chất độc hại. Sản xuất chuyên biệt với máy móc bán tự động kết hợp thao tác nhẹ nhàng nhằm bảo toàn chất lượng của các chất dinh dưỡng.<\/p>"
           }
         },
         "row-3": {
           "type": "list_row",
           "settings": {
             "title": "CẢI TIẾN & ĐỔI MỚI",
-            "content": "<p>Các sản phẩm và công thức tối ưu hoá độc đáo được phát triển thông qua các quan hệ hợp tác và chia sẻ kinh nghiệm giữa Sunday Natural và các nhà trị liệu toàn diện, các nhà khoa học hàng đầu cũng như các cơ sở sản xuất chất lượng.</p>"
+            "content": "<p>Các sản phẩm và công thức tối ưu hoá độc đáo được phát triển thông qua các quan hệ hợp tác và chia sẻ kinh nghiệm giữa Sunday Natural và các nhà trị liệu toàn diện, các nhà khoa học hàng đầu cũng như các cơ sở sản xuất chất lượng.<\/p>"
           }
         },
         "row-4": {
           "type": "list_row",
           "settings": {
             "title": "PHÁT TRIỂN BỀN VỮNG",
-            "content": "<p>Hầu hết các sản phẩm đều là thuần chay (vegan), chỉ có một số ít ngoại lệ là chay thường (vegetarian). Tất cả các nguyên liệu đều được trồng thông qua các phương pháp canh tác bền vững và được mua trực tiếp từ các nhà cung cấp địa phương. Các vật liệu đóng gói cũng thân thiện với môi trường bao gồm cả thuỷ tinh và tinh bột có thể phân huỷ sinh học được.</p>"
+            "content": "<p>Hầu hết các sản phẩm đều là thuần chay (vegan), chỉ có một số ít ngoại lệ là chay thường (vegetarian). Tất cả các nguyên liệu đều được trồng thông qua các phương pháp canh tác bền vững và được mua trực tiếp từ các nhà cung cấp địa phương. Các vật liệu đóng gói cũng thân thiện với môi trường bao gồm cả thuỷ tinh và tinh bột có thể phân huỷ sinh học được.<\/p>"
           }
         },
         "row-5": {
           "type": "list_row",
           "settings": {
             "title": "MINH BẠCH",
-            "content": "<p>Sunday Natural luôn minh bạch tối đa về tất cả các thành phần và quy trình sản xuất (tuyệt đối không có thành phần ẩn).</p>"
+            "content": "<p>Sunday Natural luôn minh bạch tối đa về tất cả các thành phần và quy trình sản xuất (tuyệt đối không có thành phần ẩn).<\/p>"
           }
         },
         "row-6": {
           "type": "list_row",
           "settings": {
             "title": "CÔNG BẰNG",
-            "content": "<p>Sản phẩm chất lượng cao với giá cả hợp lý thông qua mua trực tiếp và sản xuất nội bộ. Quan hệ hợp tác lâu dài, công bằng với các nhà cung cấp.</p>"
+            "content": "<p>Sản phẩm chất lượng cao với giá cả hợp lý thông qua mua trực tiếp và sản xuất nội bộ. Quan hệ hợp tác lâu dài, công bằng với các nhà cung cấp.<\/p>"
           }
         }
       },
@@ -78,35 +78,31 @@
         "row-4",
         "row-5",
         "row-6"
-      ]
+      ],
+      "settings": {
+      }
     },
     "sunday-master-background-richtext-one": {
       "type": "sunday-master-background-richtext",
-      "settings": {
-        "richtext_group_backgrond_desktop": "",
-        "richtext_group_backgrond_mobile": "",
-        "richtext_group_backgrond_desktop_default": "https://cdn.shopify.com/s/files/1/0817/3902/2646/files/about-us-desktop.png?v=1693217875",
-        "richtext_group_backgrond_mobile_default": "https://cdn.shopify.com/s/files/1/0817/3902/2646/files/about-us-mobile.png?v=1693217873"
-      },
       "blocks": {
         "group-0": {
           "type": "richtext_group",
           "settings": {
-            "content": "<h3>TRIẾT LÝ KINH DOANH CỦA SUNDAY NATURAL</h3><p>Trong lịch sử hàng ngàn năm qua, con người từ nhiều nền văn hoá khác nhau trên thế giới vẫn luôn sử dụng các cây làm thuốc và thực phẩm dinh dưỡng tồn tại trong thiên nhiên để duy trì sự sống và gìn giữ sức khoẻ. Để tiệm cận với những tri thức cổ xưa này, Sunday Natural đã và đang phát triển những sản phẩm hướng đến tính tự nhiên nhiều nhất có thể.</p>",
+            "content": "<h3>TRIẾT LÝ KINH DOANH CỦA SUNDAY NATURAL<\/h3><p>Trong lịch sử hàng ngàn năm qua, con người từ nhiều nền văn hoá khác nhau trên thế giới vẫn luôn sử dụng các cây làm thuốc và thực phẩm dinh dưỡng tồn tại trong thiên nhiên để duy trì sự sống và gìn giữ sức khoẻ. Để tiệm cận với những tri thức cổ xưa này, Sunday Natural đã và đang phát triển những sản phẩm hướng đến tính tự nhiên nhiều nhất có thể.<\/p>",
             "text_align": "left"
           }
         },
         "group-1": {
           "type": "richtext_group",
           "settings": {
-            "content": "<p>Do đó, triết lý kinh doanh của chúng tôi rất đơn giản:</p><p></p><h4>&#34;Sunday Natural mong muốn tạo ra những sản phẩm có thể đáp ứng các tiêu chuẩn cao nhất cả về chất lượng lẫn độ tinh khiết; giá trị cốt lõi của chúng tôi chính là các thành phần hữu cơ và có nguồn gốc từ thiên nhiên.&#34;</h4><p>Chúng tôi theo đuổi triết lý này với tất cả sự quan tâm tỉ mỉ ở mọi cấp độ và cho đến từng chi tiết cuối cùng.</p>",
+            "content": "<p>Do đó, triết lý kinh doanh của chúng tôi rất đơn giản:<\/p><p><\/p><h4>&#34;Sunday Natural mong muốn tạo ra những sản phẩm có thể đáp ứng các tiêu chuẩn cao nhất cả về chất lượng lẫn độ tinh khiết; giá trị cốt lõi của chúng tôi chính là các thành phần hữu cơ và có nguồn gốc từ thiên nhiên.&#34;<\/h4><p>Chúng tôi theo đuổi triết lý này với tất cả sự quan tâm tỉ mỉ ở mọi cấp độ và cho đến từng chi tiết cuối cùng.<\/p>",
             "text_align": "left"
           }
         },
         "group-2": {
           "type": "richtext_group",
           "settings": {
-            "content": "<h3>NGUỒN GỐC THIÊN NHIÊN</h3><p>Các sản phẩm thực phẩm có nguồn gốc thiên nhiên và dược liệu tốt nhất đều bắt nguồn từ nơi xuất xứ của chúng vì khi đó chúng được sản xuất và trồng trong điều kiện tự nhiên hoàn hảo nhất. Tuy nhiên, muốn giữ lại được các tinh chất tự nhiên vốn có thì chúng không nên qua xử lý nhiều. Bởi lẽ đó, các sản phẩm của Sunday Natural luôn cố gắng đảm bảo tính tự nhiên nhất có thể. Vì vậy, các thực phẩm bổ sung của chúng tôi luôn cố gắng sử dụng các nguyên liệu có chiết xuất từ thiên nhiên khi có thể. Tuy nhiên, chúng tôi cũng có thể sử dụng các nguyên liệu thô có hoạt tính sinh học được chiết xuất thông qua sự tổng hợp hữu cơ từ thực vật hoặc vi khuẩn.</p><p></p><p>Các vitamin, khoáng chất và tất cả các chất dinh dưỡng khác đều mang lại kết quả tốt nhất khi chúng tồn tại dưới dạng tự nhiên và có hoạt tính sinh học. Đây cũng chính xác là những gì mà cơ thể chúng ta mong muốn. Hơn nữa, các chất dinh dưỡng tự nhiên có thể tối ưu hoá được khả năng hấp thụ và trao đổi chất của cơ thể trong quá trình tái tạo, phục hồi và phát triển.</p>",
+            "content": "<h3>NGUỒN GỐC THIÊN NHIÊN<\/h3><p>Các sản phẩm thực phẩm có nguồn gốc thiên nhiên và dược liệu tốt nhất đều bắt nguồn từ nơi xuất xứ của chúng vì khi đó chúng được sản xuất và trồng trong điều kiện tự nhiên hoàn hảo nhất. Tuy nhiên, muốn giữ lại được các tinh chất tự nhiên vốn có thì chúng không nên qua xử lý nhiều. Bởi lẽ đó, các sản phẩm của Sunday Natural luôn cố gắng đảm bảo tính tự nhiên nhất có thể. Vì vậy, các thực phẩm bổ sung của chúng tôi luôn cố gắng sử dụng các nguyên liệu có chiết xuất từ thiên nhiên khi có thể. Tuy nhiên, chúng tôi cũng có thể sử dụng các nguyên liệu thô có hoạt tính sinh học được chiết xuất thông qua sự tổng hợp hữu cơ từ thực vật hoặc vi khuẩn.<\/p><p><\/p><p>Các vitamin, khoáng chất và tất cả các chất dinh dưỡng khác đều mang lại kết quả tốt nhất khi chúng tồn tại dưới dạng tự nhiên và có hoạt tính sinh học. Đây cũng chính xác là những gì mà cơ thể chúng ta mong muốn. Hơn nữa, các chất dinh dưỡng tự nhiên có thể tối ưu hoá được khả năng hấp thụ và trao đổi chất của cơ thể trong quá trình tái tạo, phục hồi và phát triển.<\/p>",
             "text_align": "left"
           }
         }
@@ -115,28 +111,28 @@
         "group-0",
         "group-1",
         "group-2"
-      ]
+      ],
+      "settings": {
+        "richtext_group_backgrond_desktop": "",
+        "richtext_group_backgrond_mobile": "",
+        "richtext_group_backgrond_desktop_default": "https:\/\/cdn.shopify.com\/s\/files\/1\/0817\/3902\/2646\/files\/about-us-desktop.png?v=1693217875",
+        "richtext_group_backgrond_mobile_default": "https:\/\/cdn.shopify.com\/s\/files\/1\/0817\/3902\/2646\/files\/about-us-mobile.png?v=1693217873"
+      }
     },
     "sunday-master-background-richtext-two": {
       "type": "sunday-master-background-richtext",
-      "settings": {
-        "richtext_group_backgrond_desktop": "",
-        "richtext_group_backgrond_mobile": "",
-        "richtext_group_backgrond_desktop_default": "https://cdn.shopify.com/s/files/1/0817/3902/2646/files/About-us-1.png?v=1693277071",
-        "richtext_group_backgrond_mobile_default": "https://cdn.shopify.com/s/files/1/0817/3902/2646/files/About-us-1-mb.png?v=1693277068"
-      },
       "blocks": {
         "group-0": {
           "type": "richtext_group",
           "settings": {
-            "content": "<h3>CHẤT LƯỢNG CAO CẤP</h3><p>Để tạo ra được các sản phẩm tuyệt vời như hiện nay, Sunday Natural luôn tìm kiếm các nguyên liệu và siêu thực phẩm cao cấp nhất từ khắp các nơi trên thế giới. Những nguyên liệu này được đảm bảo không chứa chất độc hại và đặc biệt là giàu chất dinh dưỡng để có thể đạt được hương vị tuyệt vời và lợi ích tối ưu. Tuy nhiên việc tìm kiếm các thành phần, các nhà sản xuất hay phương pháp sản xuất tốt nhất luôn yêu cầu chúng tôi phải nghiên cứu một cách tỉ mỉ và điều này thường diễn ra trong một thời gian rất dài. Mặc dù vậy, chúng tôi chỉ chấp nhận những thành phẩm đáp ứng tuyệt đối các tiêu chuẩn cao của chúng tôi.</p><p></p><p>Ngoài ra, để xác định được độ tinh khiết và hàm lượng hoạt chất thì những nguyên liệu thô và thành phẩm luôn được chúng tôi thử nghiệm rộng rãi tại các phòng thí nghiệm độc lập. Và đặc biệt chỉ những thành phần tinh khiết và hiệu quả nhất mới được chọn để sử dụng tại cơ sở sản xuất của chúng tôi tại Berlin. Đây cũng là chính là nơi các sản phẩm của Sunday Natural ra đời theo công thức riêng và không có chất phụ gia hoá học.</p>",
+            "content": "<h3>CHẤT LƯỢNG CAO CẤP<\/h3><p>Để tạo ra được các sản phẩm tuyệt vời như hiện nay, Sunday Natural luôn tìm kiếm các nguyên liệu và siêu thực phẩm cao cấp nhất từ khắp các nơi trên thế giới. Những nguyên liệu này được đảm bảo không chứa chất độc hại và đặc biệt là giàu chất dinh dưỡng để có thể đạt được hương vị tuyệt vời và lợi ích tối ưu. Tuy nhiên việc tìm kiếm các thành phần, các nhà sản xuất hay phương pháp sản xuất tốt nhất luôn yêu cầu chúng tôi phải nghiên cứu một cách tỉ mỉ và điều này thường diễn ra trong một thời gian rất dài. Mặc dù vậy, chúng tôi chỉ chấp nhận những thành phẩm đáp ứng tuyệt đối các tiêu chuẩn cao của chúng tôi.<\/p><p><\/p><p>Ngoài ra, để xác định được độ tinh khiết và hàm lượng hoạt chất thì những nguyên liệu thô và thành phẩm luôn được chúng tôi thử nghiệm rộng rãi tại các phòng thí nghiệm độc lập. Và đặc biệt chỉ những thành phần tinh khiết và hiệu quả nhất mới được chọn để sử dụng tại cơ sở sản xuất của chúng tôi tại Berlin. Đây cũng là chính là nơi các sản phẩm của Sunday Natural ra đời theo công thức riêng và không có chất phụ gia hoá học.<\/p>",
             "text_align": "left"
           }
         },
         "group-1": {
           "type": "richtext_group",
           "settings": {
-            "content": "<h3>SỰ TINH KHIẾT</h3><p>Các sản phẩm của chúng tôi đều sử dụng các nguyên liệu có hoạt tính tự nhiên ban đầu, tức là chúng không bị pha trộn, không chứa bất kỳ tạp chất hay các chất phụ gia gây tranh cãi nào để đảm bảo độ tinh khiết cao nhất. Đặc biệt, tất cả các thành phần chọn lọc của chúng tôi đều không biến đổi gen (non-GMO), được thử nghiệm trong phòng thí nghiệm và hoàn toàn không tiếp xúc với chất diệt khuẩn cũng như các chất độc hại. Để đảm bảo được điều này thì chúng tôi luôn dựa vào những quy định nghiêm ngặt về chất lượng hữu cơ và các thành phần có nguồn gốc trực tiếp từ thiên nhiên. Hơn nữa chúng còn được chiết xuất bằng các phương pháp nhẹ nhất có thể.</p><p></p><p>True Clean Label® chính là lời hứa của Sunday Natural về việc đảm bảo các sản phẩm &#34không có chất phụ gia ẩn&#34. Đảm bảo được độ tinh khiết khiết cao nhất luôn là mục tiêu mà chúng tôi theo đuổi từ khi thành lập đến nay. Thậm chí từng chi tiết nhỏ nhất cũng được chúng tôi chú trọng như từ vỏ viên nang siêu tinh khiết, không chứa các hạt nano cho đến việc bao bì thủy tinh và hộp vận chuyển không chứa chất dầu khoáng.</p>",
+            "content": "<h3>SỰ TINH KHIẾT<\/h3><p>Các sản phẩm của chúng tôi đều sử dụng các nguyên liệu có hoạt tính tự nhiên ban đầu, tức là chúng không bị pha trộn, không chứa bất kỳ tạp chất hay các chất phụ gia gây tranh cãi nào để đảm bảo độ tinh khiết cao nhất. Đặc biệt, tất cả các thành phần chọn lọc của chúng tôi đều không biến đổi gen (non-GMO), được thử nghiệm trong phòng thí nghiệm và hoàn toàn không tiếp xúc với chất diệt khuẩn cũng như các chất độc hại. Để đảm bảo được điều này thì chúng tôi luôn dựa vào những quy định nghiêm ngặt về chất lượng hữu cơ và các thành phần có nguồn gốc trực tiếp từ thiên nhiên. Hơn nữa chúng còn được chiết xuất bằng các phương pháp nhẹ nhất có thể.<\/p><p><\/p><p>True Clean Label® chính là lời hứa của Sunday Natural về việc đảm bảo các sản phẩm &#34không có chất phụ gia ẩn&#34. Đảm bảo được độ tinh khiết khiết cao nhất luôn là mục tiêu mà chúng tôi theo đuổi từ khi thành lập đến nay. Thậm chí từng chi tiết nhỏ nhất cũng được chúng tôi chú trọng như từ vỏ viên nang siêu tinh khiết, không chứa các hạt nano cho đến việc bao bì thủy tinh và hộp vận chuyển không chứa chất dầu khoáng.<\/p>",
             "text_align": "left"
           }
         }
@@ -144,28 +140,28 @@
       "block_order": [
         "group-0",
         "group-1"
-      ]
+      ],
+      "settings": {
+        "richtext_group_backgrond_desktop": "",
+        "richtext_group_backgrond_mobile": "",
+        "richtext_group_backgrond_desktop_default": "https:\/\/cdn.shopify.com\/s\/files\/1\/0817\/3902\/2646\/files\/About-us-1.png?v=1693277071",
+        "richtext_group_backgrond_mobile_default": "https:\/\/cdn.shopify.com\/s\/files\/1\/0817\/3902\/2646\/files\/About-us-1-mb.png?v=1693277068"
+      }
     },
     "sunday-master-background-richtext-three": {
       "type": "sunday-master-background-richtext",
-      "settings": {
-        "richtext_group_backgrond_desktop": "",
-        "richtext_group_backgrond_mobile": "",
-        "richtext_group_backgrond_desktop_default": "https://cdn.shopify.com/s/files/1/0817/3902/2646/files/About-us-2.png?v=1693277071",
-        "richtext_group_backgrond_mobile_default": "https://cdn.shopify.com/s/files/1/0817/3902/2646/files/About-us-2-mb.png?v=1693277068"
-      },
       "blocks": {
         "group-0": {
           "type": "richtext_group",
           "settings": {
-            "content": "<h3>GIẢI PHÁP TUỲ CHỈNH</h3><p>Trong quá trình phát triển sản phẩm mới, nếu chúng tôi không tìm được những nguyên liệu ưng ý trên thị trường thì chúng tôi sẽ có những giải pháp mới thay thế.</p><p></p><p>Mặc dù không phải thường xuyên nhưng Sunday Natural đôi khi sẽ có những nguyên liệu thô được sản xuất đặc biệt dành riêng cho nhãn hiệu của chúng tôi. Đây cũng chính là giải pháp thay thế của chúng tôi trong quá trình tìm kiếm nguyên liệu. Quá trình này được mở rộng từ các hướng dẫn cụ thể về phương pháp canh tác và chiết xuất không có dư lượng thuốc trừ sâu tại các cánh đồng nơi mà các giống chè đặc biệt của Sunday Natural được trồng, cho đến việc sản xuất độc quyền những nguyên liệu thô này để phục vụ cho việc phát triển các sản phẩm bổ trợ của chúng tôi về sau.</p><p></p><p>Việc xử lý các thành phần hữu cơ độc quyền mà không chứa bất kỳ chất bảo quản nào thường đặt ra những thách thức và chi phí lớn cho Sunday Natural đặc biệt là đội ngũ nghiên cứu và phát triển cũng như các nhóm sản xuất. Tuy nhiên, chúng tôi cân bằng những chi phí cao này bằng cách chọn mua hàng trực tiếp, cơ cấu chi phí một cách hợp lý và tổ chức bán hàng nhanh gọn. </p>",
+            "content": "<h3>GIẢI PHÁP TUỲ CHỈNH<\/h3><p>Trong quá trình phát triển sản phẩm mới, nếu chúng tôi không tìm được những nguyên liệu ưng ý trên thị trường thì chúng tôi sẽ có những giải pháp mới thay thế.<\/p><p><\/p><p>Mặc dù không phải thường xuyên nhưng Sunday Natural đôi khi sẽ có những nguyên liệu thô được sản xuất đặc biệt dành riêng cho nhãn hiệu của chúng tôi. Đây cũng chính là giải pháp thay thế của chúng tôi trong quá trình tìm kiếm nguyên liệu. Quá trình này được mở rộng từ các hướng dẫn cụ thể về phương pháp canh tác và chiết xuất không có dư lượng thuốc trừ sâu tại các cánh đồng nơi mà các giống chè đặc biệt của Sunday Natural được trồng, cho đến việc sản xuất độc quyền những nguyên liệu thô này để phục vụ cho việc phát triển các sản phẩm bổ trợ của chúng tôi về sau.<\/p><p><\/p><p>Việc xử lý các thành phần hữu cơ độc quyền mà không chứa bất kỳ chất bảo quản nào thường đặt ra những thách thức và chi phí lớn cho Sunday Natural đặc biệt là đội ngũ nghiên cứu và phát triển cũng như các nhóm sản xuất. Tuy nhiên, chúng tôi cân bằng những chi phí cao này bằng cách chọn mua hàng trực tiếp, cơ cấu chi phí một cách hợp lý và tổ chức bán hàng nhanh gọn. <\/p>",
             "text_align": "left"
           }
         },
         "group-1": {
           "type": "richtext_group",
           "settings": {
-            "content": "<h3>CẢI TIẾN & ĐỔI MỚI</h3><p>Các sản phẩm của Sunday Natural luôn song hành cùng với các nghiên cứu khoa học hiện hành và được phát triển dựa trên sự hợp tác có chọn lọc với các nhà khoa học, nhà trị liệu, nông dân và các nhà sản xuất chất lượng. Bằng sự nỗ lực của mình, Sunday Natural đã tìm cách tạo ra các giải pháp hiệu quả cao thông qua các công thức và sự kết hợp độc đáo.</p><p></p><p>Tại thời điểm mới thành lập, nhiều sản phẩm của chúng tôi còn khá mới lạ đối với người tiêu dùng. Tuy nhiên, thay vì chạy theo xu hướng thị trường, chúng tôi là một trong những công ty tiên phong trong ngành về việc phát triển những công thức mới cũng như thiết lập các tiêu chuẩn mới về chất lượng và tính minh bạch của sản phẩm.</p>",
+            "content": "<h3>CẢI TIẾN & ĐỔI MỚI<\/h3><p>Các sản phẩm của Sunday Natural luôn song hành cùng với các nghiên cứu khoa học hiện hành và được phát triển dựa trên sự hợp tác có chọn lọc với các nhà khoa học, nhà trị liệu, nông dân và các nhà sản xuất chất lượng. Bằng sự nỗ lực của mình, Sunday Natural đã tìm cách tạo ra các giải pháp hiệu quả cao thông qua các công thức và sự kết hợp độc đáo.<\/p><p><\/p><p>Tại thời điểm mới thành lập, nhiều sản phẩm của chúng tôi còn khá mới lạ đối với người tiêu dùng. Tuy nhiên, thay vì chạy theo xu hướng thị trường, chúng tôi là một trong những công ty tiên phong trong ngành về việc phát triển những công thức mới cũng như thiết lập các tiêu chuẩn mới về chất lượng và tính minh bạch của sản phẩm.<\/p>",
             "text_align": "left"
           }
         }
@@ -173,28 +169,28 @@
       "block_order": [
         "group-0",
         "group-1"
-      ]
+      ],
+      "settings": {
+        "richtext_group_backgrond_desktop": "",
+        "richtext_group_backgrond_mobile": "",
+        "richtext_group_backgrond_desktop_default": "https:\/\/cdn.shopify.com\/s\/files\/1\/0817\/3902\/2646\/files\/About-us-2.png?v=1693277071",
+        "richtext_group_backgrond_mobile_default": "https:\/\/cdn.shopify.com\/s\/files\/1\/0817\/3902\/2646\/files\/About-us-2-mb.png?v=1693277068"
+      }
     },
     "sunday-master-background-richtext-four": {
       "type": "sunday-master-background-richtext",
-      "settings": {
-        "richtext_group_backgrond_desktop": "",
-        "richtext_group_backgrond_mobile": "",
-        "richtext_group_backgrond_desktop_default": "https://cdn.shopify.com/s/files/1/0817/3902/2646/files/About-us-3.png?v=1693277072",
-        "richtext_group_backgrond_mobile_default": "https://cdn.shopify.com/s/files/1/0817/3902/2646/files/About-us-3-mb.png?v=1693277068"
-      },
       "blocks": {
         "group-0": {
           "type": "richtext_group",
           "settings": {
-            "content": "<h3>PHÁT TRIỂN BỀN VỮNG</h3><p>Bên cạnh việc chú trọng chất lượng sản phẩm, Sunday Natural cũng quan tâm đến vấn đề về môi trường, hệ sinh thái cũng như tính đạo đức trong kinh doanh và các vấn đề xã hội. Đó là lí do tại sao hầu như chúng tôi chỉ bán các sản phẩm thuần chay và một số ít ngoại lệ là chay thường.</p><p></p><p>Việc xây dựng mối quan hệ thân thiết và lâu dài với các nhà cung cấp cũng là một trong mục tiêu quan trọng của Sunday Natural. Vì vậy, chúng tôi thường xuyên ghé thăm nơi họ làm việc và sản xuất để có thể kiểm tra xem liệu rằng những người nông dân và các nhà sản xuất của chúng tôi có đang cung cấp môi trường làm việc an toàn và lành mạnh hay mức lương công bằng cho tất cả nhân viên của họ hay không. Đây cũng là cách để Sunday Natural có thể đảm bảo được các nhà cung ứng tôn trọng các nguyên tắc của chúng tôi về việc tính công bằng và đạo đức kinh doanh.</p><p></p><p>Sự thành công của thương hiệu chúng tôi được xây dựng dựa trên các mối quan hệ đối tác bền chặt với những người có cùng chí hướng. Các công thức của chúng tôi không chỉ được phát triển với sự hợp tác của các nhà khoa học hàng đầu và các nhà trị liệu toàn diện, mà nhiều thành phần hoạt chất thô của chúng tôi cũng có nguồn gốc từ các doanh nghiệp nhỏ, doanh nghiệp địa phương và các hộ gia đình có đam mê với canh tác bền vững và nói không với thuốc trừ sâu.</p><p></p><p>Bên cạnh đó thì chúng tôi cũng có cách đóng gói riêng biệt. Cụ thể là phần lớn các sản phẩm của chúng tôi được đóng gói bằng các chai lọ thuỷ tinh và do đó gần như có thể tái chế hoàn toàn.</p>",
+            "content": "<h3>PHÁT TRIỂN BỀN VỮNG<\/h3><p>Bên cạnh việc chú trọng chất lượng sản phẩm, Sunday Natural cũng quan tâm đến vấn đề về môi trường, hệ sinh thái cũng như tính đạo đức trong kinh doanh và các vấn đề xã hội. Đó là lí do tại sao hầu như chúng tôi chỉ bán các sản phẩm thuần chay và một số ít ngoại lệ là chay thường.<\/p><p><\/p><p>Việc xây dựng mối quan hệ thân thiết và lâu dài với các nhà cung cấp cũng là một trong mục tiêu quan trọng của Sunday Natural. Vì vậy, chúng tôi thường xuyên ghé thăm nơi họ làm việc và sản xuất để có thể kiểm tra xem liệu rằng những người nông dân và các nhà sản xuất của chúng tôi có đang cung cấp môi trường làm việc an toàn và lành mạnh hay mức lương công bằng cho tất cả nhân viên của họ hay không. Đây cũng là cách để Sunday Natural có thể đảm bảo được các nhà cung ứng tôn trọng các nguyên tắc của chúng tôi về việc tính công bằng và đạo đức kinh doanh.<\/p><p><\/p><p>Sự thành công của thương hiệu chúng tôi được xây dựng dựa trên các mối quan hệ đối tác bền chặt với những người có cùng chí hướng. Các công thức của chúng tôi không chỉ được phát triển với sự hợp tác của các nhà khoa học hàng đầu và các nhà trị liệu toàn diện, mà nhiều thành phần hoạt chất thô của chúng tôi cũng có nguồn gốc từ các doanh nghiệp nhỏ, doanh nghiệp địa phương và các hộ gia đình có đam mê với canh tác bền vững và nói không với thuốc trừ sâu.<\/p><p><\/p><p>Bên cạnh đó thì chúng tôi cũng có cách đóng gói riêng biệt. Cụ thể là phần lớn các sản phẩm của chúng tôi được đóng gói bằng các chai lọ thuỷ tinh và do đó gần như có thể tái chế hoàn toàn.<\/p>",
             "text_align": "left"
           }
         },
         "group-1": {
           "type": "richtext_group",
           "settings": {
-            "content": "<h3>MINH BẠCH</h3><p>Mục tiêu của chúng tôi chính là cung cấp các sản phẩm chất lượng cao, tinh khiết và hiệu quả nhất đến người dùng, đồng thời cũng đặt ra các tiêu chuẩn cao nhất về chất lượng và tính minh bạch của sản phẩm.</p><p></p><p>Với một thị trường bão hoà và nhiều thông tin gây nhầm lẫn như hiện nay, cách duy nhất để chúng tôi có thể chiếm được lòng tin của khách hàng chính là thông qua sự minh bạch tuyệt đối. Đó là lý do tại sao mà Sunday Natural chọn cách công khai hết mọi thành phần đơn lẻ có trong các sản phẩm của mình, ngay cả những thành phần mà pháp luật không yêu cầu.</p><p></p><p>Bên cạnh việc công khai đầy đủ thành phần trên nhãn sản phẩm, Sunday Natural cũng đã triển khai một kế hoạch chưa từng có về tính minh bạch của sản phẩm. Cụ thể, đối với những sản phẩm quan trọng nhất trong phạm vi của mình, chúng tôi lần lượt công bố các thử nghiệm chi tiết và chống giả mạo được thực hiện bởi các phòng thí nghiệm quốc tế độc lập nổi tiếng. Các thử nghiệm này chứng minh độ tinh khiết và hàm lượng hoạt chất trong các sản phẩm của chúng tôi. Những kiến thức chuyên môn của các phòng thí nghiệm và các nhà sản xuất chất lượng của chúng tôi cũng được đưa vào các quy trình sản xuất của chính Sunday Natural. Và điều này cho phép chúng tôi bảo quản tốt hơn các chất dinh dưỡng nhạy cảm với ánh sáng, oxy và nhiệt.</p><p></p><p>Bất cứ khi nào có thể, chúng tôi luôn sẵn sàng áp dụng những con dấu chất lượng hiện hành và hướng đến việc thiết lập các tiêu chuẩn chất lượng mới nhất.</p>",
+            "content": "<h3>MINH BẠCH<\/h3><p>Mục tiêu của chúng tôi chính là cung cấp các sản phẩm chất lượng cao, tinh khiết và hiệu quả nhất đến người dùng, đồng thời cũng đặt ra các tiêu chuẩn cao nhất về chất lượng và tính minh bạch của sản phẩm.<\/p><p><\/p><p>Với một thị trường bão hoà và nhiều thông tin gây nhầm lẫn như hiện nay, cách duy nhất để chúng tôi có thể chiếm được lòng tin của khách hàng chính là thông qua sự minh bạch tuyệt đối. Đó là lý do tại sao mà Sunday Natural chọn cách công khai hết mọi thành phần đơn lẻ có trong các sản phẩm của mình, ngay cả những thành phần mà pháp luật không yêu cầu.<\/p><p><\/p><p>Bên cạnh việc công khai đầy đủ thành phần trên nhãn sản phẩm, Sunday Natural cũng đã triển khai một kế hoạch chưa từng có về tính minh bạch của sản phẩm. Cụ thể, đối với những sản phẩm quan trọng nhất trong phạm vi của mình, chúng tôi lần lượt công bố các thử nghiệm chi tiết và chống giả mạo được thực hiện bởi các phòng thí nghiệm quốc tế độc lập nổi tiếng. Các thử nghiệm này chứng minh độ tinh khiết và hàm lượng hoạt chất trong các sản phẩm của chúng tôi. Những kiến thức chuyên môn của các phòng thí nghiệm và các nhà sản xuất chất lượng của chúng tôi cũng được đưa vào các quy trình sản xuất của chính Sunday Natural. Và điều này cho phép chúng tôi bảo quản tốt hơn các chất dinh dưỡng nhạy cảm với ánh sáng, oxy và nhiệt.<\/p><p><\/p><p>Bất cứ khi nào có thể, chúng tôi luôn sẵn sàng áp dụng những con dấu chất lượng hiện hành và hướng đến việc thiết lập các tiêu chuẩn chất lượng mới nhất.<\/p>",
             "text_align": "left"
           }
         }
@@ -202,28 +198,28 @@
       "block_order": [
         "group-0",
         "group-1"
-      ]
+      ],
+      "settings": {
+        "richtext_group_backgrond_desktop": "",
+        "richtext_group_backgrond_mobile": "",
+        "richtext_group_backgrond_desktop_default": "https:\/\/cdn.shopify.com\/s\/files\/1\/0817\/3902\/2646\/files\/About-us-3.png?v=1693277072",
+        "richtext_group_backgrond_mobile_default": "https:\/\/cdn.shopify.com\/s\/files\/1\/0817\/3902\/2646\/files\/About-us-3-mb.png?v=1693277068"
+      }
     },
     "sunday-master-background-richtext-five": {
       "type": "sunday-master-background-richtext",
-      "settings": {
-        "richtext_group_backgrond_desktop": "",
-        "richtext_group_backgrond_mobile": "",
-        "richtext_group_backgrond_desktop_default": "https://cdn.shopify.com/s/files/1/0817/3902/2646/files/About-us-5.png?v=1693277072",
-        "richtext_group_backgrond_mobile_default": "https://cdn.shopify.com/s/files/1/0817/3902/2646/files/About-us-5-mb.png?v=1693277068"
-      },
       "blocks": {
         "group-0": {
           "type": "richtext_group",
           "settings": {
-            "content": "<h3>CÔNG BẰNG</h3><p>Chúng tôi luôn cho rằng sống khoẻ mạnh là quyền cơ bản của mỗi con người. Do đó, chúng tôi luôn cung cấp tất cả các sản phẩm của mình với giá cả hợp lý để người tiêu dùng có thể tiếp cận được chúng.</p><p></p><p>Để làm được điều đó, chúng tôi chỉ áp dụng tỷ suất lợi nhuận vừa phải và cố định cho toàn bộ các dòng sản phẩm của mình. Bởi vậy nên sản phẩm của chúng tôi luôn có giá phải chăng nhất có thể. Bất kỳ sự cắt giảm nào về nguyên liệu thô và chi phí sản xuất đều được phản ánh ngay lập tức trong việc định giá sản phẩm của chúng tôi.</p>",
+            "content": "<h3>CÔNG BẰNG<\/h3><p>Chúng tôi luôn cho rằng sống khoẻ mạnh là quyền cơ bản của mỗi con người. Do đó, chúng tôi luôn cung cấp tất cả các sản phẩm của mình với giá cả hợp lý để người tiêu dùng có thể tiếp cận được chúng.<\/p><p><\/p><p>Để làm được điều đó, chúng tôi chỉ áp dụng tỷ suất lợi nhuận vừa phải và cố định cho toàn bộ các dòng sản phẩm của mình. Bởi vậy nên sản phẩm của chúng tôi luôn có giá phải chăng nhất có thể. Bất kỳ sự cắt giảm nào về nguyên liệu thô và chi phí sản xuất đều được phản ánh ngay lập tức trong việc định giá sản phẩm của chúng tôi.<\/p>",
             "text_align": "left"
           }
         },
         "group-1": {
           "type": "richtext_group",
           "settings": {
-            "content": "<h3>ĐỘC LẬP</h3><p>Sunday Natural là doanh nghiệp tư nhân và do đó không phải chịu những ràng buộc thông thường về kế hoạch kinh doanh và mục tiêu lợi nhuận nghiêm ngặt hoặc các yêu cầu từ nhà đầu tư. Chúng tôi có thể đạt được thành công thông qua sự tính toán cẩn thận, đặc biệt là dựa trên tinh thần trách nhiệm và niềm đam mê lớn với những gì chúng tôi đang theo đuổi. Hơn nữa, việc mua hàng trực tiếp và sản xuất nội bộ sẽ cho phép chúng tôi tiếp tục duy trì các tiêu chuẩn này trong tương lai.</p><p></p><p>Sunday Natural cũng suy nghĩ đến việc làm sao để những người có mức chi tiêu thấp cũng có thể tiếp cận được các sản phẩm chất lượng cao của chúng tôi. Và để làm được điều đó, chúng tôi muốn đảm bảo rằng đối với mỗi danh mục sản phẩm, sẽ có ít nhất một sản phẩm rẻ hơn với tỷ suất lợi nhuận nhỏ hơn. Tất nhiên, người tiêu dùng có thể yên tâm rằng những sản phẩm này có tiêu chuẩn chất lượng tương tự như các sản phẩm khác của chúng tôi.</p>",
+            "content": "<h3>ĐỘC LẬP<\/h3><p>Sunday Natural là doanh nghiệp tư nhân và do đó không phải chịu những ràng buộc thông thường về kế hoạch kinh doanh và mục tiêu lợi nhuận nghiêm ngặt hoặc các yêu cầu từ nhà đầu tư. Chúng tôi có thể đạt được thành công thông qua sự tính toán cẩn thận, đặc biệt là dựa trên tinh thần trách nhiệm và niềm đam mê lớn với những gì chúng tôi đang theo đuổi. Hơn nữa, việc mua hàng trực tiếp và sản xuất nội bộ sẽ cho phép chúng tôi tiếp tục duy trì các tiêu chuẩn này trong tương lai.<\/p><p><\/p><p>Sunday Natural cũng suy nghĩ đến việc làm sao để những người có mức chi tiêu thấp cũng có thể tiếp cận được các sản phẩm chất lượng cao của chúng tôi. Và để làm được điều đó, chúng tôi muốn đảm bảo rằng đối với mỗi danh mục sản phẩm, sẽ có ít nhất một sản phẩm rẻ hơn với tỷ suất lợi nhuận nhỏ hơn. Tất nhiên, người tiêu dùng có thể yên tâm rằng những sản phẩm này có tiêu chuẩn chất lượng tương tự như các sản phẩm khác của chúng tôi.<\/p>",
             "text_align": "left"
           }
         }
@@ -231,28 +227,28 @@
       "block_order": [
         "group-0",
         "group-1"
-      ]
+      ],
+      "settings": {
+        "richtext_group_backgrond_desktop": "",
+        "richtext_group_backgrond_mobile": "",
+        "richtext_group_backgrond_desktop_default": "https:\/\/cdn.shopify.com\/s\/files\/1\/0817\/3902\/2646\/files\/About-us-5.png?v=1693277072",
+        "richtext_group_backgrond_mobile_default": "https:\/\/cdn.shopify.com\/s\/files\/1\/0817\/3902\/2646\/files\/About-us-5-mb.png?v=1693277068"
+      }
     },
     "sunday-master-background-richtext-six": {
       "type": "sunday-master-background-richtext",
-      "settings": {
-        "richtext_group_backgrond_desktop": "",
-        "richtext_group_backgrond_mobile": "",
-        "richtext_group_backgrond_desktop_default": "https://cdn.shopify.com/s/files/1/0817/3902/2646/files/About-us-4.png?v=1693277072",
-        "richtext_group_backgrond_mobile_default": "https://cdn.shopify.com/s/files/1/0817/3902/2646/files/About-us-4-mb.png?v=1693277068"
-      },
       "blocks": {
         "group-0": {
           "type": "richtext_group",
           "settings": {
-            "content": "<h3>SỨC KHOẺ TỰ NHIÊN</h3><p>Khoẻ mạnh là trạng thái tự nhiên của cơ thể. Mục tiêu của tất cả các sản phẩm của chúng tôi là đảm bảo sự chăm sóc tối ưu, kích thích khả năng tự phục hồi của cơ thể và hỗ trợ trong việc duy trì hoặc lấy lại trạng thái cân bằng tự nhiên vốn có đó.</p><p></p><p>Tuy nhiên, đây không phải là điều dễ dàng có thể thực hiện được, đặc biệt là trong cuộc sống hiện đại ngày càng phát triển như hiện nay. Chúng ta có thể thấy rõ, chất lượng của các sản phẩm thực phẩm ngày càng đi xuống rõ rệt trong khi nhu cầu dinh dưỡng của con người lại không ngừng tăng lên do các yếu tố như: ô nhiễm môi trường và những áp lực căng thẳng của cuộc sống hiện đại. Điều này dẫn đến việc con người thiếu đi các yếu tố cơ bản để có thể duy trì được sức khoẻ tốt.</p><p></p><p>Việc này không chỉ ảnh hưởng đến thể chất mà nó còn ảnh hưởng đến sự thành công và trọn vẹn trong đời sống cá nhân cũng như nghề nghiệp của chúng ta.</p><p></p><p>Vitamin, thực phẩm bổ sung, siêu thực phẩm và tinh dầu của chúng tôi có thể giúp kích hoạt khả năng tự phục hồi để tăng cường và duy trì sức sống tự nhiên của cơ thể.</p>",
+            "content": "<h3>SỨC KHOẺ TỰ NHIÊN<\/h3><p>Khoẻ mạnh là trạng thái tự nhiên của cơ thể. Mục tiêu của tất cả các sản phẩm của chúng tôi là đảm bảo sự chăm sóc tối ưu, kích thích khả năng tự phục hồi của cơ thể và hỗ trợ trong việc duy trì hoặc lấy lại trạng thái cân bằng tự nhiên vốn có đó.<\/p><p><\/p><p>Tuy nhiên, đây không phải là điều dễ dàng có thể thực hiện được, đặc biệt là trong cuộc sống hiện đại ngày càng phát triển như hiện nay. Chúng ta có thể thấy rõ, chất lượng của các sản phẩm thực phẩm ngày càng đi xuống rõ rệt trong khi nhu cầu dinh dưỡng của con người lại không ngừng tăng lên do các yếu tố như: ô nhiễm môi trường và những áp lực căng thẳng của cuộc sống hiện đại. Điều này dẫn đến việc con người thiếu đi các yếu tố cơ bản để có thể duy trì được sức khoẻ tốt.<\/p><p><\/p><p>Việc này không chỉ ảnh hưởng đến thể chất mà nó còn ảnh hưởng đến sự thành công và trọn vẹn trong đời sống cá nhân cũng như nghề nghiệp của chúng ta.<\/p><p><\/p><p>Vitamin, thực phẩm bổ sung, siêu thực phẩm và tinh dầu của chúng tôi có thể giúp kích hoạt khả năng tự phục hồi để tăng cường và duy trì sức sống tự nhiên của cơ thể.<\/p>",
             "text_align": "left"
           }
         },
         "group-1": {
           "type": "richtext_group",
           "settings": {
-            "content": "<h3>VỀ CÔNG TY SUNDAY NATURAL</h3><p>Công ty Sunday Natural xuất phát từ niềm đam mê và nghiên cứu lâu dài trong các lĩnh vực sức khoẻ, phục hồi trị liệu và phát triển bản thân. Thương hiệu Sunday Natural của chúng tôi bắt nguồn từ việc chúng tôi không hài lòng với chất lượng của các loại vitamin, thực phẩm bổ sung và trà trên thị trường. Vì vậy, chúng tôi quyết định sản xuất các loại thực phẩm bổ sung dựa trên các tiêu chí của chúng tôi về: công thức đơn giản, chất lượng cao và được sản xuất từ các nguyên liệu thô siêu tinh khiết.</p><p></p><p>Công ty chúng tôi hoạt động độc lập và được tư nhân tài trợ. Ban điều hành công ty bao gồm các bác sĩ đang hành nghề, các chuyên gia dinh dưỡng, nhà trị liệu, nhà thảo dược học và những người có niềm đam mê với các sản phẩm dinh dưỡng.</p><p></p><p>Chúng tôi cho rằng chủ nhật (SUNDAY) là ngày nghỉ ngơi, chiêm nghiệm và tái sinh - là thời gian để chữa lành và hồi phục. Ngoài ra, trong nhiều truyền thống văn hoá của các nước trong đó có Việt Nam thì biểu tượng đoá sen nở rộ là biểu tượng thiêng liêng tượng trưng cho sự phát triển cá nhân và sự phát triển hài hoà của muôn loài. Đặc biệt, hoa sen chính là một biểu tượng nổi bật của sự thuần khiết.</p><p></p><p>Niềm đam mê của chúng tôi là liệu pháp tự nhiên toàn diện dựa trên cơ sở khoa học, y học dinh dưỡng. Do đó, Sunday Natural sẽ là trợ thủ đắc lực nhất trong việc cung cấp cho tủ thuốc nhà bạn các sản phẩm đến từ thiên nhiên như: siêu thực phẩm, trà, thực phẩm bổ sung và tinh dầu. Mục tiêu của chúng tôi chính là sự đa dạng về chủng loại sản phẩm cũng như chất lượng vượt trội.</p><p></p><p>Sunday Natural là một trong những nhà sản xuất sản phẩm chất lượng cao nổi tiếng nhất của Đức và có đội ngũ nghiên cứu, phát triển riêng tại Berlin. Chúng tôi hợp tác có chọn lọc với các tổ chức nghiên cứu, các nhà khoa học, nhà trị liệu, nông dân và hiệp hội nghề nghiệp để không ngừng cải tiến các sản phẩm của mình.</p>",
+            "content": "<h3>VỀ CÔNG TY SUNDAY NATURAL<\/h3><p>Công ty Sunday Natural xuất phát từ niềm đam mê và nghiên cứu lâu dài trong các lĩnh vực sức khoẻ, phục hồi trị liệu và phát triển bản thân. Thương hiệu Sunday Natural của chúng tôi bắt nguồn từ việc chúng tôi không hài lòng với chất lượng của các loại vitamin, thực phẩm bổ sung và trà trên thị trường. Vì vậy, chúng tôi quyết định sản xuất các loại thực phẩm bổ sung dựa trên các tiêu chí của chúng tôi về: công thức đơn giản, chất lượng cao và được sản xuất từ các nguyên liệu thô siêu tinh khiết.<\/p><p><\/p><p>Công ty chúng tôi hoạt động độc lập và được tư nhân tài trợ. Ban điều hành công ty bao gồm các bác sĩ đang hành nghề, các chuyên gia dinh dưỡng, nhà trị liệu, nhà thảo dược học và những người có niềm đam mê với các sản phẩm dinh dưỡng.<\/p><p><\/p><p>Chúng tôi cho rằng chủ nhật (SUNDAY) là ngày nghỉ ngơi, chiêm nghiệm và tái sinh - là thời gian để chữa lành và hồi phục. Ngoài ra, trong nhiều truyền thống văn hoá của các nước trong đó có Việt Nam thì biểu tượng đoá sen nở rộ là biểu tượng thiêng liêng tượng trưng cho sự phát triển cá nhân và sự phát triển hài hoà của muôn loài. Đặc biệt, hoa sen chính là một biểu tượng nổi bật của sự thuần khiết.<\/p><p><\/p><p>Niềm đam mê của chúng tôi là liệu pháp tự nhiên toàn diện dựa trên cơ sở khoa học, y học dinh dưỡng. Do đó, Sunday Natural sẽ là trợ thủ đắc lực nhất trong việc cung cấp cho tủ thuốc nhà bạn các sản phẩm đến từ thiên nhiên như: siêu thực phẩm, trà, thực phẩm bổ sung và tinh dầu. Mục tiêu của chúng tôi chính là sự đa dạng về chủng loại sản phẩm cũng như chất lượng vượt trội.<\/p><p><\/p><p>Sunday Natural là một trong những nhà sản xuất sản phẩm chất lượng cao nổi tiếng nhất của Đức và có đội ngũ nghiên cứu, phát triển riêng tại Berlin. Chúng tôi hợp tác có chọn lọc với các tổ chức nghiên cứu, các nhà khoa học, nhà trị liệu, nông dân và hiệp hội nghề nghiệp để không ngừng cải tiến các sản phẩm của mình.<\/p>",
             "text_align": "left"
           }
         }
@@ -260,22 +256,23 @@
       "block_order": [
         "group-0",
         "group-1"
-      ]
+      ],
+      "settings": {
+        "richtext_group_backgrond_desktop": "",
+        "richtext_group_backgrond_mobile": "",
+        "richtext_group_backgrond_desktop_default": "https:\/\/cdn.shopify.com\/s\/files\/1\/0817\/3902\/2646\/files\/About-us-4.png?v=1693277072",
+        "richtext_group_backgrond_mobile_default": "https:\/\/cdn.shopify.com\/s\/files\/1\/0817\/3902\/2646\/files\/About-us-4-mb.png?v=1693277068"
+      }
     },
     "sunday-master-background-richtext-seven": {
       "type": "sunday-master-background-richtext",
       "settings": {
         "richtext_group_backgrond_desktop": "",
         "richtext_group_backgrond_mobile": "",
-        "richtext_group_backgrond_desktop_default": "https://cdn.shopify.com/s/files/1/0817/3902/2646/files/About-us-6.png?v=1693277072",
-        "richtext_group_backgrond_mobile_default": "https://cdn.shopify.com/s/files/1/0817/3902/2646/files/About-us-6-mb.png?v=1693277068",
+        "richtext_group_backgrond_desktop_default": "https:\/\/cdn.shopify.com\/s\/files\/1\/0817\/3902\/2646\/files\/About-us-6.png?v=1693277072",
+        "richtext_group_backgrond_mobile_default": "https:\/\/cdn.shopify.com\/s\/files\/1\/0817\/3902\/2646\/files\/About-us-6-mb.png?v=1693277068",
         "richtext_group_backgrond_desktop_height": 880
-      },
-      "blocks": {
-        
-      },
-      "block_order": [
-      ]
+      }
     }
   },
   "order": [

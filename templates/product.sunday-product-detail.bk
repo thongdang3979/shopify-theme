@@ -25,6 +25,42 @@
             "picker_type": "button"
           }
         },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {
+          }
+        },
+        "social_lazada": {
+          "type": "social",
+          "settings": {
+            "social_icon": "",
+            "social_title": "LAZADA",
+            "social_url": "https:\/\/www.lazada.vn\/"
+          }
+        },
+        "social_shopee": {
+          "type": "social",
+          "settings": {
+            "social_icon": "",
+            "social_title": "SHOPEE",
+            "social_url": "https:\/\/shopee.vn\/"
+          }
+        },
+        "social_tiktok": {
+          "type": "social",
+          "settings": {
+            "social_icon": "",
+            "social_title": "TIKTOK",
+            "social_url": "https:\/\/tiktok.com\/"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": true
+          }
+        },
         "description": {
           "type": "description",
           "settings": {
@@ -35,6 +71,11 @@
         "title",
         "price",
         "variant_picker",
+        "quantity_selector",
+        "social_lazada",
+        "social_shopee",
+        "social_tiktok",
+        "buy_buttons",
         "description"
       ],
       "settings": {

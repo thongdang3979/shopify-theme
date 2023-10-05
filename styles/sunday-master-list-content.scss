@@ -12,7 +12,7 @@
             @include flexCustome(column, nowrap, null, null, null, 12px);
 
             .box-title-area {
-                h2 {
+                h3 {
                     @include customFont(16px, 700, 120%, $Black-000, null, null);
                     margin: 0;
                 }
@@ -46,7 +46,7 @@
                 text-align: right;
                 margin-top: 2px;
 
-                h2 {
+                h3 {
                     font-size: 18px;
                 }
             }
@@ -68,7 +68,7 @@
         .box-content-area {
            
             .box-title-area {
-                h2 {
+                h3 {
                     font-size: 20px;
                 }
             }

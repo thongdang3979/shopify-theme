@@ -53,7 +53,7 @@
     }
   }
 
-  .home-banner-area .group-content-area .title-area h1 {
+  .home-banner-area .group-content-area .title-area h2 {
     {% if section.settings.heading_align %}
       text-align: {{ section.settings.heading_align }};
     {% endif %}
@@ -67,10 +67,11 @@
 {%- endstyle -%}
 
 <section class="home-banner-area">
+  <h1>{{ section.settings.heading_banner_desktop | strip_html }}</h1>
   <div class="background-image">
     <img
       class="mobile-image"
-      src="{% if section.settings.image_banner_mobile %}{{ section.settings.image_banner_mobile | image_url: width: 1024 }}{% else %}//cdn.shopify.com/s/files/1/0817/3902/2646/files/Sunday-banner-mb.png?v=1693217456{% endif %}"
+      src="{% if section.settings.image_banner_mobile %}{{ section.settings.image_banner_mobile | image_url: width: 1024 }}{% else %}//cdn.shopify.com/s/files/1/0817/3902/2646/files/Sunday-banner-mb.png?v=1693217456&width=1024{% endif %}"
       width="{{ section.settings.image_banner_mobile.width | default: '414' }}"
       height="{{ section.settings.image_banner_mobile.height | default: '516' }}"
       alt="{{ section.settings.image_banner_mobile.alt | default: 'SundayBanner' }}"
@@ -79,7 +80,7 @@
 
     <img
       class="desktop-image"
-      src="{% if section.settings.image_banner_desktop %}{{ section.settings.image_banner_desktop | image_url: width: 1920 }}{% else %}//cdn.shopify.com/s/files/1/0817/3902/2646/files/Sunday-banner.webp?v=1693217350{% endif %}"
+      src="{% if section.settings.image_banner_desktop %}{{ section.settings.image_banner_desktop | image_url: width: 1920 }}{% else %}//cdn.shopify.com/s/files/1/0817/3902/2646/files/Sunday-banner.webp?v=1693217350&width=1920{% endif %}"
       width="{{ section.settings.image_banner_desktop.width | default: '1920' }}"
       height="{{ section.settings.image_banner_desktop.height | default: '979' }}"
       alt="{{ section.settings.image_banner_desktop.alt | default: 'SundayBanner' }}"
@@ -92,7 +93,7 @@
       {{ section.settings.image_product | image_url: width: 1024 | image_tag }}
     {%- else -%}
       <img
-        src="https://cdn.shopify.com/s/files/1/0817/3902/2646/files/Vitamin-no-bg.png?v=1693217221"
+        src="https://cdn.shopify.com/s/files/1/0817/3902/2646/files/5597__NAME__20ml_de_product-main-thumbnail-1.png?v=1694099588&width=1024"
         width="500"
         height="611"
         alt="SundayBannerProduct"
@@ -103,14 +104,14 @@
   <div class="group-content-area">
     <div class="title-area">
       {% if section.settings.heading_banner_desktop %}
-        <h1 class="desktop-title">
+        <h2 class="desktop-title">
           {{ section.settings.heading_banner_desktop | upcase | default: 'DINH DƯỠNG CAO CẤP<br>TỪ THIÊN NHIÊN' }}
-        </h1>
+        </h2>
       {% endif %}
       {% if section.settings.heading_banner_mobile %}
-        <h1 class="mobile-title">
+        <h2 class="mobile-title">
           {{ section.settings.heading_banner_mobile | upcase | default: 'DINH DƯỠNG<br>CAO CẤP<br>TỪ THIÊN NHIÊN' }}
-        </h1>
+        </h2>
       {% endif %}
     </div>
     <div class="content-area">

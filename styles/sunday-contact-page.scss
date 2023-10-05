@@ -1,6 +1,14 @@
 @import 'function.scss';
 
 @media only screen and (min-width: 200px) {
+    .background-content-area {
+
+        h1,
+        h2 {
+            display: none;
+        }
+    }
+
     .contact-page-area {
         @include flexCustome(column, nowrap, null, null, null, 24px);
         padding-bottom: 40px;
@@ -8,7 +16,7 @@
         .title-area {
             margin-top: 24px;
 
-            h1 {
+            h2 {
                 @include customFont(24px, 700, 100%, $Black-000, null, null);
                 margin: 0;
             }
@@ -21,9 +29,12 @@
                 @include flexCustome(column, nowrap, null, null, null);
 
                 .group-box-infomation {
-                    @include flexCustome(column, nowrap, null, null, null, 8px);
+                    @include flexCustome(null, wrap, null, null, null, 8px);
 
                     .box-title-area {
+                        margin-bottom: 10px;
+                        width: 100%;
+
                         h2 {
                             @include customFont(16px, 700, 100%, $Orange-CA9, null, null);
                             margin: 0;
@@ -48,6 +59,7 @@
 
                     .box-icon-area {
                         @include flexCustome(row, nowrap, center, flex-start, flex-start, 12px);
+                        width: 100%;
 
                         .icon-area {
                             @include flexCustome(row, nowrap, null, null, null);
@@ -69,8 +81,21 @@
                                 @include customFont(14px, 600, 160%, $Black-202, null, null);
                                 letter-spacing: 1px;
                                 margin: 0;
-                                text-decoration: none
+                                text-decoration: none;
+
+                                span {
+                                    color: $Orange-CA9;
+                                }
                             }
+                        }
+                    }
+
+                    .box-social-area {
+                        float: left;
+                        margin-top: 15px;
+                        margin-right: 15px;
+                        a {
+                            display: flex;
                         }
                     }
                 }
@@ -186,7 +211,7 @@
 
             .infomation-area {
                 .title-area {
-                    h1 {
+                    h2 {
                         font-size: 36px;
                     }
                 }

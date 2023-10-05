@@ -3,6 +3,10 @@
 @media only screen and (min-width: 200px) {
     .collection-area {
 
+        .breadcrumbs{
+            padding: 0;
+        }
+
         .collection-details-area {
             @include flexCustome(column, nowrap, null, null, null, 16px);
             padding: 30px 0;

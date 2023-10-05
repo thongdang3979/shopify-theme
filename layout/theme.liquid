@@ -8,7 +8,19 @@
     <link rel="canonical" href="{{ canonical_url }}">
 
     {%- if settings.favicon != blank -%}
-      <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
+      <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 40, height: 40 }}">
+      <link rel="shortcut icon" type="image/x-icon" href="{{ settings.favicon | image_url: width: 40, height: 40 }}">
+    {%- else -%}
+      <link
+        rel="icon"
+        type="image/x-icon"
+        href="https://cdn.shopify.com/s/files/1/0817/3902/2646/files/favicon.ico?v=1696408369"
+      >
+      <link
+        rel="shortcut icon"
+        type="image/x-icon"
+        href="https://cdn.shopify.com/s/files/1/0817/3902/2646/files/favicon.ico?v=1696408369"
+      >
     {%- endif -%}
 
     {%- unless settings.type_header_font.system? and settings.type_body_font.system? -%}
@@ -27,6 +39,7 @@
     {% endif %}
 
     {% render 'meta-tags' %}
+    {% render 'ld-json' %}
 
     <script src="{{ 'constants.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'pubsub.js' | asset_url }}" defer="defer"></script>

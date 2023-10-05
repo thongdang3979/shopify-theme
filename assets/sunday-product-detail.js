@@ -3,8 +3,11 @@ let CUSTOM_MASTER_PRODUCT_DETAIL = {
         // Product Detail Gallery Control 
         this.product_detail_gallery_control();
 
-        // Product Description Collapse Control
-        this.product_description_collapse_control();
+        // Product Info Collapse Control
+        this.product_info_collapse_control();
+
+        // Product Group Description Collapse Control
+        this.product_group_description_collapse_control();
 
         // Product Aside Control
         this.product_aside_control();
@@ -12,48 +15,77 @@ let CUSTOM_MASTER_PRODUCT_DETAIL = {
 
     // Product Detail Gallery Control 
     product_detail_gallery_control: function () {
-        const productPreviewSlider = document.getElementById('productPreviewSlider');
-        const options = {
+        const fancyThumbsOptions = {
+            compact: false,
+            idle: false,
+            dragToClose: true,
+            animated: false,
+            showClass: false,
+            hideClass: false,
+            Hash: false,
             Dots: false,
             Thumbs: {
                 type: "classic",
+                minCount: 1
+            },
+
+            contentClick: "iterateZoom",
+            Images: {
+                zoom: false,
+                Panzoom: {
+                    // panMode: 'mousemove',
+                    // mouseMoveFactor: 1.1,
+                    maxScale: 3,
+                },
+            },
+
+            Carousel: {
+                transition: 'crossfade',
+                preload: 3,
             },
         };
+        const productPreviewSlider = document.getElementById('productPreviewSlider');
+        new Carousel(productPreviewSlider, fancyThumbsOptions, { Thumbs });
+        Fancybox.bind('[data-fancybox="gallery"]', fancyThumbsOptions);
 
-        new Carousel(productPreviewSlider, options, { Thumbs });
+        function openLabortestThumb() {
+            // Collect all image sources within .product-labortest
+            const imageSources = $('.product-labortest img').map(function () {
+                return $(this).attr('src');
+            }).get();
 
-        Fancybox.bind('[data-fancybox="gallery"]', {
-            Thumbs: {
-                type: "classic",
-            },
+            // Prepare an array of objects with src and thumb properties
+            const images = imageSources.map(function (src) {
+                return { src: src };
+            });
+
+            // Show all images using Fancybox with the specified options
+            Fancybox.show(images, fancyThumbsOptions);
+        }
+
+        // Attach the function to a button click event or any trigger you prefer
+        $('.product-labortest .btn').on('click', function () {
+            openLabortestThumb();
         });
     },
 
-    // Product Description Collapse Control
-    product_description_collapse_control: function () {
+    // Product Info Collapse Control
+    product_info_collapse_control: function () {
         jQuery(document).ready(function ($) {
-            if ($(window).width() > 768) {
-                let $descriptionAreas = $('.product-description-area .product__description');
-                let lineHeight = parseInt($descriptionAreas.css("line-height"));
-                let contentHeight = $descriptionAreas.height();
-                let maxLines = 3; // Adjust this value to control the number of lines to display
+            let $descriptionAreas = $('.product-description-area .product__description');
+            let parentName = 'product-description-area';
+            let maxLines = 10; // Adjust this value to control the number of lines to display
+            collapseControl($descriptionAreas, parentName, maxLines);
+        });
+    },
 
-                if (contentHeight > lineHeight * maxLines) {
-                    $descriptionAreas.parent('.product-description-area').addClass('collapse');
-                }
-
-                $('.icon-collapse').on('click', function (e) {
-                    e.preventDefault();
-                    e.stopPropagation();
-
-                    var $parent = $(this).parent('.product-description-area');
-                    if ($parent.hasClass('collapse')) {
-                        $parent.removeClass('collapse').addClass('uncollapse');
-                    } else {
-                        $parent.removeClass('uncollapse').addClass('collapse');
-                    }
-                });
-            }
+    // Product Group Description Collapse Control
+    product_group_description_collapse_control: function () {
+        jQuery(document).ready(function ($) {
+            let $groupDescriptionAreas = $('.product-group-content-area:not(.true-clean-section) .description-area .content__description');
+            let parentName = 'description-area';
+            let groupMaxLines = 3;
+            collapseControl($groupDescriptionAreas, parentName, groupMaxLines);
         });
     },
 
@@ -107,5 +139,25 @@ let CUSTOM_MASTER_PRODUCT_DETAIL = {
         });
     },
 };
+
+function collapseControl($areas, parentName, maxLines) {
+    $areas.each(function () {
+        let $area = $(this);
+        let lineHeight = parseFloat($area.css("line-height"));
+        let contentHeight = $area.height();
+
+        if (contentHeight > lineHeight * maxLines) {
+            $area.parent('.' + parentName).addClass('collapse');
+        }
+    });
+
+    jQuery('.icon-collapse').on('click', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        var $parent = jQuery(this).parent('.' + parentName);
+        $parent.toggleClass('collapse uncollapse');
+    });
+}
 
 CUSTOM_MASTER_PRODUCT_DETAIL.init();

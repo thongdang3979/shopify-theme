@@ -1,0 +1,245 @@
+{%- assign og_title = page_title | default: shop.name | strip_html -%}
+{%- assign og_url = canonical_url | default: shop.url | strip -%}
+{%- assign og_description = page_description | default: shop.description | default: shop.name | strip_html -%}
+{% assign potential_action_target = request.origin | append: routes.search_url | append: '?q={search_term_string}' %}
+
+<!-- #region Organization -->
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@id": "{{ shop.url }}#Organization",
+    "@type": "Organization",
+    "name": {{ shop.name | json }},
+    "url": {{ request.origin | append: page.url | json }},
+    {% if settings.logo %}
+      "logo": {{ settings.logo | image_url: width: 500 | prepend: "https:" | json }},
+    {% endif %}
+    {% if shop.phone %}
+    "email": {{ shop.email | json }},
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": {{ shop.address.country | json }},
+      "addressLocality": {{ shop.address.city | json }},
+      "postalCode": {{ shop.address.zip | json }},
+      "streetAddress": {{ shop.address.address1 | json }},
+      "addressRegion": "HCM"
+    },
+    "contactPoint": [
+      {
+        "@type": "ContactPoint",
+        "telephone": "{{ shop.phone | escape }}",
+        "contactType": "sales",
+        "areaServed": "VN",
+        "availableLanguage": ["VN"]
+      }
+    ],
+    {% endif %}
+    "sameAs": [
+      {{ settings.social_twitter_link | json }},
+      {{ settings.social_facebook_link | json }},
+      {{ settings.social_pinterest_link | json }},
+      {{ settings.social_instagram_link | json }},
+      {{ settings.social_tiktok_link | json }},
+      {{ settings.social_tumblr_link | json }},
+      {{ settings.social_snapchat_link | json }},
+      {{ settings.social_youtube_link | json }},
+      {{ settings.social_vimeo_link | json }}
+    ]
+  }
+</script>
+<!-- #endregion -->
+
+<!-- #region WebSite -->
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org/",
+    "@type": "WebSite",
+    "name": {{ shop.name | json }},
+    "url": {{ request.origin | append: page.url | json }},
+    "headline": "{{ og_title | escape }}",
+    {% if page_image %}
+    "image": {
+      "@type": "ImageObject",
+      "url": {{ page_image | image_url: width: 500 | prepend: "https:" | json }},
+      "caption": "WebSiteImage"
+    },
+    {% endif %}
+    "description": {{ og_description | escape | json }},
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": {{ potential_action_target | json }},
+        "inLanguage": "{{ request.locale.iso_code | upcase }}",
+        "actionPlatform": ["http://schema.org/DesktopWebPlatform", "http://schema.org/MobileWebPlatform"]
+      },
+      "query-input": "required name=search_term_string"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": {{ shop.name | json }},
+      {% if settings.logo %}
+      "logo": {
+        "@type": "ImageObject",
+        "url": {{ settings.logo | image_url: width: 500 | prepend: "https:" | json }},
+        "width": 300,
+        "height": 300
+      },
+      {% endif %}
+      "description": {{ shop.description | escape | json }},
+      "sameAs": [
+        {{ settings.social_twitter_link | json }},
+        {{ settings.social_facebook_link | json }},
+        {{ settings.social_pinterest_link | json }},
+        {{ settings.social_instagram_link | json }},
+        {{ settings.social_tiktok_link | json }},
+        {{ settings.social_tumblr_link | json }},
+        {{ settings.social_snapchat_link | json }},
+        {{ settings.social_youtube_link | json }},
+        {{ settings.social_vimeo_link | json }}
+      ]
+    }
+  }
+</script>
+<!-- #endregion -->
+
+{% if template.name == 'index' %}
+  <!-- #region BreadcrumbList -->
+  <script type="application/ld+json">
+    {
+      "@type": "BreadcrumbList",
+      "@context": "https://schema.org",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@id": "{{ shop.url | escape }}",
+            "name": "{{ shop.name | escape }}"
+          }
+        }
+      ]
+    }
+  </script>
+  <!-- #endregion -->
+{% elsif template.name == 'collection' %}
+  <!-- #region BreadcrumbList -->
+  <script type="application/ld+json">
+    {
+      "@type": "BreadcrumbList",
+      "@context": "https://schema.org",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@id": "{{ request.origin }}",
+            "name": {{ shop.name | escape | json }}
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@id": "{{ request.origin }}{{ collection.url | escape }}",
+            "name": {{ collection.title | escape | json }}
+          }
+        }
+      ]
+    }
+  </script>
+  <!-- #endregion -->
+{% elsif template.name == 'product' %}
+  {% assign collection_to_display = product.metafields.custom.product_breadcrumb_collection.value %}
+  {% assign product_subtitle = product.metafields.descriptors.subtitle %}
+
+  <!-- #region BreadcrumbList -->
+  <script type="application/ld+json">
+    {
+      "@type": "BreadcrumbList",
+      "@context": "https://schema.org",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@id": "{{ request.origin }}",
+            "name": {{ shop.name | escape | json }}
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            {% if collection_to_display %}
+              "@id": "{{ request.origin }}{{ product.metafields.custom.product_breadcrumb_collection.value.url | escape }}",
+              "name": {{ product.metafields.custom.product_breadcrumb_collection.value.title | escape | json }}
+            {% else %}
+              {% assign collection_to_display = product.collections | last %}
+              "@id": "{{ request.origin }}{{ collection_to_display.url | escape }}",
+              "name": {{ collection_to_display.title | escape | json }}
+            {% endif %}
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@id": "{{ request.origin }}{{ product.url | escape }}",
+            "name": {{ product.title | escape | json }}
+          }
+        }
+      ]
+    }
+  </script>
+  <!-- #endregion -->
+{% endif %}
+
+{%- if request.page_type == 'product' -%}
+  <!-- #region Product -->
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org/",
+      "@type": "Product",
+      "name": {{ product.title | json }},
+      "url": {{ request.origin | append: product.url | json }},
+      {% if page_image -%}
+        "image": [
+          {{ page_image | image_url: width: 1920 | prepend: "https:" | json }}
+        ],
+      {%- endif %}
+      "description": {{ product.description | strip_html | json }},
+      {% if product.selected_or_first_available_variant.sku != blank -%}
+        "sku": {{ product.selected_or_first_available_variant.sku | json }},
+      {%- endif %}
+      "brand": {
+        "@type": "Brand",
+        "name": {{ product.vendor | json }}
+      },
+      "offers": [
+        {%- for variant in product.variants -%}
+          {
+            "@type" : "Offer",
+            {%- if variant.sku != blank -%}
+              "sku": {{ variant.sku | json }},
+            {%- endif -%}
+            {%- if variant.barcode.size == 12 -%}
+              "gtin12": {{ variant.barcode }},
+            {%- endif -%}
+            {%- if variant.barcode.size == 13 -%}
+              "gtin13": {{ variant.barcode }},
+            {%- endif -%}
+            {%- if variant.barcode.size == 14 -%}
+              "gtin14": {{ variant.barcode }},
+            {%- endif -%}
+            "availability" : "http://schema.org/{% if variant.available %}InStock{% else %}OutOfStock{% endif %}",
+            "price" : {{ variant.price | divided_by: 100.00 | json }},
+            "priceCurrency" : {{ cart.currency.iso_code | json }},
+            "url" : {{ request.origin | append: variant.url | json }}
+          }{% unless forloop.last %},{% endunless %}
+        {%- endfor -%}
+      ]
+    }
+  </script>
+  <!-- #endregion -->
+{%- endif -%}

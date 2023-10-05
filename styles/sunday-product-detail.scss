@@ -43,6 +43,10 @@
         --f-thumb-height: 90px;
     }
 
+    .f-thumbs__slide__img {
+        object-fit: contain
+    }
+
     .product-detail-area {
         @include flexCustome(column, nowrap, null, null, null);
 
@@ -77,6 +81,7 @@
                 .f-carousel {
                     display: flex;
                     border: 1px solid #E8E8E8;
+                    height: 350px;
 
                     .f-carousel__slide {
                         overflow-y: hidden;
@@ -171,9 +176,10 @@
                 grid-area: product-description;
 
                 .product__description {
+                    @include customFont(14px, 400, 160%, $Black-000, null, null);
                     display: -webkit-box;
                     -webkit-box-orient: vertical;
-                    -webkit-line-clamp: 4;
+                    -webkit-line-clamp: 11;
                     overflow: hidden;
                 }
 
@@ -183,6 +189,7 @@
 
                         span {
                             @include customFont(16px, 700, 140%, $Orange-CA9, null, null);
+                            text-transform: uppercase;
                         }
 
                         .icon-area {
@@ -204,52 +211,11 @@
                     display: none;
                     cursor: pointer;
                 }
-
-                p,
-                ul,
-                ol {
-                    @include customFont(14px, 400, 160%, $Black-000, null, null);
-                }
-            }
-        }
-
-        .product-group-property-area {
-            order: 2;
-
-            .product-property-area {
-                @include flexCustome(column, nowrap, null, null, null, 24px);
-
-                .image-area {
-
-                    img {
-                        width: 100%;
-                        height: 100%;
-                        object-fit: contain;
-                    }
-                }
-
-                .content-area {
-                    .title-area {
-                        h3 {
-                            @include customFont(20px, 700, 120%, $Black-000, null, null);
-                            margin: 0;
-                        }
-                    }
-
-                    .description-area {
-
-                        ul,
-                        ol,
-                        p {
-                            @include customFont(14px, 500, 160%, $Black-000, null, null);
-                        }
-                    }
-                }
             }
         }
 
         .product-group-attribute-area {
-            order: 3;
+            order: 2;
 
             .product-attribute-area {
                 display: grid;
@@ -258,12 +224,29 @@
                 column-gap: 12px;
                 position: relative;
 
-                &:first-child {
-                    margin-top: 36px;
-                }
-
                 &:not(:first-child) {
                     margin-top: 56px;
+
+                    .image-area {
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            top: -24px;
+                            left: 0;
+                            right: 0;
+                            height: 2px;
+                            background: $Orange-CA9;
+                        }
+                    }
+                }
+
+                &.sunday-natural-section {
+                    .description-area {
+                        display: -webkit-box;
+                        -webkit-line-clamp: 6;
+                        -webkit-box-orient: vertical;
+                        overflow: hidden;
+                    }
                 }
 
                 .image-area {
@@ -278,16 +261,6 @@
                         width: 100%;
                         height: 100%;
                         object-fit: contain;
-                    }
-
-                    &::after {
-                        content: "";
-                        position: absolute;
-                        top: -24px;
-                        left: 0;
-                        right: 0;
-                        height: 2px;
-                        background: $Orange-CA9;
                     }
                 }
 
@@ -306,11 +279,208 @@
                 .description-area {
                     grid-column: 1 / span 2;
                     grid-row: 2 / span 1;
+                    @include customFont(14px, 500, 160%, $Black-000, null, null);
 
-                    ul,
-                    ol,
-                    p {
-                        @include customFont(14px, 500, 160%, $Black-000, null, null);
+                    .table-ingredient {
+                        border-collapse: collapse;
+                        border-spacing: 0;
+                        width: 100%;
+
+                        tr {
+                            &:first-child {
+
+                                td {
+                                    background: #D3D3D3;
+                                    font-weight: 700;
+
+                                    &:first-child {
+                                        border-left: 1px solid #d3d3d3;
+                                        border-right: 1px solid #fff;
+                                        min-width: 230px;
+
+                                    }
+                                }
+                            }
+
+                            td {
+                                @include customFont(14px, 500, 160%, $Black-000, null, null);
+                                border: 1px solid #d3d3d3;
+                                padding: 8px 10px;
+
+                                &:last-child {
+                                    min-width: 80px;
+                                    text-align: center;
+                                }
+                            }
+                        }
+                    }
+
+                    .table-detail {
+                        border-collapse: collapse;
+                        border-spacing: 0;
+                        width: 100%;
+
+                        tr {
+                            td {
+                                @include customFont(14px, 500, 160%, $Black-000, null, null);
+                                padding: 8px 10px;
+                                vertical-align: top;
+
+                                p{
+                                    margin: 0;
+                                }
+
+                                &:first-child {
+                                    font-weight: 700;
+                                    vertical-align: top;
+                                }
+                            }
+                        }
+                    }
+
+                    .product-icon-ingredient {
+                        @include flexCustome(row, wrap, null, null, null, 6px);
+                    }
+
+                    .product-labortest {
+                        @include flexCustome(column, wrap, null, null, null, 12px);
+                        margin-top: 12px;
+
+                        .box-labortest {
+                            @include flexCustome(row, nowrap, null, null, null, 20px);
+                            width: 100%;
+
+                            .image {
+                                border: 1px solid #D3D3D3;
+                            }
+
+                            .title-area {
+                                @include flexCustome(column, nowrap, null, space-between, null);
+
+                                span {
+                                    @include customFont(14px, 700, 160%, $Black-000, null, null);
+
+                                    &.btn {
+                                        color: $Orange-CA9;
+                                        text-transform: uppercase;
+                                        cursor: pointer;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .button-area {
+                    grid-column: 1 / span 2;
+                    display: grid;
+                    align-items: center;
+                    margin-top: 12px;
+
+                    a {
+                        @include customFont(17px, 700, 100%, $White-FFF, null, null);
+                        @include customButton(transparent, $Orange-CA9, $Gray-5E6, $Gray-5E6, $Orange-CA9, $White-FFF);
+                        padding: 16px 38px;
+                        width: fit-content
+                    }
+                }
+            }
+        }
+
+        .product-group-property-area {
+            order: 3;
+
+            .product-property-area {
+                @include flexCustome(column, nowrap, center, center, center, 24px);
+                margin-top: 56px;
+
+                &.true-clean-section {
+                    .content-area {
+                        .description-area .content__description {
+                            display: -webkit-box;
+                            -webkit-line-clamp: 9;
+                            -webkit-box-orient: vertical;
+                            overflow: hidden;
+                        }
+
+                        .button-area {
+                            margin-top: 35px;
+                        }
+                    }
+                }
+
+                .image-area {
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: contain;
+                    }
+                }
+
+                .content-area {
+                    .title-area {
+                        h3 {
+                            @include customFont(20px, 700, 120%, $Black-000, null, null);
+                            margin: 0;
+                            width: fit-content;
+
+                            img {
+                                width: 100%;
+                                object-fit: contain;
+                            }
+                        }
+                    }
+
+                    .description-area {
+
+                        .content__description {
+                            @include customFont(14px, 500, 160%, $Black-000, null, null);
+                            display: -webkit-box;
+                            -webkit-box-orient: vertical;
+                            -webkit-line-clamp: 4;
+                            overflow: hidden;
+                            max-height: 100px;
+                        }
+
+                        &.collapse {
+                            .icon-collapse {
+                                @include flexCustome(row, nowrap, center, null, center);
+
+                                span {
+                                    @include customFont(16px, 700, 140%, $Orange-CA9, null, null);
+                                    text-transform: uppercase;
+                                }
+
+                                .icon-area {
+                                    display: flex;
+                                }
+                            }
+                        }
+
+                        &.uncollapse {
+                            .content__description {
+                                display: -webkit-box;
+                                -webkit-box-orient: vertical;
+                                -webkit-line-clamp: unset;
+                                overflow: unset;
+                                max-height: unset;
+                            }
+                        }
+
+                        .icon-collapse {
+                            display: none;
+                            cursor: pointer;
+                        }
+                    }
+
+                    .button-area {
+                        a {
+                            @include customFont(17px, 700, 100%, $White-FFF, null, null);
+                            @include customButton(transparent, $Orange-CA9, $Gray-5E6, $Gray-5E6, $Orange-CA9, $White-FFF);
+                            padding: 16px 38px;
+                            width: fit-content
+                        }
                     }
                 }
             }
@@ -322,10 +492,11 @@
             border-bottom: 1px solid #000;
             background: $White-FFF;
             order: 1;
-            overflow-x: auto;
             width: 100%;
             margin: 24px 0;
             cursor: pointer;
+            overflow: auto;
+
 
             &::-webkit-scrollbar-track {
                 -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
@@ -346,13 +517,14 @@
             &.sticky {
                 position: sticky;
                 top: 0;
-                z-index: 9999;
+                z-index: 999;
             }
 
             .aside-attribute-item {
                 flex-shrink: 0;
 
                 &.active {
+
                     span {
                         color: $Orange-CA9;
                     }
@@ -362,6 +534,7 @@
                     display: flex;
                     padding: 10px 4px;
                     @include customFont(16px, 700, 120%, $Black-000, null, null);
+                    text-transform: uppercase;
                 }
             }
         }
@@ -378,10 +551,10 @@
 
         .product-group-info-area {
             grid-template-columns: repeat(2, calc(50% - 15px));
+            grid-template-rows: auto 1fr auto;
             grid-template-areas:
                 "product-image product-title"
                 "product-image product-description"
-                "product-image product-infomation"
                 "product-image product-infomation";
             margin-top: 40px;
             column-gap: 30px;
@@ -396,54 +569,22 @@
 
             .product-image-area {
                 margin-top: 0;
+
+                .f-carousel {
+                    height: 280px;
+                }
             }
 
             .product-description-area {
                 margin-top: 10px;
             }
-        }
 
-        .product-group-property-area {
-
-            .product-property-area {
-                flex-direction: row;
-                gap: 32px;
-
-                .image-area {
-                    width: calc(50% - 16px);
-                }
-
-                .content-area {
-                    width: calc(50% - 16px);
-                    padding: 0 50px;
-                    max-width: 450px;
-
-                    .title-area {
-                        h3 {
-                            font-size: 26px;
-                        }
-                    }
-
-                    .description-area {
-
-                        ul,
-                        ol,
-                        p {
-                            font-size: 16px;
-                        }
-                    }
-                }
-            }
         }
 
         .product-group-attribute-area {
             .product-attribute-area {
                 grid-template-columns: 50px auto;
                 column-gap: 18px;
-
-                &:first-child {
-                    margin-top: 48px;
-                }
 
                 .image-area {
                     img {
@@ -463,11 +604,93 @@
                 }
 
                 .description-area {
+                    font-size: 16px;
 
-                    ul,
-                    ol,
-                    p {
-                        font-size: 16px;
+                    .table-ingredient {
+                        width: auto;
+
+                        tr {
+                            &:first-child {
+                                td {
+                                    &:first-child {
+                                        min-width: 350px;
+                                    }
+                                }
+                            }
+
+                            td {
+                                font-size: 16px;
+                            }
+                        }
+                    }
+
+                    .table-detail {
+                        width: auto;
+
+                        tr {
+                            td {
+                                font-size: 16px;
+                            }
+                        }
+                    }
+
+                    .product-labortest {
+                        flex-direction: row;
+
+                        .box-labortest {
+                            width: calc(50% - 6px);
+
+                            .title-area {
+                                span {
+                                    font-size: 16px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .product-group-property-area {
+
+            .product-property-area {
+                flex-direction: row;
+                justify-content: space-between;
+                gap: 32px;
+
+                &.even {
+                    .image-area {
+                        order: 0;
+                    }
+
+                    .content-area {
+                        order: 1;
+                    }
+                }
+
+                &.odd {
+                    .image-area {
+                        order: 1;
+                    }
+
+                    .content-area {
+                        order: 0;
+
+                    }
+                }
+
+                .image-area {
+                    width: calc(50% - 16px);
+                }
+
+                .content-area {
+                    width: calc(50% - 16px);
+                    max-width: 450px;
+
+                    .title-area {
+                        h3 {
+                            font-size: 26px;
+                        }
                     }
                 }
             }
@@ -487,10 +710,15 @@
             grid-template-areas:
                 "product-image product-title"
                 "product-image product-description"
-                "product-image product-infomation"
                 "product-image product-infomation";
             margin-top: 40px;
             column-gap: 30px;
+
+            .product-image-area {
+                .f-carousel {
+                    height: 380px;
+                }
+            }
 
             .product-title-area {
                 margin: 0 0 15px 0;
@@ -507,25 +735,8 @@
             .product-description-area {
                 margin-top: 0;
 
-                p,
-                ul,
-                ol {
+                .product__description {
                     font-size: 16px;
-                }
-            }
-        }
-
-        .product-group-property-area {
-
-            .product-property-area {
-
-                .content-area {
-
-                    .title-area {
-                        h3 {
-                            font-size: 36px;
-                        }
-                    }
                 }
             }
         }
@@ -544,8 +755,14 @@
                     grid-row: 1 / span 1;
 
                     &::after {
-                        top: unset;
+                        content: "";
+                        position: absolute;
+                        top: unset !important;
                         bottom: -5px;
+                        left: 0;
+                        right: 0;
+                        height: 2px;
+                        background: $Orange-CA9;
                         width: 100%;
                     }
                 }
@@ -571,9 +788,41 @@
                         padding: 4px;
                         border: 1px solid #efefef;
                     }
+
+                    .table-detail {
+                        tr {
+                            td {
+                                &:first-child {
+                                    white-space: nowrap;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .button-area {
+                    grid-column: 2 / span 1;
                 }
             }
         }
 
+        .product-group-property-area {
+
+            .product-property-area {
+
+                &:not(:first-child) {
+                    margin-top: 60px;
+                }
+
+                .content-area {
+
+                    .title-area {
+                        h3 {
+                            font-size: 36px;
+                        }
+                    }
+                }
+            }
+        }
     }
 }

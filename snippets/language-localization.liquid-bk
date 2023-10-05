@@ -13,8 +13,8 @@
     aria-controls="{{ localPosition }}List"
     aria-describedby="{{ localPosition }}Label"
   >
-    <span>{{ localization.language.iso_code | upcase }}</span>
-    {% comment %} {% render 'icon-caret' %} {% endcomment %}
+    <span>{{ localization.language.endonym_name | capitalize }}</span>
+    {% render 'icon-caret' %}
   </button>
   <div class="disclosure__list-wrapper" hidden>
     <ul id="{{ localPosition }}List" role="list" class="disclosure__list list-unstyled">
@@ -30,7 +30,7 @@
             {% endif %}
             data-value="{{ language.iso_code }}"
           >
-            {{ language.iso_code | upcase }}
+            {{ language.endonym_name | capitalize }}
           </a>
         </li>
       {%- endfor -%}

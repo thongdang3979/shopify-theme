@@ -36,26 +36,7 @@
               <div class="product-title-area">
                 <a href="{{ related_product.url }}">{{ related_product.title }}</a>
               </div>
-              <div class="product-variation-area">
-                <table>
-                  <tbody>
-                    {% for variant in related_product.variants %}
-                      <tr class="variation-item">
-                        <td class="price-area">
-                          <span>{{ variant.price | money }}</span>
-                        </td>
-                        <td class="line-area"></td>
-                        <td class="size-area">
-                          <span>{{ variant.title }}</span>
-                        </td>
-                      </tr>
-                    {% endfor %}
-                  </tbody>
-                </table>
-                <div class="button-area">
-                  <a class="sd-button-primary" href="{{ related_product.url }}">MUA NGAY</a>
-                </div>
-              </div>
+              {%- render 'sunday-product-variation', productVariation: product.variants -%}
             </div>
           </div>
         {% endunless %}

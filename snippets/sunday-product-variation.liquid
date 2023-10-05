@@ -1,0 +1,24 @@
+<div class="product-variation-area">
+  <table>
+    <tbody>
+      {% for variant in productVariation %}
+        <tr class="variation-item">
+          {% if variant.price != 0 %}
+            <td class="price-area">
+              <span>{{ variant.price | money }}</span>
+            </td>
+            {% if variant.title != 'Default Title' %}
+              <td class="line-area"></td>
+              <td class="size-area">
+                <span>{{ variant.title }}</span>
+              </td>
+            {% endif %}
+          {% endif %}
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  <div class="button-area">
+    <a class="sd-button-primary" href="{{ product.url }}">{{ 'sunday.partials.button.buy_now' | t }}</a>
+  </div>
+</div>

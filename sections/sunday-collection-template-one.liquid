@@ -3,44 +3,6 @@
 
 <section class="collection-area collection-area-template-one">
   <div class="page-width">
-    <aside class="sidebar-area">
-      <div class="sticky-area">
-        <div class="group-title-area">
-          <div class="category-title">
-            <h2>DANH MỤC</h2>
-          </div>
-          <div class="icon-bar-area second-bar-icon toggle-open">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        </div>
-
-        <div class="list-category-area">
-          {% for block in section.blocks %}
-            {% if block.type == 'group_product_category' %}
-              <div class="category-item">
-                {% if block.settings.show_collection_title %}
-                  <span data-id="{{ block.settings.collection }}">
-                    {{- block.settings.collection.title -}}
-                  </span>
-                {% else %}
-                  <span data-id="{{ block.settings.collection }}">
-                    {{- block.settings.group_sidebar_title -}}
-                  </span>
-                {% endif %}
-              </div>
-            {% endif %}
-          {% endfor %}
-        </div>
-      </div>
-      <div class="icon-bar-area first-bar-icon">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </aside>
-
     <div class="content-area">
       {% render 'sunday-breadcrumb' %}
       <div class="collection-details-area">
@@ -50,7 +12,7 @@
           </h1>
         </div>
         <div class="description-area">
-          {{ collection.description | richtext }}
+          {{ collection.description }}
           <span class="icon-collapse">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="26" viewBox="0 0 24 26" fill="none">
               <g id="plus">
@@ -63,79 +25,74 @@
         </div>
       </div>
 
-      {% for block in section.blocks %}
-        {% if block.type == 'group_product_category' %}
-          <div
-            class="group-collection-area  {% case forloop.index %}{% when 1 %}first{% when 2 %}second{% else %}other{% endcase %}"
-            id="{{ block.settings.collection }}"
-          >
-            <div class="title-area">
-              <h2>
-                {% if block.settings.show_collection_title %}
-                  {{ block.settings.collection.title }}
-                {% else %}
-                  {{ block.settings.group_title | upcase }}
-                {% endif %}
-              </h2>
-            </div>
-            <div class="description-area">
-              {{ block.settings.group_description | richtext }}
-              <span class="icon-collapse">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="26" viewBox="0 0 24 26" fill="none">
-                  <g id="plus">
-                    <path id="Icon" d="M12 6.92194V18.9219M6 12.9219H18" stroke="#CA9B63" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path id="Vector 1" d="M4 1.92194H1V24.9219H4" stroke="#CA9B63" stroke-linecap="round"/>
-                    <path id="Vector 2" d="M20 1.92194H23V24.9219H20" stroke="#CA9B63" stroke-linecap="round"/>
-                  </g>
-                </svg>
-              </span>
-            </div>
-            {% if collections[block.settings.collection.handle].products.size > 0 %}
-              <div class="group-product-area">
-                {% for product in collections[block.settings.collection.handle].products %}
-                  <div class="product-item">
-                    <a class="product-image-area" href="{{ product.url }}">
-                      <img
-                        src="{{ product.featured_image.src | image_url: width: 300 }}"
-                        width="{{ product.featured_image.width }}"
-                        height="{{ product.featured_image.height }}"
-                        alt="{{ product.title }}"
-                        loading="lazy"
-                      >
-                    </a>
-                    <div class="group-product-info-area">
-                      <div class="product-title-area">
-                        <a href="{{ product.url }}">{{ product.title }}</a>
-                      </div>
-                      <div class="product-variation-area">
-                        <table>
-                          <tbody>
-                            {% for variant in product.variants %}
-                              <tr class="variation-item">
-                                <td class="price-area">
-                                  <span>{{ variant.price | money }}</span>
-                                </td>
-                                <td class="line-area"></td>
-                                <td class="size-area">
-                                  <span>{{ variant.title }}</span>
-                                </td>
-                              </tr>
-                            {% endfor %}
-                          </tbody>
-                        </table>
-                        <div class="button-area">
-                          <a class="sd-button-primary" href="{{ product.url }}">MUA NGAY</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                {% endfor %}
-              </div>
-            {% endif %}
+      {% assign aside_attribute = '' %}
+      {% for collection_attribute in collection.metafields.custom.collection_attribute.value %}
+        <div
+          class="group-collection-area {% case forloop.index %}{% when 1 %}first{% when 2 %}second{% else %}other{% endcase %}"
+          id="{{ collection_attribute.collection_child_name | handle }}"
+        >
+          <div class="title-area">
+            <h2>
+              {{ collection_attribute.collection_child_name | upcase }}
+            </h2>
           </div>
+          <div class="description-area">
+            {{ collection_attribute.collection_child_description | metafield_tag | newline_to_br }}
+            <span class="icon-collapse">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="26" viewBox="0 0 24 26" fill="none">
+                <g id="plus">
+                  <path id="Icon" d="M12 6.92194V18.9219M6 12.9219H18" stroke="#CA9B63" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path id="Vector 1" d="M4 1.92194H1V24.9219H4" stroke="#CA9B63" stroke-linecap="round"/>
+                  <path id="Vector 2" d="M20 1.92194H23V24.9219H20" stroke="#CA9B63" stroke-linecap="round"/>
+                </g>
+              </svg>
+            </span>
+          </div>
+
+          {% if collection_attribute.collection_child_product.value != blank %}
+            {%- render 'sunday-product', productAttribute: collection_attribute.collection_child_product.value -%}
+          {% endif %}
+        </div>
+
+        {% assign aside_attribute = aside_attribute | append: collection_attribute.collection_child_name %}
+        {% if forloop.last == false %}
+          {% assign aside_attribute = aside_attribute | append: '*' %}
         {% endif %}
       {% endfor %}
+      {% assign aside_attribute = aside_attribute | split: '*' %}
     </div>
+
+    <aside class="sidebar-area">
+      <div class="sticky-area">
+        <div class="group-title-area">
+          <div class="category-title">
+            <h2>{{ 'sunday.partials.label.menu' | t }}</h2>
+          </div>
+          <div class="icon-bar-area second-bar-icon toggle-open">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+
+        <div class="list-category-area">
+          {% for attribute in aside_attribute %}
+            {% if attribute != blank %}
+              <div class="category-item">
+                <span data-id="{{ attribute | handle }}">
+                  {{ attribute }}
+                </span>
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+      <div class="icon-bar-area first-bar-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </aside>
   </div>
   <div class="sunday-overlay"></div>
 </section>
@@ -149,43 +106,7 @@
     "groups": ["header", "footer"]
   },
   "settings": [],
-  "blocks": [
-    {
-      "type": "group_product_category",
-      "name": "t:sections.sunday-collection-template-one.blocks.group_product_category.name",
-      "settings": [
-        {
-          "type": "collection",
-          "id": "collection",
-          "label": "Collection"
-        },
-        {
-          "type": "checkbox",
-          "id": "show_collection_title",
-          "label": "Show Collection Title",
-          "default": true
-        },
-        {
-          "type": "inline_richtext",
-          "id": "group_title",
-          "default": "Chúng tôi đề xuất",
-          "label": "t:sections.sunday-collection-template-one.blocks.group_product_category.settings.group_title.label"
-        },
-        {
-          "type": "inline_richtext",
-          "id": "group_sidebar_title",
-          "default": "đề xuất",
-          "label": "t:sections.sunday-collection-template-one.blocks.group_product_category.settings.group_sidebar_title.label"
-        },
-        {
-          "type": "richtext",
-          "id": "group_description",
-          "default": "<p>Vitamin D3 và K2 phụ thuộc vào nhau với tư cách là đồng yếu tố. Các công thức cân bằng của chúng tôi, với D3 và K2 MK-7 all-trans (K2VITAL®), được tối ưu hóa để bổ sung D3 dự trữ hoặc để bổ sung linh hoạt, toàn diện.</p>",
-          "label": "t:sections.sunday-collection-template-one.blocks.group_product_category.settings.group_description.label"
-        }
-      ]
-    }
-  ],
+  "blocks": [],
   "presets": [
     {
       "name": "t:sections.sunday-collection-template-one.presets.name"

@@ -3,7 +3,7 @@
 @media only screen and (min-width: 200px) {
 
     .featured-product-area {
-        padding: 72px 12px 44px;
+        padding: 72px 40px 44px;
 
         .title-area {
             h2 {
@@ -203,7 +203,7 @@
 @media only screen and (min-width: 1025px) {
 
     .featured-product-area {
-        padding: 135px 100px 80px;
+        padding: 135px 60px 80px;
 
         .title-area {
             h2 {
@@ -222,13 +222,13 @@
             }
 
             .slick-slide {
-                margin: 0 44px;
+                margin: 0 30px;
                 height: inherit !important;
             }
 
             /* the parent */
             .slick-list {
-                margin: 0 -44px;
+                margin: 0 -30px;
             }
 
             .item {
@@ -237,8 +237,9 @@
                 align-items: flex-start;
 
                 .product-image-area {
-                    width: 45%;
-                    max-width: 264px;
+                    width: 50%;
+                    height: 100%;
+                    max-height: 400px;
                     position: relative;
                 }
 
@@ -255,15 +256,15 @@
                         a {
                             font-size: 36px;
                             line-height: 125%;
+                            -webkit-line-clamp: 3;
                         }
                     }
 
                     .product-description-area {
                         display: -webkit-box;
                         -webkit-box-orient: vertical;
-                        -webkit-line-clamp: 4;
+                        -webkit-line-clamp: 8;
                         overflow: hidden;
-                        height: 100px;
 
                         ul,
                         ol {
@@ -282,11 +283,28 @@
             }
 
             .slick-prev {
-                left: -72px;
+                left: -30px;
             }
 
             .slick-next {
-                right: -72px;
+                right: -30px;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+    .featured-product-area {
+        padding: 135px 110px 80px;
+
+        .featured-product-slider {
+            .slick-slide {
+                margin: 0 66px;
+            }
+
+            /* the parent */
+            .slick-list {
+                margin: 0 -66px;
             }
         }
     }

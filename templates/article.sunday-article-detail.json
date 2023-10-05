@@ -4,20 +4,24 @@
       "type": "sunday-article-detail",
       "blocks": {
         "article-0": {
-          "type": "article_banner"
+          "type": "article_banner",
+          "settings": {
+          }
         },
         "article-1": {
-          "type": "article_breadcrumb"
+          "type": "article_breadcrumb",
+          "settings": {
+          }
         },
         "article-2": {
           "type": "article_title",
           "settings": {
-            "show_date": false,
-            "show_author": false
           }
         },
         "article-3": {
-          "type": "article_content"
+          "type": "article_content",
+          "settings": {
+          }
         }
       },
       "block_order": [
@@ -25,7 +29,9 @@
         "article-1",
         "article-2",
         "article-3"
-      ]
+      ],
+      "settings": {
+      }
     }
   },
   "order": [

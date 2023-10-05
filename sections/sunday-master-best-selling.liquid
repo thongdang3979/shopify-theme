@@ -1,42 +1,42 @@
 {{ 'sunday-master-featured-product.css' | asset_url | stylesheet_tag }}
 <script src="{{ 'sunday-master-featured-product.js' | asset_url }}" defer="defer"></script>
 
-<section class="featured-product-area page-width">
+<section class="featured-product-area">
   <div class="title-area">
     <h2>{{ section.settings.section_heading | upcase }}</h2>
   </div>
-  {%- for collection in section.settings.collection_list -%}
-    <div class="featured-product-slider">
-      {% for product in collections[collection.handle].products limit: section.settings.product_limit %}
-        <div class="item">
-          <a class="product-image-area" href="{{ product.url }}">
-            <img
-              src="{{ product.featured_image.src | image_url: width: 300 }}"
-              width="{{ product.featured_image.width }}"
-              height="{{ product.featured_image.height }}"
-              alt="{{ product.title }}"
-              loading="lazy"
-            >
 
-            <div class="product-tag-area">
-              <h3>HOT</h3>
-            </div>
-          </a>
-          <div class="group-content-area">
-            <div class="product-title-area">
-              <a href="{{ product.url }}">{{ product.title }}</a>
-            </div>
-            <div class="product-description-area">
-              <p>{{ product.description }}</p>
-            </div>
-            <div class="button-area">
-              <a class="sd-button-primary" href="{{ product.url }}">{{ section.settings.button_content }}</a>
-            </div>
+  <div class="featured-product-slider">
+    {% for product in section.settings.product_list limit: section.settings.product_limit %}
+      {% assign product_subtitle = product.metafields.descriptors.subtitle %}
+
+      <div class="item">
+        <a class="product-image-area" href="{{ product.url }}">
+          <img
+            src="{{ product.featured_image.src | image_url: width: 1440 }}"
+            width="{{ product.featured_image.width }}"
+            height="{{ product.featured_image.height }}"
+            alt="{{ product.title }}"
+            loading="lazy"
+          >
+          <div class="product-tag-area">
+            <h3>HOT</h3>
+          </div>
+        </a>
+        <div class="group-content-area">
+          <div class="product-title-area">
+            <a href="{{ product.url }}">{{ product_subtitle | default: product.title }}</a>
+          </div>
+          <div class="product-description-area">
+            <p>{{ product.metafields.global.description_tag | default: product.description }}</p>
+          </div>
+          <div class="button-area">
+            <a class="sd-button-primary" href="{{ product.url }}">{{ section.settings.button_content }}</a>
           </div>
         </div>
-      {% endfor %}
-    </div>
-  {% endfor %}
+      </div>
+    {% endfor %}
+  </div>
 </section>
 
 {% schema %}
@@ -54,11 +54,12 @@
       "default": "Sản phẩm bán chạy",
       "label": "t:sections.sunday-master-best-selling.settings.section_heading.label"
     },
+
     {
-      "type": "collection_list",
-      "id": "collection_list",
-      "label": "Collections",
-      "limit": 1
+      "type": "product_list",
+      "id": "product_list",
+      "label": "t:sections.sunday-master-best-selling.settings.product_list.label",
+      "limit": 12
     },
     {
       "type": "range",

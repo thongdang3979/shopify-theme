@@ -1,0 +1,21 @@
+<div class="group-product-area">
+  {% for product in productAttribute %}
+    <div class="product-item">
+      <a class="product-image-area" href="{{ product.url }}">
+        <img
+          src="{{ product.featured_image.src | image_url: width: 300 }}"
+          width="{{ product.featured_image.width }}"
+          height="{{ product.featured_image.height }}"
+          alt="{{ product.title }}"
+          loading="lazy"
+        >
+      </a>
+      <div class="group-product-info-area">
+        <div class="product-title-area">
+          <a href="{{ product.url }}">{{ product.title }}</a>
+        </div>
+        {%- render 'sunday-product-variation', productVariation: product.variants -%}
+      </div>
+    </div>
+  {% endfor %}
+</div>

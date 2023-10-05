@@ -5,7 +5,6 @@
     "header": {
       "type": "header",
       "settings": {
-        "color_scheme": "background-custom",
         "logo_position": "middle-left",
         "menu": "main-menu",
         "second-menu": "second-menu",
@@ -13,6 +12,7 @@
         "menu_type_desktop": "dropdown",
         "sticky_header_type": "on-scroll-up",
         "show_line_separator": true,
+        "color_scheme": "background-custom",
         "enable_country_selector": true,
         "enable_language_selector": true,
         "mobile_logo_position": "center",

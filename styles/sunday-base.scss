@@ -30,27 +30,39 @@ body {
                 @include flexCustome(row, nowrap, center, center, center, 8px);
 
                 .language-area {
-                    @include flexCustome(row, nowrap, center, center, center, 8px);
 
-                    a {
-                        @include customFont(22px, 600, 135%, $Gray-333, null, #{16px});
-                        text-transform: uppercase;
-                        text-decoration: none;
+                    .localization-form {
+                        @include flexCustome(row, nowrap, center, center, center, 8px);
 
-                        &.active {
-                            color: $Orange-CA9;
+                        .disclosure__button {
+                            display: none;
+                        }
+
+                        a {
+                            @include customFont(22px, 600, 135%, $Gray-333, null, #{16px});
+                            text-transform: uppercase;
+                            text-decoration: none;
+
+                            &.disclosure__link--active {
+                                color: $Orange-CA9;
+                            }
+
+                            &.disclosure__link {
+                                padding: 0;
+                            }
+                        }
+
+                        .group-line-area {
+                            @include flexCustome(row, nowrap, center, center, center, 1px);
+
+                            span {
+                                width: 1px;
+                                height: 16px;
+                                background: $Gray-333;
+                            }
                         }
                     }
 
-                    .group-line-area {
-                        @include flexCustome(row, nowrap, center, center, center, 1px);
-
-                        span {
-                            width: 1px;
-                            height: 16px;
-                            background: $Gray-333;
-                        }
-                    }
                 }
 
                 .icon-area {
@@ -78,6 +90,16 @@ body {
             .list-menu__item {
                 @include customFont(16px, 500, 150%, $Gray-333, null, null);
                 text-transform: uppercase;
+
+                &#HeaderDrawer-mua-hang {
+                    background-color: transparent;
+                    color: $Gray-333;
+                }
+
+                &.menu-drawer__menu-item--active {
+                    color: $White-FFF;
+                    background-color: $Orange-CA9;
+                }
             }
         }
     }
@@ -135,7 +157,8 @@ body {
 
 @media only screen and (min-width: 200px) {
     .header {
-        grid-template-areas: 'left-icons search logo users carts';
+        // grid-template-areas: 'left-icons search logo users carts';
+        grid-template-areas: 'left-icons carts logo . search';
         grid-template-columns: 1fr 1fr 8fr 1fr 1fr;
         padding: 12px 16px !important;
 
@@ -173,6 +196,8 @@ body {
             .header__custom-search {
                 display: none;
             }
+
+
         }
 
         .header__user {
@@ -180,6 +205,7 @@ body {
             grid-area: users;
             justify-self: end;
             padding-right: 0;
+            display: none;
 
             svg {
                 width: 23px;
@@ -192,6 +218,7 @@ body {
             grid-area: carts;
             justify-self: end;
             padding-right: 0;
+            display: none;
 
             svg {
                 width: 23px;
@@ -253,6 +280,32 @@ body {
                     }
                 }
             }
+
+            &#HeaderMenu-mua-hang {
+                span {
+
+                    &.header__active-menu-item {
+                        &::after {
+                            background: transparent;
+                        }
+
+                        &:hover {
+                            &::after {
+                                background: $Orange-CA9;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .desktop-localization-wrapper {
+            display: none;
+        }
+
+        .header-localization .disclosure .localization-form__select {
+            color: $White-FFF;
+            font-size: 20px;
         }
     }
 
@@ -336,6 +389,16 @@ body {
                 }
             }
         }
+
+        .header-localization .disclosure .localization-form__select {
+            color: $Gray-686;
+        }
+    }
+
+    .header-wrapper-second {
+        .header-localization .disclosure .localization-form__select {
+            color: $Gray-686;
+        }
     }
 }
 
@@ -392,7 +455,7 @@ body {
         grid-template-columns: 0.5fr 0.5fr 1fr 1fr 1fr 2fr 1fr 1fr 1fr 0.5fr 0.5fr;
         grid-template-rows: 0.5fr 1fr;
         grid-template-areas:
-            ". . . . . . search search . users carts"
+            ". . . . . . search search search users carts"
             "second-menu second-menu second-menu second-menu second-menu logo main-menu main-menu main-menu main-menu main-menu";
         padding: 10px 20px !important;
         grid-gap: 0;
@@ -441,6 +504,7 @@ body {
 
         .header__icons {
             justify-self: end;
+            gap: 15px;
 
             .header__search {
                 display: none !important;
@@ -500,6 +564,10 @@ body {
                 }
             }
         }
+
+        .desktop-localization-wrapper {
+            display: block;
+        }
     }
 
     .header__heading-logo-wrapper {
@@ -520,7 +588,7 @@ body {
             grid-template-columns: 1fr 1fr 1fr 1fr 12fr 2fr 12fr 1fr 1fr 1fr 1fr;
             grid-template-rows: 1fr;
             grid-template-areas:
-                ". . second-menu second-menu second-menu logo main-menu search . users carts";
+                ". . second-menu second-menu second-menu logo main-menu search search users carts";
             padding: 25px;
             grid-column-gap: 5px;
 

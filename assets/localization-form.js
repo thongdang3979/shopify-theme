@@ -7,10 +7,14 @@ if (!customElements.get('localization-form')) {
         this.elements = {
           input: this.querySelector('input[name="locale_code"], input[name="country_code"]'),
           button: this.querySelector('button'),
-          panel: this.querySelector('.disclosure__list-wrapper'),
+          panel: this.querySelector('.disclosure__list-wrapper')
         };
         this.elements.button.addEventListener('click', this.openSelector.bind(this));
         this.elements.button.addEventListener('focusout', this.closeSelector.bind(this));
+
+        this.addEventListener('mouseenter', this.openSelectorForHover.bind(this));
+        this.addEventListener('mouseleave', this.closeSelectorForHover.bind(this));
+
         this.addEventListener('keyup', this.onContainerKeyUp.bind(this));
 
         this.querySelectorAll('a').forEach((item) => item.addEventListener('click', this.onItemClick.bind(this)));
@@ -52,6 +56,16 @@ if (!customElements.get('localization-form')) {
         if (!event.relatedTarget || !isChild) {
           this.hidePanel();
         }
+      }
+
+      openSelectorForHover() {
+        this.elements.button.focus();
+        this.elements.panel.removeAttribute('hidden');
+        this.elements.button.setAttribute('aria-expanded', 'true');
+      }
+
+      closeSelectorForHover() {
+        this.hidePanel();
       }
     }
   );

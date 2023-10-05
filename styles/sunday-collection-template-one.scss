@@ -14,6 +14,7 @@
         }
 
         .sidebar-area {
+            order: 0;
             @include flexCustome(column, nowrap, null, null, null, 16px);
             max-width: calc(20% - 19px);
             min-width: 267px;
@@ -175,8 +176,8 @@
         }
 
         .content-area {
+            order: 1;
             @include flexCustome(column, nowrap, null, null, null, 24px);
-            min-width: 400px;
 
             .breadcrumbs {
                 margin-top: 0;
@@ -199,7 +200,20 @@
                     position: relative;
                     padding: 0 12px;
 
+                    @include customFont(14px, 400, 160%, $Gray-686, null, null);
+                    letter-spacing: 0.14px;
+                    margin: 0;
+                    text-align: center;
+                    max-height: 90px;
+                    overflow: hidden;
+                   
+
                     &.collapse {
+                        display: -webkit-box;
+                        -webkit-box-orient: vertical;
+                        -webkit-line-clamp: 4;
+                        overflow: hidden;
+
                         .icon-collapse {
                             display: flex;
                             position: absolute;
@@ -209,27 +223,17 @@
                     }
 
                     &.uncollapse {
-                        p {
-                            display: -webkit-box;
-                            -webkit-box-orient: vertical;
-                            -webkit-line-clamp: unset;
-                            overflow: unset;
-                        }
-                    }
-
-                    p {
-                        @include customFont(14px, 400, 160%, $Gray-686, null, null);
-                        letter-spacing: 0.14px;
-                        margin: 0;
-                        text-align: justify;
-                        display: -webkit-box;
-                        -webkit-box-orient: vertical;
-                        -webkit-line-clamp: 4;
-                        overflow: hidden;
+                        max-height: unset;
+                        -webkit-line-clamp: unset;
+                        overflow: unset;
                     }
 
                     .icon-collapse {
                         display: none;
+                    }
+
+                    p{
+                        margin: 0;
                     }
                 }
             }
@@ -259,13 +263,18 @@
                     position: relative;
                     padding: 0 12px;
 
+                    @include customFont(14px, 400, 160%, $Gray-686, null, null);
+                    letter-spacing: 0.14px;
+                    margin: 0;
+                    text-align: center;
+                    max-height: 90px;
+                    overflow: hidden;
+
                     &.collapse {
-                        p {
-                            display: -webkit-box;
-                            -webkit-box-orient: vertical;
-                            -webkit-line-clamp: 3;
-                            overflow: hidden;
-                        }
+                        display: -webkit-box;
+                        -webkit-box-orient: vertical;
+                        -webkit-line-clamp: 4;
+                        overflow: hidden;
 
                         .icon-collapse {
                             display: flex;
@@ -274,21 +283,24 @@
                             right: -6px;
                         }
                     }
-
-                    p {
-                        @include customFont(14px, 400, 160%, $Gray-686, null, null);
-                        letter-spacing: 0.14px;
-                        margin: 0;
-                        text-align: justify;
+                    
+                    &.uncollapse {
+                        max-height: unset;
+                        -webkit-line-clamp: unset;
+                        overflow: unset;
                     }
 
                     .icon-collapse {
                         display: none;
                     }
+
+                    p{
+                        margin: 0;
+                    }
                 }
             }
 
-           @include customProduct();
+            @include customProduct();
         }
 
         .sunday-overlay {
@@ -318,6 +330,13 @@
 
 @media only screen and (min-width: 769px) {
     .collection-area {
+        .sidebar-area {
+            width: 100%;
+
+            .icon-bar-area {
+                right: 44px;
+            }
+        }
 
         .page-width {
             padding: 24px 44px 44px;
@@ -434,6 +453,7 @@
                 filter: none;
                 background: none;
                 gap: 12px;
+                max-width: 267px;
 
                 .list-category-area {
 
@@ -441,7 +461,7 @@
                         cursor: pointer;
 
                         span {
-                           font-size: 13px;
+                            font-size: 13px;
                         }
                     }
                 }
