@@ -3,18 +3,30 @@
 {%- style -%}
   .background-cta-area {
     {% if section.settings.slider_background != null %}
-      background-image: url('{{- section.settings.slider_background | image_url: width: 2048 -}}');
+      background-image: url('{{- section.settings.slider_background | image_url: width: 1440 -}}');
     {% else %}
-      background-image: url('https://cdn.shopify.com/s/files/1/0817/3902/2646/files/TrueCleanLabel_3840x1200_8aa21231-607d-4c7f-99c9-50326f56f199.webp?v=1693217814');
+      background-image: url('https://cdn.shopify.com/s/files/1/0817/3902/2646/files/TrueCleanLabel_3840x1200_8aa21231-607d-4c7f-99c9-50326f56f199.webp?v=1693217814&width=1440');
     {% endif %}
   }
 {%- endstyle -%}
 
 <section class="background-cta-area">
   <div class="button-area">
-    <a href="{{ section.settings.button_link | default: '/blogs/cam-nang/true-clean-label' }}" class="sd-button-third">
-      {{- section.settings.button_content -}}
-    </a>
+    {% if request.locale.iso_code != 'vi' %}
+      <a
+        href="{{ request.origin }}/{{ request.locale.iso_code }}{{ section.settings.button_link | default: '/blogs/knowledge/true-clean-label' }}"
+        class="sd-button-third"
+      >
+        {{- section.settings.button_content -}}
+      </a>
+    {% else %}
+      <a
+        href="{{ section.settings.button_link | default: '/blogs/cam-nang/true-clean-label' }}"
+        class="sd-button-third"
+      >
+        {{- section.settings.button_content -}}
+      </a>
+    {% endif %}
   </div>
 </section>
 

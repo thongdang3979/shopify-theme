@@ -2,6 +2,8 @@
     @media only screen and (min-width: 200px) {
         .group-product-area {
             @include flexCustome(row, wrap, null, null, null, 24px);
+            max-width: 90%;
+            margin: auto;
 
             .product-item {
                 @include flexCustome(column, nowrap, center, flex-start, center, 16px);

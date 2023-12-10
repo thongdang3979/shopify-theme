@@ -4,11 +4,21 @@
       "type": "sunday-master-banner-content",
       "settings": {
         "banner_desktop": "",
-        "banner_desktop_default": "https://cdn.shopify.com/s/files/1/0817/3902/2646/files/z4555749562504_a0fdd70fa5c7373b7f58cc6118c53f02.jpg?v=1694578571",
+        "banner_desktop_default": "https://cdn.shopify.com/s/files/1/0817/3902/2646/files/z4555749562504_a0fdd70fa5c7373b7f58cc6118c53f02.jpg?v=1694578571&width=1920",
+        "heading_h1_show": true,
         "heading_title_desktop": "<p>Liên hệ với chúng tôi<p>",
+        "heading_title_desktop_show": false,
+        "heading_content_desktop": "",
+        "heading_content_desktop_show": false,
+        "banner_desktop_height": 600,
+
         "banner_mobile": "",
-        "banner_mobile_default": "https://cdn.shopify.com/s/files/1/0817/3902/2646/files/z4555749562504_a0fdd70fa5c7373b7f58cc6118c53f02.jpg?v=1694578571",
-        "heading_title_mobile": "<p>Liên hệ với chúng tôi<p>"
+        "banner_mobile_default": "https://cdn.shopify.com/s/files/1/0817/3902/2646/files/z4555749562504_a0fdd70fa5c7373b7f58cc6118c53f02.jpg?v=1694578571&width=1024",
+        "heading_title_mobile": "<p>Liên hệ với chúng tôi<p>",
+        "heading_title_mobile_show": false,
+        "heading_content_mobile": "",
+        "heading_content_mobile_show": false,
+        "banner_mobile_height": 425
       }
     },
     "sunday-master-breadcrumb": {
@@ -28,17 +38,17 @@
             "description": "<p></p>"
           }
         },
-        "box_contact_icon-0": {
-          "type": "box_contact_icon",
+        "box_address-0": {
+          "type": "box_address",
           "settings": {
-            "box_icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\">\n<g clip-path=\"url(#clip0_1642_1514)\">\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M10 5C8.34315 5 7 6.34315 7 8C7 9.65685 8.34315 11 10 11C11.6569 11 13 9.65685 13 8C13 6.34315 11.6569 5 10 5ZM9 8C9 7.44772 9.44772 7 10 7C10.5523 7 11 7.44772 11 8C11 8.55228 10.5523 9 10 9C9.44772 9 9 8.55228 9 8Z\" fill=\"white\"/>\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M15.2263 1.98053C12.2238 -0.660178 7.7762 -0.660177 4.7737 1.98053C1.40988 4.93903 1.05764 10.1211 3.98017 13.5246L9.24131 19.6515C9.43129 19.8727 9.70837 20 9.99998 20C10.2916 20 10.5687 19.8727 10.7587 19.6515L16.0198 13.5246C18.9423 10.1211 18.5901 4.93903 15.2263 1.98053ZM6.09454 3.48233C8.34176 1.50589 11.6582 1.50589 13.9054 3.48233C16.4426 5.71374 16.7151 9.64487 14.5024 12.2216L9.99998 17.465L5.49752 12.2216C3.28489 9.64487 3.55741 5.71374 6.09454 3.48233Z\" fill=\"white\"/>\n</g>\n<defs>\n<clipPath id=\"clip0_1642_1514\">\n<rect width=\"20\" height=\"20\" fill=\"white\"/>\n</clipPath>\n</defs>\n</svg>",
+            "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\"><g clip-path=\"url(#clip0_1642_1514)\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M10 5C8.34315 5 7 6.34315 7 8C7 9.65685 8.34315 11 10 11C11.6569 11 13 9.65685 13 8C13 6.34315 11.6569 5 10 5ZM9 8C9 7.44772 9.44772 7 10 7C10.5523 7 11 7.44772 11 8C11 8.55228 10.5523 9 10 9C9.44772 9 9 8.55228 9 8Z\" fill=\"white\"></path><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M15.2263 1.98053C12.2238 -0.660178 7.7762 -0.660177 4.7737 1.98053C1.40988 4.93903 1.05764 10.1211 3.98017 13.5246L9.24131 19.6515C9.43129 19.8727 9.70837 20 9.99998 20C10.2916 20 10.5687 19.8727 10.7587 19.6515L16.0198 13.5246C18.9423 10.1211 18.5901 4.93903 15.2263 1.98053ZM6.09454 3.48233C8.34176 1.50589 11.6582 1.50589 13.9054 3.48233C16.4426 5.71374 16.7151 9.64487 14.5024 12.2216L9.99998 17.465L5.49752 12.2216C3.28489 9.64487 3.55741 5.71374 6.09454 3.48233Z\" fill=\"white\"></path></g><defs><clipPath id=\"clip0_1642_1514\"><rect width=\"20\" height=\"20\" fill=\"white\"></rect></clipPath></svg>",
             "description": "<h3><span>Việt Nam</span>: L18-11-13, Tầng 18, Tòa nhà Vincom Center Đồng Khởi, 72 Lê Thánh Tôn, Phường Bến Nghé, Quận 1, Thành phố Hồ Chí Minh, Việt Nam</h3>"
           }
-        },
-        "box_contact_icon-1": {
-          "type": "box_contact_icon",
+        },     
+        "box_address-1": {
+          "type": "box_address",
           "settings": {
-            "box_icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\">\n<g clip-path=\"url(#clip0_1642_1514)\">\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M10 5C8.34315 5 7 6.34315 7 8C7 9.65685 8.34315 11 10 11C11.6569 11 13 9.65685 13 8C13 6.34315 11.6569 5 10 5ZM9 8C9 7.44772 9.44772 7 10 7C10.5523 7 11 7.44772 11 8C11 8.55228 10.5523 9 10 9C9.44772 9 9 8.55228 9 8Z\" fill=\"white\"/>\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M15.2263 1.98053C12.2238 -0.660178 7.7762 -0.660177 4.7737 1.98053C1.40988 4.93903 1.05764 10.1211 3.98017 13.5246L9.24131 19.6515C9.43129 19.8727 9.70837 20 9.99998 20C10.2916 20 10.5687 19.8727 10.7587 19.6515L16.0198 13.5246C18.9423 10.1211 18.5901 4.93903 15.2263 1.98053ZM6.09454 3.48233C8.34176 1.50589 11.6582 1.50589 13.9054 3.48233C16.4426 5.71374 16.7151 9.64487 14.5024 12.2216L9.99998 17.465L5.49752 12.2216C3.28489 9.64487 3.55741 5.71374 6.09454 3.48233Z\" fill=\"white\"/>\n</g>\n<defs>\n<clipPath id=\"clip0_1642_1514\">\n<rect width=\"20\" height=\"20\" fill=\"white\"/>\n</clipPath>\n</defs>\n</svg>",
+            "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" fill=\"none\"><g clip-path=\"url(#clip0_1642_1514)\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M10 5C8.34315 5 7 6.34315 7 8C7 9.65685 8.34315 11 10 11C11.6569 11 13 9.65685 13 8C13 6.34315 11.6569 5 10 5ZM9 8C9 7.44772 9.44772 7 10 7C10.5523 7 11 7.44772 11 8C11 8.55228 10.5523 9 10 9C9.44772 9 9 8.55228 9 8Z\" fill=\"white\"></path><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M15.2263 1.98053C12.2238 -0.660178 7.7762 -0.660177 4.7737 1.98053C1.40988 4.93903 1.05764 10.1211 3.98017 13.5246L9.24131 19.6515C9.43129 19.8727 9.70837 20 9.99998 20C10.2916 20 10.5687 19.8727 10.7587 19.6515L16.0198 13.5246C18.9423 10.1211 18.5901 4.93903 15.2263 1.98053ZM6.09454 3.48233C8.34176 1.50589 11.6582 1.50589 13.9054 3.48233C16.4426 5.71374 16.7151 9.64487 14.5024 12.2216L9.99998 17.465L5.49752 12.2216C3.28489 9.64487 3.55741 5.71374 6.09454 3.48233Z\" fill=\"white\"></path></g><defs><clipPath id=\"clip0_1642_1514\"><rect width=\"20\" height=\"20\" fill=\"white\"></rect></clipPath></defs></svg>",
             "description": "<h3><span>Germany</span>: Potsdamer Str. 83, 10785 Berlin, Germany</h3>"
           }
         },
@@ -69,8 +79,8 @@
       },
       "block_order": [
         "box_contact_infomation-0",
-        "box_contact_icon-0",
-        "box_contact_icon-1",
+        "box_address-0",
+        "box_address-1",
         "box_social_icon-fb",
         "box_social_icon-ins",
         "box_social_icon-tiktok"

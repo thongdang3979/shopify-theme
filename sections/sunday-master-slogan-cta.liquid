@@ -16,9 +16,21 @@
     </div>
   </div>
   <div class="button-area">
-    <a href="{{ section.settings.button_link | default: '/pages/gioi-thieu' }}" class="sd-button-third">
-      {{- section.settings.button_content -}}
-    </a>
+    {% if request.locale.iso_code != 'vi' %}
+      <a
+        href="{{ request.origin }}/{{ request.locale.iso_code }}{{ section.settings.button_link | default: '/pages/about-us' }}"
+        class="sd-button-third"
+      >
+        {{- section.settings.button_content -}}
+      </a>
+    {% else %}
+      <a
+        href="{{ request.origin }}{{ section.settings.button_link | default: '/pages/gioi-thieu' }}"
+        class="sd-button-third"
+      >
+        {{- section.settings.button_content -}}
+      </a>
+    {% endif %}
   </div>
 </section>
 

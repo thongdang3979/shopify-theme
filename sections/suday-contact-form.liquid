@@ -23,10 +23,10 @@
               </div>
               {% assign boxContactInfomationCount = boxContactInfomationCount | plus: 1 %}
 
-            {% when 'box_contact_icon' %}
+            {% when 'box_address' %}
               <div class="box-icon-area{% if boxContactIconCount == 1 %} second{% endif %}">
                 <div class="icon-area">
-                  {{ block.settings.box_icon }}
+                  {{ block.settings.icon }}
                 </div>
                 <div class="content-area">
                   {{ block.settings.description }}
@@ -187,19 +187,19 @@
       ]
     },
     {
-      "type": "box_contact_icon",
-      "name": "t:sections.sunday-contact-form.blocks.box_contact_icon.name",
+      "type": "box_address",
+      "name": "t:sections.sunday-contact-form.blocks.box_address.name",
       "settings": [
         {
           "type": "liquid",
-          "id": "box_icon",
-          "label": "t:sections.sunday-contact-form.blocks.box_contact_icon.settings.box_icon.label"
+          "id": "icon",
+          "label": "t:sections.sunday-contact-form.blocks.box_address.settings.description.label"
         },
         {
-          "type": "liquid",
+          "type": "richtext",
           "id": "description",
           "default": "<p>Liên hệ với chúng tôi để được giải đáp thắc mắc ngay nhé</p>",
-          "label": "t:sections.sunday-contact-form.blocks.box_contact_icon.settings.description.label"
+          "label": "t:sections.sunday-contact-form.blocks.box_address.settings.description.label"
         }
       ]
     },

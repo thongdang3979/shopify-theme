@@ -3489,6 +3489,9 @@
         "product_limit": {
           "label": "Product Limt"
         },
+        "product_tag": {
+          "label": "Product Tag"
+        },
         "button_content": {
           "label": "Button Content"
         }
@@ -3579,32 +3582,6 @@
         "name": "Sunday Slogan CTA"
       }
     },
-    "sunday-master-background-content": {
-      "name": "Sunday Background Content",
-      "settings": {
-        "slider_background_desktop": {
-          "label": "Background Image Desktop"
-        },
-        "content_desktop": {
-          "label": "Content Desktop"
-        },
-        "heading_title_desktop": {
-          "label": "Title Desktop"
-        },
-        "slider_background_mobile": {
-          "label": "Background Image Mobike"
-        },
-        "content_mobile": {
-          "label": "Content Mobile"
-        },
-        "heading_title_mobile": {
-          "label": "Title Mobile"
-        }
-      },
-      "presets": {
-        "name": "Sunday Background Content"
-      }
-    },
     "sunday-master-banner-content": {
       "name": "Sunday Banner Content",
       "settings": {
@@ -3614,8 +3591,23 @@
         "banner_desktop_default": {
           "label": "Banner Image Default Desktop"
         },
+        "heading_h1_show": {
+          "label": "Show H1 in Banner"
+        },
         "heading_title_desktop": {
           "label": "Title Desktop"
+        },
+        "heading_title_desktop_show": {
+          "label": "Show Title Desktop"
+        },
+        "heading_content_desktop": {
+          "label": "Content Desktop"
+        },
+        "heading_content_desktop_show": {
+          "label": "Show Content Desktop"
+        },
+        "banner_desktop_height": {
+          "label": "Banner Desktop Height"
         },
         "banner_mobile": {
           "label": "Banner Image Mobile"
@@ -3625,6 +3617,27 @@
         },
         "heading_title_mobile": {
           "label": "Title Mobile"
+        },
+        "heading_title_mobile_show": {
+          "label": "Show Title Mobile"
+        },
+        "heading_content_mobile": {
+          "label": "Content Mobile"
+        },
+        "heading_content_mobile_show": {
+          "label": "Show Content Mobile"
+        },
+        "banner_mobile_height": {
+          "label": "Banner Mobile Height"
+        },
+        "button_content": {
+          "label": "Button Content"
+        },
+        "button_link": {
+          "label": "Button Link"
+        },
+        "button_gap": {
+          "label": "Button Gap"
         }
       },
       "presets": {
@@ -3781,18 +3794,14 @@
     },
     "sunday-product-detail": {
       "name": "Sunday Product Detail",
-      "settings": {
-       
-      },
+      "settings": {},
       "presets": {
         "name": "Sunday Product Detail"
       }
     },
     "sunday-contact-form": {
       "name": "Sunday Contact Form",
-      "settings": {
-       
-      },
+      "settings": {},
       "blocks": {
         "box_contact_infomation": {
           "name": "Box Contact Infomation",
@@ -3805,11 +3814,11 @@
             }
           }
         },
-        "box_contact_icon": {
-          "name": "Box Contact Icon",
+        "box_address": {
+          "name": "Box Address",
           "settings": {
-            "box_icon": {
-              "label": "Icon"
+            "icon": {
+              "label": "Box Title"
             },
             "description": {
               "label": "Box Description"
@@ -3819,7 +3828,7 @@
         "box_social_icon": {
           "name": "Box Social Icon",
           "settings": {
-            "box_social_icon": {
+            "box_social_icon_image": {
               "label": "Icon"
             },
             "box_social_icon_default": {

@@ -1,19 +1,42 @@
 {
   "sections": {
-    "main": {
-      "type": "main-blog",
+    "sunday-master-banner-content": {
+      "type": "sunday-master-banner-content",
       "settings": {
-        "layout": "collage",
-        "show_image": true,
-        "image_height": "medium",
-        "show_date": true,
-        "show_author": false,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "banner_desktop": "",
+        "banner_desktop_default": "https:\/\/cdn.shopify.com\/s\/files\/1\/0817\/3902\/2646\/files\/20.09.23_-_VitDWebsite_Banners-2.jpg?v=1695294682&width=1920",
+        "heading_h1_show": true,
+        "heading_title_desktop": "<p>Cẩm nang</p>",
+        "heading_title_desktop_show": false,
+        "heading_content_desktop": "",
+        "heading_content_desktop_show": false,
+        "banner_desktop_height": 600,
+
+        "banner_mobile": "",
+        "banner_mobile_default": "https:\/\/cdn.shopify.com\/s\/files\/1\/0817\/3902\/2646\/files\/20.09.23_-_VitDWebsite_Banners-2.jpg?v=1695294682&width=1024",
+        "heading_title_mobile": "<p>Cẩm nang</p>",
+        "heading_title_mobile_show": false,
+        "heading_content_mobile": "",
+        "heading_content_mobile_show": false,
+        "banner_mobile_height": 425
+      }
+    },
+    "sunday-master-breadcrumb": {
+      "type": "sunday-master-breadcrumb",
+      "settings": {
+        "breabcrumb_position_left": 10
+      }
+    },
+    "sunday-master-blog": {
+      "type": "sunday-master-blog",
+      "settings": {
+        "blog": "cam-nang"
       }
     }
   },
   "order": [
-    "main"
+    "sunday-master-banner-content",
+    "sunday-master-breadcrumb",
+    "sunday-master-blog"
   ]
 }

@@ -7,7 +7,7 @@ let CUSTOM_MASTER_FEATURED_PRODUCT = {
     // Master Featured Product Slider Control 
     master_featured_product_slider_control: function () {
         function generateSVGArrow(iconPath) {
-            return `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">${iconPath}</svg>`;
+            return `<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none">${iconPath}</svg>`;
         }
 
         jQuery(document).ready(function ($) {
@@ -27,8 +27,9 @@ let CUSTOM_MASTER_FEATURED_PRODUCT = {
                     slidesToScroll: 1,
                     dots: false,
                     arrows: true,
-                    prevArrow: `<button class="slick-prev pull-left">${prevArrowIcon}</button>`,
-                    nextArrow: `<button class="slick-next pull-right">${nextArrowIcon}</button>`,
+                    prevArrow: `<button class="slick-prev pull-left" aria-label="pull-left">${prevArrowIcon}</button>`,
+                    nextArrow: `<button class="slick-next pull-right" aria-label="pull-right">${nextArrowIcon}</button>`,
+                    lazyLoad: 'ondemand',
                 });
             }
         });

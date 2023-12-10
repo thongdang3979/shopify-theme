@@ -25,9 +25,10 @@
           <div class="product-item">
             <a class="product-image-area" href="{{ related_product.url }}">
               <img
-                src="{{ related_product.featured_image.src | image_url: width: 300 }}"
-                width="{{ related_product.featured_image.width }}"
-                height="{{ related_product.featured_image.height }}"
+                src="{{ related_product.featured_image.src | image_url: width: 1024 }}"
+                data-lazy="{{ related_product.featured_image.src | image_url: width: 1024 }}"
+                width="200"
+                height="200"
                 alt="{{ related_product.title }}"
                 loading="lazy"
               >
@@ -36,7 +37,7 @@
               <div class="product-title-area">
                 <a href="{{ related_product.url }}">{{ related_product.title }}</a>
               </div>
-              {%- render 'sunday-product-variation', productVariation: product.variants -%}
+              {%- render 'sunday-product-variation', productVariation: product.variants, product: related_product -%}
             </div>
           </div>
         {% endunless %}

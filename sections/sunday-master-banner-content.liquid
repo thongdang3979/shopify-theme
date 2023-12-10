@@ -4,33 +4,105 @@
   @media (min-width: 200px) {
      .background-content-area {
        {% if section.settings.banner_mobile != null %}
-         background-image: url('{{- section.settings.banner_mobile | image_url: width: 1024 -}}');
+         background-image: url('{{- section.settings.banner_mobile -}}');
        {% else %}
          background-image: url('{{- section.settings.banner_mobile_default -}}');
        {% endif %}
+
+      {% if section.settings.banner_mobile_height != null %}
+        height: {{ section.settings.banner_mobile_height }}px;
+      {% endif %}
+
+      {% if section.settings.button_gap != null %}
+        gap: {{ section.settings.button_gap }}px;
+      {% endif %}
+
+
+      .group-content-area{
+        {% unless section.settings.heading_title_mobile_show %}
+          .title-area.title-mobile{
+            display: none;
+          }
+        {% endunless %}
+
+        {% unless section.settings.heading_content_mobile_show %}
+          .content-area.content-mobile{
+            display: none;
+          }
+        {% endunless %}
+      }
      }
    }
-   @media (min-width: 1025px) {
-     .background-content-area {
-       {% if section.settings.banner_desktop != null %}
-         background-image: url('{{- section.settings.banner_desktop | image_url: width: 2048 -}}');
-       {% else %}
-         background-image: url('{{- section.settings.banner_desktop_default -}}');
-       {% endif %}
-     }
-   }
+
+  @media (min-width: 1025px) {
+    .background-content-area {
+      {% if section.settings.banner_desktop != null %}
+        background-image: url('{{- section.settings.banner_desktop -}}');
+      {% else %}
+        background-image: url('{{- section.settings.banner_desktop_default -}}');
+      {% endif %}
+
+      {% if section.settings.banner_desktop_height != null %}
+        height: {{ section.settings.banner_desktop_height }}px;
+      {% endif %}
+
+      .group-content-area{
+        {% unless section.settings.heading_title_desktop_show %}
+          .title-area.title-desktop{
+            display: none;
+          }
+        {% endunless %}
+
+        {% unless section.settings.heading_content_desktop_show %}
+          .content-area.content-desktop{
+            display: none;
+          }
+        {% endunless %}
+      }
+    }
+  }
 {%- endstyle -%}
 
-<section class="background-content-area">
-  <h1>{{ section.settings.heading_title_desktop | strip_html }}</h1>
+<section class="background-content-area {{ template.suffix }}">
+  {% if section.settings.heading_h1_show %}
+    <h1>{{ section.settings.heading_title_desktop | strip_html }}</h1>
+  {% endif %}
   <div class="group-content-area">
-    <div class="title-area title-desktop">
-      <h2>{{ section.settings.heading_title_desktop }}</h2>
-    </div>
-    <div class="title-area title-mobile">
-      <h2>{{ section.settings.heading_title_mobile }}</h2>
-    </div>
+    {% if section.settings.heading_title_desktop != null %}
+      <div class="title-area title-desktop">
+        {{ section.settings.heading_title_desktop }}
+      </div>
+    {% endif %}
+
+    {% if section.settings.heading_title_mobile != null %}
+      <div class="title-area title-mobile">
+        {{ section.settings.heading_title_mobile }}
+      </div>
+    {% endif %}
+
+    {% if section.settings.heading_content_desktop != null %}
+      <div class="content-area content-desktop">
+        {{ section.settings.heading_content_desktop }}
+      </div>
+    {% endif %}
+
+    {% if section.settings.heading_content_mobile != null %}
+      <div class="content-area content-mobile">
+        {{ section.settings.heading_content_mobile }}
+      </div>
+    {% endif %}
   </div>
+
+  {% if section.settings.button_content != null %}
+    <div class="button-area">
+      <a
+        href="{{ section.settings.button_link }}"
+        class="sd-button-third"
+      >
+        {{- section.settings.button_content -}}
+      </a>
+    </div>
+  {% endif %}
 </section>
 
 {% schema %}
@@ -53,10 +125,42 @@
       "label": "t:sections.sunday-master-banner-content.settings.banner_desktop_default.label"
     },
     {
+      "type": "checkbox",
+      "id": "heading_h1_show",
+      "label": "t:sections.sunday-master-banner-content.settings.heading_h1_show.label",
+      "default": true
+    },
+    {
       "type": "text",
       "id": "heading_title_desktop",
-      "default": "Đức Phật",
       "label": "t:sections.sunday-master-banner-content.settings.heading_title_desktop.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "heading_title_desktop_show",
+      "label": "t:sections.sunday-master-banner-content.settings.heading_title_desktop_show.label",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "heading_content_desktop",
+      "label": "t:sections.sunday-master-banner-content.settings.heading_title_desktop.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "heading_content_desktop_show",
+      "label": "t:sections.sunday-master-banner-content.settings.heading_content_desktop_show.label",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "banner_desktop_height",
+      "min": 400,
+      "max": 800,
+      "step": 5,
+      "unit": "px",
+      "label": "t:sections.sunday-master-banner-content.settings.banner_desktop_height.label",
+      "default": 600
     },
 
     {
@@ -72,8 +176,54 @@
     {
       "type": "text",
       "id": "heading_title_mobile",
-      "default": "Đức Phật",
       "label": "t:sections.sunday-master-banner-content.settings.heading_title_mobile.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "heading_title_mobile_show",
+      "label": "t:sections.sunday-master-banner-content.settings.heading_title_mobile_show.label",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "heading_content_mobile",
+      "label": "t:sections.sunday-master-banner-content.settings.heading_title_mobile.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "heading_content_mobile_show",
+      "label": "t:sections.sunday-master-banner-content.settings.heading_content_mobile_show.label",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "banner_mobile_height",
+      "min": 300,
+      "max": 700,
+      "step": 5,
+      "unit": "px",
+      "label": "t:sections.sunday-master-banner-content.settings.banner_mobile_height.label",
+      "default": 425
+    },
+    {
+      "type": "text",
+      "id": "button_content",
+      "label": "t:sections.sunday-master-banner-content.settings.button_content.label"
+    },
+    {
+      "id": "button_link",
+      "type": "url",
+      "label": "t:sections.sunday-master-banner-content.settings.button_link.label"
+    },
+    {
+      "type": "range",
+      "id": "button_gap",
+      "min": 0,
+      "max": 120,
+      "step": 5,
+      "unit": "px",
+      "label": "t:sections.sunday-master-banner-content.settings.button_gap.label",
+      "default": 30
     }
   ],
   "presets": [

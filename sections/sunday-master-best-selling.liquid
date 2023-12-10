@@ -13,22 +13,32 @@
       <div class="item">
         <a class="product-image-area" href="{{ product.url }}">
           <img
-            src="{{ product.featured_image.src | image_url: width: 1440 }}"
-            width="{{ product.featured_image.width }}"
-            height="{{ product.featured_image.height }}"
+            src="{{ product.featured_image.src | image_url: width: 1024 }}"
+            data-lazy="{{ product.featured_image.src | image_url: width: 1024 }}"
+            width="200"
+            height="200"
             alt="{{ product.title }}"
             loading="lazy"
           >
-          <div class="product-tag-area">
-            <h3>HOT</h3>
-          </div>
+          {% if section.settings.product_tag != blank %}
+            <div class="product-tag-area">
+              <h3>{{ section.settings.product_tag }}</h3>
+            </div>
+          {% endif %}
         </a>
         <div class="group-content-area">
           <div class="product-title-area">
             <a href="{{ product.url }}">{{ product_subtitle | default: product.title }}</a>
           </div>
           <div class="product-description-area">
-            <p>{{ product.metafields.global.description_tag | default: product.description }}</p>
+            <p>
+              {{
+                product.metafields.custom.product_short_description
+                | metafield_tag
+                | newline_to_br
+                | default: product.description
+              }}
+            </p>
           </div>
           <div class="button-area">
             <a class="sd-button-primary" href="{{ product.url }}">{{ section.settings.button_content }}</a>
@@ -70,6 +80,12 @@
       "unit": "EA",
       "label": "t:sections.sunday-master-best-selling.settings.product_limit.label",
       "default": 4
+    },
+    {
+      "type": "text",
+      "id": "product_tag",
+      "default": "Mới",
+      "label": "t:sections.sunday-master-best-selling.settings.product_tag.label"
     },
     {
       "type": "text",

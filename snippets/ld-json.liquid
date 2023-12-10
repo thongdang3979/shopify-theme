@@ -243,3 +243,46 @@
   </script>
   <!-- #endregion -->
 {%- endif -%}
+
+{%- if request.page_type == 'article' -%}
+  <!-- #region Artical -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "Article",
+      "mainEntityOfPage": {
+        "@type": "WebSite",
+        "@id": "{{ og_url | escape }}"
+      },
+      "headline": "{{ og_title | escape }}",
+      {% if page_image %}
+      "image": {
+        "@type": "ImageObject",
+        "url": {{ page_image | image_url: width: 500 | prepend: "https:" | json }},
+        "height": 800,
+        "width": 1200
+      },
+      {% endif %}
+      "datePublished": "{{ article.published_at }}",
+      "dateModified": "{{ article.updated_at }}",
+      "author": {
+        "@type": "Person",
+        "name": "{{ article.author}}"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "{{ request.origin }}",
+        "logo": {
+          "@type": "ImageObject",
+          "url": {{ page_image | image_url: width: 500 | prepend: "https:" | json }},
+          "width": 200,
+          "height": 50
+        }
+      },
+      "description": {{ og_description | escape | json }},
+      "articleBody": {{ og_description | escape | json }},
+      "keywords": "{{ article.tags | join: ', ' }}"
+    }
+  </script>
+  <!-- #endregion -->
+{%- endif -%}

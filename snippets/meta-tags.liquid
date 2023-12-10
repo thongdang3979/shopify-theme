@@ -13,8 +13,13 @@
   {%- assign og_url = request.origin | strip -%}
 {%- endif -%}
 
-<meta name="robots" content="index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large">
-<meta name="keywords" content="">
+{% if collection.url == '/collections/all' %}
+  <meta name="robots" content="noindex,nofollow">
+{% else %}
+  <meta name="robots" content="index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large">
+{% endif %}
+
+<meta name="keywords" content="Vitamin, Vitamin cho trẻ, Vitamin D, Vitamin K2, Sunday, Sunday Natural">
 {%- if page_image -%}
   <link rel="image_src" href="https:{{ page_image | image_url }}">
 {%- endif -%}

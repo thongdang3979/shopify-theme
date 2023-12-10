@@ -7,7 +7,7 @@ let CUSTOM_MASTER_PRODUCT_RELATE = {
     // Master Product Slider Reate Control 
     master_product_relate_control: function () {
         function generateSVGArrow(iconPath) {
-            return `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">${iconPath}</svg>`;
+            return `<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none">${iconPath}</svg>`;
         }
 
         jQuery(document).ready(function ($) {
@@ -28,10 +28,11 @@ let CUSTOM_MASTER_PRODUCT_RELATE = {
                     autoplaySpeed: 5000,
                     slidesToShow: 4,
                     slidesToScroll: 1,
+                    lazyLoad: 'ondemand',
                     dots: false,
                     arrows: true,
-                    prevArrow: `<button class="slick-prev pull-left">${prevArrowIcon}</button>`,
-                    nextArrow: `<button class="slick-next pull-right">${nextArrowIcon}</button>`,
+                    prevArrow: `<button class="slick-prev pull-left" aria-label="pull-left">${prevArrowIcon}</button>`,
+                    nextArrow: `<button class="slick-next pull-right" aria-label="pull-right">${nextArrowIcon}</button>`,
                     responsive: [
                         {
                             breakpoint: 768,

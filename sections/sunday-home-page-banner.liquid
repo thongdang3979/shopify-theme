@@ -80,7 +80,7 @@
 
     <img
       class="desktop-image"
-      src="{% if section.settings.image_banner_desktop %}{{ section.settings.image_banner_desktop | image_url: width: 1920 }}{% else %}//cdn.shopify.com/s/files/1/0817/3902/2646/files/Sunday-banner.webp?v=1693217350&width=1920{% endif %}"
+      src="{% if section.settings.image_banner_desktop %}{{ section.settings.image_banner_desktop | image_url: width: 1440 }}{% else %}//cdn.shopify.com/s/files/1/0817/3902/2646/files/Sunday-banner.webp?v=1693217350&width=1440{% endif %}"
       width="{{ section.settings.image_banner_desktop.width | default: '1920' }}"
       height="{{ section.settings.image_banner_desktop.height | default: '979' }}"
       alt="{{ section.settings.image_banner_desktop.alt | default: 'SundayBanner' }}"
@@ -90,10 +90,10 @@
 
   <div class="product-image-area">
     {%- if section.settings.image_product -%}
-      {{ section.settings.image_product | image_url: width: 1024 | image_tag }}
+      {{ section.settings.image_product | image_url: width: 768 | image_tag }}
     {%- else -%}
       <img
-        src="https://cdn.shopify.com/s/files/1/0817/3902/2646/files/5597__NAME__20ml_de_product-main-thumbnail-1.png?v=1694099588&width=1024"
+        src="https://cdn.shopify.com/s/files/1/0817/3902/2646/files/5597__NAME__20ml_de_product-main-thumbnail-1.png?v=1694099588&width=768"
         width="500"
         height="611"
         alt="SundayBannerProduct"

@@ -1,0 +1,29 @@
+{
+    "sections": {
+        "sunday-master-banner-content": {
+            "type": "sunday-master-banner-content",
+            "settings": {
+                "banner_desktop": "",
+                "banner_desktop_default": "https://cdn.shopify.com/s/files/1/0817/3902/2646/files/Product_Authenticity.png?v=1701789253&width=1440",
+                "heading_h1_show": false,
+                "heading_title_desktop": "<h3>XIN CHÚC MỪNG! SẢN PHẨM NÀY ĐÃ ĐƯỢC XÁC THỰC THÀNH CÔNG</h3>",
+                "heading_title_desktop_show": true,
+                "heading_content_desktop": "<p>Cảm ơn bạn đã dành thời gian để kiểm tra và giúp chúng tôi chống lại hàng giả<br><span>SUNDAY NATURAL VIỆT NAM</span></p>",
+                "heading_content_desktop_show": true,
+                "banner_desktop_height": 600,
+                "banner_mobile": "",
+                "banner_mobile_default": "https://cdn.shopify.com/s/files/1/0817/3902/2646/files/Product_Authenticity.png?v=1701789253&width=1024",
+                "heading_title_mobile": "<h3>XIN CHÚC MỪNG! SẢN PHẨM NÀY ĐÃ ĐƯỢC XÁC THỰC THÀNH CÔNG</h3>",
+                "heading_title_mobile_show": true,
+                "heading_content_mobile": "<p>Cảm ơn bạn đã dành thời gian để kiểm tra và giúp chúng tôi chống lại hàng giả<br><span>SUNDAY NATURAL VIỆT NAM</span></p>",
+                "heading_content_mobile_show": true,
+                "button_content": "Xem thêm",
+                "button_link": "",
+                "button_gap": 95
+            }
+        }
+    },
+    "order": [
+        "sunday-master-banner-content"
+    ]
+}

@@ -3,9 +3,9 @@
     <div class="product-item">
       <a class="product-image-area" href="{{ product.url }}">
         <img
-          src="{{ product.featured_image.src | image_url: width: 300 }}"
-          width="{{ product.featured_image.width }}"
-          height="{{ product.featured_image.height }}"
+          src="{{ product.featured_image.src | image_url: width: 1024 }}"
+          width="200"
+          height="200"
           alt="{{ product.title }}"
           loading="lazy"
         >
@@ -14,7 +14,7 @@
         <div class="product-title-area">
           <a href="{{ product.url }}">{{ product.title }}</a>
         </div>
-        {%- render 'sunday-product-variation', productVariation: product.variants -%}
+        {%- render 'sunday-product-variation', productVariation: product.variants, product: product -%}
       </div>
     </div>
   {% endfor %}

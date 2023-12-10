@@ -3,6 +3,8 @@
 @media only screen and (min-width: 200px) {
 
     .background-content-area {
+        @include flexCustome(column, nowrap, center, center, center, 30px);
+
         position: relative;
         height: 400px;
 
@@ -10,16 +12,27 @@
         background-size: cover !important;
         background-position: center center !important;
 
-        h1{
+        h1 {
             display: none;
         }
 
         .group-content-area {
             @include flexCustome(column, nowrap, center, center, center);
-            height: 100%;
+            gap: 16px;
 
+            .content-desktop,
             .title-desktop {
                 display: none;
+            }
+
+            .content-area {
+                padding: 0 30px;
+
+                p {
+                    @include customFont(13px, 400, 140%, $White-FFF, null, null);
+                    margin: 0;
+                    text-align: center;
+                }
             }
 
             .title-area {
@@ -28,6 +41,41 @@
                     margin: 0;
                     text-align: center;
                     text-transform: uppercase;
+                }
+
+                h3 {
+                    @include customFont(14px, 500, 100%, $White-FFF, null, null);
+                    margin: 0;
+                    text-align: center;
+                }
+            }
+        }
+
+        .button-area {
+            @include flexCustome(row, nowrap, center, center, center);
+            width: 100%;
+
+            a {
+                @include customFont(17px, 700, 100%, $White-FFF, null, null);
+                @include customButton($Orange-CA9, $Orange-CA9, $Gray-5E6, $Gray-5E6, $White-FFF, $White-FFF);
+                padding: 16px 38px;
+            }
+        }
+
+        &.product-authenticity {
+            .title-area {
+                h3 {
+                    font-size: 20px;
+                    font-weight: 700;
+                }
+
+            }
+
+            .content-area {
+                p {
+                    span {
+                        font-weight: 600;
+                    }
                 }
             }
         }
@@ -40,13 +88,23 @@
         height: 425px;
 
         .group-content-area {
-            
+
+            .content-mobile,
             .title-mobile {
                 display: none;
             }
 
+            .content-desktop,
             .title-desktop {
                 display: block;
+            }
+
+            .content-area {
+                p {
+                    font-size: 18px;
+                    font-weight: 500;
+                    line-height: 160%;
+                }
             }
 
             .title-area {
@@ -54,6 +112,12 @@
                     font-size: 48px;
                     line-height: 120%;
                     letter-spacing: -1.92px;
+                }
+
+                h3 {
+                    font-size: 16px;
+                    line-height: 140%;
+                    letter-spacing: 1px;
                 }
             }
         }
@@ -67,7 +131,7 @@
         max-height: 90vh;
 
         .group-content-area {
-            
+
             .title-area {
                 h2 {
                     font-size: 60px;

@@ -7,7 +7,7 @@ let CUSTOM_MASTER_PRODUCT_SLIDER_BACKGROUNG = {
     // Master Product Slider Background Control 
     master_product_slider_background_control: function () {
         function generateSVGArrow(iconPath) {
-            return `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">${iconPath}</svg>`;
+            return `<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none">${iconPath}</svg>`;
         }
 
         jQuery(document).ready(function ($) {
@@ -25,10 +25,11 @@ let CUSTOM_MASTER_PRODUCT_SLIDER_BACKGROUNG = {
                 $product_background_slider.slick({
                     slidesToShow: 1,
                     slidesToScroll: 1,
-                    dots: true,
+                    dots: $product_background_slider.data('slider') > 1 ? true : false,
                     arrows: true,
-                    prevArrow: `<button class="slick-prev pull-left">${prevArrowIcon}</button>`,
-                    nextArrow: `<button class="slick-next pull-right">${nextArrowIcon}</button>`,
+                    prevArrow: `<button class="slick-prev pull-left" aria-label="pull-left">${prevArrowIcon}</button>`,
+                    nextArrow: `<button class="slick-next pull-right" aria-label="pull-right">${nextArrowIcon}</button>`,
+                    lazyLoad: 'ondemand',
                 });
             }
         });

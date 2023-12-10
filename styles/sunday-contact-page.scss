@@ -133,7 +133,7 @@
                             @include customFont(16px, 700, 130%, $White-FFF, null, null);
                             text-transform: uppercase;
                             letter-spacing: 2px;
-                            @include customButton($Orange-CA9, $Orange-CA9, $Green-3A4, $Green-3A4, $White-FFF, $White-FFF);
+                            @include customButton($Orange-CA9, $Orange-CA9, $Gray-5E6, $Gray-5E6, $White-FFF, $White-FFF);
                             margin-top: 24px;
 
                             &::after {

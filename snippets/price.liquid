@@ -118,7 +118,7 @@
       </span>
     </small>
   </div>
-  {%- if show_badges -%}
+  {%- if show_badges and price > 0 -%}
     <span class="badge price__badge-sale color-{{ settings.sale_badge_color_scheme }}">
       {{ 'products.product.on_sale' | t }}
     </span>

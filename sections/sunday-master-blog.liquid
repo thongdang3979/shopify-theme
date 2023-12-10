@@ -9,7 +9,7 @@
         <div class="image-area">
           <a href="{{ block.settings.each_article.url }}">
             <img
-              src="{{ block.settings.each_article | image_url: width: 1280 }}"
+              src="{{ block.settings.each_article | image_url: width: 1440 }}"
               alt="{{ block.settings.each_article.title }}"
             >
           </a>
@@ -34,7 +34,12 @@
         <article class="{% cycle 'odd', 'even' %}">
           <div class="image-area">
             <a href="{{ article.url }}">
-              <img src="{{ article | image_url: width: 1280 }}" alt="{{ article.title }}">
+              <img
+                src="{{ article | image_url: width: 1440 }}"
+                alt="{{ article.title }}"
+                srcset="{{ article | image_url: width: 720 }} 720w, {{ article | image_url: width: 1440 }} 1440w"
+                sizes="(max-width: 720px) 100vw, 1440px"
+              >
             </a>
           </div>
           <div class="group-info-area">

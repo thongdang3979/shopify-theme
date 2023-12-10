@@ -530,7 +530,8 @@
     "partials": {
       "button": {
         "read_more": "Read more",
-        "buy_now": "BUY NOW"
+        "buy_now": "SEE MORE",
+        "see_evaluate": "SEE TESTS"
       },
       "label": {
         "menu": "Menu"

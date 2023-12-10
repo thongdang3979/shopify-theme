@@ -195,9 +195,9 @@
             {%- else -%}
             <div class="header__heading-logo-wrapper">
               <img
-                src="https://cdn.shopify.com/s/files/1/0817/3902/2646/files/sunday-logo.png?v=1693218239&width=1920"
-                width="1370"
-                height="531"
+                src="https://cdn.shopify.com/s/files/1/0817/3902/2646/files/sunday-logo.png?v=1693218239&width=240"
+                width="240"
+                height="93"
                 alt="Sunday-logo"
                 loading="eager"
               >
@@ -229,9 +229,9 @@
             {%- else -%}
               <div class="header__heading-logo-wrapper second-logo">
                 <img
-                  src="https://cdn.shopify.com/s/files/1/0817/3902/2646/files/sunday-logo-black.png?v=1693881670&width=1920"
-                  width="1370"
-                  height="531"
+                  src="https://cdn.shopify.com/s/files/1/0817/3902/2646/files/sunday-logo-black.png?v=1693881670&width=240"
+                  width="240"
+                  height="93"
                   alt="Sunday-second-logo"
                   loading="eager"
                 >
@@ -312,9 +312,9 @@
             {%- else -%}
             <div class="header__heading-logo-wrapper">
               <img
-                src="https://cdn.shopify.com/s/files/1/0817/3902/2646/files/sunday-logo.png?v=1693218239&width=1920"
-                width="1370"
-                height="531"
+                src="https://cdn.shopify.com/s/files/1/0817/3902/2646/files/sunday-logo.png?v=1693218239&width=240"
+                width="240"
+                height="93"
                 alt="Sunday-logo"
                 loading="eager"
               >
@@ -346,9 +346,9 @@
             {%- else -%}
               <div class="header__heading-logo-wrapper second-logo">
                 <img
-                  src="https://cdn.shopify.com/s/files/1/0817/3902/2646/files/sunday-logo-black.png?v=1693881670&width=1920"
-                  width="1370"
-                  height="531"
+                  src="https://cdn.shopify.com/s/files/1/0817/3902/2646/files/sunday-logo-black.png?v=1693881670&width=240"
+                  width="240"
+                  height="93"
                   alt="Sunday-second-logo"
                   loading="eager"
                 >
@@ -533,7 +533,7 @@
       this.hideHeaderOnScrollUp = () => this.preventReveal = true;
 
       this.addEventListener('preventHeaderReveal', this.hideHeaderOnScrollUp);
-      window.addEventListener('scroll', this.onScrollHandler, false);
+      window.addEventListener('scroll', this.onScrollHandler, { passive: true });
 
       this.createObserver();
     }

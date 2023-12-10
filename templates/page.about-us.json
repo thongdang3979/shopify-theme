@@ -4,11 +4,22 @@
       "type": "sunday-master-banner-content",
       "settings": {
         "banner_desktop": "",
-        "banner_desktop_default": "https:\/\/cdn.shopify.com\/s\/files\/1\/0817\/3902\/2646\/files\/About-us.png",
-        "heading_title_desktop": "SẢN PHẨM DINH DƯỠNG<br>SIÊU TINH KHIẾT<br>NGUỒN GỐC TỰ NHIÊN",
+        "banner_desktop_default": "https:\/\/cdn.shopify.com\/s\/files\/1\/0817\/3902\/2646\/files\/About-us.png?width=1920",
+        "heading_h1_show": true,
+        "heading_title_desktop": "<h2>SẢN PHẨM DINH DƯỠNG<br>SIÊU TINH KHIẾT<br>NGUỒN GỐC TỰ NHIÊN<\/h2>",
+        "heading_title_desktop_show": true,
+        "heading_content_desktop": "",
+        "heading_content_desktop_show": false,
+        "banner_desktop_height": 600,
+
         "banner_mobile": "",
-        "banner_mobile_default": "https:\/\/cdn.shopify.com\/s\/files\/1\/0817\/3902\/2646\/files\/About-us.png",
-        "heading_title_mobile": "SẢN PHẨM DINH DƯỠNG<br>SIÊU TINH KHIẾT<br>NGUỒN GỐC TỰ NHIÊN"
+        "banner_mobile_default": "https:\/\/cdn.shopify.com\/s\/files\/1\/0817\/3902\/2646\/files\/About-us.png?width=1024",
+        "heading_title_mobile": "<h2>SẢN PHẨM DINH DƯỠNG<br>SIÊU TINH KHIẾT<br>NGUỒN GỐC TỰ NHIÊN<\/h2>",
+        "heading_title_mobile_show": true,
+        "heading_content_mobile": "",
+        "heading_content_mobile_show": false,
+        "banner_mobile_height": 425
+
       }
     },
     "sunday-master-breadcrumb": {
@@ -115,8 +126,8 @@
       "settings": {
         "richtext_group_backgrond_desktop": "",
         "richtext_group_backgrond_mobile": "",
-        "richtext_group_backgrond_desktop_default": "https:\/\/cdn.shopify.com\/s\/files\/1\/0817\/3902\/2646\/files\/about-us-desktop.png?v=1693217875",
-        "richtext_group_backgrond_mobile_default": "https:\/\/cdn.shopify.com\/s\/files\/1\/0817\/3902\/2646\/files\/about-us-mobile.png?v=1693217873"
+        "richtext_group_backgrond_desktop_default": "https:\/\/cdn.shopify.com\/s\/files\/1\/0817\/3902\/2646\/files\/about-us-desktop.png?v=1693217875&width=1024",
+        "richtext_group_backgrond_mobile_default": "https:\/\/cdn.shopify.com\/s\/files\/1\/0817\/3902\/2646\/files\/about-us-mobile.png?v=1693217873&width=468"
       }
     },
     "sunday-master-background-richtext-two": {
@@ -144,8 +155,8 @@
       "settings": {
         "richtext_group_backgrond_desktop": "",
         "richtext_group_backgrond_mobile": "",
-        "richtext_group_backgrond_desktop_default": "https:\/\/cdn.shopify.com\/s\/files\/1\/0817\/3902\/2646\/files\/About-us-1.png?v=1693277071",
-        "richtext_group_backgrond_mobile_default": "https:\/\/cdn.shopify.com\/s\/files\/1\/0817\/3902\/2646\/files\/About-us-1-mb.png?v=1693277068"
+        "richtext_group_backgrond_desktop_default": "https:\/\/cdn.shopify.com\/s\/files\/1\/0817\/3902\/2646\/files\/About-us-1.png?v=1693277071&width=1024",
+        "richtext_group_backgrond_mobile_default": "https:\/\/cdn.shopify.com\/s\/files\/1\/0817\/3902\/2646\/files\/About-us-1-mb.png?v=1693277068&width=468"
       }
     },
     "sunday-master-background-richtext-three": {
@@ -173,8 +184,8 @@
       "settings": {
         "richtext_group_backgrond_desktop": "",
         "richtext_group_backgrond_mobile": "",
-        "richtext_group_backgrond_desktop_default": "https:\/\/cdn.shopify.com\/s\/files\/1\/0817\/3902\/2646\/files\/About-us-2.png?v=1693277071",
-        "richtext_group_backgrond_mobile_default": "https:\/\/cdn.shopify.com\/s\/files\/1\/0817\/3902\/2646\/files\/About-us-2-mb.png?v=1693277068"
+        "richtext_group_backgrond_desktop_default": "https:\/\/cdn.shopify.com\/s\/files\/1\/0817\/3902\/2646\/files\/About-us-2.png?v=1693277071&width=1024",
+        "richtext_group_backgrond_mobile_default": "https:\/\/cdn.shopify.com\/s\/files\/1\/0817\/3902\/2646\/files\/About-us-2-mb.png?v=1693277068&width=468"
       }
     },
     "sunday-master-background-richtext-four": {
@@ -202,8 +213,8 @@
       "settings": {
         "richtext_group_backgrond_desktop": "",
         "richtext_group_backgrond_mobile": "",
-        "richtext_group_backgrond_desktop_default": "https:\/\/cdn.shopify.com\/s\/files\/1\/0817\/3902\/2646\/files\/About-us-3.png?v=1693277072",
-        "richtext_group_backgrond_mobile_default": "https:\/\/cdn.shopify.com\/s\/files\/1\/0817\/3902\/2646\/files\/About-us-3-mb.png?v=1693277068"
+        "richtext_group_backgrond_desktop_default": "https:\/\/cdn.shopify.com\/s\/files\/1\/0817\/3902\/2646\/files\/About-us-3.png?v=1693277072&width=1024",
+        "richtext_group_backgrond_mobile_default": "https:\/\/cdn.shopify.com\/s\/files\/1\/0817\/3902\/2646\/files\/About-us-3-mb.png?v=1693277068&width=468"
       }
     },
     "sunday-master-background-richtext-five": {
@@ -231,8 +242,8 @@
       "settings": {
         "richtext_group_backgrond_desktop": "",
         "richtext_group_backgrond_mobile": "",
-        "richtext_group_backgrond_desktop_default": "https:\/\/cdn.shopify.com\/s\/files\/1\/0817\/3902\/2646\/files\/About-us-5.png?v=1693277072",
-        "richtext_group_backgrond_mobile_default": "https:\/\/cdn.shopify.com\/s\/files\/1\/0817\/3902\/2646\/files\/About-us-5-mb.png?v=1693277068"
+        "richtext_group_backgrond_desktop_default": "https:\/\/cdn.shopify.com\/s\/files\/1\/0817\/3902\/2646\/files\/About-us-5.png?v=1693277072&width=1024",
+        "richtext_group_backgrond_mobile_default": "https:\/\/cdn.shopify.com\/s\/files\/1\/0817\/3902\/2646\/files\/About-us-5-mb.png?v=1693277068&width=468"
       }
     },
     "sunday-master-background-richtext-six": {
@@ -260,8 +271,8 @@
       "settings": {
         "richtext_group_backgrond_desktop": "",
         "richtext_group_backgrond_mobile": "",
-        "richtext_group_backgrond_desktop_default": "https:\/\/cdn.shopify.com\/s\/files\/1\/0817\/3902\/2646\/files\/About-us-4.png?v=1693277072",
-        "richtext_group_backgrond_mobile_default": "https:\/\/cdn.shopify.com\/s\/files\/1\/0817\/3902\/2646\/files\/About-us-4-mb.png?v=1693277068"
+        "richtext_group_backgrond_desktop_default": "https:\/\/cdn.shopify.com\/s\/files\/1\/0817\/3902\/2646\/files\/About-us-4.png?v=1693277072&width=1024",
+        "richtext_group_backgrond_mobile_default": "https:\/\/cdn.shopify.com\/s\/files\/1\/0817\/3902\/2646\/files\/About-us-4-mb.png?v=1693277068&width=468"
       }
     },
     "sunday-master-background-richtext-seven": {
@@ -269,8 +280,8 @@
       "settings": {
         "richtext_group_backgrond_desktop": "",
         "richtext_group_backgrond_mobile": "",
-        "richtext_group_backgrond_desktop_default": "https:\/\/cdn.shopify.com\/s\/files\/1\/0817\/3902\/2646\/files\/About-us-6.png?v=1693277072",
-        "richtext_group_backgrond_mobile_default": "https:\/\/cdn.shopify.com\/s\/files\/1\/0817\/3902\/2646\/files\/About-us-6-mb.png?v=1693277068",
+        "richtext_group_backgrond_desktop_default": "https:\/\/cdn.shopify.com\/s\/files\/1\/0817\/3902\/2646\/files\/About-us-6.png?v=1693277072&width=1024",
+        "richtext_group_backgrond_mobile_default": "https:\/\/cdn.shopify.com\/s\/files\/1\/0817\/3902\/2646\/files\/About-us-6-mb.png?v=1693277068&width=468",
         "richtext_group_backgrond_desktop_height": 880
       }
     }

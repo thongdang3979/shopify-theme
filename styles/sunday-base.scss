@@ -788,11 +788,16 @@ body {
 
                     .list-menu__item--link {
                         display: flex;
-                        @include customFont(12px, 500, 130%, $White-FFF, null, null);
+                        @include customFont(13px, 500, 130%, $White-FFF, null, null);
                         text-transform: uppercase;
                         padding-top: 14px;
                         padding-bottom: 14px;
                         padding: 0;
+
+                        svg{
+                            width: 13px;
+                            height: 13px;
+                        }
                     }
 
                     &.special {

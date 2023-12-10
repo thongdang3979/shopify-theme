@@ -27,14 +27,15 @@
     "sunday-master-best-selling": {
       "type": "sunday-master-best-selling",
       "settings": {
-        "section_heading": "Sản phẩm bán chạy",
+        "section_heading": "sản phẩm nổi bật",
         "product_list": [
-          "vitamin-d3-k2-mk-7-5-000-iu-200µg-300-giọt",
-          "vitamin-d3-k2-mk7-200-iu-15µg-thuần-chay-600-giọt",
-          "vitamin-d3-10-000-iu-300-giọt",
-          "vitamin-d3-k2-mk7-10-000-iu-200µg-300-giọt"
+          "vitamin-d3-k2-mk7-200-iu-15µg-thuan-chay-600-giot",
+          "vitamin-d3-k2-mk7-200-iu-15ug-cho-tre-so-sinh-va-tre-nho-600-giot-chay-thuong",
+          "vitamin-d3-k2-mk7-2-500-iu-100µg-all-trans-300-giot",
+          "vitamin-d3-k2-mk7-2-500-iu-100µg-all-trans-300-giot-thuan-chay"
         ],
         "product_limit": 6,
+        "product_tag": "",
         "button_content": "Xem thêm"
       }
     },
@@ -47,35 +48,19 @@
             "sub_title": "",
             "heading_title": "VITAMIN D",
             "slider_background_desktop": "",
-            "slider_background_desktop_default": "https:\/\/cdn.shopify.com\/s\/files\/1\/0817\/3902\/2646\/files\/20.09.23_-_VitDWebsite_Banners-5.jpg?v=1695294681",
+            "slider_background_desktop_default": "https://cdn.shopify.com/s/files/1/0817/3902/2646/files/20.09.23_-_VitDWebsite_Banners-4-2.jpg?v=1695294681&width=1920",
             "slider_background_desktop_position": 0,
             "slider_background_mobile": "",
-            "slider_background_mobile_default": "https:\/\/cdn.shopify.com\/s\/files\/1\/0817\/3902\/2646\/files\/20.09.23_-_VitDWebsite_Banners-6.jpg?v=1695726250",
-            "button_content": "Xem thêm",
-            "button_link": ""
-          }
-        },
-        "slide-1": {
-          "type": "slide",
-          "settings": {
-            "sub_title": "",
-            "heading_title": "VITAMIN D",
-            "slider_background_desktop": "",
-            "slider_background_desktop_default": "https://cdn.shopify.com/s/files/1/0817/3902/2646/files/20.09.23_-_VitDWebsite_Banners-4-2.jpg?v=1695294681",
-            "slider_background_desktop_position": 0,
-            "slider_background_mobile": "",
-            "slider_background_mobile_default": "https:\/\/cdn.shopify.com\/s\/files\/1\/0817\/3902\/2646\/files\/20.09.23_-_VitDWebsite_Banners-4.jpg?v=1695294681",
+            "slider_background_mobile_default": "https:\/\/cdn.shopify.com\/s\/files\/1\/0817\/3902\/2646\/files\/20.09.23_-_VitDWebsite_Banners-4.jpg?v=1695294681&width=1440",
             "button_content": "Xem thêm",
             "button_link": ""
           }
         }
       },
       "block_order": [
-        "slide-0",
-        "slide-1"
+        "slide-0"
       ],
-      "settings": {
-      }
+      "settings": {}
     },
     "sunday-master-background-cta": {
       "type": "sunday-master-background-cta",
@@ -87,22 +72,30 @@
       "type": "sunday-master-slogan-cta",
       "settings": {
         "heading_title": "TRIẾT LÝ KINH DOANH",
-        "slogan_desktop": "<p>“Sunday Natural mong muốn tạo ra những sản phẩm có thể đáp ứng các tiêu chuẩn cao nhất cả về chất lượng<br> lẫn độ tinh khiết; giá trị cốt lõi của chúng tôi chính là các thành phần hữu cơ và có nguồn gốc từ thiên nhiên.”<\/p>",
-        "slogan_tablet": "<p>“Sunday Natural mong muốn tạo ra những sản phẩm có thể đáp ứng các<br> tiêu chuẩn cao nhất cả về chất lượng lẫn độ tinh khiết; giá trị cốt lõi của<br> chúng tôi chính là các thành phần hữu cơ và có nguồn gốc từ thiên nhiên.”<\/p>",
-        "slogan_mobile": "<p>“Sunday Natural mong muốn tạo ra những sản phẩm có thể đáp ứng các tiêu chuẩn cao nhất cả về chất lượng lẫn độ tinh khiết; giá trị cốt lõi của chúng tôi chính là các thành phần hữu cơ và có nguồn gốc từ thiên nhiên.”<\/p>",
+        "slogan_desktop": "<p>Sunday Natural mong muốn tạo ra những sản phẩm có thể đáp ứng các tiêu chuẩn cao nhất cả về chất lượng<br> lẫn độ tinh khiết; giá trị cốt lõi của chúng tôi chính là các thành phần hữu cơ và có nguồn gốc từ thiên nhiên.<\/p>",
+        "slogan_tablet": "<p>Sunday Natural mong muốn tạo ra những sản phẩm có thể đáp ứng các<br> tiêu chuẩn cao nhất cả về chất lượng lẫn độ tinh khiết; giá trị cốt lõi của<br> chúng tôi chính là các thành phần hữu cơ và có nguồn gốc từ thiên nhiên.<\/p>",
+        "slogan_mobile": "<p>Sunday Natural mong muốn tạo ra những sản phẩm có thể đáp ứng các tiêu chuẩn cao nhất cả về chất lượng lẫn độ tinh khiết; giá trị cốt lõi của chúng tôi chính là các thành phần hữu cơ và có nguồn gốc từ thiên nhiên.<\/p>",
         "button_content": "Xem thêm",
         "button_link": ""
       }
     },
-    "sunday-master-background-content": {
-      "type": "sunday-master-background-content",
+    "sunday-master-banner-content": {
+      "type": "sunday-master-banner-content",
       "settings": {
-        "slider_background_desktop": "",
-        "content_desktop": "<p>Khoẻ mạnh là giàu có, bình thản là an vui<\/p>",
-        "heading_title_desktop": "Đức Phật",
-        "slider_background_mobile": "",
-        "content_mobile": "<p>Khoẻ mạnh là giàu có, bình thản là an vui<\/p>",
-        "heading_title_mobile": "Đức Phật"
+        "banner_desktop": "",
+        "banner_desktop_default": "https://cdn.shopify.com/s/files/1/0817/3902/2646/files/about-us-desktop.png?v=1693217875&width=1440",
+        "heading_h1_show": false,
+        "heading_title_desktop": "<h3>Khoẻ mạnh là giàu có, bình thản là an vui<\/h3>",
+        "heading_title_desktop_show": true,
+        "heading_content_desktop": "<p>Đức Phật<\/p>",
+        "heading_content_desktop_show": true,
+        "banner_desktop_height": 600,
+        "banner_mobile": "",
+        "banner_mobile_default": "https://cdn.shopify.com/s/files/1/0817/3902/2646/files/about-us-mobile.png?v=1693217873&width=1024",
+        "heading_title_mobile": "<h3>Khoẻ mạnh là giàu có, bình thản là an vui<\/h3>",
+        "heading_title_mobile_show": true,
+        "heading_content_mobile": "<p>Đức Phật<\/p>",
+        "heading_content_mobile_show": true
       }
     }
   },
@@ -112,6 +105,6 @@
     "sunday-master-product-slider-background",
     "sunday-master-background-cta",
     "sunday-master-slogan-cta",
-    "sunday-master-background-content"
+    "sunday-master-banner-content"
   ]
 }

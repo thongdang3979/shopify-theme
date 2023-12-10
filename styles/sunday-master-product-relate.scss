@@ -4,7 +4,7 @@
     .product-relate-area {
         padding: 44px 12px;
         @include customProduct();
-
+        
         .title-area {
             text-align: center;
 
@@ -31,6 +31,27 @@
 
             .slick-track {
                 margin-left: 0;
+            }
+
+            .slick-prev,
+            .slick-next {
+                background: transparent;
+                border: none;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                z-index: 99;
+                width: 48px;
+                height: 48px;
+
+                &::before {
+                    content: "";
+                    display: none;
+                }
+
+                &:hover {
+                    cursor: pointer;
+                }
             }
         }
     }
@@ -64,12 +85,13 @@
             }
 
             .slick-prev {
-                left: -55px;
+                left: -50px;
             }
 
             .slick-next {
-                right: -55px;
+                right: -50px;
             }
         }
     }
 }
+

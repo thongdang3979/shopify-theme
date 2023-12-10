@@ -34,18 +34,26 @@
       {%- unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless -%}
     </title>
 
-    {% if page_description %}
-      <meta name="description" content="{{ page_description | escape }}">
-    {% endif %}
-
     {% render 'meta-tags' %}
     {% render 'ld-json' %}
 
     <script src="{{ 'constants.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'pubsub.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
-    <script src="{{ 'jquery.min.js' | asset_url }}" defer="defer"></script>
-    <script src="{{ 'slick.min.js' | asset_url }}" defer="defer"></script>
+
+    {%- if template.name == 'index' or template.name == 'collection' or template.name == 'product' -%}
+      <script src="{{ 'jquery.min.js' | asset_url }}" defer="defer"></script>
+    {%- endif -%}
+
+    {%- if template.name == 'index'
+      or template.suffix == 'sunday-collection-vitamin-k2'
+      or template.name == 'product'
+    -%}
+      {{ 'slick.css' | asset_url | stylesheet_tag }}
+      {{ 'slick-theme.css' | asset_url | stylesheet_tag }}
+      <script src="{{ 'slick.min.js' | asset_url }}" defer="defer"></script>
+    {%- endif -%}
+
     {%- if settings.animations_reveal_on_scroll -%}
       <script src="{{ 'animations.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
@@ -254,8 +262,6 @@
 
     {{ 'base.css' | asset_url | stylesheet_tag }}
     {{ 'sunday-base.css' | asset_url | stylesheet_tag }}
-    {{ 'slick.css' | asset_url | stylesheet_tag }}
-    {{ 'slick-theme.css' | asset_url | stylesheet_tag }}
 
     <link rel="preload" href="{{ 'Quicksand-Medium.woff2' | asset_url }}" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="{{ 'Quicksand-Light.woff2' | asset_url }}" as="font" type="font/woff2" crossorigin>
@@ -289,6 +295,18 @@
       if (Shopify.designMode) {
         document.documentElement.classList.add('shopify-design-mode');
       }
+    </script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-92G9S5FQKH"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'G-92G9S5FQKH');
     </script>
   </head>
 
@@ -365,3 +383,9 @@
     {%- endif -%}
   </body>
 </html>
+
+{% if collection.url == '/collections/all' %}
+  <script type="text/javascript">
+    window.location = '/';
+  </script>
+{% endif %}

@@ -51,7 +51,7 @@ let CUSTOM_MASTER_PRODUCT_DETAIL = {
         function openLabortestThumb() {
             // Collect all image sources within .product-labortest
             const imageSources = $('.product-labortest img').map(function () {
-                return $(this).attr('src');
+                return $(this).data('src');
             }).get();
 
             // Prepare an array of objects with src and thumb properties
@@ -82,7 +82,7 @@ let CUSTOM_MASTER_PRODUCT_DETAIL = {
     // Product Group Description Collapse Control
     product_group_description_collapse_control: function () {
         jQuery(document).ready(function ($) {
-            let $groupDescriptionAreas = $('.product-group-content-area:not(.true-clean-section) .description-area .content__description');
+            let $groupDescriptionAreas = $('.product-group-content-area:not(.no-read-more-section) .description-area .content__description');
             let parentName = 'description-area';
             let groupMaxLines = 3;
             collapseControl($groupDescriptionAreas, parentName, groupMaxLines);

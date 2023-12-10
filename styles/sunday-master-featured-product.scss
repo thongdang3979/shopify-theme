@@ -47,14 +47,20 @@
                         position: absolute;
                         top: 0;
                         right: 0;
-                        padding: 22px 12px;
+                        padding: 10px;
                         background: $Orange-CA9;
                         border-radius: 50%;
+                        @include flexCenter(column, nowrap);
+                        max-width: 65px;
+                        max-height: 65px;
+                        width: 100%;
+                        height: 100%;
 
                         h3 {
                             @include customFont(18px, 700, 100%, $White-FFF, null, null);
                             text-transform: uppercase;
                             margin: 0;
+                            text-align: center;
                         }
                     }
                 }
@@ -105,6 +111,8 @@
                 top: 50%;
                 transform: translateY(-50%);
                 z-index: 99;
+                width: 48px;
+                height: 48px;
 
                 &::before {
                     content: "";
@@ -117,11 +125,11 @@
             }
 
             .slick-prev {
-                left: -12px;
+                left: -30px;
             }
 
             .slick-next {
-                right: -12px;
+                right: -30px;
             }
         }
     }
@@ -160,11 +168,12 @@
             .item {
                 .product-image-area {
                     .product-tag-area {
-                        padding: 30px 16px;
                         background: $Orange-CA9;
+                        max-width: 75px;
+                        max-height: 75px;
 
                         h3 {
-                            font-size: 30px;
+                            font-size: 22px;
                         }
                     }
                 }
@@ -277,17 +286,14 @@
                         align-items: flex-end;
                     }
                 }
-
-
-
             }
 
             .slick-prev {
-                left: -30px;
+                left: -50px;
             }
 
             .slick-next {
-                right: -30px;
+                right: -50px;
             }
         }
     }

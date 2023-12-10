@@ -22,7 +22,7 @@
         <li class="disclosure__item" tabindex="-1">
           <a
             class="link link--text disclosure__link caption-large{% if language.iso_code == localization.language.iso_code %} disclosure__link--active{% endif %} focus-inset"
-            href="#"
+            href="{% if language.iso_code == 'vi' %}{{ request.origin }}{% else %}{{ request.origin }}/{{ language.iso_code }}{% endif %}"
             hreflang="{{ language.iso_code }}"
             lang="{{ language.iso_code }}"
             {% if language.iso_code == localization.language.iso_code %}

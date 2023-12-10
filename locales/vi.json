@@ -526,7 +526,8 @@
     "partials": {
       "button": {
         "read_more": "Xem thêm",
-        "buy_now": "MUA NGAY"
+        "buy_now": "XEM THÊM",
+        "see_evaluate": "XEM ĐÁNH GIÁ"
       },
       "label": {
         "menu": "Danh mục"

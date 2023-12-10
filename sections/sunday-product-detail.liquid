@@ -599,9 +599,9 @@
     {% for product_attribute in product.metafields.custom.product_attribute.value %}
       
       {% if product_attribute != blank %}
-        <div class="product-attribute-area product-group-content-area {% if product_attribute.check_our_business != blank %}sunday-natural-section{% endif %}" id="{{ product_attribute.title | handle }}">
+        <div class="product-attribute-area product-group-content-area" id="{{ product_attribute.title | handle }}">
           <div class="image-area">
-            <img src="{{ product_attribute.icon | img_url: '640x480' }}" width="200" height="200" alt="product-icon">
+            <img src="{{ product_attribute.icon | img_url: '100x100' }}" width="100" height="100" alt="product-icon">
           </div>
           <div class="product-attribute-title">
             <h3>{{ product_attribute.title }}</h3>
@@ -612,16 +612,28 @@
             {% if product_attribute.table_ingredient.value.size > 0 %}
               <table class="table table-ingredient">
                 {% for row in product_attribute.table_ingredient.value %}
-                  <tr>
-                    {% for col in row %}
-                      {% if forloop.parentloop.first and forloop.first %}
-                        <td colspan="2">{{ col | last }}</td>
-                      {% else %}
-                        <td>{{ col | last }}</td>
-                      {% endif %}
-                    {% endfor %}
-                  </tr>
+                  {% if forloop.first %}
+                    <thead>
+                      <tr>
+                        {% for col in row %}
+                          {% if forloop.parentloop.first %}
+                            <th colspan="2">{{ col.last }}</th>
+                          {% else %}
+                            <th>{{ col.last }}</th>
+                          {% endif %}
+                        {% endfor %}
+                      </tr>
+                    </thead>
+                    <tbody>
+                  {% else %}
+                    <tr>
+                      {% for col in row %}
+                        <td>{{ col.last }}</td>
+                      {% endfor %}
+                    </tr>
+                  {% endif %}
                 {% endfor %}
+                </tbody>
               </table>
             {% endif %}
 
@@ -654,25 +666,18 @@
                 {% for certificate in product_attribute.product_labor_certificate.value %}
                   <div class="box-labortest">
                     <div class="image">
-                      <img src="{{ certificate.certificate_image | img_url: 'large' }}" width="60" height="100" alt="{{ certificate.certificate_image.alt }}" title="{{ certificate.certificate_title }}">
+                      <img src="{{ certificate.certificate_image | img_url: '80x80' }}" data-src="{{ certificate.certificate_image | img_url: '' }}" width="60" height="100" alt="{{ certificate.certificate_image.alt }}" title="{{ certificate.certificate_title }}">
                     </div>
                     <div class="title-area">
                       <span>{{ certificate.certificate_title }}</span>
-                      <span class="btn">Xem đánh giá</span>
+                      <span class="btn">{{ 'sunday.partials.button.see_evaluate' | t }}</span>
                     </div>
                   </div>
                 {% endfor %}
               </div>
             {% endif %}
 
-
           </div>
-
-          {% if product_attribute.check_our_business != blank %}
-          <div class="button-area">
-            <a href="{{ product_attribute.check_our_business.value.url }}" class="sd-button-third">{{ 'sunday.partials.button.read_more' | t }}</a>
-          </div>
-          {% endif %}
         </div>
 
         {% assign aside_attribute = aside_attribute | append: product_attribute.title %}
@@ -685,7 +690,7 @@
   <div class="product-group-property-area">
     {% for product_property in product.metafields.custom.product_property.value %}
       {% if product_property != blank %}
-        <div class="product-property-area product-group-content-area {% cycle 'even', 'odd' %} {% if product_property.check_true_clean != blank %}true-clean-section{% endif %}" id="{{ product_property.title | handle }}">
+        <div class="product-property-area product-group-content-area {% cycle 'even', 'odd' %} {% if product_property.check_true_clean != blank or product_property.check_our_business != blank %}no-read-more-section{% endif %}" id="{{ product_property.title | handle }}">
           <div class="image-area">
             <img src="{{ product_property.image | img_url: '640x480' }}" width="1200" height="600" alt="product-image">
           </div>
@@ -723,9 +728,24 @@
             </div>
             {% if product_property.check_true_clean != blank %}
               <div class="button-area">
-                <a href="{{ product_property.check_true_clean.value.url }}" class="sd-button-third">{{ 'sunday.partials.button.read_more' | t }}</a>
+                {% if request.locale.iso_code != 'vi' %}
+                  <a href="{{ request.origin }}/{{ request.locale.iso_code }}{{ product_property.check_true_clean.value.url | escape }}" class="sd-button-third">{{ 'sunday.partials.button.read_more' | t }}</a>
+                {% else %}
+                  <a href="{{ request.origin }}{{ product_property.check_true_clean.value.url | escape }}" class="sd-button-third">{{ 'sunday.partials.button.read_more' | t }}</a>
+                {% endif %}
               </div>
             {% endif %}
+
+            {% if product_property.check_our_business != blank %}
+            <div class="button-area">
+              {% if request.locale.iso_code != 'vi' %}
+                <a href="{{ request.origin }}/{{ request.locale.iso_code }}{{ product_property.check_our_business.value.url | escape }}" class="sd-button-third">{{ 'sunday.partials.button.read_more' | t }}</a>
+              {% else %}
+                <a href="{{ request.origin }}{{ product_property.check_our_business.value.url | escape }}" class="sd-button-third">{{ 'sunday.partials.button.read_more' | t }}</a>
+              {% endif %}
+            </div>
+            {% endif %}
+            
           </div>
         </div>
 

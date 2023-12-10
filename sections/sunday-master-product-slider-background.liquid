@@ -8,13 +8,13 @@
       {%- if block.settings.slider_background_desktop == blank -%}
         {%- assign desktopImage = block.settings.slider_background_desktop_default -%}
       {%- else -%}
-        {%- assign desktopImage = block.settings.slider_background_desktop | image_url: width: 2048 -%}
+        {%- assign desktopImage = block.settings.slider_background_desktop | image_url: width: 1920 -%}
       {%- endif -%}
 
       {%- if block.settings.slider_background_mobile == blank -%}
         {%- assign mobileImage = block.settings.slider_background_mobile_default -%}
       {%- else -%}
-        {%- assign mobileImage = block.settings.slider_background_mobile | image_url: width: 1024 -%}
+        {%- assign mobileImage = block.settings.slider_background_mobile | image_url: width: 1440 -%}
       {%- endif -%}
       @media only screen and (min-width: 1025px) {
         .product-slider-background-area .product-background-slider .slider-container.block-index-{{ forloop.index }} {
@@ -34,7 +34,7 @@
 </style>
 
 <section class="product-slider-background-area">
-  <div class="product-background-slider">
+  <div class="product-background-slider" data-slider="{{ section.blocks.size }}">
     {%- for block in section.blocks -%}
       {%- if block.type == 'slide' -%}
         <div class="slider-container block-index-{{ forloop.index }}">
@@ -45,9 +45,21 @@
             <h2>{{ block.settings.heading_title }}</h2>
           </div>
           <div class="button-area">
-            <a href="{{ block.settings.button_link | default: '/collections/vitamin-d' }}" class="sd-button-second">
-              {{- block.settings.button_content -}}
-            </a>
+            {% if request.locale.iso_code != 'vi' %}
+              <a
+                href="{{ request.origin }}/{{ request.locale.iso_code }}{{ block.settings.button_link | default: '/collections/vitamin-d' }}"
+                class="sd-button-third"
+              >
+                {{- block.settings.button_content -}}
+              </a>
+            {% else %}
+              <a
+                href="{{ block.settings.button_link | default: '/collections/vitamin-d' }}"
+                class="sd-button-third"
+              >
+                {{- block.settings.button_content -}}
+              </a>
+            {% endif %}
           </div>
         </div>
       {%- endif -%}
