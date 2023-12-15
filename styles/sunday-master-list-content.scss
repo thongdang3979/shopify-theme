@@ -1,6 +1,6 @@
 @import 'function.scss';
 
-@media only screen and (min-width: 200px) {
+@media only screen and (min-width: 1px) {
     .list-content-area {
         @include flexCustome(column, nowrap, null, null, null, 24px);
         padding-top: 20px;

@@ -1,4 +1,4 @@
-let CUSTOM_MASTER_PRODUCT_SLIDER_BACKGROUNG = {
+let CUSTOM_MASTER_PRODUCT_SLIDER_BACKGROUND = {
     init: function () {
         // Master Product Slider Background Control 
         this.master_product_slider_background_control();
@@ -36,4 +36,4 @@ let CUSTOM_MASTER_PRODUCT_SLIDER_BACKGROUNG = {
     },
 };
 
-CUSTOM_MASTER_PRODUCT_SLIDER_BACKGROUNG.init();
+CUSTOM_MASTER_PRODUCT_SLIDER_BACKGROUND.init();

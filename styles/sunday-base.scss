@@ -155,7 +155,7 @@ body {
     }
 }
 
-@media only screen and (min-width: 200px) {
+@media only screen and (min-width: 1px) {
     .header {
         // grid-template-areas: 'left-icons search logo users carts';
         grid-template-areas: 'left-icons carts logo . search';
@@ -708,7 +708,7 @@ body {
 }
 
 //--------------------------------------------Footer--------------------------------------------
-@media only screen and (min-width: 200px) {
+@media only screen and (min-width: 1px) {
     .footer {
         padding-top: 0 !important;
         padding-bottom: 0 !important;
@@ -794,7 +794,7 @@ body {
                         padding-bottom: 14px;
                         padding: 0;
 
-                        svg{
+                        svg {
                             width: 13px;
                             height: 13px;
                         }
@@ -835,7 +835,7 @@ body {
                 margin: 0;
 
                 .copyright__content {
-                    @include customFont(13px, 400, 140%, $Gray-C2C, null, null);
+                    @include customFont(13px, 400, 140%, $White-FFF, null, null);
                 }
             }
         }

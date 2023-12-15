@@ -1,0 +1,162 @@
+{{ 'sunday-master-popup.css' | asset_url | stylesheet_tag }}
+
+<section class="sunday-popup-area">
+  <div class="popup-body-area">
+    <div class="popup-close-button-area"><span></span></div>
+
+    {% for block in section.blocks %}
+      {% if block.type == 'block-popup-image' %}
+        {% if block.settings.popup_image_url != blank %}
+          <a href="{{ block.settings.popup_image_url }}" target="_blank">
+        {% elsif block.settings.popup_image_url_default != blank %}
+          <a href="{{ block.settings.popup_image_url_default }}" target="_blank">
+        {% endif %}
+
+        <div class="image-area">
+          <img
+            src="{% if block.settings.popup_image != blank %}{{ block.settings.popup_image | img_url: 'large' }}{% elsif block.settings.popup_image_default != blank %}{{ block.settings.popup_image_default }}{% endif %}"
+            width="500"
+            height="{{ block.settings.popup_image_height }}"
+            alt="sunday-popup"
+          >
+        </div>
+
+        {% if block.settings.popup_image_url != blank %}
+          </a>
+        {% elsif block.settings.popup_image_url_default != blank %}
+          </a>
+        {% endif %}
+      {% endif %}
+
+      {% if block.type == 'block-popup-title' %}
+        <div class="title-area">
+          {{ block.settings.popup_title | newline_to_br }}
+        </div>
+      {% endif %}
+
+      {% if block.type == 'block-popup-price' %}
+        <div class="price-area">
+          <span>{{ block.settings.popup_price }}</span>
+        </div>
+      {% endif %}
+
+      {% if block.type == 'block-popup-button' %}
+        <a
+          class="button-area"
+          href="{% if block.settings.popup_button_url != blank %}{{ block.settings.popup_button_url }} {% elsif block.settings.popup_button_url_default != blank %}{{ block.settings.popup_button_url_default }}{% endif %}"
+          target="_blank"
+        >
+          <span class="icon-area">
+            {{ block.settings.popup_button_icon }}
+          </span>
+          <span class="text">
+            {{- block.settings.popup_button_text -}}
+          </span>
+        </a>
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "t:sections.sunday-master-popup.name",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [],
+  "blocks": [
+    {
+      "type": "block-popup-image",
+      "name": "t:sections.sunday-master-popup.blocks.block-popup-image.name",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "popup_image",
+          "label": "t:sections.sunday-master-popup.blocks.block-popup-image.settings.popup_image.label"
+        },
+        {
+          "type": "range",
+          "id": "popup_image_height",
+          "min": 20,
+          "max": 700,
+          "step": 10,
+          "unit": "px",
+          "label": "t:sections.sunday-master-popup.blocks.block-popup-image.settings.popup_image_height.label",
+          "default": 200
+        },
+        {
+          "type": "text",
+          "id": "popup_image_default",
+          "label": "t:sections.sunday-master-popup.blocks.block-popup-image.settings.popup_image_default.label"
+        },
+        {
+          "type": "url",
+          "id": "popup_image_url",
+          "label": "t:sections.sunday-master-popup.blocks.block-popup-image.settings.popup_image_url.label"
+        },
+        {
+          "type": "text",
+          "id": "popup_image_url_default",
+          "label": "t:sections.sunday-master-popup.blocks.block-popup-image.settings.popup_image_url_default.label"
+        }
+      ]
+    },
+    {
+      "type": "block-popup-title",
+      "name": "t:sections.sunday-master-popup.blocks.block-popup-title.name",
+      "settings": [
+        {
+          "type": "text",
+          "id": "popup_title",
+          "label": "t:sections.sunday-master-popup.blocks.block-popup-title.settings.popup_title.label"
+        }
+      ]
+    },
+    {
+      "type": "block-popup-price",
+      "name": "t:sections.sunday-master-popup.blocks.block-popup-price.name",
+      "settings": [
+        {
+          "type": "text",
+          "id": "popup_price",
+          "label": "t:sections.sunday-master-popup.blocks.block-popup-price.settings.popup_price.label"
+        }
+      ]
+    },
+    {
+      "type": "block-popup-button",
+      "name": "t:sections.sunday-master-popup.blocks.block-popup-button.name",
+      "settings": [
+        {
+          "type": "text",
+          "id": "popup_button_icon",
+          "label": "t:sections.sunday-master-popup.blocks.block-popup-button.settings.popup_button_icon.label"
+        },
+        {
+          "type": "text",
+          "id": "popup_button_text",
+          "label": "t:sections.sunday-master-popup.blocks.block-popup-button.settings.popup_button_text.label"
+        },
+        {
+          "type": "url",
+          "id": "popup_button_url",
+          "label": "t:sections.sunday-master-popup.blocks.block-popup-button.settings.popup_button_url.label"
+        },
+        {
+          "type": "text",
+          "id": "popup_button_url_default",
+          "label": "t:sections.sunday-master-popup.blocks.block-popup-button.settings.popup_button_url_default.label"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.sunday-master-popup.presets.name"
+    }
+  ]
+}
+{% endschema %}

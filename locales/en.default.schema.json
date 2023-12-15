@@ -3636,8 +3636,14 @@
         "button_link": {
           "label": "Button Link"
         },
+        "button_link_default": {
+          "label": "Button Link Default"
+        },
         "button_gap": {
           "label": "Button Gap"
+        },
+        "button_from_bottom": {
+          "label": "Button From Bottom"
         }
       },
       "presets": {
@@ -3842,6 +3848,167 @@
       },
       "presets": {
         "name": "Sunday Contact Form"
+      }
+    },
+    "sunday-page": {
+      "name": "Sunday Page",
+      "settings": {
+        "header_alignment": {
+          "options__1": {
+            "label": "Left"
+          },
+          "options__2": {
+            "label": "Center"
+          },
+          "options__3": {
+            "label": "Right"
+          },
+          "label": "Header alignment"
+        },
+        "header_show": {
+          "label": "Show header"
+        }
+      },
+      "presets": {
+        "name": "Sunday Page"
+      }
+    },
+    "sunday-page-purchase": {
+      "name": "Sunday Page Purchase",
+      "settings": {
+        "header_alignment": {
+          "options__1": {
+            "label": "Left"
+          },
+          "options__2": {
+            "label": "Center"
+          },
+          "options__3": {
+            "label": "Right"
+          },
+          "label": "Header alignment"
+        },
+        "header_show": {
+          "label": "Show header"
+        }
+      },
+      "blocks": {
+        "block-store": {
+          "name": "Store",
+          "settings": {
+            "block-store-title": {
+              "label": "Store Title"
+            },
+            "block-store-content": {
+              "label": "Store Content"
+            }
+          }
+        },
+        "block-store-social": {
+          "name": "Store Social",
+          "settings": {
+            "social_image": {
+              "label": "Store Social Image"
+            },
+            "social_image_default": {
+              "label": "Store Social Image Default"
+            },
+            "social_url": {
+              "label": "Store Social URL"
+            },
+            "social_url_default": {
+              "label": "Store Social URL Default"
+            }
+          }
+        },
+        "block-distribute": {
+          "name": "Distrubute",
+          "settings": {
+            "block-distribute-title": {
+              "label": "Distribute Title"
+            },
+            "block-distribute-content": {
+              "label": "Distribute Content"
+            },
+            "distribute_image": {
+              "label": "Distribute Image"
+            },
+            "distribute_image_default": {
+              "label": "Distribute Image Default"
+            },
+            "distribute_image_url": {
+              "label": "Distribute Image URL"
+            },
+            "distribute_image_url_default": {
+              "label": "Distribute Image URL Default"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Sunday Page Purchase"
+      }
+    },
+    "sunday-master-popup": {
+      "name": "Sunday Popup",
+      "settings": {},
+      "blocks": {
+        "block-popup-image": {
+          "name": "Popup Image",
+          "settings": {
+            "popup_image": {
+              "label": "Popup Image"
+            },
+            "popup_image_height": {
+              "label": "Popup Image Height"
+            },
+            "popup_image_default": {
+              "label": "Popup Image Default"
+            },
+            "popup_image_url": {
+              "label": "Popup Image URL"
+            },
+            "popup_image_url_default": {
+              "label": "Popup Image URL Default"
+            }
+          }
+        },
+        "block-popup-title": {
+          "name": "Popup Title",
+          "settings": {
+            "popup_title": {
+              "label": "Popup Title"
+            }
+          }
+        },
+        "block-popup-price": {
+          "name": "Popup Price",
+          "settings": {
+            "popup_price": {
+              "label": "Popup Price"
+            }
+          }
+        },
+        "block-popup-button": {
+          "name": "Popup Button",
+          "settings": {
+            "popup_button_icon": {
+              "label": "Popup Button Icon (SVG)"
+            },
+            "popup_button_text": {
+              "label": "Popup Button Text"
+            },
+            "popup_button_url": {
+              "label": "Popup Button URL"
+            },
+            "popup_button_url_default": {
+              "label": "Popup Button URL Default"
+            }
+          }
+        }
+      },
+      "presets": {
+        "name": "Sunday Popup"
       }
     }
   }

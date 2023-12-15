@@ -7,7 +7,6 @@
 <script type="application/ld+json">
   {
     "@context": "http://schema.org",
-    "@id": "{{ shop.url }}#Organization",
     "@type": "Organization",
     "name": {{ shop.name | json }},
     "url": {{ request.origin | append: page.url | json }},

@@ -1,0 +1,96 @@
+{{ 'section-sunday-page.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  .page-title{
+    text-align: {{ section.settings.header_alignment }};
+
+    {% unless section.settings.header_show %}
+      display: none;
+    {% endunless %}
+  }
+
+  table{
+    width: 100%;
+  }
+{%- endstyle -%}
+
+<div class="page-width section-{{ section.id }}-padding">
+  <h1 class="sunday-page-title page-title h0{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
+    {{ page.title | escape }}
+  </h1>
+  <div class="rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+    {{ page.content }}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.sunday-page.name",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "select",
+      "id": "header_alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:sections.sunday-page.settings.header_alignment.options__1.label"
+        },
+        {
+          "value": "center",
+          "label": "t:sections.sunday-page.settings.header_alignment.options__2.label"
+        },
+        {
+          "value": "right",
+          "label": "t:sections.sunday-page.settings.header_alignment.options__3.label"
+        }
+      ],
+      "default": "left",
+      "label": "t:sections.sunday-page.settings.header_alignment.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "header_show",
+      "label": "t:sections.sunday-page.settings.header_show.label",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    }
+  ]
+}
+{% endschema %}

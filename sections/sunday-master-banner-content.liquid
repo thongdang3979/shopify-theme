@@ -31,6 +31,13 @@
           }
         {% endunless %}
       }
+
+      {% if section.settings.button_from_bottom %}
+        .button-area{
+          position: absolute;
+          bottom: {{ section.settings.button_gap }}px;
+        }
+      {% endif %}
      }
    }
 
@@ -68,38 +75,38 @@
     <h1>{{ section.settings.heading_title_desktop | strip_html }}</h1>
   {% endif %}
   <div class="group-content-area">
-    {% if section.settings.heading_title_desktop != null %}
+    {% if section.settings.heading_title_desktop != blank %}
       <div class="title-area title-desktop">
         {{ section.settings.heading_title_desktop }}
       </div>
     {% endif %}
 
-    {% if section.settings.heading_title_mobile != null %}
+    {% if section.settings.heading_title_mobile != blank %}
       <div class="title-area title-mobile">
         {{ section.settings.heading_title_mobile }}
       </div>
     {% endif %}
 
-    {% if section.settings.heading_content_desktop != null %}
+    {% if section.settings.heading_content_desktop != blank %}
       <div class="content-area content-desktop">
         {{ section.settings.heading_content_desktop }}
       </div>
     {% endif %}
 
-    {% if section.settings.heading_content_mobile != null %}
+    {% if section.settings.heading_content_mobile != blank %}
       <div class="content-area content-mobile">
         {{ section.settings.heading_content_mobile }}
       </div>
     {% endif %}
   </div>
 
-  {% if section.settings.button_content != null %}
+  {% if section.settings.button_content != blank %}
     <div class="button-area">
       <a
-        href="{{ section.settings.button_link }}"
+        href="{% if section.settings.button_link != blank %}{{ section.settings.button_link }}{% elsif section.settings.button_link_default != blank %}{% if request.locale.iso_code != 'vi' %}/{{ request.locale.iso_code }}{% endif %}{{ section.settings.button_link_default }}{% endif %}"
         class="sd-button-third"
       >
-        {{- section.settings.button_content -}}
+        {{ section.settings.button_content }}
       </a>
     </div>
   {% endif %}
@@ -211,9 +218,14 @@
       "label": "t:sections.sunday-master-banner-content.settings.button_content.label"
     },
     {
-      "id": "button_link",
       "type": "url",
+      "id": "button_link",
       "label": "t:sections.sunday-master-banner-content.settings.button_link.label"
+    },
+    {
+      "type": "text",
+      "id": "button_link_default",
+      "label": "t:sections.sunday-master-banner-content.settings.button_link_default.label"
     },
     {
       "type": "range",
@@ -224,6 +236,12 @@
       "unit": "px",
       "label": "t:sections.sunday-master-banner-content.settings.button_gap.label",
       "default": 30
+    },
+    {
+      "type": "checkbox",
+      "id": "button_from_bottom",
+      "label": "t:sections.sunday-master-banner-content.settings.button_from_bottom.label",
+      "default": true
     }
   ],
   "presets": [

@@ -1,5 +1,5 @@
 @mixin customProduct() {
-    @media only screen and (min-width: 200px) {
+    @media only screen and (min-width: 1px) {
         .group-product-area {
             @include flexCustome(row, wrap, null, null, null, 24px);
             max-width: 90%;

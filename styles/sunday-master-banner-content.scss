@@ -1,6 +1,6 @@
 @import 'function.scss';
 
-@media only screen and (min-width: 200px) {
+@media only screen and (min-width: 1px) {
 
     .background-content-area {
         @include flexCustome(column, nowrap, center, center, center, 30px);
@@ -26,7 +26,7 @@
             }
 
             .content-area {
-                padding: 0 30px;
+                padding: 0 10px;
 
                 p {
                     @include customFont(13px, 400, 140%, $White-FFF, null, null);
@@ -44,7 +44,7 @@
                 }
 
                 h3 {
-                    @include customFont(14px, 500, 100%, $White-FFF, null, null);
+                    @include customFont(14px, 500, 140%, $White-FFF, null, null);
                     margin: 0;
                     text-align: center;
                 }
@@ -63,21 +63,33 @@
         }
 
         &.product-authenticity {
-            .title-area {
-                h3 {
-                    font-size: 20px;
-                    font-weight: 700;
+
+            .group-content-area {
+                gap: 8px;
+
+                .title-area {
+                    h3 {
+                        font-size: 20px;
+                        font-weight: 700;
+                    }
+
                 }
 
-            }
+                .content-area {
+                    p {
+                        font-size: 16px;
+                    }
 
-            .content-area {
-                p {
                     span {
-                        font-weight: 600;
+                        font-size: 20px;
+                        font-weight: 700;
+                        color: $White-FFF;
+                        @include flexCenter(row, nowrap);
+                        margin-top: 8px;
                     }
                 }
             }
+
         }
     }
 }

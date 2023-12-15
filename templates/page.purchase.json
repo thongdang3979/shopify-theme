@@ -1,14 +1,68 @@
 {
   "sections": {
-    "main": {
-      "type": "main-page",
+    "sunday-page-purchase": {
+      "type": "sunday-page-purchase",
       "settings": {
         "padding_top": 28,
         "padding_bottom": 28
-      }
+      },
+      "blocks": {
+        "block-store": {
+          "type": "block-store",
+          "settings": {
+            "block-store-title": "MUA HÀNG ONLINE",
+            "block-store-content": "<p>Hiện tại chúng tôi cung cấp sản phẩm Vitamin D3 + K2 MK-7 200 IU + 15μg trên 3 nền tảng thương mại điện tử lớn là Shopee Mall, Lazada Mall and TikTok Shop. Quý khách hàng có thể truy cập các đường link bên để mua sản phẩm.</p>"
+          }
+        },
+        "block-store-social-shopee": {
+          "type": "block-store-social",
+          "settings": {
+            "social_image": "",
+            "social_image_default": "https://cdn.shopify.com/s/files/1/0817/3902/2646/files/shopee-logo-digital-economy-forum-mdcc-1.png?v=1702375465&width=1024",
+            "social_url": "",
+            "social_url_default": ""
+          }
+        },
+        "block-store-social-lazada": {
+          "type": "block-store-social",
+          "settings": {
+            "social_image": "",
+            "social_image_default": "https://cdn.shopify.com/s/files/1/0817/3902/2646/files/lazada_2615fbb7-acbf-43e6-9395-b451bdb84ef9.png?v=1702550027&width=1024",
+            "social_url": "",
+            "social_url_default": ""
+          }
+        },
+        "block-store-social-tiktok": {
+          "type": "block-store-social",
+          "settings": {
+            "social_image": "",
+            "social_image_default": "https://cdn.shopify.com/s/files/1/0817/3902/2646/files/tiktok-shop.png?v=1702550443&width=1024",
+            "social_url": "",
+            "social_url_default": ""
+          }
+        },
+        "block-distribute": {
+          "type": "block-distribute",
+          "settings": {
+            "block-distribute-title": "PHÂN PHỐI",
+            "block-distribute-content": "<p>Kidsplaza đã chính thức trở thành nhà phân phối đầu tiên của Sunday Natural tại thị trường Việt Nam. Vì vậy, quý khách có thể tìm mua trực tiếp sản phẩm tại các cửa hàng của Kidsplaza trên khắp cả nước hoặc trên website chính hãng.</p>",
+            "distribute_image": "",
+            "distribute_image_default": "https://cdn.shopify.com/s/files/1/0817/3902/2646/files/sunday-kidsplaza.png?v=1702606038&width=1024",
+            "distribute_image_url": "",
+            "distribute_image_url_default": "https://www.kidsplaza.vn/"
+          }
+        }
+      },
+      "block_order": [
+        "block-store",
+        "block-store-social-shopee",
+        "block-store-social-lazada",
+        "block-store-social-tiktok",
+        "block-distribute"
+      ]
     }
   },
   "order": [
-    "main"
+    "sunday-page-purchase"
   ]
 }

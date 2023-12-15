@@ -8,7 +8,7 @@
     @include customTransition(transform 0.2s linear);
 }
 
-@media only screen and (min-width: 200px) {
+@media only screen and (min-width: 1px) {
     .f-carousel__thumbs {
         --f-thumb-width: 100px;
         --f-thumb-height: 100px;

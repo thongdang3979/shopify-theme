@@ -1,0 +1,14 @@
+{
+  "sections": {
+    "sunday-page": {
+      "type": "sunday-page",
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    }
+  },
+  "order": [
+    "sunday-page"
+  ]
+}

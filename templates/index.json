@@ -97,6 +97,71 @@
         "heading_content_mobile": "<p>Đức Phật<\/p>",
         "heading_content_mobile_show": true
       }
+    },
+    "sunday-master-popup": {
+      "type": "sunday-master-popup",
+      "settings": {},
+      "blocks": {
+        "blocks-popup-image-logo": {
+          "type": "block-popup-image",
+          "settings": {
+            "popup_image": "",
+            "popup_image_height": 60,
+            "popup_image_default": "https://cdn.shopify.com/s/files/1/0817/3902/2646/files/SN_golden_logo.png?v=1702376117",
+            "popup_image_url": "",
+            "popup_image_url_default": ""
+          }
+        },
+        "blocks-popup-title": {
+          "type": "block-popup-title",
+          "settings": {
+            "popup_title": "<h3>CHÍNH THỨC MỞ BÁN <br> VITAMIN D3 & K2 MK7<h3>"
+          }
+        },
+        "blocks-popup-price": {
+          "type": "block-popup-price",
+          "settings": {
+            "popup_price": "295.000 VNĐ"
+          }
+        },
+        "blocks-popup-image-product": {
+          "type": "block-popup-image",
+          "settings": {
+            "popup_image": "",
+            "popup_image_height": 200,
+            "popup_image_default": "https://cdn.shopify.com/s/files/1/0817/3902/2646/files/BUY_NOW_4.png?v=1702534100&width=1024",
+            "popup_image_url": "",
+            "popup_image_url_default": ""
+          }
+        },
+        "blocks-popup-image-distribute": {
+          "type": "block-popup-image",
+          "settings": {
+            "popup_image": "",
+            "popup_image_height": 60,
+            "popup_image_default": "https://cdn.shopify.com/s/files/1/0817/3902/2646/files/Kidsplazalogo.png?v=1702375916&width=1024",
+            "popup_image_url": "",
+            "popup_image_url_default": "https://www.kidsplaza.vn/"
+          }
+        },
+        "blocks-popup-button": {
+          "type": "block-popup-button",
+          "settings": {
+            "popup_button_icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"18\" viewBox=\"0 0 20 18\" fill=\"none\"> <path d=\"M13.366 0L16.577 5.562H20V7.562H18.833L18.076 16.645C18.0552 16.8949 17.9413 17.1278 17.7568 17.2977C17.5723 17.4675 17.3308 17.5619 17.08 17.562H2.92C2.66925 17.5619 2.4277 17.4675 2.24322 17.2977C2.05875 17.1278 1.94481 16.8949 1.924 16.645L1.166 7.562H0V5.562H3.422L6.634 0L8.366 1L5.732 5.562H14.267L11.634 1L13.366 0V0ZM11 9.562H9V13.562H11V9.562ZM7 9.562H5V13.562H7V9.562ZM15 9.562H13V13.562H15V9.562Z\" fill=\"#CA9B63\"/> </svg>",
+            "popup_button_text": "MUA NGAY",
+            "popup_button_url": "",
+            "popup_button_url_default": "pages/mua-hang"
+          }
+        }
+      },
+      "block_order": [
+        "blocks-popup-image-logo",
+        "blocks-popup-title",
+        "blocks-popup-price",
+        "blocks-popup-image-product",
+        "blocks-popup-image-distribute",
+        "blocks-popup-button"
+      ]
     }
   },
   "order": [
@@ -105,6 +170,7 @@
     "sunday-master-product-slider-background",
     "sunday-master-background-cta",
     "sunday-master-slogan-cta",
-    "sunday-master-banner-content"
+    "sunday-master-banner-content",
+    "sunday-master-popup"
   ]
 }

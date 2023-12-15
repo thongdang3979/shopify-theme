@@ -27,8 +27,8 @@
         "breabcrumb_position_left": 0
       }
     },
-    "suday-contact-form": {
-      "type": "suday-contact-form",
+    "sunday-contact-form": {
+      "type": "sunday-contact-form",
       "settings": {},
       "blocks": {
         "box_contact_infomation-0": {
@@ -90,6 +90,6 @@
   "order": [
     "sunday-master-banner-content",
     "sunday-master-breadcrumb",
-    "suday-contact-form"
+    "sunday-contact-form"
   ]
 }

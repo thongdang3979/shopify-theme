@@ -1,0 +1,261 @@
+{{ 'sunday-purchase-page.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  .page-title{
+    text-align: {{ section.settings.header_alignment }};
+
+    {% unless section.settings.header_show %}
+      display: none;
+    {% endunless %}
+  }
+
+  table{
+    width: 100%;
+  }
+{%- endstyle -%}
+
+<span class="circle-path"></span>
+
+<span class="wave-path">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+    <path fill="#ede4d5" fill-opacity="1" d="M0,0L26.7,16C53.3,32,107,64,160,85.3C213.3,107,267,117,320,101.3C373.3,85,427,43,480,26.7C533.3,11,587,21,640,64C693.3,107,747,181,800,202.7C853.3,224,907,192,960,154.7C1013.3,117,1067,75,1120,53.3C1173.3,32,1227,32,1280,53.3C1333.3,75,1387,117,1413,138.7L1440,160L1440,320L1413.3,320C1386.7,320,1333,320,1280,320C1226.7,320,1173,320,1120,320C1066.7,320,1013,320,960,320C906.7,320,853,320,800,320C746.7,320,693,320,640,320C586.7,320,533,320,480,320C426.7,320,373,320,320,320C266.7,320,213,320,160,320C106.7,320,53,320,27,320L0,320Z"></path>
+  </svg>
+</span>
+
+<div class="section-content page-width section-{{ section.id }}-padding">
+  <h1 class="sunday-page-title page-title h0{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
+    {{ page.title | escape }}
+  </h1>
+
+  <div class="rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+    {{ page.content | newline_to_br }}
+  </div>
+</div>
+<div class="line-area"><span></span></div>
+
+<div class="section-content purchase page-width">
+  <div class="box-content-up-area box-out-side">
+    <div class="box-inside">
+      <div class="box-left-area">
+        {% for block in section.blocks %}
+          {% if block.type == 'block-store' %}
+            <div class="box-title">
+              <h2>{{ block.settings['block-store-title'] }}</h2>
+            </div>
+            <div class="box-content">
+              {{ block.settings['block-store-content'] }}
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+
+      <div class="box-right-area">
+        {% for block in section.blocks %}
+          {% if block.type == 'block-store-social' %}
+            <div class="group-store-area">
+              <a
+                class="store-area"
+                href="{% if block.settings.social_url != blank %}{{ block.settings.social_url }}{% elsif block.settings.social_url_default != blank %}{{ block.settings.social_url_default }}{% endif %}"
+                target="_blank"
+              >
+                <img
+                  src="{% if block.settings.social_image != blank %}{{ block.settings.social_image | img_url: 'large' }}{% elsif block.settings.social_image_default != blank %}{{ block.settings.social_image_default }}{% endif %}"
+                  width="500"
+                  height="100"
+                  alt="{{ block.settings.social_image.alt | default: 'Store' | escape }}"
+                >
+              </a>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+
+  <div class="box-content-down-area box-out-side">
+    <div class="box-inside">
+      {% for block in section.blocks %}
+        {% if block.type == 'block-distribute' %}
+          <div class="box-left-area">
+            <div class="box-title">
+              <h2>{{ block.settings['block-distribute-title'] }}</h2>
+            </div>
+            <div class="box-content">
+              {{ block.settings['block-distribute-content'] }}
+            </div>
+          </div>
+          <div class="box-right-area">
+            <a
+              href="{% if block.settings.distribute_image_url != blank %}{{ block.settings.distribute_image_url }}{% elsif block.settings.distribute_image_url_default != blank %}{{ block.settings.distribute_image_url_default }}{% endif %}"
+              target="_blank"
+            >
+              <img
+                src="{% if block.settings.distribute_image != blank %}{{ block.settings.distribute_image | img_url: 'large' }}{% elsif block.settings.distribute_image_default != blank %}{{ block.settings.distribute_image_default }}{% endif %}"
+                width="500"
+                height="250"
+                alt="distribute"
+              >
+            </a>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.sunday-page-purchase.name",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "select",
+      "id": "header_alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:sections.sunday-page-purchase.settings.header_alignment.options__1.label"
+        },
+        {
+          "value": "center",
+          "label": "t:sections.sunday-page-purchase.settings.header_alignment.options__2.label"
+        },
+        {
+          "value": "right",
+          "label": "t:sections.sunday-page-purchase.settings.header_alignment.options__3.label"
+        }
+      ],
+      "default": "left",
+      "label": "t:sections.sunday-page-purchase.settings.header_alignment.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "header_show",
+      "label": "t:sections.sunday-page-purchase.settings.header_show.label",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    }
+  ],
+  "blocks": [
+    {
+      "type": "block-store",
+      "name": "t:sections.sunday-page-purchase.blocks.block-store.name",
+      "settings": [
+        {
+          "type": "text",
+          "id": "block-store-title",
+          "label": "t:sections.sunday-page-purchase.blocks.block-store.settings.block-store-title.label"
+        },
+        {
+          "type": "richtext",
+          "id": "block-store-content",
+          "label": "t:sections.sunday-page-purchase.blocks.block-store.settings.block-store-content.label"
+        }
+      ]
+    },
+    {
+      "type": "block-store-social",
+      "name": "t:sections.sunday-page-purchase.blocks.block-store-social.name",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "social_image",
+          "label": "t:sections.sunday-page-purchase.blocks.block-store-social.settings.social_image.label"
+        },
+        {
+          "type": "text",
+          "id": "social_image_default",
+          "label": "t:sections.sunday-page-purchase.blocks.block-store-social.settings.social_image_default.label"
+        },
+        {
+          "type": "url",
+          "id": "social_url",
+          "label": "t:sections.sunday-page-purchase.blocks.block-store-social.settings.social_url.label"
+        },
+        {
+          "type": "url",
+          "id": "social_url_default",
+          "label": "t:sections.sunday-page-purchase.blocks.block-store-social.settings.social_url_default.label"
+        }
+      ]
+    },
+    {
+      "type": "block-distribute",
+      "name": "t:sections.sunday-page-purchase.blocks.block-distribute.name",
+      "settings": [
+        {
+          "type": "text",
+          "id": "block-distribute-title",
+          "label": "t:sections.sunday-page-purchase.blocks.block-distribute.settings.block-distribute-title.label"
+        },
+        {
+          "type": "richtext",
+          "id": "block-distribute-content",
+          "label": "t:sections.sunday-page-purchase.blocks.block-distribute.settings.block-distribute-content.label"
+        },
+        {
+          "type": "image_picker",
+          "id": "distribute_image",
+          "label": "t:sections.sunday-page-purchase.blocks.block-distribute.settings.distribute_image.label"
+        },
+        {
+          "type": "text",
+          "id": "distribute_image_default",
+          "label": "t:sections.sunday-page-purchase.blocks.block-distribute.settings.distribute_image_default.label"
+        },
+        {
+          "type": "url",
+          "id": "distribute_image_url",
+          "label": "t:sections.sunday-page-purchase.blocks.block-distribute.settings.distribute_image_url.label"
+        },
+        {
+          "type": "text",
+          "id": "distribute_image_url_default",
+          "label": "t:sections.sunday-page-purchase.blocks.block-distribute.settings.distribute_image_url_default.label"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.sunday-page-purchase.presets.name"
+    }
+  ]
+}
+{% endschema %}
